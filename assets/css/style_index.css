@@ -1,0 +1,52 @@
+.body_color{
+    background-color:rgb(224,220,158);
+}
+/*幻燈片 CSS*/
+.carousel .carousel-item {
+  height: 300px;
+    z-index:-1;
+}
+
+.carousel .carousel-item img {
+  min-height: 300px;
+  max-height: 600px;
+  object-fit: cover;
+}
+/*footer CSS*/
+footer {
+    background: #343a40;
+    padding: 40px;
+}
+footer a{
+    color: #f8f9fa!important
+}
+
+.a1{
+    padding-right:0px;
+    padding-left: 0px;
+}
+.login-cancel{
+    position:absolute;
+    margin-left:-75%;
+}
+
+/*首頁底圖*/
+.bg_image{
+  background-image: url(../images/bgimg2.png);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;
+}
+
+ul,li,a{
+    text-decoration: none;
+    list-style-type:none
+}
+.profile-name{
+    font-size:20px;
+    z-index:2;
+    float:left;
+    position:relative;
+    margin-left: 13px;
+}
