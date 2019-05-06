@@ -1,0 +1,20 @@
+.product_inf
+{
+	width: 1600px;
+}
+.product
+{
+transition: box-shadow 0.4s;
+box-shadow:8px 8px 11px gray;
+height: 400px;
+margin-right: 18px;
+border: 1px solid black;
+}
+.product:hover
+{
+  box-shadow:8px 8px 11px #BBCCDD; 
+}
+.pro
+{
+margin-top: 500px;
+}
