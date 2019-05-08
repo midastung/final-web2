@@ -6,6 +6,7 @@
     <title>test</title>
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/FAQ.css">
     <!--		<link rel="stylesheet" type="text/css" href="css/demo.css" />-->
     <link rel="stylesheet" type="text/css" href="assets/css/component.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/style_index.css">
@@ -20,7 +21,7 @@
 
 <body class="body_color bg_image">
     <!--    側欄/開始-->
-    <div class="container">
+    <div class="container FAQ"">
         <ul id="gn-menu" class="gn-menu-main">
             <li class="gn-trigger">
                 <a class="gn-icon gn-icon-menu"><span>Menu</span></a>
@@ -117,34 +118,20 @@
             </div>
         </div>
     </div>
-    
-       <div class="container" style="position:relative;margin-top:34%;">
-                    <div class="carousel slide" data-interval="3000" id="carousel-demo">
-                        <ol class="carousel-indicators">
-                            <li data-target="#carousel-demo" data-slide-to="0" class="active"></li>
-                            <li data-target="#carousel-demo" data-slide-to="1"></li>
-                            <li data-target="#carousel-demo" data-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img class="d-block w-100" src="assets/images/post2.png" alt="">
-                            </div>
-                            <div class="carousel-item">
-                                <img class="d-block w-100" src="assets/images/post2.png" alt="">
-                            </div>
-                            <div class="carousel-item">
-                                <img class="d-block w-100" src="assets/images/post2.png" alt="">
-                            </div>
-
-                            <a href="#carousel-demo" class="carousel-control-prev" data-slide="prev">
-                                <span class="carousel-control-prev-icon"></span>
-                            </a>
-                            <a href="#carousel-demo" class="carousel-control-next" data-slide="next">
-                                <span class="carousel-control-next-icon"></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+    <!--留言板-->
+       <div >
+           <div class="feeback_content">
+                         
+                             
+                    <form  method="post" action="mailto:a0983630767@mail.com.tw?subject=網站意見回饋" enctype="text/plain">
+                        <input type="text" name="name" placeholder="姓名" class="feeback1 w-25"></input>
+                        <input  type="text" name="title" placeholder="標題" class="feeback1 w-75"></input>
+                     <textarea type="text" name="content" placeholder="意見" class="feeback2 w-75"></textarea>   
+                     <input type="submit" class="but">
+                     <input type="reset" class="but">
+                    </form>
+             </div>         
+        </div>
     <script src="assets/js/classie.js"></script>
     <script src="assets/js/gnmenu.js"></script>
     <script src="assets/js/modernizr.custom.js"></script>
