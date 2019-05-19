@@ -1,5 +1,5 @@
 .body_color{
-    background-color:rgb(224,220,158);
+    background-color:#fff;
 }
 /*幻燈片 CSS*/
 .carousel .carousel-item {
@@ -50,3 +50,366 @@ ul,li,a{
     position:relative;
     margin-left: 13px;
 }
+
+
+/*slider*/
+/*
+    .slider {
+        width: 80%;
+        margin: 100px auto;
+    }
+
+    .slick-slide {
+      margin: 0px 20px;
+    }
+
+    .slick-slide img {
+      width: 100%;
+    }
+
+    .slick-prev:before
+    .slick-next:before {
+      color: black;
+    }
+
+
+    .slick-slide {
+      transition: all ease-in-out .3s;
+      opacity: .2;
+    }
+    
+    .slick-active {
+      opacity: 1;
+    }
+
+    .slick-current {
+      opacity: 1;
+    }
+
+.slide-position{
+    position:relative;
+    margin-top:35%;
+}*/
+
+
+/*slider2*/
+
+.works_slider .slider li a {
+    box-shadow: -8px 8px 0 rgba(217, 187, 22, 0.7);
+}
+.works_slider .slider li a {
+	box-shadow: -8px 8px 3px rgba(217, 187, 22, 1.0);
+}
+.slider li a {
+    display: block;
+    width: 300px;
+    height: 390px;
+    border-radius: 5px;
+    box-shadow: -8px 8px 0 rgba(50, 50, 50, 0.7);
+    background: #fff;
+    margin: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.slick-slide:hover {
+    background: transparent;
+}
+.slick-slide {
+    background: transparent;
+}
+.slick-slide img {
+    max-width: 100% !important;
+    /*height: auto;*/
+    margin: auto;
+    object-fit: cover;
+    width: 280px;
+    height: 250px;
+}
+
+.p-tp{
+    position: relative;
+    margin:1% 0 0 10%;
+}
+
+.topsellproduct{
+    position:relative;
+    margin-top:35%;
+    margin-left:6%;
+}
+
+
+
+/*menu*/
+/* Page */
+
+
+.more-menu {
+    width: 50px;
+}
+
+/* More Button / Dropdown Menu */
+
+.more-btn,
+.more-menu-btn {
+    background: none;
+    border: 0 none;
+    line-height: normal;
+    overflow: visible;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    cursor: pointer;
+}
+.more-menu {
+    position: absolute;
+    top: 100%;
+    z-index: 900;
+    float: left;
+    padding: 20px 75px;
+    margin-top: 9px;
+    background-color:rgb(238,241,228);
+    border: 1px solid #ccd8e0;
+    border-radius: 4px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.25);
+    opacity: 0;
+    transform: translate(0, 15px) scale(.95);
+    transition: transform 0.1s ease-out, opacity 0.1s ease-out;
+    pointer-events: none;
+}
+
+.more-menu-caret {
+    position: absolute;
+    top: -10px;
+    left: 12px;
+    width: 18px;
+    height: 10px;
+    float: left;
+    overflow: hidden;
+}
+
+.more-menu-caret-outer,
+.more-menu-caret-inner {
+    position: absolute;
+    display: inline-block;
+    margin-left: -1px;
+    font-size: 0;
+    line-height: 1;
+}
+
+.more-menu-caret-outer {
+    border-bottom: 10px solid #c1d0da;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    height: auto;
+    left: 0;
+    top: 0;
+    width: auto;    
+}
+
+.more-menu-caret-inner {
+    top: 1px;
+    left: 1px;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-bottom: 9px solid rgb(242,243,233);
+}
+
+.more-menu-items {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+.more-menu-item {
+    display: block;
+}
+
+.more-menu-btn {
+    min-width: 100%;
+    color: #66757f;
+    cursor: pointer;
+    display: block;
+    font-size: 13px;
+    line-height: 18px;
+    padding: 5px 35px;
+    position: relative;
+    white-space: nowrap;
+}
+
+.more-menu-item:hover {
+    background-color: #489fe5;
+}
+
+.more-menu-item:hover .more-menu-btn {
+    color: #fff;
+}
+
+.show-more-menu .more-menu {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+    pointer-events: auto;
+}
+
+/*
+
+grid+align垂直置中
+*/
+.cont {
+    margin: auto;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+/*熱門商品*/
+.hot-posi{
+    
+}
+
+
+.hot_product{
+    margin-top:40%;
+}
+
+.shop-card {
+  margin: 10px;
+  width: 250px;
+  height: 270px;
+  background: #f5f5f5;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .3);
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.shop-card .title {
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 25px;
+  color: #23211f;
+  margin-bottom: 5px;
+}
+
+.shop-card .desc {
+  font-size: 15px;
+  opacity: .8;
+  margin-bottom: 3px;
+  color: #23211f;
+}
+
+.product {
+  margin: 10px 0;
+}
+/*調整商品圖片*/
+.product img {
+  width: 60%;
+}
+
+.cta {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.price {
+  color: #28406b;
+  font-size: 22px;
+  font-weight: 900;
+  transition: color .3s ease-in-out;
+}
+
+.button {
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #28406b;
+  padding: 12px 18px;
+  cursor: pointer;
+  transition: all 300ms;
+  line-height: .95;
+  border: none;
+  background: none;
+  outline: none;
+  border: 1px solid #28406b;
+  border-radius: 20px;
+}
+
+.button:hover {
+  background: linear-gradient(135deg, #3d61a1, #28406b);
+  color: #fff;
+  border: none;
+}
+
+
+.parallax-section {
+  background-attachment: fixed !important;
+  background-size: cover !important;
+}
+/*---------------------------------------
+    Features section
+-----------------------------------------*/
+
+#features {
+  background: #E9724C;
+}
+
+#features p {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+#features .features-thumb {
+  padding: 52px 22px 52px 22px;
+}
+
+#features .features-thumb .fa {
+  font-size: 42px;
+  padding-bottom: 22px;
+}
+
+
+.overlay {
+    background: #121212;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 0.7;
+}
+
+/*---------------------------------------
+   Quotes section
+-----------------------------------------*/
+
+#quotes {
+    background: url('../images/icon/desertbg.jpg') 50% 0 repeat-y fixed;
+    background-size: cover;
+    background-position: center center;
+    color: #ffffff;
+    position: relative;
+    padding: 100px 0px;
+}
+
+#quotes .overlay {
+    background: #121212;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 0.7;
+}
+
+#quotes .fa {
+  font-size: 42px;
+  margin-top: 32px;
+  margin-bottom: 22px;
+}
+
+#quotes p {
+  padding-top: 32px;
+}
+
