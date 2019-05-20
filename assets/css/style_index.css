@@ -490,12 +490,12 @@ grid+align垂直置中
 
 /*對話變色*/
 .chat1{
-    transition: 
+    margin-left: -20%;
 }
 .chat1:hover{
     background: #fff;
     opacity: 0.7;
-    transition: 0.3s;
+    transition: 0.1s;
 }
 
 
