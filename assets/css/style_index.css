@@ -387,6 +387,12 @@ grid+align垂直置中
 /*---------------------------------------
    Quotes section
 -----------------------------------------*/
+#experience,
+#enterprise,
+#contact {
+  position: relative;
+}
+
 
 #quotes {
     background: url('../images/icon/desertbg.jpg') 50% 0 repeat-y fixed;
@@ -475,13 +481,84 @@ grid+align垂直置中
   padding: 22px 42px 42px 42px;
 }
 
-/*
+
 
 .section-title {
     position: relative;
     padding-bottom: 22px;
 }
-*/
+
+
+
+/*---------------------------------------
+    Contact section
+-----------------------------------------*/
+
+#contact {
+  background: #E9724C;
+}
+
+#contact .contact-form,
+#contact .contact-thumb {
+  padding: 22px 32px 22px 32px;
+  min-height: 10vh;
+}
+
+#contact .contact-img {
+  background: url('../images/egg.jpg') no-repeat;
+  min-height: 75vh;
+}
+
+#contact .contact-info {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+#contact .form-control::-moz-placeholder{color:#ffffff;opacity:1}
+#contact .form-control:-ms-input-placeholder{color:#ffffff}
+#contact .form-control::-webkit-input-placeholder{color:#ffffff}
+
+#contact .form-control {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #E3AE57;
+  border-radius: 0px;
+  box-shadow: none;
+  color: #ffffff;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  transition: all 0.4s ease-in-out;
+}
+
+#contact .form-control:focus {
+  border-bottom-color: #ffffff;
+}
+
+#contact input {
+  height: 45px;
+}
+
+#contact input[type="submit"] {
+  background: #ffffff;
+  border: 2px solid transparent;
+  border-radius: 40px;
+  color: #161616;
+  padding-bottom: 10px;
+}
+
+#contact input[type="submit"]:hover {
+  background: transparent;
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+#contact .fa {
+  padding-right: 10px;
+}
+
+
+
 
 
 .color-white {
