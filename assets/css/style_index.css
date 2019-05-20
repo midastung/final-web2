@@ -1,3 +1,6 @@
+.chi-font{
+    font-family: 'Noto Sans TC', sans-serif;
+}
 .body_color{
     background-color:#fff;
 }
@@ -412,4 +415,87 @@ grid+align垂直置中
 #quotes p {
   padding-top: 32px;
 }
+/*---------------------------------------
+    Experience section
+-----------------------------------------*/
+#experience{
+    background: #E9724C;
+      margin-bottom: -8px;
+
+}
+
+#experience .experience-img {
+  background: url('../images/experience-img.jpg') no-repeat;
+  
+}
+
+#experience .media-heading {
+  margin-bottom: 0px;
+}
+
+#experience .media .fa {
+  font-size: 42px;
+  margin-right: 14px;
+}
+
+#experience small {
+  color: #633;
+  font-weight: bold;
+}
+
+/*---------------------------------------
+    Experience section
+-----------------------------------------*/
+#enterprise {
+  background: #E3AE57;
+}
+
+
+.background-image {
+    position: relative;
+    min-height: 45vh;
+}
+
+
+#experience .media-heading {
+  margin-bottom: -20px;
+}
+
+#experience .media .fa {
+  font-size: 42px;
+  margin-right: 14px;
+}
+
+#experience small {
+  color: #633;
+  font-weight: bold;
+}
+#experience .experience-thumb,
+#enterprise .enterprise-thumb  {
+  padding: 22px 42px 42px 42px;
+}
+
+/*
+
+.section-title {
+    position: relative;
+    padding-bottom: 22px;
+}
+*/
+
+
+.color-white {
+    color: #ffffff;
+}
+
+/*對話變色*/
+.chat1{
+    transition: 
+}
+.chat1:hover{
+    background: #fff;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
 
