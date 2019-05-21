@@ -6,6 +6,7 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--count-->
         <!-- Nice Select CSS-->
         <link rel="stylesheet" href="assets/css/nice-select.css">
         <!-- Slick CSS-->
@@ -18,8 +19,7 @@
         <!--        <link rel="stylesheet" type="text/css" href="css/demo.css" />-->
         <link rel="stylesheet" type="text/css" href="assets/css/component.css" />
         <link rel="stylesheet" type="text/css" href="assets/css/style_index.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" crossorigin="anonymous"></script>
         <script src="assets/js/bootstrap.min.js"></script>
@@ -168,16 +168,16 @@
                                     <div class="single-product-menu">
                                         <div class="nav single-slide-menu" role="tablist">
                                             <div class="single-tab-menu img-full">
-                                                <a class="active" data-toggle="tab" href="#single-slide-one"><img src="assets/images/desert/purin.jpg" alt=""></a>
+                                                <a class="active" data-toggle="tab" href="#single-slide-one"><img src="assets/images/desert/purin.jpg" alt="" style="height:120px;"></a>
                                             </div>
                                             <div class="single-tab-menu img-full">
-                                                <a data-toggle="tab" href="#single-slide-two"><img src="assets/images/desert/purin.jpg" alt=""></a>
+                                                <a data-toggle="tab" href="#single-slide-two"><img src="assets/images/desert/purin.jpg" alt="" style="height:120px;"></a>
                                             </div>
                                             <div class="single-tab-menu img-full">
-                                                <a data-toggle="tab" href="#single-slide-three"><img src="assets/images/desert/purin.jpg" alt=""></a>
+                                                <a data-toggle="tab" href="#single-slide-three"><img src="assets/images/desert/purin.jpg" alt="" style="height:120px;"></a>
                                             </div>
                                             <div class="single-tab-menu img-full">
-                                                <a data-toggle="tab" href="#single-slide-four"><img src="assets/images/desert/purin.jpg" alt=""></a>
+                                                <a data-toggle="tab" href="#single-slide-four"><img src="assets/images/desert/purin.jpg" alt="" style="height:120px;"></a>
                                             </div>
                                         </div>
                                     </div>
@@ -206,27 +206,27 @@
                                             
                                             <div class="product-variants-item">
                                                 
-                                                <span class="control-label">Size</span>
-                                                <select class="nice-select" name="size">
-                                                    <option value="1">S</option>
-                                                    <option value="2">M</option>
-                                                    <option value="3">X</option>
-                                                    <option value="4">XL</option>
-                                                </select>
-                                                
-                                                
+                                                <span class="control-label">數量</span>
+                                                <form id='myform' method='POST' action='#'>
+                                                    
+                                                    <input type='button' value='-' class='qtyminus' field='quantity' />
+                                                    <input type='text' name='quantity' value='0' class="qty pl-0" />
+                                                    <input type='button' value='+' class='qtyplus' field='quantity' />
+                                                </form>
                                             </div>
-                                             
+                                            
                                         </div>
-                                           
-                                        <div>
-                                        <span class="h3">分享至:</span>
-                                             <i class="fab fa-facebook"></i>
-                                             <i class="fab fa-instagram"></i>
-                                             <i class="fab fa-twitter"></i>
-                                             <i class="fab fas fa-envelope"></i>
-                                            </div>
-                                        <hr>
+                                        
+                                        <div class="bt-5">
+                                            <button class="button mr-3">加購物車</button>
+                                            <button class="button">我的最愛</button>
+                                            <span class="h5 ml-5">分享至:</span>
+                                            <i class="fab fa-facebook"></i>
+                                            <i class="fab fa-instagram"></i>
+                                            <i class="fab fa-twitter"></i>
+                                            <i class="fab fas fa-envelope"></i>
+                                        </div>
+                                        
                                         
                                     </div>
                                 </div>
@@ -254,96 +254,97 @@
                                             <!--Review And Description Tab Menu End-->
                                             <!--Review And Description Tab Content Start-->
                                             <div class="tab-content product-review-content-tab mt-30" id="myTabContent-4">
-                              <div class="tab-pane fade show active" id="description">
-                                  <div class="single-product-description">
-                                      <p>複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹</p>
-                                  </div>
-                              </div>
-                              <div class="tab-pane fade" id="product-details">
-                                  <div class="product-details">
-                                      
-                                  </div>
-                              </div>
-                              <div class="tab-pane fade" id="reviews">
-                                  <div class="review-page-comment">
-                                      
-                                      <div class="review-form">
-                                          <form action="#">
-                                              <label>名字<sup class="required">*</sup></label>
-                                              <input type="text" placeholder="Your Name" name="title">
-                                              <label>評論標題<sup class="required">*</sup></label>
-                                              <input type="text" placeholder="Title Here" name="title">
-                                              <label>聯絡方式<sup class="required">*</sup></label>
-                                              <input type="text" placeholder="phone" name="title">
-                                              <label>評論內容<sup class="required">*</sup></label>
-                                              <textarea id="content" name="content" placeholder="content"></textarea>
-                                              
-                                              <div class="send-your-review">
-                                                  
-                                                  <div class="send-cancel-btn">
-                                                      <button class="send-btn">Send</button>
-                                                      or
-                                                      <button class="cancel-btn">Cancel</button>
-                                                  </div>
-                                              </div>
-                                          </form>
-                                      </div>
-                                  </div>
-                              </div>
-                            </div>
-                                                <!--Review And Description Tab Content End-->
+                                                <div class="tab-pane fade show active" id="description">
+                                                    <div class="single-product-description">
+                                                        <p>複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹</p>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="product-details">
+                                                    <div class="product-details">
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="reviews">
+                                                    <div class="review-page-comment">
+                                                        
+                                                        <div class="review-form">
+                                                            <form action="#">
+                                                                <label>名字<sup class="required">*</sup></label>
+                                                                <input type="text" placeholder="Your Name" name="title">
+                                                                <label>評論標題<sup class="required">*</sup></label>
+                                                                <input type="text" placeholder="Title Here" name="title">
+                                                                <label>聯絡方式<sup class="required">*</sup></label>
+                                                                <input type="text" placeholder="phone" name="title">
+                                                                <label>評論內容<sup class="required">*</sup></label>
+                                                                <textarea id="content" name="content" placeholder="content"></textarea>
+                                                                
+                                                                <div class="send-your-review">
+                                                                    
+                                                                    <div class="send-cancel-btn">
+                                                                        <button class="send-btn">Send</button>
+                                                                        or
+                                                                        <button class="cancel-btn">Cancel</button>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
+                                            <!--Review And Description Tab Content End-->
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
                     </div>
+                    
                 </div>
             </div>
-            <!--Jquery 1.12.4-->
-            <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
-            
-            <!--Counterup-->
-            <script src="assets/js/jquery.counterup.min.js"></script>
-            <!--Countdown-->
-            <script src="assets/js/jquery.countdown.min.js"></script>
-            <!--Carousel-->
-            <script src="assets/js/owl.carousel.min.js"></script>
-            <!--Slick-->
-            <script src="assets/js/slick.min.js"></script>
-            <!--Meanmenu-->
-            <script src="assets/js/jquery.meanmenu.min.js"></script>
-            <!--Instafeed-->
-            <!--<script src="js/instafeed.min.js"></script>-->
-            <!--Nice Select-->
-            <script src="assets/js/jquery.nice-select.min.js"></script>
-            <!--ScrollUp-->
-            <script src="assets/js/jquery.scrollUp.min.js"></script>
-            <!--Bootstrap-->
-            <script src="assets/js/bootstrap2.min.js"></script>
-            <!--Main Js-->
-            <script src="assets/js/main.js"></script>
-            <script src="assets/js/classie.js"></script>
-            <script src="assets/js/gnmenu.js"></script>
-            <script src="assets/js/modernizr.custom.js"></script>
-            <script>
-            new gnMenu(document.getElementById('gn-menu'));
-            </script>
-            <script>
-            $(document).ready(function() {
-            $("#myBtn").click(function() {
-            $("#mySign").modal();
-            });
-            });
-            </script>
-            <!--登入跳進註冊 -->
-            <script>
-            $("#pop-reg").on('click', function() {
-            $("#close-login").trigger("click");
-            $('#myModal').modal();
-            });
-            </script>
-        </body>
-    </html>
+        </div>
+        <script src="assets/js/count.js"></script>
+        <!--Jquery 1.12.4-->
+        <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+        
+        <!--Counterup-->
+        <script src="assets/js/jquery.counterup.min.js"></script>
+        <!--Countdown-->
+        <script src="assets/js/jquery.countdown.min.js"></script>
+        <!--Carousel-->
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <!--Slick-->
+        <script src="assets/js/slick.min.js"></script>
+        <!--Meanmenu-->
+        <script src="assets/js/jquery.meanmenu.min.js"></script>
+        <!--Instafeed-->
+        <!--<script src="js/instafeed.min.js"></script>-->
+        <!--Nice Select-->
+        <script src="assets/js/jquery.nice-select.min.js"></script>
+        <!--ScrollUp-->
+        <script src="assets/js/jquery.scrollUp.min.js"></script>
+        <!--Bootstrap-->
+        <script src="assets/js/bootstrap2.min.js"></script>
+        <!--Main Js-->
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/classie.js"></script>
+        <script src="assets/js/gnmenu.js"></script>
+        <script src="assets/js/modernizr.custom.js"></script>
+        <script>
+        new gnMenu(document.getElementById('gn-menu'));
+        </script>
+        <script>
+        $(document).ready(function() {
+        $("#myBtn").click(function() {
+        $("#mySign").modal();
+        });
+        });
+        </script>
+        <!--登入跳進註冊 -->
+        <script>
+        $("#pop-reg").on('click', function() {
+        $("#close-login").trigger("click");
+        $('#myModal').modal();
+        });
+        </script>
+    </body>
+</html>
