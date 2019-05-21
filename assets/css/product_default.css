@@ -1,0 +1,113 @@
+/* -----------------------------------------------------
+  Sticker / Product Label
+----------------------------------------------------- */
+.pro-label {
+  left: 20px;
+  position: absolute;
+  top: 20px;
+  z-index: 2;
+  background: #c8a165 none repeat scroll 0 0;
+  border-radius: 5px;
+  color: #fff;
+  height: 25px;
+  line-height: 25px;
+  padding: 0 10px;
+  text-transform: capitalize;
+}
+.pro-label.new-label {
+  background: #c8a165 none repeat scroll 0 0;
+}
+.pro-label.sale-label {
+  background: #c87065 none repeat scroll 0 0;
+}
+.single-banner .pro-label {
+  left: 30px;
+}
+.product-style-2 .pro-label {
+  left: 15px;
+  top: 15px;
+}
+
+/* -----------------------------------------------------
+  Title
+----------------------------------------------------- */
+.title-1 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 28px;
+}
+.title-border {
+    position: relative;
+}
+.title-border::before {
+    background: #eee none repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    height: 2px;
+  left: 0;
+    position: absolute;
+    width: 50px;
+}
+.section-title h2 {
+  color: #444;
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 22px;
+  margin-bottom: 25px;
+  padding-bottom: 22px;
+}
+.section-title .title-border::before {
+  background: #c87065 none repeat scroll 0 0;
+  margin: 0 auto;
+  right: 0;
+}
+
+/* -----------------------------------------------------
+  Slick slider Next - Prev
+----------------------------------------------------- */
+/* Slick-Arrow */
+.arrow-left-right .slick-arrow {
+  background: #fff none repeat scroll 0 0;
+  border: 2px solid #eeeeee;
+  color: #a6a6a6;
+  font-weight: 700;
+  left: -30px;
+  line-height: 20px;
+  margin-top: -43px;
+  position: absolute;
+  top: 50%;
+  width: 35px;
+  z-index: 999;
+  transition: all 0.5s ease 0s;
+}
+.arrow-left-right .slick-arrow:hover {
+  background: #C8A165 none repeat scroll 0 0;
+  border: 2px solid #C8A165;
+  color: #fff;
+}
+.arrow-left-right .slick-next.slick-arrow {
+  left: auto;
+  right: -30px;
+}
+/* Slick-Dots */
+.dots-bottom-right .slick-dots {
+    bottom: 20px;
+    position: absolute;
+    right: 45px;
+}
+.dots-bottom-right .slick-dots li {
+  background: #ccc none repeat scroll 0 0;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0;
+  height: 8px;
+  line-height: 0;
+  margin-left: 10px;
+  width: 8px;
+}
+.dots-bottom-right .slick-dots li.slick-active {
+    background: #C8A165 none repeat scroll 0 0;
+}
+
+
