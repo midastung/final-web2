@@ -4,23 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <title>test</title>
-
+            <!--product start-->
         <!-- Google Font -->
         <link href='https://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
-
-        <!-- all css here -->
-        <!-- bootstrap v3.3.6 css -->
-        <link rel="stylesheet" href="assets/css/bootstrap.min_product.css">
-        
-        <!-- slick css -->
         <link rel="stylesheet" href="assets/css/product_slick.css">
-        
-        <!-- material-design-iconic-font css -->
         <link rel="stylesheet" href="assets/css/product-iconic-font.css">
-        <!-- All common css of theme -->
         <link rel="stylesheet" href="assets/css/product_default.css">
-        <!-- style css -->
         <link rel="stylesheet" href="assets/css/product_style.css">
         <!--product end-->
     <link rel="shortcut icon" href="../favicon.ico">
@@ -30,36 +20,38 @@
     <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
     <link rel="stylesheet" type="text/css" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/animate.css" />
-
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <!--    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">-->
+        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+
 
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:700&display=swap" rel="stylesheet">
+
 </head>
 
-<body class="bg_image" style="background-color: #F0E68C;">
+<body class="bg_image">
     <!--    側欄/開始-->
     <div class="">
-        <ul id="gn-menu" class="gn-menu-main">
+        <ul id="gn-menu" class="gn-menu-main" style="z-index:100;">
             <li class="gn-trigger">
                 <a class="gn-icon gn-icon-menu"><span>Menu</span></a>
                 <nav class="gn-menu-wrapper">
                     <div class="gn-scroller">
                         <ul class="gn-menu">
                             <li class="gn-search-item">
-                                <i class="fas fa-search p-3"></i>
-                                <input placeholder="Search" type="search" class="gn-search p-0">
+                                <i class="fas fa-search p-4"></i>
+                                <input placeholder="Search" type="search" class="gn-search p-0" >
                             </li>
-                            <li class="gn-search-item"><a href="product1.html"><i class="fas fa-shopping-basket p-3"></i>Product</a></li>
-                            <li class="gn-search-item"><a href="#"><i class="fas fa-users p-3"></i>About Us</a></li>
-                            <li class="gn-search-item"><a href="#"><i class="far fa-question-circle p-3"></i><span class="p-1">FAQ</span></a></li>
+                            <li class="gn-search-item"><a href="product1.html"><i class="fas fa-shopping-basket p-4"></i>Product</a></li>
+                            <li class="gn-search-item"><a href="#"><i class="fas fa-users p-4"></i>About Us</a></li>
+                            <li class="gn-search-item"><a href="#"><i class="far fa-question-circle p-4"></i><span class="p-1">FAQ</span></a></li>
                         </ul>
                     </div><!-- /gn-scroller -->
                 </nav>
             </li>
             <li><a class="codrops-icon codrops-icon-prev" href="#" data-toggle="modal" data-target="#mySign" id="myBtn">Sign in</a></li>
             <li><a class="codrops-icon codrops-icon-prev" href="#" data-toggle="modal" data-target="#myModal"><span>Sign up</span></a></li>
-            <li class="more p-1">
+            
+            <li class="more p-1 chi-font">
                 <button id="more-btn" class="more-btn mr-5">
                     <h6 class="cont">歡迎，Midas</h6>
                 </button>
@@ -68,41 +60,44 @@
                         <div class="more-menu-caret-outer"></div>
                         <div class="more-menu-caret-inner"></div>
                     </div>
-                    <ul class="more-menu-items cont" tabindex="-1" role="menu" aria-labelledby="more-btn" aria-hidden="true">
+                    <ul class="more-menu-items cont  " tabindex="-1" role="menu" aria-labelledby="more-btn" aria-hidden="true">
                         <li class="more-menu-item" role="presentation">
                             <button type="button" class="more-menu-btn" role="menuitem">
-                                <h6>會員專區</h6>
+                                <h6 class="chi-font">會員專區</h6>
                             </button>
                         </li>
                         <li class="more-menu-item" role="presentation">
                             <button type="button" class="more-menu-btn" role="menuitem">
-                                <h6>購物車</h6>
+                                <h6 class="chi-font">購物車</h6>
                             </button>
                         </li>
                         <li class="more-menu-item" role="presentation">
                             <button type="button" class="more-menu-btn" role="menuitem">
-                                <h6>我的最愛</h6>
+                                <h6 class="chi-font">我的最愛</h6>
                             </button>
                         </li>
                         <li class="more-menu-item" role="presentation">
                             <button type="button" class="more-menu-btn" role="menuitem">
-                                <h6>購物紀錄</h6>
+                                <h6 class="chi-font">購物紀錄</h6>
                             </button>
                         </li>
                         <li class="more-menu-item" role="presentation">
                             <button type="button" class="more-menu-btn" role="menuitem">
 
-                                <h6>登出</h6>
+                                <h6 class="chi-font">登出</h6>
                             </button>
                         </li>
                     </ul>
                 </div>
             </li>
+            <!--<li>
+                <div class="sharethis-inline-share-buttons cont p-3"></div>
+            </li>-->
         </ul>
     </div>
     <!--    側欄/結束-->
     <!--            註冊跳出頁面--Start-->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal fade chi-font" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -113,17 +108,17 @@
                         &times;
                     </button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body  chi-font">
                     <form>
-                        <span style="color: #FE938C;">帳號</span><input style="max-width:85%;" class="form-control" type="search" placeholder="Account..." id="acc">
-                        <span style="color: #FE938C;">密碼</span><input style="max-width:85%;" class="form-control" type="search" placeholder="Password..." id="psd">
-                    </form>
+                        <span style="color: #FE938C;" class="chi-font">帳號</span><input style="max-width:85%;" class="form-control" type="search" placeholder="Account..." id="acc">
+                        <span style="color: #FE938C;" class="chi-font">密碼</span><input style="max-width:85%;" class="form-control" type="search" placeholder="Password..." id="psd">
+                 
                 </div>
                 <div class="modal-footer">
-                    <form>
-                        <button type="button" class="btn btn-default" data-dismiss="modal">關閉
+        
+                        <button type="button" class="btn btn-default chi-font" data-dismiss="modal">關閉
                         </button>
-                        <button type="submit" class="btn btn-primary">
+                        <button type="submit" class="btn btn-primary chi-font">
                             註冊完成
                         </button>
                     </form>
@@ -133,12 +128,12 @@
     </div>
     <!--            註冊跳出頁面--End-->
     <!-- Modal -->
-    <div class="modal fade" id="mySign" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal fade chi-font" id="mySign" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title" id="myModalLabel" style="color: #FE938C;">
+                    <h4 class="modal-title chi-font" id="myModalLabel" style="color: #FE938C;">
                         登入
                     </h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
@@ -147,25 +142,24 @@
                 </div>
                 <div class="modal-body">
                     <form>
-                        <div class="modal-body">
-                            <span style="color: #FE938C;">帳號</span><input style="max-width:85%;" class="form-control" type="search" placeholder="Account..." id="acc">
-                            <span style="color: #FE938C;">密碼</span><input style="max-width:85%;" class="form-control" type="search" placeholder="Password..." id="psd">
+                        <div class="modal-body chi-font">
+                            <span style="color: #FE938C;" class="chi-font">帳號</span><input style="max-width:85%;" class="form-control" type="search" placeholder="Account..." id="acc">
+                            <span style="color: #FE938C;" class="chi-font">密碼</span><input style="max-width:85%;" class="form-control" type="search" placeholder="Password..." id="psd">
                         </div>
-                        <button type="submit" class="btn btn-success btn-block">登入</button>
+                        <button type="submit" class="btn btn-success btn-block chi-font">登入</button>
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-danger login-cancel" data-dismiss="modal" id="close-login">取消</button>
-                    <p class="mt-3">不是會員？
-                        <a href="#" id="pop-reg">註冊</a></p>
+                    <button type="submit" class="btn btn-danger login-cancel chi-font" data-dismiss="modal" id="close-login">取消</button>
+                    <p class="mt-3 chi-font">不是會員？
+                        <a href="#" id="pop-reg" class="chi-font">註冊</a></p>
                 </div>
             </div>
         </div>
-    </div>
+    </div>  
 
-
- <!-- PRODUCT-AREA START -->
-            <div class="product-area" style="margin-top: 500px;">
+     <!-- PRODUCT-AREA START -->
+            <div class="product-area" style="margin-top:500px;">
                 <div class="container">
                     <!-- Section-title start -->
                     <div class="row">
@@ -177,7 +171,7 @@
                     </div>
                     <!-- Section-title end -->
                     <div class="row cus-row-30">
-                        <div class="product-slider arrow-left-right">
+                        <div class="product-slider arrow-left-right" style="width:100%;">
                             <!-- Single-product start -->
                             <div class="single-product col-lg-12">
                                 <div class="product-img">
@@ -330,16 +324,13 @@
                     </div>
                 </div>
             </div>
-            <!-- jquery latest version -->
+        <!-- product js start -->
         <script src="assets/js/jquery-1.12.0.min.js"></script>
-        <!-- jquery.meanmenu js -->
         <script src="assets/js/product_meanmenu.js"></script>
-        <!-- slick.min js -->
         <script src="assets/js/product_slick.js"></script>
-        <!-- wow js -->
         <script src="assets/js/product_wow.js"></script>
-        <!-- main js -->
         <script src="assets/js/product_main.js"></script>
+  <!-- product js end -->
 
 
             <script src="assets/js/classie.js"></script>

@@ -431,7 +431,7 @@ Common Style CSS
     visibility: visible;
 }
 .vbox-close {
-	background: #ff6a00 url("close.gif") no-repeat scroll 10px center !important;
+	background: #BBCCDD url("close.gif") no-repeat scroll 10px center !important;
 	color: #fff !important;
 	cursor: pointer;
 	display: block;
