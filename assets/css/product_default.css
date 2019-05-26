@@ -29,40 +29,6 @@
 }
 
 /* -----------------------------------------------------
-  Title
------------------------------------------------------ */
-.title-1 {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 28px;
-}
-.title-border {
-    position: relative;
-}
-.title-border::before {
-    background: #eee none repeat scroll 0 0;
-    bottom: 0;
-    content: "";
-    height: 2px;
-  left: 0;
-    position: absolute;
-    width: 50px;
-}
-.section-title h2 {
-  color: #444;
-  font-size: 30px;
-  font-weight: 900;
-  line-height: 22px;
-  margin-bottom: 25px;
-  padding-bottom: 22px;
-}
-.section-title .title-border::before {
-  background: #c87065 none repeat scroll 0 0;
-  margin: 0 auto;
-  right: 0;
-}
-
-/* -----------------------------------------------------
   Slick slider Next - Prev
 ----------------------------------------------------- */
 /* Slick-Arrow */
@@ -88,26 +54,6 @@
 .arrow-left-right .slick-next.slick-arrow {
   left: auto;
   right: -30px;
-}
-/* Slick-Dots */
-.dots-bottom-right .slick-dots {
-    bottom: 20px;
-    position: absolute;
-    right: 45px;
-}
-.dots-bottom-right .slick-dots li {
-  background: #ccc none repeat scroll 0 0;
-  border-radius: 50%;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 0;
-  height: 8px;
-  line-height: 0;
-  margin-left: 10px;
-  width: 8px;
-}
-.dots-bottom-right .slick-dots li.slick-active {
-    background: #C8A165 none repeat scroll 0 0;
 }
 
 
