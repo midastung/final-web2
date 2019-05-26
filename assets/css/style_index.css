@@ -1,8 +1,14 @@
 .chi-font{
     font-family: 'Noto Sans TC', sans-serif;
 }
+.hot-product{
+    margin-top: 8%;
+}
+.index-color{
+   background-color:rgb(224,220,158);
+}
 .body_color{
-    background-color:#fff;
+    background-color:rgb(224,220,158);
 }
 /*幻燈片 CSS*/
 .carousel .carousel-item {

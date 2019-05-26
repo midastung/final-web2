@@ -23,11 +23,7 @@ img {max-width:100%;height:auto}
 p {
   margin:0 0 15px;
 }
-h1, h2, h3, h4, h5, h6 {
-  color: #434343;
-  font-family: 'Lato', sans-serif;
-  margin: 0 0 10px;
-}
+
 a{
   text-decoration:none;
   color: #434343;
@@ -51,13 +47,7 @@ margin: 0;
 padding: 0
 }
 .clear{clear:both}
-body {
-  color: #666;
-  font-family: "Lato",sans-serif;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 20px;
-}
+
 ::-moz-selection {
     background: #b3d4fc;
     text-shadow: none;
@@ -98,10 +88,11 @@ body {
   visibility:hidden;
   opacity: 0;
   transition: all 0.5s ease 0s;
-  width: calc(100% - 40px);
+  width: 30%;
 }
 .product-action a {
   color: #666666;
+ margin-left:15%;
   float: left;
   font-size: 16px;
   height: 40px;
@@ -115,7 +106,7 @@ body {
   height: 16px;
   margin-top: -8px;
   position: absolute;
-  right: 0;
+  right: -30%;
   top: 50%;
   width: 2px;
 }
