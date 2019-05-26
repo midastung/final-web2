@@ -193,7 +193,7 @@
         <img src="assets/images/icon/bg-image2.png" class="img-fluid" style="width:130%;">
     </div>
 
-    <div class="bg-white container-fluid  mb-5">
+    <div class="bg-white container-fluid">
         <div class="row">
             <div class="col-md-4 wow fadeInLeft" data-wow-delay="1.0s">
                 <img src="assets/images/icon/chef1.png" style="max-width:60%;" class="cont">
@@ -219,6 +219,7 @@
         </div>
     </div>
 
+    <div class="container-fluid bg-white p-4" ></div>
     <!--廚師結束-->
     <section id="features" class="parallax-section">
         <div class="container-fluid">
