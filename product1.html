@@ -9,11 +9,13 @@
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style_index.css">
     <!--product start-->
     <link rel="stylesheet" href="assets/css/product_slick.css">
     <link rel="stylesheet" href="assets/css/product-iconic-font.css">
     <link rel="stylesheet" href="assets/css/product_default.css">
     <link rel="stylesheet" href="assets/css/product_style.css">
+     <link rel="stylesheet" href="assets/css/product.css">
     <!--product end-->
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
@@ -29,7 +31,7 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="">
     <!--    側欄/開始-->
     <div class="">
         <ul id="gn-menu" class="gn-menu-main" style="z-index:100;">
@@ -42,6 +44,7 @@
                                 <i class="fas fa-search p-4"></i>
                                 <input placeholder="Search" type="search" class="gn-search p-0">
                             </li>
+                            <li class="gn-search-item"><a href="index.html"><i class="fas fa-home p-4"></i>Home</a></li>
                             <li class="gn-search-item"><a href="product1.html"><i class="fas fa-shopping-basket p-4"></i>Product</a></li>
                             <li class="gn-search-item"><a href="#"><i class="fas fa-users p-4"></i>About Us</a></li>
                             <li class="gn-search-item"><a href="#"><i class="far fa-question-circle p-4"></i><span class="p-1">FAQ</span></a></li>
@@ -160,16 +163,18 @@
         </div>
     </div>
     <!--    側邊欄/結束-->
-   
+    <div class="mt-5">
+        <img src="assets/images/post4.png" class="img-fluid">
+    </div>
 
     <!-- PRODUCT-AREA START -->
-    <div class="product-area" style="margin-top:500px;">
+    <div class="product-area" style="margin-top:50px;">
         <div class="container">
             <!-- Section-title start -->
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title text-center">
-                        <h2 class="title-border">Featured Products</h2>
+                        <h2 class="title-border">商品總覽</h2>
                     </div>
                 </div>
             </div>
@@ -183,8 +188,7 @@
                             <a href="single-product.html"><img src="assets/images/dish/onigiri.jpg" alt="" /></a>
                             <div class="product-action clearfix">
                                 <a href="#" data-toggle="tooltip" data-placement="top" title="Wishlist"><i class="zmdi zmdi-favorite-outline"></i></a>
-                                <a href="#" data-toggle="modal" data-target="#productModal" title="Quick View"><i class="zmdi zmdi-zoom-in"></i></a>
-                                <a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="zmdi zmdi-refresh"></i></a>
+    
                                 <a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="zmdi zmdi-shopping-cart-plus"></i></a>
                             </div>
                         </div>
@@ -213,8 +217,7 @@
                             <a href="single-product.html"><img src="assets/images/dish/ramen.jpg" alt="" /></a>
                             <div class="product-action clearfix">
                                 <a href="#" data-toggle="tooltip" data-placement="top" title="Wishlist"><i class="zmdi zmdi-favorite-outline"></i></a>
-                                <a href="#" data-toggle="modal" data-target="#productModal" title="Quick View"><i class="zmdi zmdi-zoom-in"></i></a>
-                                <a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="zmdi zmdi-refresh"></i></a>
+                             
                                 <a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="zmdi zmdi-shopping-cart-plus"></i></a>
                             </div>
                         </div>
@@ -242,8 +245,7 @@
                             <a href="single-product.html"><img src="assets/images/dish/oniku.jpg" alt="" /></a>
                             <div class="product-action clearfix">
                                 <a href="#" data-toggle="tooltip" data-placement="top" title="Wishlist"><i class="zmdi zmdi-favorite-outline"></i></a>
-                                <a href="#" data-toggle="modal" data-target="#productModal" title="Quick View"><i class="zmdi zmdi-zoom-in"></i></a>
-                                <a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="zmdi zmdi-refresh"></i></a>
+                              
                                 <a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="zmdi zmdi-shopping-cart-plus"></i></a>
                             </div>
                         </div>
@@ -271,8 +273,7 @@
                             <a href="single-product.html"><img src="assets/images/dish/okayu.jpg" alt="" /></a>
                             <div class="product-action clearfix">
                                 <a href="#" data-toggle="tooltip" data-placement="top" title="Wishlist"><i class="zmdi zmdi-favorite-outline"></i></a>
-                                <a href="#" data-toggle="modal" data-target="#productModal" title="Quick View"><i class="zmdi zmdi-zoom-in"></i></a>
-                                <a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="zmdi zmdi-refresh"></i></a>
+                             
                                 <a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="zmdi zmdi-shopping-cart-plus"></i></a>
                             </div>
                         </div>
@@ -301,8 +302,7 @@
                             <a href="single-product.html"><img src="assets/images/dish/oden.jpg" alt="" /></a>
                             <div class="product-action clearfix">
                                 <a href="#" data-toggle="tooltip" data-placement="top" title="Wishlist"><i class="zmdi zmdi-favorite-outline"></i></a>
-                                <a href="#" data-toggle="modal" data-target="#productModal" title="Quick View"><i class="zmdi zmdi-zoom-in"></i></a>
-                                <a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="zmdi zmdi-refresh"></i></a>
+                         
                                 <a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="zmdi zmdi-shopping-cart-plus"></i></a>
                             </div>
                         </div>
