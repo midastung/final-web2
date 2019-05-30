@@ -1,0 +1,37 @@
+.confirm_cont
+{
+font-family: 標楷體;
+width: 60%;
+height: 100%;
+background-color: #FFFFFF;
+margin-top: 100px;
+margin-left: auto;
+margin-right: auto;
+box-shadow: 0 0 15px 5px gray;
+padding-top: 60px;
+padding-bottom: 60px;
+margin-bottom: 20px;
+}
+.intro_cont
+{
+width: 80%;
+margin-top: -10px;
+line-height: 15px;
+margin-left: auto;
+margin-right: auto;
+}
+.intro_h
+{
+border: 1px #AAAAAA solid;
+width: 80%;
+font-weight: bold;
+text-align: center;
+margin-top: 50px;
+margin-left: auto;
+margin-right: auto;
+}
+.order_inf
+{
+margin-left: 150px;
+line-height: 15px;
+}

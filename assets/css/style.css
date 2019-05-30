@@ -131,81 +131,6 @@ label {
     padding: 0.2em 0;
 }
 
-/*************************
-         button
-*************************/
-.btn {
-	display: inline-block;
-	font-weight: 400;
-	line-height: 1;
-	text-align: center;
-	white-space: nowrap;
-	vertical-align: middle;
-	cursor: pointer;
-	border: 1px solid transparent;
-	padding: 7px 14px;
-	font-size: 14px;
-	border-radius: 0;
-}
-.btn-primary {
-	box-shadow: 2px 2px 4px 0 rgba(0,0,0,.2);
-	text-transform: uppercase;
-	font-weight: 600;
-	padding: 10px 18px;
-}
-.btn-primary:hover{
-    border-color: transparent;
-}
-.btn-primary.focus,
-.btn-primary:focus{
-    box-shadow: none;
-    
-}
-/*************************
-       social-icon
-*************************/
-.social-icon {
-	display: inline-block;
-}
-.social-icon > li {
-	display: inline-block;
-	list-style: none;
-}
-.social-icon > li > a {
-	height: 36px;
-	width: 36px;
-	margin-right: 8px;
-	margin-bottom: 0;
-    font-size: 16px;
-	text-align: center;
-	display: inline-block;
-	line-height: 36px;
-	background: transparent;
-	color: #333;
-	border: 1px solid #dddddd;
-	border-radius: 100%;
-	cursor: pointer;
-}
-.social-icon > li > a:hover {
-	background: #008bff;
-	border-color: #008bff;
-    color: #fff;
-}
-.footer-middle-area.footer-style-2 .social-icon > li > a:hover {
-	background: #613f99;
-	border-color: #613f99;
-    color: #fff;
-}
-.footer-middle-area.footer-style-3 .social-icon > li > a:hover {
-	background: #333;
-	border-color: #333;
-    color: #fff;
-}
-.footer-middle-area.footer-style-4 .social-icon > li > a:hover {
-	background: #1e56a0;
-	border-color: #1e56a0;
-    color: #fff;
-}
 
 /*************************
         Input
@@ -844,13 +769,8 @@ Common Style CSS
 }
 .pro-comments-rating > li {
 	list-style: none;
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-ms-flex-wrap: wrap;
 	    flex-wrap: wrap;
-	-webkit-box-pack: justify;
-	    -ms-flex-pack: justify;
 	        justify-content: space-between;
 }
 .review-form label {
@@ -936,4 +856,36 @@ input.qtyminus {
   height: 32px;
   border: 1px solid #aaa;
 border-right: none;
+}
+.product_comment
+{
+	background-color: #FFF8DC;
+	height: 120px;
+}
+.comment_str
+{
+	margin-top: 15px;
+	margin-left:15px;
+}
+.level_txt
+{
+	font-size: 35px;
+}
+.comment_btn
+{
+	margin:45px 0px 0px 10px;
+	background-color: #FFFFFF;
+	width: 100px;
+	border:1px solid #DDDDDD;
+}
+.comment_btn:focus
+{
+	border:1px solid #FF8C00;
+}
+
+.tabcontent {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: none;
+  padding: 6px 12px;
 }

@@ -42,9 +42,43 @@
                     </div><!-- /gn-scroller -->
                 </nav>
             </li>
-            <li><a class="codrops-icon codrops-icon-prev" href="#" data-toggle="modal" data-target="#mySign" id="myBtn">Sign in</a></li>
+
+            <%
+
+        String acc=null;
+        String pas=null;
+      
+        try{
+                Cookie getC[]=request.getCookies();
+                for(int i=0;i<getC.length;i++)
+                {
+                    if(getC[i].getName().equals("getin"))
+                    {
+                        String[] sp=getC[i].getValue().split("-");
+                        acc=sp[0];
+                        pas=sp[1];
+                    }
+                }
+        
+            }
+        catch(Exception e)
+        {
+
+        
+        }
+
+    try{    
+        if(acc==null||acc.equals("")||pas==null||pas.equals(""))
+        {
+                    out.println("<li>");
+                    out.println("<a class='codrops-icon codrops-icon-prev' href='#'' data-toggle='modal' data-target='#mySign' id='myBtn'>"+"Sign in"+"</a>");
+                    out.println("</li>");
+    %>
+            
             <li><a class="codrops-icon codrops-icon-prev" href="#" data-toggle="modal" data-target="#myModal"><span>Sign up</span></a></li>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
             <li class="more p-1 chi-font dropdown">
                 <a href="#" class="dropdown-toggle " data-toggle="dropdown">Dropdown <b class="caret-up"></b></a>
                 <ul class="dropdown-menu">
@@ -66,8 +100,62 @@
                 </ul>
             </li>
             <!--<li>
+=======
+=======
+>>>>>>> 2c2fc6d325d11d49fa7e7db831b0a7e9e58dfe57
+            <%
+                          
+                }   
+                else 
+                {
+                    out.println("<li class='more p-1 chi-font'>");
+                    out.println("<button id='more-btn' class='more-btn mr-5'>");
+                    out.println("<h6 class='cont'>"+"您好，Midas"+"</h6>");
+                    out.println("</button>");
+                    out.println("<div class='more-menu'>");
+                    out.println("<div class='more-menu-caret'>");
+                    out.println("<div class='more-menu-caret-outer'>");
+                    out.println("</div>");
+                    out.println("<div class='more-menu-caret-inner'>");
+                    out.println("</div>");
+                    out.println("</div>");
+                    out.println("<ul class='more-menu-items cont  'tabindex='-1' role='menu' aria-labelledby='more-btn' aria-hidden='true'>");            
+                    out.println("<li class='more-menu-item' role='presentation'>");
+                    out.println("<button type='button' class='more-menu-btn' role='menuitem'>");
+                    out.println("<h6 class='chi-font'>"+"會員專區"+"</h6>");    
+                    out.println("</button>");    
+                    out.println("</li>"); 
+                    out.println("<li class='more-menu-item' role='presentation'>");
+                    out.println("<button type='button' class='more-menu-btn' role='menuitem'>");
+                    out.println("<h6 class='chi-font'>"+"購物車"+"</h6>");      
+                    out.println("</button>");         
+                    out.println("</li>");      
+                    out.println("<li class='more-menu-item' role='presentation'>");
+                    out.println("<button type='button' class='more-menu-btn' role='menuitem'>"); 
+                    out.println("<h6 class='chi-font'>"+"我的最愛"+"</h6>");
+                    out.println("</button>");
+                    out.println("</li>");
+                    out.println("<li class='more-menu-item' role='presentation'>");
+                    out.println("<button type='button' class='more-menu-btn' role='menuitem'>");
+                    out.println("<h6 class='chi-font'>"+"購物紀錄"+"</h6>");       
+                    out.println("</button>");
+                    out.println("</li>");
+                    out.println("<li class='more-menu-item' role='presentation'>");
+                    out.println("<button type='button' class='more-menu-btn' role='menuitem'>");   
+                    out.println("<h6 class='chi-font'>"+"登出"+"</h6>");       
+                    out.println("</button>");
+                    out.println("</li>");
+                    out.println("</ul>");
+                    out.println("</div>");
+                    out.println("</li>");
+    %>
+            <li>
+<<<<<<< HEAD
+>>>>>>> 2c2fc6d325d11d49fa7e7db831b0a7e9e58dfe57
+=======
+>>>>>>> 2c2fc6d325d11d49fa7e7db831b0a7e9e58dfe57
                 <div class="sharethis-inline-share-buttons cont p-3"></div>
-            </li>-->
+            </li>
         </ul>
     </div>
     <!--    側欄/結束-->

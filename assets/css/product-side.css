@@ -90,11 +90,9 @@ ul.nacc li {
 }
 
 ul.nacc li.active {
-    -webkit-transition-delay: .3s;
     transition-delay: .3s;
     z-index: 2;
     opacity: 1;
-    -webkit-transform: translateX(0px);
     transform: translateX(0px);
 }
 
