@@ -187,90 +187,6 @@
 
         </div>
     </div>
-
-    <!--    熱門商品/結束-->
-
-    <!--<div style="background-color:rgb(224,220,158);">
-        <div class=" hot_product ">
-            <div class="row mr-5" style="margin-left:-4%;margin-top: -5%;">
-                <div class="col-md-3 cont">
-                    <img src="assets/images/icon/TP6.png" style="width:50%;margin-left:50%;">
-                </div>
-                <div class="col-md-8 chi-font" style="margin-right:8%;">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class='shop-card wow fadeInDown' data-wow-delay="0.2s">
-                                <div class="title chi-font">
-                                    垂涎欲滴的餃子
-                                </div>
-                                <div class="desc  chi-font">
-                                    阿霖師限定
-                                </div>
-                                <div class="product">
-                                    <img src="assets/images/dish/gyouza.jpg" />
-                                </div>
-                                <div class='cta'>
-                                    <div class="price">$90</div>
-                                    <button class="button">Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class='shop-card wow fadeInDown' data-wow-delay="0.3s">
-                                <div class="title chi-font">
-                                    垂涎欲滴的餃子
-                                </div>
-                                <div class="desc chi-font">
-                                    阿霖師限定
-                                </div>
-                                <div class="product">
-                                    <img src="assets/images/dish/gyouza.jpg" />
-                                </div>
-                                <div class='cta'>
-                                    <div class="price">$90</div>
-                                    <button class="button">Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class='shop-card wow fadeInDown' data-wow-delay="0.4s">
-                                <div class="title chi-font">
-                                    垂涎欲滴的餃子
-                                </div>
-                                <div class="desc chi-font">
-                                    阿霖師限定
-                                </div>
-                                <div class="product">
-                                    <img src="assets/images/dish/gyouza.jpg" />
-                                </div>
-                                <div class='cta'>
-                                    <div class="price">$90</div>
-                                    <button class="button">Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class='shop-card wow fadeInDown' data-wow-delay="0.5s">
-                                <div class="title chi-font">
-                                    垂涎欲滴的餃子
-                                </div>
-                                <div class="desc chi-font">
-                                    阿霖師限定
-                                </div>
-                                <div class="product">
-                                    <img src="assets/images/dish/gyouza.jpg" />
-                                </div>
-                                <div class='cta'>
-                                    <div class="price">$90</div>
-                                    <button class="button">Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
--->
-
     <!--熱門商品/結束-->
     <!--廚師開始-->
     <div>
@@ -480,7 +396,7 @@
                             <h1 class="color-white">Say hello..</h1>
                             <p class="color-white">Whether you are an investor, a possible partner or a stranger that wants to test the app, feel free to reach us.</p>
                         </div>
-
+                        <!--訪客回饋表單/開始-->
                         <div id="contact-form">
                             <form action="mailto:midas112800@gmail.com" method="post" enctype="text/plain">
                                 <div class="wow fadeInUp" data-wow-delay="1s">
@@ -494,7 +410,7 @@
                                 </div>
                             </form>
                         </div>
-
+                        <!--訪客回饋表單/結束-->
                     </div>
                 </div>
 
