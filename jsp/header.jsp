@@ -77,62 +77,92 @@
             
             <li><a class="codrops-icon codrops-icon-prev" href="#" data-toggle="modal" data-target="#myModal"><span>Sign up</span></a></li>
 
-            <%
-                          
-                }   
-                else 
+            <li class="more p-1 chi-font dropdown">
+<%
+    }
+            else
+        {       session.setAttribute("in",acc);//the memory of the logged in account
+                sql="SELECT * FROM member WHERE m_account='"+acc+"' and m_password='"+pas+"'";
+                ResultSet tmp=con.createStatement().executeQuery(sql);
+                tmp.next();
+                if(tmp.getString("m_level").equals("1"))
                 {
-                    out.println("<li class='more p-1 chi-font'>");
-                    out.println("<button id='more-btn' class='more-btn mr-5'>");
-                    out.println("<h6 class='cont'>"+"歡迎，"+tmp.getString("m_firstname")+"</h6>");
-                    out.println("</button>");
-                    out.println("<div class='more-menu'>");
-                    out.println("<div class='more-menu-caret'>");
-                    out.println("<div class='more-menu-caret-outer'>");
-                    out.println("</div>");
-                    out.println("<div class='more-menu-caret-inner'>");
-                    out.println("</div>");
-                    out.println("</div>");
-                    out.println("<ul class='more-menu-items cont  'tabindex='-1' role='menu' aria-labelledby='more-btn' aria-hidden='true'>");            
-                    out.println("<li class='more-menu-item' role='presentation'>");
-                    out.println("<button type='button' class='more-menu-btn' role='menuitem'>");
-                    out.println("<h6 class='chi-font'>"+"會員專區"+"</h6>");    
-                    out.println("</button>");    
-                    out.println("</li>"); 
-                    out.println("<li class='more-menu-item' role='presentation'>");
-                    out.println("<button type='button' class='more-menu-btn' role='menuitem'>");
-                    out.println("<h6 class='chi-font'>"+"購物車"+"</h6>");      
-                    out.println("</button>");         
-                    out.println("</li>");      
-                    out.println("<li class='more-menu-item' role='presentation'>");
-                    out.println("<button type='button' class='more-menu-btn' role='menuitem'>"); 
-                    out.println("<h6 class='chi-font'>"+"我的最愛"+"</h6>");
-                    out.println("</button>");
-                    out.println("</li>");
-                    out.println("<li class='more-menu-item' role='presentation'>");
-                    out.println("<button type='button' class='more-menu-btn' role='menuitem'>");
-                    out.println("<h6 class='chi-font'>"+"購物紀錄"+"</h6>");       
-                    out.println("</button>");
-                    out.println("</li>");
-                    out.println("<li class='more-menu-item' role='presentation'>");
-                    out.println("<button type='button' class='more-menu-btn' role='menuitem'>");   
-                    out.println("<h6 class='chi-font'>"+"登出"+"</h6>");       
-                    out.println("</button>");
-                    out.println("</li>");
-                    out.println("</ul>");
-                    out.println("</div>");
-                    out.println("</li>");
-                }
-                else 
+                     out.println("<div id='funtion_login'>");
+                     out.println("<ul class='drop-down-menu_2'>");
+                     out.println("<li>");
+                     out.println("<span class='hint--bottom' data-hint='管理員資料'>");
+                     out.println("<a href='member.jsp' style='text-decoration:none;'>"+"歡迎，"+tmp.getString("m_name"));
+                     out.println("</span>");
+                     out.println("</a>");
+                     out.println("</li>");
+                     out.println("</ul>");
+                     out.println("</div>");
+                
+%>
+                <ul class="dropdown-menu">
+                    <li class="p-3 cont btn-li">
+                        <a href="member-area.html" style="text-decoration: none;" class="text-white"><h6 class="chi-font btn-li">後台管理</h6></a>
+                    </li>
+                    <li class="p-3 cont btn-li">
+                        <a href="car.html" style="text-decoration: none;" class="text-white"><h6 class="chi-font btn-li">登出</h6></a>
+                    </li>
+                </ul>
+<%
+            }
+    else 
                 {
-                    out.println("<li class='more p-1 chi-font'>");
-                    out.println("<button id='more-btn' class='more-btn mr-5'>");
-                    out.println("<h6 class='cont'>"+"請登入會員"+"</h6>");
-                    out.println("</button>");
-                    out.println("</li>");
+                    out.println("<a href='#' class='dropdown-toggle' data-toggle='dropdown'><span style='font-size: 20px;position:relative;top:-10%;'>"+"歡迎，"+tmp.getString("m_name"));
+                    out.println("</span>");
+                    out.println("</a>");
+                
+%>
+                <ul class="dropdown-menu">
+                    <li class="p-3 cont btn-li">
+                        <a href="member-area.html" style="text-decoration: none;" class="text-white"><h6 class="chi-font btn-li">會員專區</h6></a>
+                    </li>
+                    <li class="p-3 cont btn-li">
+                        <a href="car.html" style="text-decoration: none;" class="text-white"><h6 class="chi-font btn-li">購物車</h6></a>
+                    </li>
+                    <li class="p-3 cont btn-li">
+                        <a href="member-area.html" style="text-decoration: none;" class="text-white"><h6 class="chi-font btn-li">我的最愛</h6></a>
+                    </li>
+                    <li class="p-3 cont btn-li">
+                        <a href="member-area.html" style="text-decoration: none;" class="text-white"><h6 class="chi-font btn-li">購物紀錄</h6></a>
+                    </li>
+                    <li class="p-3 cont btn-li">
+                        <a href="member-area.html" style="text-decoration: none;" class="text-white"><h6 class="chi-font btn-li">登出</h6></a>
+                    </li>
+                </ul>
+            </li>
+<%
+}
+        }
+    }
+    catch(Exception e)
+    {
+        
+        //銷毁session：
+     
+        //清除cookie：
+        try{
+                Cookie getC[]=request.getCookies();
+                for(int i=0;i<getC.length;i++)
+                {
+                    if(getC[i].getName().equals("getin"))
+                    {
+                        getC[i].setMaxAge(0);
+                        response.addCookie(getC[i]);
+                        response.sendRedirect("index.jsp");
+                    }
                 }
+            }
+        catch(Exception err)
+        {
+            response.sendRedirect("index.jsp");
+        }
+    }
+%> 
 
-    %>
             <li>
                 <div class="sharethis-inline-share-buttons cont p-3"></div>
             </li>
@@ -182,10 +212,10 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form action="login.jsp" method="POST">
                         <div class="modal-body chi-font">
-                            <span style="color: #FE938C;" class="chi-font">帳號</span><input style="max-width:85%;" class="form-control" type="search" placeholder="Account..." id="acc">
-                            <span style="color: #FE938C;" class="chi-font">密碼</span><input style="max-width:85%;" class="form-control" type="search" placeholder="Password..." id="psd">
+                            <span style="color: #FE938C;" class="chi-font">帳號</span><input style="max-width:85%;" class="form-control" type="search" placeholder="Account..." name="acc">
+                            <span style="color: #FE938C;" class="chi-font">密碼</span><input style="max-width:85%;" class="form-control" type="search" placeholder="Password..." name="pas">
                         </div>
                         <button type="submit" class="btn btn-success btn-block chi-font">登入</button>
                     </form>
@@ -232,6 +262,22 @@
 
             </script>
 
+            <script>
+        $(function(){
+        $(".dropdown").hover(            
+                function() {
+                    $('.dropdown-menu', this).stop( true, true ).fadeIn("fast");
+                    $(this).toggleClass('open');
+                    $('b', this).toggleClass("caret caret-up");                
+                },
+                function() {
+                    $('.dropdown-menu', this).stop( true, true ).fadeOut("fast");
+                    $(this).toggleClass('open');
+                    $('b', this).toggleClass("caret caret-up");                
+                });
+        });
+
+    </script>
 </body>
 
 </html>
