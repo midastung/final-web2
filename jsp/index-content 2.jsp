@@ -6,21 +6,17 @@
 
 <head>
     <title>test</title>
-    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/component.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/style_index.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/slick.css">
-    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="../assets/css/animate.css" />
     <!--product start-->
-    <link rel="stylesheet" href="assets/css/product_slick.css">
-    <link rel="stylesheet" href="assets/css/product-iconic-font.css">
-    <link rel="stylesheet" href="assets/css/product_default.css">
-    <link rel="stylesheet" href="assets/css/product_style.css">
+    <link rel="stylesheet" href="../assets/css/product_slick.css">
+    <link rel="stylesheet" href="../assets/css/product-iconic-font.css">
+    <link rel="stylesheet" href="../assets/css/product_default.css">
+    <link rel="stylesheet" href="../assets/css/product_style.css">
     <!--product end-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <!--    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">-->
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
 
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:700&display=swap" rel="stylesheet">
 

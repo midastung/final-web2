@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <title>test</title>
-    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    
     <link rel="stylesheet" type="text/css" href="assets/css/component.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/style_index.css">
     <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
