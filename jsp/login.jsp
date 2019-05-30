@@ -19,13 +19,13 @@ else
 		Cookie ck=new Cookie("getin",tmp.getString("m_account")+"-"+tmp.getString("m_password"));
 		ck.setMaxAge(60*60*24*7);
 		response.addCookie(ck);
-		response.setHeader("refresh","0;URL=realindex.jsp") ;
+		response.setHeader("refresh","0;URL=index.jsp") ;
 	}
      else
 	 {
 		out.write("<script language=javascript>alert('帳號或密碼輸入錯誤');</script>");
 		
-		response.setHeader("refresh","0;URL=realindex.jsp") ;
+		response.setHeader("refresh","0;URL=index.jsp") ;
      }
 	 
 	}

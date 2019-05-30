@@ -19,7 +19,7 @@
 		{
 			getC[i].setMaxAge(0);
 			response.addCookie(getC[i]);
-			response.sendRedirect("realindex.jsp");
+			response.sendRedirect("index.jsp");
 		}
 	}
 }
