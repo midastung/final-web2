@@ -43,7 +43,7 @@
                 </nav>
             </li>
 
-            <%
+<%
 
         String acc=null;
         String pas=null;
@@ -73,7 +73,7 @@
                     out.println("<li>");
                     out.println("<a class='codrops-icon codrops-icon-prev' href='#'' data-toggle='modal' data-target='#mySign' id='myBtn'>"+"Sign in"+"</a>");
                     out.println("</li>");
-    %>
+%>
             
             <li><a class="codrops-icon codrops-icon-prev" href="#" data-toggle="modal" data-target="#myModal"><span>Sign up</span></a></li>
 
@@ -84,7 +84,7 @@
                 {
                     out.println("<li class='more p-1 chi-font'>");
                     out.println("<button id='more-btn' class='more-btn mr-5'>");
-                    out.println("<h6 class='cont'>"+"您好，Midas"+"</h6>");
+                    out.println("<h6 class='cont'>"+"歡迎，"+tmp.getString("m_firstname")+"</h6>");
                     out.println("</button>");
                     out.println("<div class='more-menu'>");
                     out.println("<div class='more-menu-caret'>");
@@ -122,6 +122,16 @@
                     out.println("</ul>");
                     out.println("</div>");
                     out.println("</li>");
+                }
+                else 
+                {
+                    out.println("<li class='more p-1 chi-font'>");
+                    out.println("<button id='more-btn' class='more-btn mr-5'>");
+                    out.println("<h6 class='cont'>"+"請登入會員"+"</h6>");
+                    out.println("</button>");
+                    out.println("</li>");
+                }
+
     %>
             <li>
                 <div class="sharethis-inline-share-buttons cont p-3"></div>
