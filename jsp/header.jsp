@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
     <link rel="stylesheet" type="text/css" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/animate.css" />
-
+   
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <!--    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">-->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
@@ -77,32 +77,6 @@
             
             <li><a class="codrops-icon codrops-icon-prev" href="#" data-toggle="modal" data-target="#myModal"><span>Sign up</span></a></li>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <li class="more p-1 chi-font dropdown">
-                <a href="#" class="dropdown-toggle " data-toggle="dropdown">Dropdown <b class="caret-up"></b></a>
-                <ul class="dropdown-menu">
-                    <li class="p-3 cont btn-li">
-                        <a href="member-area.html" style="text-decoration: none;" class="text-white"><h6 class="chi-font btn-li">會員專區</h6></a>
-                    </li>
-                    <li class="p-3 cont btn-li">
-                        <a href="car.html" style="text-decoration: none;" class="text-white"><h6 class="chi-font btn-li">購物車</h6></a>
-                    </li>
-                    <li class="p-3 cont btn-li">
-                        <a href="member-area.html" style="text-decoration: none;" class="text-white"><h6 class="chi-font btn-li">我的最愛</h6></a>
-                    </li>
-                    <li class="p-3 cont btn-li">
-                        <a href="member-area.html" style="text-decoration: none;" class="text-white"><h6 class="chi-font btn-li">購物紀錄</h6></a>
-                    </li>
-                    <li class="p-3 cont btn-li">
-                        <a href="member-area.html" style="text-decoration: none;" class="text-white"><h6 class="chi-font btn-li">登出</h6></a>
-                    </li>
-                </ul>
-            </li>
-            <!--<li>
-=======
-=======
->>>>>>> 2c2fc6d325d11d49fa7e7db831b0a7e9e58dfe57
             <%
                           
                 }   
@@ -150,10 +124,6 @@
                     out.println("</li>");
     %>
             <li>
-<<<<<<< HEAD
->>>>>>> 2c2fc6d325d11d49fa7e7db831b0a7e9e58dfe57
-=======
->>>>>>> 2c2fc6d325d11d49fa7e7db831b0a7e9e58dfe57
                 <div class="sharethis-inline-share-buttons cont p-3"></div>
             </li>
         </ul>
@@ -222,47 +192,35 @@
 
 
 
-    <script src="assets/js/classie.js"></script>
-    <script src="assets/js/gnmenu.js"></script>
-    <script src="assets/js/modernizr.custom.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+            <script src="assets/js/classie.js"></script>
+            <script src="assets/js/gnmenu.js"></script>
+            <script src="assets/js/modernizr.custom.js"></script>
+            <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+            <script src="assets/js/bootstrap.min.js"></script>
+            <script src="assets/js/bootstrap.bundle.min.js"></script>
 
-    <script src="assets/js/wow.min.js"></script>
-    <script>
-        new gnMenu(document.getElementById('gn-menu'));
-    </script>
+            <script src="assets/js/wow.min.js"></script>
+            <script>
+                new gnMenu(document.getElementById('gn-menu'));
 
-    <script>
-        $(document).ready(function() {
-            $("#myBtn").click(function() {
-                $("#mySign").modal();
-            });
-        });
-    </script>
-    <!--登入跳進註冊 -->
-    <script>
-        $("#pop-reg").on('click', function() {
-            $("#close-login").trigger("click");
-            $('#myModal').modal();
-        });
-    </script>
-    <script>
-        $(function() {
-            $(".dropdown").hover(
-                function() {
-                    $('.dropdown-menu', this).stop(true, true).fadeIn("fast");
-                    $(this).toggleClass('open');
-                    $('b', this).toggleClass("caret caret-up");
-                },
-                function() {
-                    $('.dropdown-menu', this).stop(true, true).fadeOut("fast");
-                    $(this).toggleClass('open');
-                    $('b', this).toggleClass("caret caret-up");
+            </script>
+
+            <script>
+                $(document).ready(function() {
+                    $("#myBtn").click(function() {
+                        $("#mySign").modal();
+                    });
                 });
-        });
-    </script>
+
+            </script>
+            <!--登入跳進註冊 -->
+            <script>
+                $("#pop-reg").on('click', function() {
+                    $("#close-login").trigger("click");
+                    $('#myModal').modal();
+                });
+
+            </script>
 
 </body>
 
