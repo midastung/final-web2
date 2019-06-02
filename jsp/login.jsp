@@ -25,7 +25,7 @@ else
 	 {
 		out.write("<script language=javascript>alert('帳號或密碼輸入錯誤');</script>");
 		
-		response.setHeader("refresh","0;URL=realindex.jsp") ;
+		response.setHeader("refresh","0;URL=index.jsp") ;
      }
 	 
 	}
