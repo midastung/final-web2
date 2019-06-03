@@ -31,8 +31,8 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">會員名稱</span>
                             </div>
-                            <input type="text" class="form-control" placeholder="名字" value="Midas">
-                            <input type="text" class="form-control" placeholder="姓氏" value="Tung">
+                            <input type="text" class="form-control" placeholder="名字" value="ym">
+                            <input type="text" class="form-control" placeholder="姓氏" value="chen">
                         </div>
 
                         <div class="input-group mb-3">
