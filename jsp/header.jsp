@@ -2,6 +2,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <%@ page import = "java.sql.*, java.util.*" %>
 <%@ page language="java" contentType="text/html; charset=utf-8"%>
+<%@include file="getDB.jsp" %>
 <html>
 
 <head>
@@ -45,9 +46,9 @@
 
 <%
 
-        String acc=null;
-        String pas=null;
-      
+        String acc="";
+        String pas="";
+      //session.setAttribute("in",acc);the memory of the logged in account
         try{
                 Cookie getC[]=request.getCookies();
                 for(int i=0;i<getC.length;i++)
@@ -81,10 +82,9 @@
 <%
     }
             else
-        {       session.setAttribute("in",acc);//the memory of the logged in account
-                sql="SELECT * FROM member WHERE m_account='"+acc+"' and m_password='"+pas+"'";
+        {       
+                sql="SELECT m_name FROM member WHERE m_account='"+acc+"' and m_password='"+pas+"'";
                 ResultSet tmp=con.createStatement().executeQuery(sql);
-                tmp.next();
                 if(tmp.getString("m_level").equals("1"))
                 {
                      out.println("<div id='funtion_login'>");
