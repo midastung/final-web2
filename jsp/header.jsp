@@ -83,9 +83,9 @@
     }
             else
         {       
-                sql="SELECT m_name FROM member WHERE m_account='"+acc+"' and m_password='"+pas+"'";
+                String sql="SELECT m_name FROM member WHERE m_account='"+acc+"' and m_password='"+pas+"'";
                 ResultSet tmp=con.createStatement().executeQuery(sql);
-                if(tmp.getString("m_level").equals("1"))
+                while(tmp.getString("m_level").equals("1"))
                 {
                      out.println("<div id='funtion_login'>");
                      out.println("<ul class='drop-down-menu_2'>");
