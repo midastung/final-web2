@@ -148,3 +148,17 @@ box-shadow: 1px 25px 54px rgba(0, 0, 0, 0.12);
 .product-slider .single-product:hover {
 box-shadow: 1px 8px 15px rgba(0, 0, 0, 0.12);
 }
+.fav
+{
+	height: 100px;
+	width: 1000px;
+	margin-left: 20px;
+	background-color: gray;
+	border: 1px #AAAAAA solid;
+	color: 	#778899;
+	text-align: center;
+    padding-top: 38px;
+    padding-bottom:38px;
+    border-radius: 25px;
+    font-size: 18px;
+}

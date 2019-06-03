@@ -11,22 +11,22 @@ if(acc==null||acc.equals("")||pas==null||pas.equals(""))
 	out.write("<script language=javascript>alert('帳號或密碼輸入錯誤');</script>");
 }
 else 
-	{
+{
 	sql="SELECT m_account,m_password FROM member WHERE shop='"+request.getParameter("acc")+"' and m_password='"+request.getParameter("pas")+"'";
 	ResultSet tmp=con.createStatement().executeQuery(sql);
-	if(tmp.next())
-	{
+    if(tmp.next())
+    {
 		Cookie ck=new Cookie("getin",tmp.getString("m_account")+"-"+tmp.getString("m_password"));
 		ck.setMaxAge(60*60*24*7);
 		response.addCookie(ck);
 		response.setHeader("refresh","0;URL=index.jsp") ;
 	}
-     else
-	 {
+    else
+	{
 		out.write("<script language=javascript>alert('帳號或密碼輸入錯誤');</script>");
 		
 		response.setHeader("refresh","0;URL=index.jsp") ;
-     }
+    }
 	 
 	}
 con.close();
