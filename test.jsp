@@ -7,28 +7,33 @@
 	<head>
 		<meta charest="utf-8">
 		<title>期末專案</title>
-		<!-- Google Font -->
-		<link href='https://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-		<!--product start-->
-		<link rel="stylesheet" href="assets/css/product_slick.css">
-		<link rel="stylesheet" href="assets/css/product-iconic-font.css">
-		<link rel="stylesheet" href="assets/css/product_default.css">
-		<link rel="stylesheet" href="assets/css/product_style.css">
-		<link rel="stylesheet" href="assets/css/product.css">
-		<!--product end-->
-		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="assets/css/component.css" />
-		<link rel="stylesheet" type="text/css" href="assets/css/style_index.css">
-		<link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
-		<link rel="stylesheet" type="text/css" href="assets/css/slick.css">
-		<link rel="stylesheet" href="assets/css/animate.css" />
-		<!--    product-side start-->
-		<link rel="stylesheet" type="text/css" href="assets/css/product-side.css">
-		<!--    product-side end-->
-		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
-		<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:700&display=swap" rel="stylesheet">
+		 <link href='https://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style_index.css">
+    <!--product start-->
+    <link rel="stylesheet" type="text/css" href="assets/css/star.css">
+    <link rel="stylesheet" href="assets/css/product_slick.css">
+    <link rel="stylesheet" href="assets/css/product-iconic-font.css">
+    <link rel="stylesheet" href="assets/css/product_default.css">
+    <link rel="stylesheet" href="assets/css/product_style.css">
+    <link rel="stylesheet" href="assets/css/product.css">
+    <!--product end-->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/component.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style_index.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/animate.css" />
+
+    <!--    product-side start-->
+
+    <link rel="stylesheet" type="text/css" href="assets/css/product-side.css">
+    <!--    product-side end-->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:700&display=swap" rel="stylesheet">s
 	</head>
 	<body>
 		<div class="mt-5">
@@ -72,7 +77,7 @@
 											while(tmp.next())
 											{
 													out.println("<div class='single-product col-lg-3'>");
-														out.println("<div class='product-img>");
+														out.println("<div class='product-img'>");
 															out.println("<span class='pro-label new-label'>"+"new"+"</span>");
 																out.println("<a href='single-product.html'>"+"<img src='"+tmp.getString("p_image")+"'/>"+"</a>");
 																out.println("<div class='product-action clearfix'>");
@@ -87,11 +92,9 @@
 																	out.println("<p class='floatright hidden-sm hidden-xs'>"+"Furniture"+"</p>");
 																out.println("</div>");
 																
-														
-														
 												%>
 												
-													<div class="fix">
+																<div class="fix">
                                                                     <span class="pro-price floatleft">$ 56.20</span>
                                                                     <span class="pro-rating floatright">
                                                                         <div class="rating">
@@ -114,84 +117,7 @@
 														con.close();
 
 												%>
-												<div class="single-product col-lg-3">
-													<div class="product-img">
-														<span class="pro-label sale-label">Sale</span>
-														<a href="single-product.html"><img src="assets/images/dish/ramen.jpg" alt="" /></a>
-														<div class="product-action clearfix">
-															<a href="#" data-toggle="tooltip" data-placement="top" title="Wishlist"><i class="zmdi zmdi-favorite-outline"></i></a>
-															<a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="zmdi zmdi-shopping-cart-plus"></i></a>
-														</div>
-													</div>
-													<div class="product-info clearfix">
-														<div class="fix">
-															<h4 class="post-title floatleft"><a href="#">dummy Product name</a></h4>
-															<p class="floatright hidden-sm hidden-xs">Furniture</p>
-														</div>
-														<div class="fix">
-															<span class="pro-price floatleft">$ 56.20</span>
-															<span class="pro-rating floatright">
-																<a href="#"><i class="zmdi zmdi-star"></i></a>
-																<a href="#"><i class="zmdi zmdi-star"></i></a>
-																<a href="#"><i class="zmdi zmdi-star"></i></a>
-																<a href="#"><i class="zmdi zmdi-star-half"></i></a>
-																<a href="#"><i class="zmdi zmdi-star-half"></i></a>
-															</span>
-														</div>
-													</div>
-												</div>
-												<div class="single-product col-lg-3">
-													<div class="product-img">
-														<span class="pro-label sale-label">Sale</span>
-														<a href="single-product.html"><img src="assets/images/dish/ramen.jpg" alt="" /></a>
-														<div class="product-action clearfix">
-															<a href="#" data-toggle="tooltip" data-placement="top" title="Wishlist"><i class="zmdi zmdi-favorite-outline"></i></a>
-															<a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="zmdi zmdi-shopping-cart-plus"></i></a>
-														</div>
-													</div>
-													<div class="product-info clearfix">
-														<div class="fix">
-															<h4 class="post-title floatleft"><a href="#">dummy Product name</a></h4>
-															<p class="floatright hidden-sm hidden-xs">Furniture</p>
-														</div>
-														<div class="fix">
-															<span class="pro-price floatleft">$ 56.20</span>
-															<span class="pro-rating floatright">
-																<a href="#"><i class="zmdi zmdi-star"></i></a>
-																<a href="#"><i class="zmdi zmdi-star"></i></a>
-																<a href="#"><i class="zmdi zmdi-star"></i></a>
-																<a href="#"><i class="zmdi zmdi-star-half"></i></a>
-																<a href="#"><i class="zmdi zmdi-star-half"></i></a>
-															</span>
-														</div>
-													</div>
-												</div>
-												<div class="single-product col-lg-3">
-													<div class="product-img">
-														<span class="pro-label new-label">new</span>
-														<a href="single-product.html"><img src="assets/images/dish/onigiri.jpg" alt="" /></a>
-														<div class="product-action clearfix">
-															<a href="#" data-toggle="tooltip" data-placement="top" title="Wishlist"><i class="zmdi zmdi-favorite-outline"></i></a>
-															<a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="zmdi zmdi-shopping-cart-plus"></i></a>
-														</div>
-													</div>
-													<div class="product-info clearfix">
-														<div class="fix">
-															<h4 class="post-title floatleft"><a href="#">dummy Product name</a></h4>
-															<p class="floatright hidden-sm hidden-xs">Furniture</p>
-														</div>
-														<div class="fix">
-															<span class="pro-price floatleft">$ 56.20</span>
-															<span class="pro-rating floatright">
-																<a href="#"><i class="zmdi zmdi-star"></i></a>
-																<a href="#"><i class="zmdi zmdi-star"></i></a>
-																<a href="#"><i class="zmdi zmdi-star"></i></a>
-																<a href="#"><i class="zmdi zmdi-star-half"></i></a>
-																<a href="#"><i class="zmdi zmdi-star-half"></i></a>
-															</span>
-														</div>
-													</div>
-												</div>
+											</div>
 											</div>
 										</div>
 									</div>
@@ -210,17 +136,19 @@
 													</div>
 												</div>
 											</div>
+
 											<!-- Section-title end -->
+											<div class="container">
+												<div class="row">
 											<%
-												sql="SELECT DISTINCT p_id, p_name, p_price, p_image, p_originprice FROM product;";
-												while(tmp.next())
+												String sql2="SELECT DISTINCT p_id, p_name, p_price, p_image, p_originprice FROM product;";
+												ResultSet tmp2=con.createStatement().executeQuery(sql2);
+												while(tmp2.next())
 												{
-													out.println("<div class='container'>");
-														out.println("<div class='row'>");
 															out.println("<div class='single-product col-lg-3'>");
-																out.println("<div class='p_image'>");
-																out.println("<span class='[pro-label new-label'>"+"new"+"</span>");
-																out.println("<a href='single-product.html'>"+"<img src="+tmp.getString("p_image")+"/>"+"</a>");
+																out.println("<div class='product-img'>");
+																out.println("<span class='pro-label new-label'>"+"new"+"</span>");
+																out.println("<a href='single-product.html'>"+"<img src="+tmp2.getString("p_image")+"/>"+"</a>");
 																out.println("<div class='product-action clearfix'>");
 																	out.println("<a href='#' data-toggle='tooltip' data-placement='top' title='Wishlist'>"+"<i class='zmdi zmdi-favorite-outline'>"+"</i>"+"</a>");
 																	out.println("<a href='#' data-toggle='tooltip' data-placement='top title='Add To Cart'>"+"<i class-'zmdi zmdi-shopping-cart-plus'>"+"</i>"+"</a>");
@@ -232,227 +160,29 @@
 																	"</h4>");
 																	out.println("<p class='floatright hidden-sm hidden-xs'>"+"Furniture"+"</p>");
 																out.println("</div>");
-
-															out.println("</div>");
-														out.println("</div>");
+											%>
+												<div class="fix">
+                                                    <span class="pro-price floatleft">$ 56.20</span>
+                                                    <span class="pro-rating floatright">
+                                                        <div class="rating">
+														    <span class="star" style="font-size: 20px;width: 20px"></span>
+														    <span class="star" style="font-size: 20px;width: 20px"></span>
+														    <span class="star" style="font-size: 20px;width: 20px"></span>
+														    <span class="star" style="font-size: 20px;width: 20px"></span>
+														    <span class="star star_bl" style="font-size: 20px;width: 20px"></span>
+														</div> 
+                                                    </span>
+                                        </div>
+											<%
+														
 														count++;
 												}
-
+												out.println("</div>");
+												out.println("</div>");
 												con.close();
 
 											%>
-											<div class="container">
-												<div class="row">
-													<div class="single-product col-lg-3">
-														<div class="product-img">
-															<span class="pro-label new-label">new</span>
-															<a href="single-product.html"><img src="assets/images/dish/onigiri.jpg" alt="" /></a>
-															<div class="product-action clearfix">
-																<a href="#" data-toggle="tooltip" data-placement="top" title="Wishlist"><i class="zmdi zmdi-favorite-outline"></i></a>
-																<a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="zmdi zmdi-shopping-cart-plus"></i></a>
-															</div>
-														</div>
-														<div class="product-info clearfix">
-															<div class="fix">
-																<h4 class="post-title floatleft"><a href="#">dummy Product name</a></h4>
-																<p class="floatright hidden-sm hidden-xs">Furniture</p>
-															</div>
-															<div class="fix">
-																<span class="pro-price floatleft">$ 56.20</span>
-																<span class="pro-rating floatright">
-																	<a href="#"><i class="zmdi zmdi-star"></i></a>
-																	<a href="#"><i class="zmdi zmdi-star"></i></a>
-																	<a href="#"><i class="zmdi zmdi-star"></i></a>
-																	<a href="#"><i class="zmdi zmdi-star-half"></i></a>
-																	<a href="#"><i class="zmdi zmdi-star-half"></i></a>
-																</span>
-															</div>
-														</div>
-													</div>
-													
-													<div class="single-product col-lg-3">
-														<div class="product-img">
-															<span class="pro-label sale-label">Sale</span>
-															<a href="single-product.html"><img src="assets/images/dish/ramen.jpg" alt="" /></a>
-															<div class="product-action clearfix">
-																<a href="#" data-toggle="tooltip" data-placement="top" title="Wishlist"><i class="zmdi zmdi-favorite-outline"></i></a>
-																<a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="zmdi zmdi-shopping-cart-plus"></i></a>
-															</div>
-														</div>
-														<div class="product-info clearfix">
-															<div class="fix">
-																<h4 class="post-title floatleft"><a href="#">dummy Product name</a></h4>
-																<p class="floatright hidden-sm hidden-xs">Furniture</p>
-															</div>
-															<div class="fix">
-																<span class="pro-price floatleft">$ 56.20</span>
-																<span class="pro-rating floatright">
-																	<a href="#"><i class="zmdi zmdi-star"></i></a>
-																	<a href="#"><i class="zmdi zmdi-star"></i></a>
-																	<a href="#"><i class="zmdi zmdi-star"></i></a>
-																	<a href="#"><i class="zmdi zmdi-star-half"></i></a>
-																	<a href="#"><i class="zmdi zmdi-star-half"></i></a>
-																</span>
-															</div>
-														</div>
-													</div>
-													<div class="single-product col-lg-3">
-														<div class="product-img">
-															<span class="pro-label sale-label">Sale</span>
-															<a href="single-product.html"><img src="assets/images/dish/ramen.jpg" alt="" /></a>
-															<div class="product-action clearfix">
-																<a href="#" data-toggle="tooltip" data-placement="top" title="Wishlist"><i class="zmdi zmdi-favorite-outline"></i></a>
-																<a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="zmdi zmdi-shopping-cart-plus"></i></a>
-															</div>
-														</div>
-														<div class="product-info clearfix">
-															<div class="fix">
-																<h4 class="post-title floatleft"><a href="#">dummy Product name</a></h4>
-																<p class="floatright hidden-sm hidden-xs">Furniture</p>
-															</div>
-															<div class="fix">
-																<span class="pro-price floatleft">$ 56.20</span>
-																<span class="pro-rating floatright">
-																	<a href="#"><i class="zmdi zmdi-star"></i></a>
-																	<a href="#"><i class="zmdi zmdi-star"></i></a>
-																	<a href="#"><i class="zmdi zmdi-star"></i></a>
-																	<a href="#"><i class="zmdi zmdi-star-half"></i></a>
-																	<a href="#"><i class="zmdi zmdi-star-half"></i></a>
-																</span>
-															</div>
-														</div>
-													</div>
-													
-													<div class="single-product col-lg-3">
-														<div class="product-img">
-															<span class="pro-label new-label">new</span>
-															<a href="single-product.html"><img src="assets/images/dish/onigiri.jpg" alt="" /></a>
-															<div class="product-action clearfix">
-																<a href="#" data-toggle="tooltip" data-placement="top" title="Wishlist"><i class="zmdi zmdi-favorite-outline"></i></a>
-																<a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="zmdi zmdi-shopping-cart-plus"></i></a>
-															</div>
-														</div>
-														<div class="product-info clearfix">
-															<div class="fix">
-																<h4 class="post-title floatleft"><a href="#">dummy Product name</a></h4>
-																<p class="floatright hidden-sm hidden-xs">Furniture</p>
-															</div>
-															<div class="fix">
-																<span class="pro-price floatleft">$ 56.20</span>
-																<span class="pro-rating floatright">
-																	<a href="#"><i class="zmdi zmdi-star"></i></a>
-																	<a href="#"><i class="zmdi zmdi-star"></i></a>
-																	<a href="#"><i class="zmdi zmdi-star"></i></a>
-																	<a href="#"><i class="zmdi zmdi-star-half"></i></a>
-																	<a href="#"><i class="zmdi zmdi-star-half"></i></a>
-																</span>
-															</div>
-														</div>
-													</div>
-													<div class="single-product col-lg-3">
-														<div class="product-img">
-															<span class="pro-label sale-label">Sale</span>
-															<a href="single-product.html"><img src="assets/images/dish/ramen.jpg" alt="" /></a>
-															<div class="product-action clearfix">
-																<a href="#" data-toggle="tooltip" data-placement="top" title="Wishlist"><i class="zmdi zmdi-favorite-outline"></i></a>
-																<a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="zmdi zmdi-shopping-cart-plus"></i></a>
-															</div>
-														</div>
-														<div class="product-info clearfix">
-															<div class="fix">
-																<h4 class="post-title floatleft"><a href="#">dummy Product name</a></h4>
-																<p class="floatright hidden-sm hidden-xs">Furniture</p>
-															</div>
-															<div class="fix">
-																<span class="pro-price floatleft">$ 56.20</span>
-																<span class="pro-rating floatright">
-																	<a href="#"><i class="zmdi zmdi-star"></i></a>
-																	<a href="#"><i class="zmdi zmdi-star"></i></a>
-																	<a href="#"><i class="zmdi zmdi-star"></i></a>
-																	<a href="#"><i class="zmdi zmdi-star-half"></i></a>
-																	<a href="#"><i class="zmdi zmdi-star-half"></i></a>
-																</span>
-															</div>
-														</div>
-													</div>
-													<div class="single-product col-lg-3">
-														<div class="product-img">
-															<span class="pro-label sale-label">Sale</span>
-															<a href="single-product.html"><img src="assets/images/dish/ramen.jpg" alt="" /></a>
-															<div class="product-action clearfix">
-																<a href="#" data-toggle="tooltip" data-placement="top" title="Wishlist"><i class="zmdi zmdi-favorite-outline"></i></a>
-																<a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="zmdi zmdi-shopping-cart-plus"></i></a>
-															</div>
-														</div>
-														<div class="product-info clearfix">
-															<div class="fix">
-																<h4 class="post-title floatleft"><a href="#">dummy Product name</a></h4>
-																<p class="floatright hidden-sm hidden-xs">Furniture</p>
-															</div>
-															<div class="fix">
-																<span class="pro-price floatleft">$ 56.20</span>
-																<span class="pro-rating floatright">
-																	<a href="#"><i class="zmdi zmdi-star"></i></a>
-																	<a href="#"><i class="zmdi zmdi-star"></i></a>
-																	<a href="#"><i class="zmdi zmdi-star"></i></a>
-																	<a href="#"><i class="zmdi zmdi-star-half"></i></a>
-																	<a href="#"><i class="zmdi zmdi-star-half"></i></a>
-																</span>
-															</div>
-														</div>
-													</div>
-													<div class="single-product col-lg-3">
-														<div class="product-img">
-															<span class="pro-label sale-label">Sale</span>
-															<a href="single-product.html"><img src="assets/images/dish/ramen.jpg" alt="" /></a>
-															<div class="product-action clearfix">
-																<a href="#" data-toggle="tooltip" data-placement="top" title="Wishlist"><i class="zmdi zmdi-favorite-outline"></i></a>
-																<a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="zmdi zmdi-shopping-cart-plus"></i></a>
-															</div>
-														</div>
-														<div class="product-info clearfix">
-															<div class="fix">
-																<h4 class="post-title floatleft"><a href="#">dummy Product name</a></h4>
-																<p class="floatright hidden-sm hidden-xs">Furniture</p>
-															</div>
-															<div class="fix">
-																<span class="pro-price floatleft">$ 56.20</span>
-																<span class="pro-rating floatright">
-																	<a href="#"><i class="zmdi zmdi-star"></i></a>
-																	<a href="#"><i class="zmdi zmdi-star"></i></a>
-																	<a href="#"><i class="zmdi zmdi-star"></i></a>
-																	<a href="#"><i class="zmdi zmdi-star-half"></i></a>
-																	<a href="#"><i class="zmdi zmdi-star-half"></i></a>
-																</span>
-															</div>
-														</div>
-													</div>
-													<div class="single-product col-lg-3">
-														<div class="product-img">
-															<span class="pro-label sale-label">Sale</span>
-															<a href="single-product.html"><img src="assets/images/dish/ramen.jpg" alt="" /></a>
-															<div class="product-action clearfix">
-																<a href="#" data-toggle="tooltip" data-placement="top" title="Wishlist"><i class="zmdi zmdi-favorite-outline"></i></a>
-																<a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="zmdi zmdi-shopping-cart-plus"></i></a>
-															</div>
-														</div>
-														<div class="product-info clearfix">
-															<div class="fix">
-																<h4 class="post-title floatleft"><a href="#">dummy Product name</a></h4>
-																<p class="floatright hidden-sm hidden-xs">Furniture</p>
-															</div>
-															<div class="fix">
-																<span class="pro-price floatleft">$ 56.20</span>
-																<span class="pro-rating floatright">
-																	<a href="#"><i class="zmdi zmdi-star"></i></a>
-																	<a href="#"><i class="zmdi zmdi-star"></i></a>
-																	<a href="#"><i class="zmdi zmdi-star"></i></a>
-																	<a href="#"><i class="zmdi zmdi-star-half"></i></a>
-																	<a href="#"><i class="zmdi zmdi-star-half"></i></a>
-																</span>
-															</div>
-														</div>
-													</div>
+											
 												</div>
 											</div>
 										</div>
@@ -716,17 +446,25 @@
 					</div>
 				</div>
 				<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-				<!-- product js start -->
-				<script src="assets/js/product_slick.js"></script>
-				<script src="assets/js/jquery-1.12.0.min.js"></script>
-				<script src="assets/js/product_slick.js"></script>
-				<script src="assets/js/jquery-1.12.0.min.js"></script>
-				<script src="assets/js/product_slick.js"></script>
-				<script src="assets/js/product_main.js"></script>
-				<script src="assets/js/product-side.js"></script>
-				<!-- product js end -->
-				
-				<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
-				<script src="assets/js/bootstrap.min.js"></script>
+    <!-- product js start -->
+
+    <script src="assets/js/product_slick.js"></script>
+    <script src="assets/js/jquery-1.12.0.min.js"></script>
+    <script src="assets/js/product_slick.js"></script>
+    <script src="assets/js/jquery-1.12.0.min.js"></script>
+    <script src="assets/js/product_slick.js"></script>
+    <script src="assets/js/product_main.js"></script>
+    <script src="assets/js/product-side.js"></script>
+    <!-- product js end -->
+
+
+    <script src="assets/js/classie.js"></script>
+    <script src="assets/js/gnmenu.js"></script>
+    <script src="assets/js/modernizr.custom.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/wow.min.js"></script>
 			</body>
 		</html>
