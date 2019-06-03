@@ -21,7 +21,7 @@
 		}
 		else 
 		{
-			sql="INSERT INTO mid_member(m_account,m_password,m_name) values('"+acc+"','"+pas+"','"+name+"');";
+			sql="INSERT INTO member(m_account,m_password,m_name) values('"+acc+"','"+pas+"','"+name+"');";
 			con.createStatement().execute(sql); 
 			response.sendRedirect("index.jsp");
 		}

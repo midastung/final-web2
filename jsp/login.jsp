@@ -12,7 +12,7 @@ if(acc==null||acc.equals("")||pas==null||pas.equals(""))
 }
 else 
 	{
-	sql="SELECT m_account,m_password FROM member WHERE m_account='"+request.getParameter("acc")+"' and m_password='"+request.getParameter("pas")+"'";
+	sql="SELECT m_account,m_password FROM member WHERE shop='"+request.getParameter("acc")+"' and m_password='"+request.getParameter("pas")+"'";
 	ResultSet tmp=con.createStatement().executeQuery(sql);
 	if(tmp.next())
 	{
