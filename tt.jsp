@@ -2,13 +2,10 @@
 <%@ page import = "java.util.*" %>
 <%@ page language="java" contentType="text/html; charset=utf-8"%>
 <%@ include file="getDB.jsp"%>
-<!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="UTF-8" />
     <title>test</title>
-
     <!-- Google Font -->
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
@@ -40,7 +37,137 @@
 </head>
 
 <body class="">
-   
+    <!--    側欄/開始-->
+    <div class="">
+        <ul id="gn-menu" class="gn-menu-main" style="z-index:100;">
+            <li class="gn-trigger">
+                <a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+                <nav class="gn-menu-wrapper">
+                    <div class="gn-scroller">
+                        <ul class="gn-menu">
+                            <li class="gn-search-item">
+                                <i class="fas fa-search p-4"></i>
+                                <input placeholder="Search" type="search" class="gn-search p-0">
+                            </li>
+                            <li class="gn-search-item"><a href="index.html"><i class="fas fa-home p-4"></i>Home</a></li>
+                            <li class="gn-search-item"><a href="product1.html"><i class="fas fa-shopping-basket p-4"></i>Product</a></li>
+                            <li class="gn-search-item"><a href="#"><i class="fas fa-users p-4"></i>About Us</a></li>
+                            <li class="gn-search-item"><a href="#"><i class="far fa-question-circle p-4"></i><span class="p-1">FAQ</span></a></li>
+                        </ul>
+                    </div><!-- /gn-scroller -->
+                </nav>
+            </li>
+            <li><a class="codrops-icon codrops-icon-prev" href="#" data-toggle="modal" data-target="#mySign" id="myBtn">Sign in</a></li>
+            <li><a class="codrops-icon codrops-icon-prev" href="#" data-toggle="modal" data-target="#myModal"><span>Sign up</span></a></li>
+
+            <li class="more p-1 chi-font">
+                <button id="more-btn" class="more-btn mr-5">
+                    <h6 class="cont">歡迎，Midas</h6>
+                </button>
+                <div class="more-menu">
+                    <div class="more-menu-caret">
+                        <div class="more-menu-caret-outer"></div>
+                        <div class="more-menu-caret-inner"></div>
+                    </div>
+                    <ul class="more-menu-items cont  " tabindex="-1" role="menu" aria-labelledby="more-btn" aria-hidden="true">
+                        <li class="more-menu-item" role="presentation">
+                            <button type="button" class="more-menu-btn" role="menuitem">
+                                <h6 class="chi-font">會員專區</h6>
+                            </button>
+                        </li>
+                        <li class="more-menu-item" role="presentation">
+                            <button type="button" class="more-menu-btn" role="menuitem">
+                                <h6 class="chi-font">購物車</h6>
+                            </button>
+                        </li>
+                        <li class="more-menu-item" role="presentation">
+                            <button type="button" class="more-menu-btn" role="menuitem">
+                                <h6 class="chi-font">我的最愛</h6>
+                            </button>
+                        </li>
+                        <li class="more-menu-item" role="presentation">
+                            <button type="button" class="more-menu-btn" role="menuitem">
+                                <h6 class="chi-font">購物紀錄</h6>
+                            </button>
+                        </li>
+                        <li class="more-menu-item" role="presentation">
+                            <button type="button" class="more-menu-btn" role="menuitem">
+
+                                <h6 class="chi-font">登出</h6>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <!--<li>
+                <div class="sharethis-inline-share-buttons cont p-3"></div>
+            </li>-->
+        </ul>
+    </div>
+    <!--    側欄/結束-->
+    <!--            註冊跳出頁面--Start-->
+    <div class="modal fade chi-font" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel" style="color: #FE938C;">
+                        註冊
+                    </h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                </div>
+                <form>
+                    <div class="modal-body  chi-font">
+
+                        <span style="color: #FE938C;" class="chi-font">帳號</span><input style="max-width:85%;" class="form-control" type="search" placeholder="Account..." id="acc">
+                        <span style="color: #FE938C;" class="chi-font">密碼</span><input style="max-width:85%;" class="form-control" type="search" placeholder="Password..." id="psd">
+
+                    </div>
+                    <div class="modal-footer">
+
+                        <button type="button" class="btn btn-default chi-font" data-dismiss="modal">關閉
+                        </button>
+                        <button type="submit" class="btn btn-primary chi-font">
+                            註冊完成
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div><!-- /.modal -->
+    </div>
+    <!--            註冊跳出頁面--End-->
+    <!-- Modal -->
+    <div class="modal fade chi-font" id="mySign" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title chi-font" id="myModalLabel" style="color: #FE938C;">
+                        登入
+                    </h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="modal-body chi-font">
+                            <span style="color: #FE938C;" class="chi-font">帳號</span><input style="max-width:85%;" class="form-control" type="search" placeholder="Account..." id="acc">
+                            <span style="color: #FE938C;" class="chi-font">密碼</span><input style="max-width:85%;" class="form-control" type="search" placeholder="Password..." id="psd">
+                        </div>
+                        <button type="submit" class="btn btn-success btn-block chi-font">登入</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-danger login-cancel chi-font" data-dismiss="modal" id="close-login">取消</button>
+                    <p class="mt-3 chi-font">不是會員？
+                        <a href="#" id="pop-reg" class="chi-font">註冊</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    側邊欄/結束-->
    <div class="mt-5">
         <img src="assets/images/post4.png" class="img-fluid">
     </div>
@@ -76,12 +203,12 @@
                                     <div class="row">
                       
                                             <%
-                                            sql="SELECT DISTINCT p_id, p_name, p_price, p_image, p_originprice FROM product; ";
+                                            sql="SELECT DISTINCT p_id, p_name, p_price, p_originprice, p_image FROM product; ";
                                             ResultSet tmp = con.createStatement().executeQuery(sql);
                                             int count = 0;
                                             while(tmp.next())
                                             {
-                                                   out.println("<div class='single-product col-lg-3'>");
+                                                    out.println("<div class='single-product col-lg-3'>");
                                                     out.println("<div class='product-img'>");
                                                         out.println("<span class='pro-label new-label'>"+"new"+"</span>");
                                                         out.println("<a href='single-product.html'>"+"<img src='"+tmp.getString("p_image")+"'/>"+"</a>");
@@ -113,15 +240,12 @@
                                                     count++;
                                                 }
 
-                                                    
+                                                con.close();    
 
                                                 %>
                                             </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    
-
+                                        </div> 
            
                     </li>
                      <!-- 商品總覽 START -->
@@ -140,13 +264,13 @@
                                 <!-- Section-title end -->
                                  <div class="container">
                                     <div class="row">
-<%
-                                        sql="SELECT DISTINCT p_id, p_name, p_price, p_image, p_originprice,p_class FROM product WHERE p_class='0'; ";
-                                        tmp = con.createStatement().executeQuery(sql);
-                                           count = 0;
+                                            <%
+                                            sql="SELECT DISTINCT p_id, p_name, p_price, p_originprice, p_image FROM product; ";
+                                            tmp = con.createStatement().executeQuery(sql);
+                                            count = 0;
                                             while(tmp.next())
                                             {
-                                                   out.println("<div class='single-product col-lg-3'>");
+                                                    out.println("<div class='single-product col-lg-3'>");
                                                     out.println("<div class='product-img'>");
                                                         out.println("<span class='pro-label new-label'>"+"new"+"</span>");
                                                         out.println("<a href='single-product.html'>"+"<img src='"+tmp.getString("p_image")+"'/>"+"</a>");
@@ -176,16 +300,14 @@
                                                     out.println("</div>");
 
                                                     count++;
-
                                                 }
 
-                                                    
+                                                con.close();    
 
                                                 %>
-                                      </div>
-                                    </div>
-                            </div>
-                        </div>
+                                            </div>
+                                            </div>
+                                        </div> 
                     </li>
                     <!--和菓子 END -->
                     <li>
