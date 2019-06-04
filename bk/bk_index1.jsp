@@ -24,7 +24,7 @@
 	<tr>
 		<td><a href="bk_member2.jsp">會員管理</a></td>
 		<td colspan="2" rowspan="3" style="width: 70rem">
-			<center><span><a href="index1.jsp">回到首頁</a></span></center>
+			<center><span><a href="index1.jsp">回到前台首頁</a></span></center>
 		</td>
 	</tr>
 	<tr>
