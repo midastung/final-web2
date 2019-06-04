@@ -1,0 +1,45 @@
+.aboutus_whole
+{
+border: solid gray 1px;
+border-radius: 15px;
+margin-top: 50px;
+padding-bottom: 20px;
+}
+.aboutus_cont
+{
+width: 70%;
+text-align: left;
+line-height: 45px;
+text-align: justify;
+}
+.aboutus_cont:hover
+{
+color: #0066FF;
+}
+.aboutus_cont2:hover
+{
+color: #0066FF;
+}
+.aboutus_cont2
+{
+width: 70%;
+text-align: left;
+line-height: 30px;
+text-align: justify;
+}
+.right_photo {
+float: right;
+height: 200px;
+width: 100px;
+margin-top: 15px;
+margin-left: 15px;
+border-radius: 5px;
+}
+.left_photo {
+float: right;
+height: 200px;
+width: 100px;
+margin-top: 15px;
+margin-left: 15px;
+border-radius: 5px;
+}
