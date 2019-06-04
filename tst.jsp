@@ -76,14 +76,14 @@
                                     <div class="row">
                       
                                             <%
-                                            sql="SELECT DISTINCT p_id, p_name, p_price, p_image, p_originprice FROM product; ";
+                                            sql="SELECT DISTINCT p_id, p_name, p_price, p_image, p_originprice,p_strcss,p_strhot FROM product; ";
                                             ResultSet tmp = con.createStatement().executeQuery(sql);
                                             int count = 0;
                                             while(tmp.next())
                                             {
                                                    out.println("<div class='single-product col-lg-3'>");
                                                     out.println("<div class='product-img'>");
-                                                        out.println("<span class='pro-label new-label'>"+"new"+"</span>");
+                                                        out.println("<span class='"+tmp.getString("p_strcss")+"'>"+tmp.getString("p_strhot")+"</span>");
                                                         out.println("<a href='single-product.html'>"+"<img src='"+tmp.getString("p_image")+"'/>"+"</a>");
                                                         out.println("<div class='product-action clearfix'>");
                                                         out.println("<a href='#' data-toggle='tooltip' data-placement='top' title='Wishlist'>"+"<i class='zmdi zmdi-favorite-outline'>"+"</i>"+"</a>");
@@ -92,11 +92,11 @@
                                                 out.println("</div>");
                                                 out.println("<div class='product-info clearfix'>");
                                                     out.println("<div class='fix'>");
-                                                        out.println("<h4 class='post-title floatleft'>"+"<a href='#'>"+"dummy Product name"+"</a>"+"</h4>");
+                                                        out.println("<h4 class='post-title floatleft'>"+"<a href='#'>"+tmp.getString("p_name")+"</a>"+"</h4>");
                                                         out.println("<p class='floatright hidden-sm hidden-xs'>"+"Furniture"+"</p>");
                                                     out.println("</div>");
                                                     out.println("<div class='fix'>");
-                                                        out.println("<span class='pro-price floatleft'>"+tmp.getString("p_price")+"</span>");
+                                                        out.println("<span class='pro-price floatleft'>$"+tmp.getString("p_price")+"</span>");
                                                         out.println("<span class='pro-rating floatright'>");
                                                             out.println("<div class='rating'>");
                                                                 out.println("<span class='star' style='font-size: 20px; width: 20px'>"+"</span>");
@@ -141,14 +141,14 @@
                                  <div class="container">
                                     <div class="row">
 <%
-                                        sql="SELECT DISTINCT p_id, p_name, p_price, p_image, p_originprice,p_class FROM product WHERE p_class='0'; ";
+                                        sql="SELECT DISTINCT p_id, p_name, p_price, p_image, p_originprice,p_class,p_strcss,p_strhot FROM product WHERE p_class='0'; ";
                                         tmp = con.createStatement().executeQuery(sql);
                                            count = 0;
                                             while(tmp.next())
                                             {
                                                    out.println("<div class='single-product col-lg-3'>");
                                                     out.println("<div class='product-img'>");
-                                                        out.println("<span class='pro-label new-label'>"+"new"+"</span>");
+                                                         out.println("<span class='"+tmp.getString("p_strcss")+"'>"+tmp.getString("p_strhot")+"</span>");
                                                         out.println("<a href='single-product.html'>"+"<img src='"+tmp.getString("p_image")+"'/>"+"</a>");
                                                         out.println("<div class='product-action clearfix'>");
                                                         out.println("<a href='#' data-toggle='tooltip' data-placement='top' title='Wishlist'>"+"<i class='zmdi zmdi-favorite-outline'>"+"</i>"+"</a>");
@@ -157,11 +157,11 @@
                                                 out.println("</div>");
                                                 out.println("<div class='product-info clearfix'>");
                                                     out.println("<div class='fix'>");
-                                                        out.println("<h4 class='post-title floatleft'>"+"<a href='#'>"+"dummy Product name"+"</a>"+"</h4>");
+                                                        out.println("<h4 class='post-title floatleft'>"+"<a href='#'>"+tmp.getString("p_name")+"</a>"+"</h4>");
                                                         out.println("<p class='floatright hidden-sm hidden-xs'>"+"Furniture"+"</p>");
                                                     out.println("</div>");
                                                     out.println("<div class='fix'>");
-                                                        out.println("<span class='pro-price floatleft'>"+tmp.getString("p_price")+"</span>");
+                                                        out.println("<span class='pro-price floatleft'>$s"+tmp.getString("p_price")+"</span>");
                                                         out.println("<span class='pro-rating floatright'>");
                                                             out.println("<div class='rating'>");
                                                                 out.println("<span class='star' style='font-size: 20px; width: 20px'>"+"</span>");
