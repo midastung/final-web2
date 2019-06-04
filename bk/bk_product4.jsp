@@ -5,16 +5,23 @@
 	<meta charset="UTF-8">
 	<title>後台介面</title>
 	<style type="text/css" media="screen">
-	.in td
+td
+ {
+ 	text-align:center;
+ }
+a
+ {
+  text-decoration:none;
+ }
+.in td
 {
 	width: 10rem;
-	text-align:center;
 }	
- .out td
+.out td
  {
  	width: 5rem;
  }
-	</style>
+</style>
 </head>
 <body>
 <center><table border="1" class="out">

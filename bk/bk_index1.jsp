@@ -5,6 +5,10 @@
 	<meta charset="UTF-8">
 	<title>後台介面</title>
 <style type="text/css" media="screen">
+ td
+ {
+ 	text-align:center;
+ }
  a
  {
   text-decoration:none;
