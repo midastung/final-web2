@@ -16,10 +16,12 @@ a
 .in td
 {
 	width: 10rem;
+	height: 5rem;
 }	
 .out td
  {
- 	width: 5rem;
+	width: 10rem;
+	height: 5rem;
  }
 </style>
 </head>
@@ -34,20 +36,39 @@ a
 		<td colspan="2" rowspan="3" style="width: 70rem">
 			<center><table border="1" class="in">
 				<tr>
+					<td>訂單編號</td>
 					<td>下單日期</td>
+					<td>訂單會員</td>
 					<td>商品編號</td>
-					<td>商品價格</td>
-					<td>訂購數量</td>
+                    <td>訂購數量</td>
+					<td>訂購總價</td>
+					<td>訂購地點</td>
 					<td>新增訂單</td>
 					<td>修改訂單</td>
 					<td>刪除訂單</td>
 				</tr>
 
 			    <tr>
+			    	<td>1</td>
 					<td>6/15</td>
-					<td>xxx</td>
-					<td>xxx</td>
-					<td>xxx</td>
+					<td>ym</td>
+					<td>商品編號</td>
+                    <td>訂購數量</td>
+					<td>訂購總價</td>
+					<td>訂購地點</td>
+				    <td><button>新增訂單</button></td>
+					<td><button>修改訂單</button></td>
+					<td><button>刪除訂單</button></td>
+				</tr>
+
+			    <tr>
+			    	<td>2</td>
+					<td>6/15</td>
+					<td>ym</td>
+					<td>商品編號</td>
+                    <td>訂購數量</td>
+					<td>訂購總價</td>
+					<td>訂購地點</td>
 				    <td><button>新增訂單</button></td>
 					<td><button>修改訂單</button></td>
 					<td><button>刪除訂單</button></td>

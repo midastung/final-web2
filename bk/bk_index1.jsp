@@ -5,17 +5,23 @@
 	<meta charset="UTF-8">
 	<title>後台介面</title>
 <style type="text/css" media="screen">
- td
+td
  {
  	text-align:center;
  }
- a
+a
  {
   text-decoration:none;
  }
- .out td
+.in td
+{
+	width: 10rem;
+	height: 5rem;
+}	
+.out td
  {
- 	width: 5rem;
+	width: 10rem;
+	height: 5rem;
  }
 </style>
 </head>

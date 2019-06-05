@@ -16,10 +16,12 @@ a
 .in td
 {
 	width: 10rem;
-}
+	height: 5rem;
+}	
 .out td
  {
- 	width: 5rem;
+	width: 10rem;
+	height: 5rem;
  }
 </style>
 </head>
@@ -36,24 +38,45 @@ a
 				<tr>
 					<td>帳號</td>
 					<td>密碼</td>
-					<td>姓氏</td>
 					<td>名字</td>
-					<td>身分</td>
+					<td>姓氏</td>
 					<td>地址</td>
 					<td>電郵</td>
+					<td>權限</td>
+					<td>稱謂</td>
 					<td>電話</td>
-					<td>增減</td>
+					<td>新增會員</td>
+					<td>修改會員</td>
+					<td>刪除會員</td>
 				</tr>
 
 			    <tr>
 					<td>y</td>
 					<td>m</td>
-					<td>chen</td>
 					<td>ym</td>
-					<td>一般會員0</td>
+					<td>chen</td>
 					<td>三重</td>
 					<td>peter880118@gmail.com</td>
+					<td>1</td>
+					<td>管理者</td>
 					<td>0920218763</td>
+				    <td><button>新增會員</button></td>
+					<td><button>修改會員</button></td>
+					<td><button>刪除會員</button></td>
+				</tr>
+
+				<tr>
+					<td>x</td>
+					<td>x</td>
+					<td>xxx</td>
+					<td>xxx</td>
+					<td>xxx</td>
+					<td>xxx@gmail.com</td>
+					<td>0</td>
+					<td>一般會員</td>
+					<td>09xxx</td>
+				    <td><button>新增會員</button></td>
+					<td><button>修改會員</button></td>
 					<td><button>刪除會員</button></td>
 				</tr>
 			</table></center>

@@ -16,10 +16,12 @@ a
 .in td
 {
 	width: 10rem;
+	height: 5rem;
 }	
 .out td
  {
- 	width: 5rem;
+	width: 10rem;
+	height: 5rem;
  }
 </style>
 </head>
@@ -34,20 +36,39 @@ a
 		<td colspan="2" rowspan="3" style="width: 70rem">
 			<center><table border="1" class="in">
 				<tr>
+					<td>商品編碼</td>
 					<td>上架日期</td>
-					<td>商品編號</td>
 					<td>商品價格</td>
-					<td>上架數量</td>
+					<td>商品數量</td>
+					<td>商品圖片</td>
+					<td>商品評論</td>
+					<td>商品星等</td>
 					<td>新增商品</td>
 					<td>修改商品</td>
 					<td>刪除商品</td>
 				</tr>
 
 			    <tr>
+			    	<td>1</td>
 					<td>6/15</td>
 					<td>xxx</td>
 					<td>xxx</td>
+					<td>xxx.jpg</td>
+					<td>評論xxx</td>
+					<td>星等xxx</td>
+				    <td><button>新增商品</button></td>
+					<td><button>修改商品</button></td>
+					<td><button>刪除商品</button></td>
+				</tr>
+
+			    <tr>
+			    	<td>2</td>
+					<td>6/15</td>
 					<td>xxx</td>
+					<td>xxx</td>
+					<td>xxx.jpg</td>
+					<td>評論xxx</td>
+					<td>星等xxx</td>
 				    <td><button>新增商品</button></td>
 					<td><button>修改商品</button></td>
 					<td><button>刪除商品</button></td>
