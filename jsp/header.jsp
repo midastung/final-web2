@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<%@ page import = "java.sql.*, java.util.*" %>
 <%@ page language="java" contentType="text/html; charset=utf-8"%>
-<%@include file="getDB.jsp" %>
 <html>
 
 <head>
@@ -16,7 +14,6 @@
    
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <!--    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">-->
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
 
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:700&display=swap" rel="stylesheet">
 
@@ -77,26 +74,24 @@
 %>
             
             <li><a class="codrops-icon codrops-icon-prev" href="#" data-toggle="modal" data-target="#myModal"><span>Sign up</span></a></li>
-
-            <li class="more p-1 chi-font dropdown">
 <%
-    }
-            else
+        }
+        else
         {       
-                String sql="SELECT m_name FROM member WHERE m_account='"+acc+"' and m_password='"+pas+"'";
+                session.setAttribute("in",acc);
+                sql="SELECT * FROM member WHERE m_account='"+acc+"' and m_password='"+pas+"'";
                 ResultSet tmp=con.createStatement().executeQuery(sql);
-                while(tmp.getString("m_level").equals("1"))
+                tmp.next();
+                if(tmp.getString("m_level").equals("1"))
                 {
-                     out.println("<div id='funtion_login'>");
-                     out.println("<ul class='drop-down-menu_2'>");
                      out.println("<li>");
-                     out.println("<span class='hint--bottom' data-hint='管理員資料'>");
-                     out.println("<a href='member.jsp' style='text-decoration:none;'>"+"歡迎，"+tmp.getString("m_name"));
-                     out.println("</span>");
-                     out.println("</a>");
+                    out.println("<a class='codrops-icon codrops-icon-prev' href='#'>"+"後台頁面"+"</a>");
+                    out.println("</li>");
+                    out.println("<li>");
+                    out.println("<a class='codrops-icon codrops-icon-prev' href='#'>"+"登出"+"</a>");
                      out.println("</li>");
-                     out.println("</ul>");
-                     out.println("</div>");
+                     out.println("<li class='more p-1 chi-font dropdown'>");
+                     out.println(" <a href='#' class='dropdown-toggle' data-toggle='dropdown'><span style='font-size: 20px;position:relative;top:-10%;'>"+"歡迎，"+tmp.getString("m_firstname")+"</span></a>");
                 
 %>
                 <ul class="dropdown-menu">
@@ -104,39 +99,42 @@
                         <a href="member-area.html" style="text-decoration: none;" class="text-white"><h6 class="chi-font btn-li">後台管理</h6></a>
                     </li>
                     <li class="p-3 cont btn-li">
-                        <a href="car.html" style="text-decoration: none;" class="text-white"><h6 class="chi-font btn-li">登出</h6></a>
-                    </li>
-                </ul>
-<%
-            }
-    else 
-                {
-                    out.println("<a href='#' class='dropdown-toggle' data-toggle='dropdown'><span style='font-size: 20px;position:relative;top:-10%;'>"+"歡迎，"+tmp.getString("m_name"));
-                    out.println("</span>");
-                    out.println("</a>");
-                
-%>
-                <ul class="dropdown-menu">
-                    <li class="p-3 cont btn-li">
-                        <a href="member-area.html" style="text-decoration: none;" class="text-white"><h6 class="chi-font btn-li">會員專區</h6></a>
-                    </li>
-                    <li class="p-3 cont btn-li">
-                        <a href="car.html" style="text-decoration: none;" class="text-white"><h6 class="chi-font btn-li">購物車</h6></a>
-                    </li>
-                    <li class="p-3 cont btn-li">
-                        <a href="member-area.html" style="text-decoration: none;" class="text-white"><h6 class="chi-font btn-li">我的最愛</h6></a>
-                    </li>
-                    <li class="p-3 cont btn-li">
-                        <a href="member-area.html" style="text-decoration: none;" class="text-white"><h6 class="chi-font btn-li">購物紀錄</h6></a>
-                    </li>
-                    <li class="p-3 cont btn-li">
-                        <a href="member-area.html" style="text-decoration: none;" class="text-white"><h6 class="chi-font btn-li">登出</h6></a>
+                        <a href="logout.jsp" style="text-decoration: none;" class="text-white"><h6 class="chi-font btn-li">登出</h6></a>
                     </li>
                 </ul>
             </li>
 <%
-}
+                }
+             else 
+                {
+                     out.println("<li>");
+                    out.println("<a class='codrops-icon codrops-icon-prev' href='#' >"+"購物車"+"</a>");
+                    out.println("</li>");
+                    out.println("<li>");
+                    out.println("<a class='codrops-icon codrops-icon-prev' href='#'>"+"我的最愛"+"</a>");
+                    out.println("</li>");
+                    out.println("<li class='dropdown'>");
+                     out.println("<a href='#' id='dropdownMenuButton' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>"+"歡迎，"+tmp.getString("m_firstname")+"</a>");
+                
+%>
+             
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+            </li>
+<%
+            }
         }
+ %>
+
+         <li>
+                <div class="sharethis-inline-share-buttons cont p-3"></div>
+            </li>
+        </ul>
+    </div>
+<%
     }
     catch(Exception e)
     {
@@ -163,11 +161,7 @@
     }
 %> 
 
-            <li>
-                <div class="sharethis-inline-share-buttons cont p-3"></div>
-            </li>
-        </ul>
-    </div>
+           
     <!--    側欄/結束-->
     <!--            註冊跳出頁面--Start-->
     <div class="modal fade chi-font" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -181,10 +175,10 @@
                         &times;
                     </button>
                 </div>
-                <form>
+                <form >
                     <div class="modal-body  chi-font">
-                        <span style="color: #FE938C;" class="chi-font">帳號</span><input style="max-width:85%;" class="form-control" type="search" placeholder="Account..." id="acc">
-                        <span style="color: #FE938C;" class="chi-font">密碼</span><input style="max-width:85%;" class="form-control" type="search" placeholder="Password..." id="psd">
+                        <span style="color: #FE938C;" class="chi-font">帳號</span><input style="max-width:85%;" class="form-control" type="search" placeholder="Account..." id="acc" name="acc">
+                        <span style="color: #FE938C;" class="chi-font">密碼</span><input style="max-width:85%;" class="form-control" type="search" placeholder="Password..." id="psd" name="psd">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default chi-font" data-dismiss="modal">關閉
@@ -212,10 +206,10 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="login.jsp" method="POST">
+                    <form action="login.jsp" method="post">
                         <div class="modal-body chi-font">
                             <span style="color: #FE938C;" class="chi-font">帳號</span><input style="max-width:85%;" class="form-control" type="search" placeholder="Account..." name="acc">
-                            <span style="color: #FE938C;" class="chi-font">密碼</span><input style="max-width:85%;" class="form-control" type="search" placeholder="Password..." name="pas">
+                            <span style="color: #FE938C;" class="chi-font">密碼</span><input style="max-width:85%;" class="form-control" type="search" placeholder="Password..." name="psd">
                         </div>
                         <button type="submit" class="btn btn-success btn-block chi-font">登入</button>
                     </form>
@@ -262,22 +256,21 @@
 
             </script>
 
-            <script>
-        $(function(){
-        $(".dropdown").hover(            
-                function() {
-                    $('.dropdown-menu', this).stop( true, true ).fadeIn("fast");
-                    $(this).toggleClass('open');
-                    $('b', this).toggleClass("caret caret-up");                
-                },
-                function() {
-                    $('.dropdown-menu', this).stop( true, true ).fadeOut("fast");
-                    $(this).toggleClass('open');
-                    $('b', this).toggleClass("caret caret-up");                
-                });
-        });
-
-    </script>
+             <script>
+                            $(function(){
+                            $(".dropdown").hover(
+                            function() {
+                            $('.dropdown-menu', this).stop( true, true ).fadeIn("fast");
+                            $(this).toggleClass('open');
+                            $('b', this).toggleClass("caret caret-up");
+                            },
+                            function() {
+                            $('.dropdown-menu', this).stop( true, true ).fadeOut("fast");
+                            $(this).toggleClass('open');
+                            $('b', this).toggleClass("caret caret-up");
+                            });
+                            });
+            </script>
 </body>
 
 </html>

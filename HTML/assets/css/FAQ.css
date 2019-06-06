@@ -1,0 +1,60 @@
+.FAQ
+{
+	display: inline-block;
+	height: 500px;
+}
+.feeback_content
+{
+	display: block;
+	width: 60%;
+   	margin:0 0 100px 500px;
+    
+}
+.feeback1
+{
+	display: block;
+	margin-bottom: 10px;
+    height: 40px;
+    font-family: "微軟正黑體";
+    border-radius: 7px;
+    border: #AAAAAA solid 3px;
+    transition: all 0.6s ease;
+}
+.feeback1:focus
+{
+ border-radius: 7px;
+ border: #BBCCDD solid 3px;
+}
+.feeback2
+{
+	font-family: "微軟正黑體";
+	display: block;
+	margin-bottom: 10px;
+    height: 150px;
+    border-radius: 7px;
+    border: #AAAAAA solid 2px;
+    transition: all 0.6s ease;
+}
+.feeback2:focus
+{
+ border-radius: 7px;
+ border: #BBCCDD solid 3px;
+}
+.but
+{
+	margin-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	width:10%;
+	position: relative;
+	background-color: #AAAAAA;
+	border: #AAAAAA solid 1px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bolder;
+    transition: all 0.3s ease;
+}
+.but:hover
+{
+  background-color: black;
+}

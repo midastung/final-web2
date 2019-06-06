@@ -1,0 +1,164 @@
+/*----------------------------------------*/
+/*   Theme default CSS
+/*----------------------------------------*/
+html, body {height: 100%;}
+.floatleft {float:left}
+.floatright {float:right}
+.alignleft {float:left;margin-right:15px;margin-bottom: 15px}
+.alignright {float:right;margin-left:15px;margin-bottom: 15px}
+.aligncenter {display:block;margin:0 auto 15px}
+a:focus {outline:0px solid}
+img {max-width:100%;height:auto}
+.fix {overflow:hidden}
+.table, .table-cell {
+height: 100%;
+display: table;
+}
+.table-cell {
+display: table-cell;
+vertical-align: middle;
+}
+p {
+margin:0 0 15px;
+}
+a{
+text-decoration:none;
+color: #434343;
+}
+a, *::before {
+transition: all 0.3s ease 0s;
+}
+a:hover {
+color: #C8A165;
+text-decoration: none;
+}
+a:active, a:hover {
+outline: 0 none;
+}
+a:focus {
+text-decoration:none;
+}
+ul{
+list-style: outside none none;
+margin: 0;
+padding: 0
+}
+.clear{clear:both}
+::-moz-selection {
+background: #b3d4fc;
+text-shadow: none;
+}
+::selection {
+background: #b3d4fc;
+text-shadow: none;
+}
+.browserupgrade {
+margin: 0.2em 0;
+background: #ccc;
+color: #000;
+padding: 0.2em 0;
+}
+/* -----------------------------------------
+Product-Area
+----------------------------------------- */
+.product-area {}
+.product-slider .slick-list { padding: 10px 15px 20px;}
+.single-product {
+padding-top: 15px;
+transition: all 0.5s ease 0s;
+}
+.product-img {
+overflow: hidden;
+position: relative;
+height: 70%;
+}
+.product-img img { width: 100%;}
+.product-action {
+background: #fff none repeat scroll 0 0;
+bottom: -40px;
+left: 0;
+margin: auto;
+position: absolute;
+right: 0;
+text-align: center;
+visibility:hidden;
+opacity: 0;
+transition: all 0.5s ease 0s;
+width: 30%;
+}
+.product-action a {
+color: #666666;
+margin-left:15%;
+float: left;
+font-size: 16px;
+height: 20px;
+line-height: 20px;
+position: relative;
+width: 25%;
+}
+.product-action a::before {
+background: #999 none repeat scroll 0 0;
+content: "";
+height: 16px;
+margin-top: -8px;
+position: absolute;
+right: -30%;
+top: 50%;
+width: 2px;
+}
+.product-action a:last-child::before {
+display:none;
+}
+.product-action a:hover {
+color: #C8A165;
+}
+.product-info {
+padding: 20px 0;
+}
+.post-title {
+font-size: 16px;
+line-height: 18px;
+text-transform: uppercase;
+font-family: bree serif;
+margin-bottom: 5px;
+}
+.product-info p {
+font-weight: 700;
+margin-bottom: 5px;
+}
+.pro-price {
+color: #c87065;
+font-size: 18px;
+font-weight: bold;
+line-height: 28px;
+}
+.pro-rating a {
+color: #c87065;
+font-size: 15px;
+line-height: 28px;
+}
+.single-product:hover .product-action {
+bottom: 15px;
+visibility:visible;
+opacity: 1;
+}
+.single-product:hover {
+box-shadow: 1px 25px 54px rgba(0, 0, 0, 0.12);
+}
+.product-slider .single-product:hover {
+box-shadow: 1px 8px 15px rgba(0, 0, 0, 0.12);
+}
+.fav
+{
+	height: 100px;
+	width: 1000px;
+	margin-left: 20px;
+	background-color: gray;
+	border: 1px #AAAAAA solid;
+	color: 	#778899;
+	text-align: center;
+    padding-top: 38px;
+    padding-bottom:38px;
+    border-radius: 25px;
+    font-size: 18px;
+}
