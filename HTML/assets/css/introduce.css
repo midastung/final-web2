@@ -1,0 +1,84 @@
+.head_image
+{
+height: 75px;
+}
+
+.introduce_image
+{
+height: 370px;
+width: 420px;
+display: block;
+margin-right: auto;
+margin-left: auto;
+}
+.introduce_title
+{
+font-size: 25px;
+}
+.price
+{
+line-height: 40px;
+}
+.introduce_sale
+{
+display: inline-block;
+color: #EE82EE;
+font-size: 18px;
+}
+.introduce_price
+{
+display: inline-block;
+font-size: 15px;
+}
+
+.introduce_list
+{
+float: left;
+}
+ul
+{
+list-style-type: none;
+line-height: 40px;
+}
+li.star
+{
+	font-size: 16px;
+}
+.hr_line
+{
+	width: 600px;
+}
+.car
+{
+	background-color: orange;
+	color: #FFFFFF;
+	border-radius: 5px;
+	border: none;
+}
+.minus
+{
+	width: 30px;
+	height: 30px;
+	background-color: #CCFF99;
+	color: #33FF33;
+	border-radius: 999em;
+	border: none;
+	font-size: 25px;
+	vertical-align: center;
+}
+.plus
+{
+	width: 30px;
+	height: 30px;
+	background-color: #CCFF99;
+	color: #33FF33;
+	border-radius: 999em;
+	border: none;
+	font-size: 25px;
+	vertical-align: center;
+}
+.num
+{
+	width: 30px;
+	height: 30px;
+}

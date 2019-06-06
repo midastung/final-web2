@@ -1,0 +1,109 @@
+.row {
+display: flex;
+flex-wrap: wrap;
+margin: 0 -16px;
+}
+.col-25 {
+flex: 25%;
+}
+.col-50 {
+flex: 50%;
+}
+.col-75 {
+flex: 75%;
+}
+.col-25,
+.col-50,
+.col-75 {
+padding: 0 16px;
+}
+.car
+{
+margin: 12.5%;
+width: 40%;
+background-color: #f2f2f2;
+padding: 5px 20px 15px 20px;
+border: 1px solid lightgrey;
+border-radius: 20px;
+}
+.container {
+background-color: #f2f2f2;
+padding: 5px 20px 15px 20px;
+border: 1px solid lightgrey;
+border-radius: 20px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+input[type=text] {
+width: 100%;
+margin-bottom: 20px;
+padding: 12px;
+border: 1px solid #ccc;
+border-radius: 3px;
+}
+input[type=textarea] {
+width: 100%;
+margin-bottom: 20px;
+margin: 0 10px 20px 15px;
+padding: 12px;
+height: 150px;
+border: 1px solid #ccc;
+border-radius: 3px;
+}
+label {
+margin-bottom: 10px;
+display: block;
+}
+.icon-container {
+margin-bottom: 20px;
+padding: 7px 0;
+font-size: 24px;
+}
+
+
+
+.button {
+    padding: 20px;
+    margin: 5px 12px;
+    width: 100%;
+
+    /* Green */
+
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+  
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.button1 {
+    background-color: #f2f2f2;
+    color: black;
+    border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+a {
+color: #2196F3;
+}
+hr {
+border: 1px solid lightgrey;
+}
+span.price {
+float: left
+color: grey;
+}
+@media (max-width: 800px) {
+.row {
+flex-direction: column-reverse;
+}
+.col-25 {
+margin-bottom: 20px;
+}
+}
+    

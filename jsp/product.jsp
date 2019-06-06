@@ -1,14 +1,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<%@ page import = "java.util.*" %>
 <%@ page language="java" contentType="text/html; charset=utf-8"%>
-<%@ include file="getDB.jsp"%>
+<%@ page import = "java.sql.*, java.util.*" %>
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="UTF-8" />
-    <title>test</title>
-
+    <title>商品</title>
     <!-- Google Font -->
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
@@ -28,14 +26,11 @@
     <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
     <link rel="stylesheet" type="text/css" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/animate.css" />
-
     <!--    product-side start-->
 
     <link rel="stylesheet" type="text/css" href="assets/css/product-side.css">
     <!--    product-side end-->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
-
-
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:700&display=swap" rel="stylesheet">
 </head>
 
