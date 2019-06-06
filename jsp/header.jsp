@@ -21,26 +21,6 @@
 </head>
 
 <body>
-    <!--    側欄/開始-->
-    <div class="">
-        <ul id="gn-menu" class="gn-menu-main">
-            <li class="gn-trigger">
-                <a class="gn-icon gn-icon-menu"><span>Menu</span></a>
-                <nav class="gn-menu-wrapper">
-                    <div class="gn-scroller">
-                        <ul class="gn-menu">
-                            <li class="gn-search-item">
-                                <i class="fas fa-search p-4"></i>
-                                <input placeholder="Search" type="search" class="gn-search p-0">
-                            </li>
-                            <li class="gn-search-item"><a href="product1.html"><i class="fas fa-shopping-basket p-4"></i>Product</a></li>
-                            <li class="gn-search-item"><a href="#"><i class="fas fa-users p-4"></i>About Us</a></li>
-                            <li class="gn-search-item"><a href="#"><i class="far fa-question-circle p-4"></i><span class="p-1">FAQ</span></a></li>
-                        </ul>
-                    </div><!-- /gn-scroller -->
-                </nav>
-            </li>
-
 <%
 
         String acc="";
@@ -68,6 +48,28 @@
     try{    
         if(acc==null||acc.equals("")||pas==null||pas.equals(""))
         {
+ %>
+        <!--    側欄/開始-->
+            <div class="">
+                <ul id="gn-menu" class="gn-menu-main">
+                    <li class="gn-trigger">
+                        <a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+                        <nav class="gn-menu-wrapper">
+                            <div class="gn-scroller">
+                                <ul class="gn-menu">
+                                    <li class="gn-search-item">
+                                        <i class="fas fa-search p-4"></i>
+                                        <input placeholder="Search" type="search" class="gn-search p-0">
+                                    </li>
+                                    <li class="gn-search-item"><a href="product1.html"><i class="fas fa-shopping-basket p-4"></i>Product</a></li>
+                                    <li class="gn-search-item"><a href="#"><i class="fas fa-users p-4"></i>About Us</a></li>
+                                    <li class="gn-search-item"><a href="#"><i class="far fa-question-circle p-4"></i><span class="p-1">FAQ</span></a></li>
+                                </ul>
+                            </div><!-- /gn-scroller -->
+                        </nav>
+                    </li>
+
+ <%
                     out.println("<li>");
                     out.println("<a class='codrops-icon codrops-icon-prev' href='#'' data-toggle='modal' data-target='#mySign' id='myBtn'>"+"Sign in"+"</a>");
                     out.println("</li>");
@@ -78,6 +80,29 @@
         }
         else
         {       
+
+%> 
+            <!--    側欄/開始-->
+            <div class="">
+                <ul id="gn-menu" class="gn-menu-main">
+                    <li class="gn-trigger">
+                        <a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+                        <nav class="gn-menu-wrapper">
+                            <div class="gn-scroller">
+                                <ul class="gn-menu">
+                                    <li class="gn-search-item">
+                                        <i class="fas fa-search p-4"></i>
+                                        <input placeholder="Search" type="search" class="gn-search p-0">
+                                    </li>
+                                    <li class="gn-search-item"><a href="product1.html"><i class="fas fa-shopping-basket p-4"></i>Product</a></li>
+                                    <li class="gn-search-item"><a href="#"><i class="fas fa-users p-4"></i>About Us</a></li>
+                                    <li class="gn-search-item"><a href="#"><i class="far fa-question-circle p-4"></i><span class="p-1">FAQ</span></a></li>
+                                    <li class="gn-search-item"><a href="logout.jsp"><i class="far fa-question-circle p-4"></i><span class="p-1">Logout</span></a></li>
+                                </ul>
+                            </div><!-- /gn-scroller -->
+                        </nav>
+                    </li>
+<%
                 session.setAttribute("in",acc);
                 sql="SELECT * FROM member WHERE m_account='"+acc+"' and m_password='"+pas+"'";
                 ResultSet tmp=con.createStatement().executeQuery(sql);
@@ -88,21 +113,12 @@
                     out.println("<a class='codrops-icon codrops-icon-prev' href='#'>"+"後台頁面"+"</a>");
                     out.println("</li>");
                     out.println("<li>");
-                    out.println("<a class='codrops-icon codrops-icon-prev' href='#'>"+"登出"+"</a>");
+                    out.println("<a class='codrops-icon codrops-icon-prev' href='logout.jsp'>"+"登出"+"</a>");
                      out.println("</li>");
-                     out.println("<li class='more p-1 chi-font dropdown'>");
-                     out.println(" <a href='#' class='dropdown-toggle' data-toggle='dropdown'><span style='font-size: 20px;position:relative;top:-10%;'>"+"歡迎，"+tmp.getString("m_firstname")+"</span></a>");
+                     out.println("<li class='more p-1 chi-font'>"+"<a href='#'>"+"<span style='font-size: 20px;position:relative;top:-10%;'>"+"歡迎，"+tmp.getString("m_firstname")+"管理員</span></a></li>");
                 
 %>
-                <ul class="dropdown-menu">
-                    <li class="p-3 cont btn-li">
-                        <a href="member-area.html" style="text-decoration: none;" class="text-white"><h6 class="chi-font btn-li">後台管理</h6></a>
-                    </li>
-                    <li class="p-3 cont btn-li">
-                        <a href="logout.jsp" style="text-decoration: none;" class="text-white"><h6 class="chi-font btn-li">登出</h6></a>
-                    </li>
-                </ul>
-            </li>
+                
 <%
                 }
              else 
@@ -113,18 +129,8 @@
                     out.println("<li>");
                     out.println("<a class='codrops-icon codrops-icon-prev' href='#'>"+"我的最愛"+"</a>");
                     out.println("</li>");
-                    out.println("<li class='dropdown'>");
-                     out.println("<a href='#' id='dropdownMenuButton' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>"+"歡迎，"+tmp.getString("m_firstname")+"</a>");
-                
-%>
-             
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
-            </li>
-<%
+                    out.println("<li class='more p-1 chi-font'>"+"<a href='#'>"+"<span style='font-size: 20px;position:relative;top:-10%;'>"+"歡迎，"+tmp.getString("m_firstname")+"</span></a></li>");
+
             }
         }
  %>
