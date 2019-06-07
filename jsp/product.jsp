@@ -79,7 +79,7 @@
                                                    out.println("<div class='single-product col-lg-3'>");
                                                     out.println("<div class='product-img'>");
                                                         out.println("<span class='"+tmp.getString("p_strcss")+"'>"+tmp.getString("p_strhot")+"</span>");
-                                                        out.println("<a href='single-product.html'>"+"<img src='"+tmp.getString("p_image")+"'/>"+"</a>");
+                                                        out.println("<a href='single-product.jsp'?"+tmp.getString("p_id")+">"+"<img src='"+tmp.getString("p_image")+"'/>"+"</a>");
                                                         out.println("<div class='product-action clearfix'>");
                                                         out.println("<a href='#' data-toggle='tooltip' data-placement='top' title='Wishlist'>"+"<i class='zmdi zmdi-favorite-outline'>"+"</i>"+"</a>");
                                                         out.println("<a href='#' data-toggle='tooltip' data-placement='top' title='Add To Cart'>"+"<i class='zmdi zmdi-shopping-cart-plus'>"+"</i>"+"</a>");
@@ -144,7 +144,7 @@
                                                    out.println("<div class='single-product col-lg-3'>");
                                                     out.println("<div class='product-img'>");
                                                          out.println("<span class='"+tmp.getString("p_strcss")+"'>"+tmp.getString("p_strhot")+"</span>");
-                                                        out.println("<a href='single-product.html'>"+"<img src='"+tmp.getString("p_image")+"'/>"+"</a>");
+                                                        out.println("<a href='single-product.jsp'?"+tmp.getString("p_id")+">"+"<img src='"+tmp.getString("p_image")+"'/>"+"</a>");
                                                         out.println("<div class='product-action clearfix'>");
                                                         out.println("<a href='#' data-toggle='tooltip' data-placement='top' title='Wishlist'>"+"<i class='zmdi zmdi-favorite-outline'>"+"</i>"+"</a>");
                                                         out.println("<a href='#' data-toggle='tooltip' data-placement='top' title='Add To Cart'>"+"<i class='zmdi zmdi-shopping-cart-plus'>"+"</i>"+"</a>");
@@ -207,7 +207,7 @@
                                                    out.println("<div class='single-product col-lg-3'>");
                                                     out.println("<div class='product-img'>");
                                                          out.println("<span class='"+tmp.getString("p_strcss")+"'>"+tmp.getString("p_strhot")+"</span>");
-                                                        out.println("<a href='single-product.html'>"+"<img src='"+tmp.getString("p_image")+"'/>"+"</a>");
+                                                        out.println("<a href='single-product.jsp'?"+tmp.getString("p_id")+">"+"<img src='"+tmp.getString("p_image")+"'/>"+"</a>");
                                                         out.println("<div class='product-action clearfix'>");
                                                         out.println("<a href='#' data-toggle='tooltip' data-placement='top' title='Wishlist'>"+"<i class='zmdi zmdi-favorite-outline'>"+"</i>"+"</a>");
                                                         out.println("<a href='#' data-toggle='tooltip' data-placement='top' title='Add To Cart'>"+"<i class='zmdi zmdi-shopping-cart-plus'>"+"</i>"+"</a>");
@@ -270,7 +270,7 @@
                                                    out.println("<div class='single-product col-lg-3'>");
                                                     out.println("<div class='product-img'>");
                                                          out.println("<span class='"+tmp.getString("p_strcss")+"'>"+tmp.getString("p_strhot")+"</span>");
-                                                        out.println("<a href='single-product.html'>"+"<img src='"+tmp.getString("p_image")+"'/>"+"</a>");
+                                                        out.println("<a href='single-product.jsp'?"+tmp.getString("p_id")+">"+"<img src='"+tmp.getString("p_image")+"'/>"+"</a>");
                                                         out.println("<div class='product-action clearfix'>");
                                                         out.println("<a href='#' data-toggle='tooltip' data-placement='top' title='Wishlist'>"+"<i class='zmdi zmdi-favorite-outline'>"+"</i>"+"</a>");
                                                         out.println("<a href='#' data-toggle='tooltip' data-placement='top' title='Add To Cart'>"+"<i class='zmdi zmdi-shopping-cart-plus'>"+"</i>"+"</a>");
