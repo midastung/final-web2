@@ -25,7 +25,7 @@ DROP TABLE IF EXISTS `count`;
 CREATE TABLE `count` (
   `idcount` int(11) NOT NULL,
   PRIMARY KEY (`idcount`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -59,7 +59,7 @@ CREATE TABLE `list_shopping` (
   `delivery_time` varchar(45) NOT NULL,
   `l_idd` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -89,7 +89,7 @@ CREATE TABLE `member` (
   `m_mobile` varchar(45) DEFAULT NULL,
   `m_tel` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`m_account`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -119,7 +119,7 @@ CREATE TABLE `product` (
   `p_long` varchar(45) NOT NULL,
   `p_hot` int(11) NOT NULL,
   PRIMARY KEY (`p_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1028 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1028 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -145,7 +145,7 @@ CREATE TABLE `shopping_cart` (
   `s_number` varchar(45) NOT NULL,
   `m_account` varchar(45) NOT NULL,
   PRIMARY KEY (`s_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
