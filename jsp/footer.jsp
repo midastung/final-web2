@@ -17,6 +17,11 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:700&display=swap" rel="stylesheet">
 
     <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5ce40b2adc07bd00120823e5&product=inline-share-buttons' async='async'></script>
+
+
+    <style>
+     
+    </style>
 </head>
 
 <body>
@@ -24,7 +29,7 @@
 
             <!-- Footer Section -->
 
-
+       
             <footer class="text-light" style="background-color: #E3AE57;">
                 <div class="container">
                     <div class="row wow fadeInUp footer-copyright" data-wow-delay="1.8s">
@@ -72,8 +77,6 @@
                     </div>
                 </div>
             </footer>
-
-
 
             <script src="assets/js/classie.js"></script>
             <script src="assets/js/gnmenu.js"></script>
