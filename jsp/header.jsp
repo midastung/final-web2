@@ -73,9 +73,11 @@
                     out.println("<li>");
                     out.println("<a class='codrops-icon codrops-icon-prev' href='#'' data-toggle='modal' data-target='#mySign' id='myBtn'>"+"Sign in"+"</a>");
                     out.println("</li>");
+
+                    out.println("<li>");
+                    out.println("<a class='codrops-icon codrops-icon-prev' href='#'' data-toggle='modal' data-target='#myModal' id='myBtn'>"+"Sign up"+"</a>");
+                    out.println("</li>");
 %>
-            
-            <li><a class="codrops-icon codrops-icon-prev" href="#" data-toggle="modal" data-target="#myModal"><span>Sign up</span></a></li>
 <%
         }
         else
@@ -109,13 +111,13 @@
                 tmp.next();
                 if(tmp.getString("m_level").equals("1"))
                 {
-                     out.println("<li>");
+                    out.println("<li>");
                     out.println("<a class='codrops-icon codrops-icon-prev' href='#'>"+"後台頁面"+"</a>");
                     out.println("</li>");
                     out.println("<li>");
                     out.println("<a class='codrops-icon codrops-icon-prev' href='logout.jsp'>"+"登出"+"</a>");
-                     out.println("</li>");
-                     out.println("<li class='more p-1 chi-font'>"+"<a href='#'>"+"<span style='font-size: 20px;position:relative;top:-10%;'>"+"歡迎，"+tmp.getString("m_firstname")+"管理員</span></a></li>");
+                    out.println("</li>");
+                    out.println("<li class='more p-1 chi-font'>"+"<a href='#'>"+"<span style='font-size: 20px;position:relative;top:-10%;'>"+"歡迎，"+tmp.getString("m_firstname")+"管理員</span></a></li>");
                 
 %>
                 
@@ -123,7 +125,7 @@
                 }
              else 
                 {
-                     out.println("<li>");
+                    out.println("<li>");
                     out.println("<a class='codrops-icon codrops-icon-prev' href='#' >"+"購物車"+"</a>");
                     out.println("</li>");
                     out.println("<li>");
@@ -169,7 +171,7 @@
 
            
     <!--    側欄/結束-->
-    <!--            註冊跳出頁面--Start-->
+    <!--    註冊跳出頁面--Start-->
     <div class="modal fade chi-font" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -181,15 +183,15 @@
                         &times;
                     </button>
                 </div>
-                <form >
+                <form action="regis.jsp" method="post">
                     <div class="modal-body  chi-font">
                         <span style="color: #FE938C;" class="chi-font">帳號</span><input style="max-width:85%;" class="form-control" type="search" placeholder="Account..." id="acc" name="acc">
-                        <span style="color: #FE938C;" class="chi-font">密碼</span><input style="max-width:85%;" class="form-control" type="search" placeholder="Password..." id="psd" name="psd">
+                        <span style="color: #FE938C;" class="chi-font">密碼</span><input style="max-width:85%;" class="form-control" type="search" placeholder="Password..." id="pas" name="pas">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default chi-font" data-dismiss="modal">關閉
                         </button>
-                        <button type="submit" class="btn btn-primary chi-font">
+                        <button type="submit" class="btn btn-primary chi-font" onclick="location.href='regis.jsp'">
                             註冊完成
                         </button>
                     </div>
