@@ -1,4 +1,7 @@
 <%@page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@page pageEncoding="utf-8"%>
+<%@page import="java.util.*,java.io.*"%>
+<%@include file="getDB.jsp"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,8 +51,8 @@ a
 		<td colspan="2" rowspan="4" style="width: 70rem">
 			<center><table border="1" class="in">
 				<tr>
-					<td>商品編碼</td>
-					<td>上架日期</td>
+					<td>商品編號</td>
+					<td>商品名稱</td>
 					<td>商品價格</td>
 					<td>商品數量</td>
 					<td>商品圖片</td>
@@ -57,7 +60,7 @@ a
 
 			    <tr>
 			    	<td>1</td>
-					<td>6/15</td>
+					<td>xxx</td>
 					<td>xxx</td>
 					<td>xxx</td>
 					<td>xxx.jpg</td>
@@ -65,7 +68,7 @@ a
 
 			    <tr>
 			    	<td>2</td>
-					<td>6/15</td>
+					<td>xxx</td>
 					<td>xxx</td>
 					<td>xxx</td>
 					<td>xxx.jpg</td>
@@ -88,7 +91,11 @@ a
 <center><table border="1" class="under">
   <tr><td colspan="3" style="width: 80rem">商品資料</td></tr>
   <tr>
-  	<td>商品編碼</td>
+  	<td>商品編號</td>
+  	<td colspan="2"><textarea style="width: 90%;"></textarea></td>
+  </tr>
+    <tr>
+  	<td>商品名稱</td>
   	<td colspan="2"><textarea style="width: 90%;"></textarea></td>
   </tr>
   <tr>

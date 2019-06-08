@@ -1,4 +1,7 @@
 <%@page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@page pageEncoding="utf-8"%>
+<%@page import="java.util.*,java.io.*"%>
+<%@include file="getDB.jsp"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,8 +60,26 @@ a
 					<td>稱謂</td>
 					<td>電話</td>
 				</tr>
-
-			    <tr>
+<%
+                sql="SELECT * FROM member;";
+                ResultSet tmp=con.createStatement().executeQuery(sql);
+                while(tmp.next())
+                {
+                  out.println("<tr>");
+                  out.println("<td>"+tmp.getString("m_account")+"</td>");
+                  out.println("<td>"+tmp.getString("m_password")+"</td>");
+                  out.println("<td>"+tmp.getString("m_firstname")+"</td>");
+                  out.println("<td>"+tmp.getString("m_lastname")+"</td>");
+                  out.println("<td>"+tmp.getString("m_address")+"</td>");
+                  out.println("<td>"+tmp.getString("m_mail")+"</td>");
+                  out.println("<td>"+tmp.getString("m_level")+"</td>");
+                  out.println("<td>"+tmp.getString("m_head")+"</td>");
+                  out.println("<td>"+tmp.getString("m_tel")+"</td>");
+                  out.println("</tr>");
+                }
+                  con.close();
+%>
+			    <!--<tr>
 					<td>y</td>
 					<td>m</td>
 					<td>ym</td>
@@ -68,19 +89,7 @@ a
 					<td>1</td>
 					<td>管理者</td>
 					<td>0920218763</td>
-				</tr>
-
-				<tr>
-					<td>x</td>
-					<td>x</td>
-					<td>xxx</td>
-					<td>xxx</td>
-					<td>xxx</td>
-					<td>xxx@gmail.com</td>
-					<td>0</td>
-					<td>一般會員</td>
-					<td>09xxx</td>
-				</tr>
+				</tr>!-->
 			</table></center>
 		</td>
 	</tr>
