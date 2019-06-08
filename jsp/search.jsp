@@ -43,16 +43,9 @@
         <img src="assets/images/pic0.png" class="img-fluid">
     </div>
     <div class="naccs container-fluid">
-            <div class="row">
-             <div class="gc p-5 col-xl-3 col-md-3">
-                <div class="menu">
-                    <div><span class="light"></span><span>商品總覽</span></div>
-                    <div class="active"><span class="light"></span><span>和菓子</span></div>
-                    <div><span class="light"></span><span>西式甜點</span></div>
-                    <div><span class="light"></span><span>日式料理</span></div>
-                </div>
-            </div>
-            <div class="p-3 col-xl-9 col-md-3" style="width:100%;">
+           
+            
+            <div class="p-3 " style="width:100%;">
                 <ul class="nacc">
                     <li class="active">
                         <!-- 商品總覽 START -->
@@ -62,7 +55,7 @@
                                 <div class="row">
                                     <div class="col-xl-12">
                                         <div class="section-title text-center">
-                                            <h2 class="title-border">商品總覽</h2>
+                                            <h2 class="title-border">搜索結果</h2>
                                         </div>
                                     </div>
                                 </div>
@@ -124,15 +117,6 @@
                         <!--和菓子 START -->
                         <div class="product-area" >
                             <div class="container">
-                                <!-- Section-title start -->
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="section-title text-center">
-                                            <h2 class="title-border">和菓子</h2>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Section-title end -->
                                  <div class="container">
                                     <div class="row">
 <%
@@ -187,15 +171,6 @@
                         <!-- 西式甜點 START -->
                         <div class="product-area" >
                             <div class="container">
-                                <!-- Section-title start -->
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="section-title text-center">
-                                            <h2 class="title-border">西式甜點</h2>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Section-title end -->
                                 <div class="container">
                                     <div class="row">
                                        <%
@@ -250,15 +225,6 @@
                         <!--日式料理 START -->
                         <div class="product-area" >
                             <div class="container">
-                                <!-- Section-title start -->
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="section-title text-center">
-                                            <h2 class="title-border">日式料理</h2>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Section-title end -->
                                 <div class="container">
                                     <div class="row">
                                       <%

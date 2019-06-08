@@ -19,7 +19,19 @@
 
     <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5ce40b2adc07bd00120823e5&product=inline-share-buttons' async='async'></script>
 </head>
-
+    <style>
+        .srh_btn{
+            background-color:rgb(242,243,233); 
+            border:none;
+            color:#5F6F81;
+            font-size:10px;
+            border-radius: 10px;
+        }
+        .srh_btn:hover{
+             background-color:#fff;
+            color:#000;
+        }
+    </style>
 <body>
 <%
 
@@ -59,7 +71,8 @@
                                 <ul class="gn-menu">
                                     <li class="gn-search-item">
                                         <i class="fas fa-search p-4"></i>
-                                        <input placeholder="Search" type="search" class="gn-search p-0">
+                                        <input placeholder="Search" type="search" class="gn-search p-0" >
+                                        <button type="submit" class="srh_btn">SUBMIT</button>
                                     </li>
                                     <li class="gn-search-item"><a href="index.jsp"><i class="fas fa-home p-4"></i>Home</a></li>
                                     <li class="gn-search-item"><a href="all_products.jsp"><i class="fas fa-shopping-basket p-4"></i>Product</a></li>
@@ -115,6 +128,7 @@
                                     <li class="gn-search-item">
                                         <i class="fas fa-search p-4"></i>
                                         <input placeholder="Search" type="search" class="gn-search p-0">
+                                        <button type="submit" class="srh_btn">SUBMIT</button>
                                     </li>
                                     <li class="gn-search-item"><a href="index.jsp"><i class="fas fa-home p-4"></i>Home</a></li>
                                     <li class="gn-search-item"><a href="all_products.jsp"><i class="fas fa-shopping-basket p-4"></i>Product</a></li>
