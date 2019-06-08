@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/animate.css" />
     <!--product start-->
+    <link rel="stylesheet" type="text/css" href="assets/css/star.css">
     <link rel="stylesheet" href="assets/css/product_slick.css">
     <link rel="stylesheet" href="assets/css/product-iconic-font.css">
     <link rel="stylesheet" href="assets/css/product_default.css">
@@ -34,151 +35,49 @@
                 <img src="assets/images/icon/TP6.png" style="width:50%;margin-top:-20%;" class="cont">
             </div>
             <!-- PRODUCT-AREA START -->
-            <div class="product-area col-xl-8 col-md-8 index-color" style="margin-top:500px;">
+            <div class="product-area col-xl-8 col-md-8 index-color" style="margin-top:32%;">
                 <div class="container">
                     <div class="row cus-row-30">
                         <div class="product-slider arrow-left-right" style="width:100%;">
                             <!-- Single-product start -->
-                            <div class="single-product col-lg-12">
-                                <div class="product-img">
-                                    <span class="pro-label new-label">No.1</span>
-                                    <a href="single-product.html"><img src="assets/images/dish/onigiri.jpg" alt="" /></a>
-                                    <div class="product-action clearfix">
-                                        <a href="#" data-toggle="tooltip" data-placement="top" title="Wishlist"><i class="zmdi zmdi-favorite-outline"></i></a>
-                                        <a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="zmdi zmdi-shopping-cart-plus"></i></a>
-                                    </div>
-                                </div>
-                                <div class="product-info clearfix">
-                                    <div class="fix">
-                                        <h4 class="post-title floatleft"><a href="#">dummy Product name</a></h4>
-                                        <p class="floatright hidden-sm hidden-xs">Furniture</p>
-                                    </div>
-                                    <div class="fix">
-                                        <span class="pro-price floatleft">$ 56.20</span>
-                                        <span class="pro-rating floatright">
-                                            <a href="#"><i class="zmdi zmdi-star"></i></a>
-                                            <a href="#"><i class="zmdi zmdi-star"></i></a>
-                                            <a href="#"><i class="zmdi zmdi-star"></i></a>
-                                            <a href="#"><i class="zmdi zmdi-star-half"></i></a>
-                                            <a href="#"><i class="zmdi zmdi-star-half"></i></a>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Single-product end -->
-                            <!-- Single-product start -->
-                            <div class="single-product col-lg-12">
-                                <div class="product-img">
-                                    <span class="pro-label new-label">No.2</span>
-                                    <a href="single-product.html"><img src="assets/images/dish/ramen.jpg" alt="" /></a>
-                                    <div class="product-action clearfix">
-                                        <a href="#" data-toggle="tooltip" data-placement="top" title="Wishlist"><i class="zmdi zmdi-favorite-outline"></i></a>
-                                        <a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="zmdi zmdi-shopping-cart-plus"></i></a>
-                                    </div>
-                                </div>
-                                <div class="product-info clearfix">
-                                    <div class="fix">
-                                        <h4 class="post-title floatleft"><a href="#">dummy Product name</a></h4>
-                                        <p class="floatright hidden-sm hidden-xs">Furniture</p>
-                                    </div>
-                                    <div class="fix">
-                                        <span class="pro-price floatleft">$ 56.20</span>
-                                        <span class="pro-rating floatright">
-                                            <a href="#"><i class="zmdi zmdi-star"></i></a>
-                                            <a href="#"><i class="zmdi zmdi-star"></i></a>
-                                            <a href="#"><i class="zmdi zmdi-star"></i></a>
-                                            <a href="#"><i class="zmdi zmdi-star-half"></i></a>
-                                            <a href="#"><i class="zmdi zmdi-star-half"></i></a>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Single-product end -->
-                            <!-- Single-product start -->
-                            <div class="single-product col-lg-12">
-                                <div class="product-img">
-                                    <span class="pro-label new-label">No.3</span>
-                                    <a href="single-product.html"><img src="assets/images/dish/oniku.jpg" alt="" /></a>
-                                    <div class="product-action clearfix">
-                                        <a href="#" data-toggle="tooltip" data-placement="top" title="Wishlist"><i class="zmdi zmdi-favorite-outline"></i></a>
-                                        <a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="zmdi zmdi-shopping-cart-plus"></i></a>
-                                    </div>
-                                </div>
-                                <div class="product-info clearfix">
-                                    <div class="fix">
-                                        <h4 class="post-title floatleft"><a href="#">dummy Product name</a></h4>
-                                        <p class="floatright hidden-sm hidden-xs">Furniture</p>
-                                    </div>
-                                    <div class="fix">
-                                        <span class="pro-price floatleft">$ 56.20</span>
-                                        <span class="pro-rating floatright">
-                                            <a href="#"><i class="zmdi zmdi-star"></i></a>
-                                            <a href="#"><i class="zmdi zmdi-star"></i></a>
-                                            <a href="#"><i class="zmdi zmdi-star"></i></a>
-                                            <a href="#"><i class="zmdi zmdi-star-half"></i></a>
-                                            <a href="#"><i class="zmdi zmdi-star-half"></i></a>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Single-product end -->
-                            <!-- Single-product start -->
-                            <div class="single-product col-lg-12">
-                                <div class="product-img">
-                                    <span class="pro-label new-label">No.4</span>
-                                    <a href="single-product.html"><img src="assets/images/dish/okayu.jpg" alt="" /></a>
-                                    <div class="product-action clearfix">
-                                        <a href="#" data-toggle="tooltip" data-placement="top" title="Wishlist"><i class="zmdi zmdi-favorite-outline"></i></a>
-                                        <a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="zmdi zmdi-shopping-cart-plus"></i></a>
-                                    </div>
-                                </div>
-                                <div class="product-info clearfix">
-                                    <div class="fix">
-                                        <h4 class="post-title floatleft"><a href="#">dummy Product name</a></h4>
-                                        <p class="floatright hidden-sm hidden-xs">Furniture</p>
-                                    </div>
-                                    <div class="fix">
-                                        <span class="pro-price floatleft">$ 56.20</span>
-                                        <span class="pro-rating floatright">
-                                            <a href="#"><i class="zmdi zmdi-star"></i></a>
-                                            <a href="#"><i class="zmdi zmdi-star"></i></a>
-                                            <a href="#"><i class="zmdi zmdi-star"></i></a>
-                                            <a href="#"><i class="zmdi zmdi-star-half"></i></a>
-                                            <a href="#"><i class="zmdi zmdi-star-half"></i></a>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Single-product end -->
-                            <!-- Single-product start -->
-                            <div class="single-product col-lg-12">
-                                <div class="product-img">
-                                    <span class="pro-label new-label">new</span>
-                                    <a href="single-product.html"><img src="assets/images/dish/oden.jpg" alt="" /></a>
-                                    <div class="product-action clearfix">
-                                        <a href="#" data-toggle="tooltip" data-placement="top" title="Wishlist"><i class="zmdi zmdi-favorite-outline"></i></a>
-                                        <a href="#" data-toggle="modal" data-target="#productModal" title="Quick View"><i class="zmdi zmdi-zoom-in"></i></a>
-                                        <a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="zmdi zmdi-refresh"></i></a>
-                                        <a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="zmdi zmdi-shopping-cart-plus"></i></a>
-                                    </div>
-                                </div>
-                                <div class="product-info clearfix">
-                                    <div class="fix">
-                                        <h4 class="post-title floatleft"><a href="#">dummy Product name</a></h4>
-                                        <p class="floatright hidden-sm hidden-xs">Furniture</p>
-                                    </div>
-                                    <div class="fix">
-                                        <span class="pro-price floatleft">$ 56.20</span>
-                                        <span class="pro-rating floatright">
-                                            <a href="#"><i class="zmdi zmdi-star"></i></a>
-                                            <a href="#"><i class="zmdi zmdi-star"></i></a>
-                                            <a href="#"><i class="zmdi zmdi-star"></i></a>
-                                            <a href="#"><i class="zmdi zmdi-star-half"></i></a>
-                                            <a href="#"><i class="zmdi zmdi-star-half"></i></a>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
+                            <%
+                                sql="SELECT * FROM product order by p_hot desc limit 6; ";
+                                ResultSet tmp = con.createStatement().executeQuery(sql);
+                                int i=0;
+                                while(tmp.next()){
+                                        i++;
+                                        out.println("<div class='single-product col-lg-12'>");
+                                        out.println("<div class='product-img'>");
+                                        out.println("<span class='pro-label new-label'>No."+i+"</span>");
+                                        out.println("<a href='all_single.jsp?p_id="+tmp.getString("p_id")+"'>"+"<img src='"+tmp.getString("p_image")+"'/>"+"</a>");
+                                        out.println("<div class='product-action clearfix'>");
+                                        out.println("<a href='#' data-toggle='tooltip' data-placement='top' title='Wishlist'>"+"<i class='zmdi zmdi-favorite-outline'>"+"</i>"+"</a>");
+                                        out.println("<a href='#' data-toggle='tooltip' data-placement='top' title='Add To Cart'>"+"<i class='zmdi zmdi-shopping-cart-plus'>"+"</i>"+"</a>");
+                                        out.println("</div>");
+                                        out.println("</div>");
+                                        out.println("<div class='product-info clearfix'>");
+                                        out.println("<div class='fix'>");
+                                        out.println("<h4 class='post-title floatleft'>"+"<a href='#'>"+tmp.getString("p_name")+"</a>"+"</h4>");
+                                        out.println("<p class='floatright hidden-sm hidden-xs'>"+tmp.getString("p_originprice")+"</p>");
+                                        out.println("</div>");
+                                        out.println("<div class='fix'>");
+                                        out.println("<span class='pro-price floatleft'>$"+tmp.getString("p_price")+"</span>");
+                                        out.println("<span class='pro-rating floatright'>");
+                                        out.println("<div class='rating'>");
+                                        out.println("<span class='star' style='font-size: 20px; width: 20px'>"+"</span>");
+                                        out.println("<span class='star' style='font-size: 20px; width: 20px'>"+"</span>");
+                                        out.println("<span class='star' style='font-size: 20px; width: 20px'>"+"</span>");
+                                        out.println("<span class='star' style='font-size: 20px; width: 20px'>"+"</span>");
+                                        out.println("<span class='star' style='font-size: 20px; width: 20px'>"+"</span>");
+                                        out.println("</div>");
+                                        out.println("</span>");
+                                        out.println("</div>");
+                                        out.println("</div>");
+                                        out.println("</div>");
+                                
+                            }
+                            %>
+                          
                             <!-- Single-product end -->
                         </div>
                     </div>
@@ -388,31 +287,29 @@
     <!-- Contact Section -->
 
     <section id="contact" class="parallax-section">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-6 col-sm-12">
-                    <div class="contact-form">
-                        <div class="wow fadeInUp section-title" data-wow-delay="0.2s">
-                            <h1 class="color-white">Say hello..</h1>
-                            <p class="color-white">Whether you are an investor, a possible partner or a stranger that wants to test the app, feel free to reach us.</p>
-                        </div>
-                        <!--訪客回饋表單/開始-->
-                        <div id="contact-form">
-                            <form action="mailto:midas112800@gmail.com" method="post" enctype="text/plain">
-                                <div class="wow fadeInUp" data-wow-delay="1s">
-                                    <input type="text" class="form-control" id="fullname" placeholder="Your Name">
-                                </div>
-                                <div class="wow fadeInUp" data-wow-delay="1.4s">
-                                    <textarea name="message" rows="5" class="form-control" id="message" placeholder="Write your message..."></textarea>
-                                </div>
-                                <div class="wow fadeInUp col-md-6 col-sm-8" data-wow-delay="1.6s">
-                                    <input type="submit" class="form-control" id="submit" value="Send">
-                                </div>
-                            </form>
-                        </div>
-                        <!--訪客回饋表單/結束-->
-                    </div>
-                </div>
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-12">
+                                            <div class="contact-form">
+                                                <div class="wow fadeInUp section-title" data-wow-delay="0.2s">
+                                                    <h1 class="color-white">和我們打個招呼..</h1>
+                                                    <p class="color-white">Whether you are an investor, a possible partner or a stranger that wants to test the app, feel free to reach us.</p>
+                                                </div>
+                                                <div id="contact-form">
+                                                    <form action="index_mess.jsp" method="get" enctype="text/plain">
+                                                        <div class="wow fadeInUp" data-wow-delay="1s">
+                                                            <textarea name="fullname" class="form-control" placeholder="Your Name"></textarea>
+                                                        </div>
+                                                        <div class="wow fadeInUp" data-wow-delay="1.4s">
+                                                            <textarea name="message" rows="5" class="form-control"  placeholder="Write your message..."></textarea>
+                                                        </div>
+                                                        <div class="wow fadeInUp col-md-6 col-sm-8" data-wow-delay="1.6s">
+                                                            <input type="submit" class="form-control" value="Send" >
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
 
                 <!-- <div class="col-md-3 col-sm-6">
                     <div class="background-image contact-img"></div>

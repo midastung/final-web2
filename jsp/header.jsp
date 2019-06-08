@@ -61,9 +61,29 @@
                                         <i class="fas fa-search p-4"></i>
                                         <input placeholder="Search" type="search" class="gn-search p-0">
                                     </li>
-                                    <li class="gn-search-item"><a href="product1.html"><i class="fas fa-shopping-basket p-4"></i>Product</a></li>
+                                    <li class="gn-search-item"><a href="index.jsp"><i class="fas fa-home p-4"></i>Home</a></li>
+                                    <li class="gn-search-item"><a href="all_products.jsp"><i class="fas fa-shopping-basket p-4"></i>Product</a></li>
                                     <li class="gn-search-item"><a href="#"><i class="fas fa-users p-4"></i>About Us</a></li>
                                     <li class="gn-search-item"><a href="#"><i class="far fa-question-circle p-4"></i><span class="p-1">FAQ</span></a></li>
+                                    <li class="gn-search-item"><a href="logout.jsp"><i class="far fa-question-circle p-4"></i><span class="p-1">Logout</span></a></li>
+                                    <li class="gn-search-item ml-4">累計訪客人數:
+                                    <%
+                                    try{
+                                        ResultSet rs=con.createStatement().executeQuery("select * from count");
+                                        rs.next();
+                                        int count1=Integer.parseInt(rs.getString("idcount"));
+                                        if(session.isNew()){
+                                            count1++;
+                                            con.createStatement().executeUpdate("update count set idcount='"+count1+"';");
+                                        }
+                                        out.println(count1);
+                                    }
+                                    catch(Exception e){
+                                        out.println(e.toString());
+                                    }
+                                    %>
+                                   
+                                    </li>
                                 </ul>
                             </div><!-- /gn-scroller -->
                         </nav>
@@ -96,10 +116,29 @@
                                         <i class="fas fa-search p-4"></i>
                                         <input placeholder="Search" type="search" class="gn-search p-0">
                                     </li>
-                                    <li class="gn-search-item"><a href="product1.html"><i class="fas fa-shopping-basket p-4"></i>Product</a></li>
+                                    <li class="gn-search-item"><a href="index.jsp"><i class="fas fa-home p-4"></i>Home</a></li>
+                                    <li class="gn-search-item"><a href="all_products.jsp"><i class="fas fa-shopping-basket p-4"></i>Product</a></li>
                                     <li class="gn-search-item"><a href="#"><i class="fas fa-users p-4"></i>About Us</a></li>
                                     <li class="gn-search-item"><a href="#"><i class="far fa-question-circle p-4"></i><span class="p-1">FAQ</span></a></li>
                                     <li class="gn-search-item"><a href="logout.jsp"><i class="far fa-question-circle p-4"></i><span class="p-1">Logout</span></a></li>
+                                    <li class="gn-search-item ml-4">累計訪客人數:
+                                    <%
+                                    try{
+                                        ResultSet rs=con.createStatement().executeQuery("select * from count");
+                                        rs.next();
+                                        int count1=Integer.parseInt(rs.getString("idcount"));
+                                        if(session.isNew()){
+                                            count1++;
+                                            con.createStatement().executeUpdate("update count set idcount='"+count1+"';");
+                                        }
+                                        out.println(count1);
+                                    }
+                                    catch(Exception e){
+                                        out.println(e.toString());
+                                    }
+                                    %>
+                                   
+                                    </li>
                                 </ul>
                             </div><!-- /gn-scroller -->
                         </nav>
@@ -112,12 +151,13 @@
                 if(tmp.getString("m_level").equals("1"))
                 {
                     out.println("<li>");
-                    out.println("<a class='codrops-icon codrops-icon-prev' href='#'>"+"後台頁面"+"</a>");
+                    out.println("<a class='codrops-icon codrops-icon-prev' href='../bk/bk_index.jsp'>"+"後台頁面"+"</a>");
                     out.println("</li>");
                     out.println("<li>");
                     out.println("<a class='codrops-icon codrops-icon-prev' href='logout.jsp'>"+"登出"+"</a>");
                     out.println("</li>");
                     out.println("<li class='more p-1 chi-font'>"+"<a href='#'>"+"<span style='font-size: 20px;position:relative;top:-10%;'>"+"歡迎，"+tmp.getString("m_firstname")+"管理員</span></a></li>");
+
                 
 %>
                 

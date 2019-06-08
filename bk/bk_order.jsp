@@ -1,4 +1,7 @@
 <%@page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@page pageEncoding="utf-8"%>
+<%@page import="java.util.*,java.io.*"%>
+<%@include file="getDB.jsp"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>

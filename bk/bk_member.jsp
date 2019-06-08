@@ -1,4 +1,7 @@
 <%@page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@page pageEncoding="utf-8"%>
+<%@page import="java.util.*,java.io.*"%>
+<%@include file="getDB.jsp"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,9 +59,28 @@ a
 					<td>權限</td>
 					<td>稱謂</td>
 					<td>電話</td>
+					<td>刪除</td>
 				</tr>
-
-			    <tr>
+<%
+                ResultSet tmp=con.createStatement("SELECT * FROM member");
+                while(tmp.next())
+                {
+                  out.println("<tr>");
+                  out.println("<td>"+tmp.getString("m_account")+"</td>");
+                  out.println("<td>"+tmp.getString("m_password")+"</td>");
+                  out.println("<td>"+tmp.getString("m_firstname")+"</td>");
+                  out.println("<td>"+tmp.getString("m_lastname")+"</td>");
+                  out.println("<td>"+tmp.getString("m_address")+"</td>");
+                  out.println("<td>"+tmp.getString("m_mail")+"</td>");
+                  out.println("<td>"+tmp.getString("m_level")+"</td>");
+                  out.println("<td>"+tmp.getString("m_head")+"</td>");
+                  out.println("<td>"+tmp.getString("m_tel")+"</td>");
+                  out.println("<td>"+"<a href='delete.jsp?m_account="+tmp.getString("m_account")+">"+"刪除"+"</a>"+"</td>");
+                  out.println("</tr>");
+                }
+                  con.close();
+%>
+			    <!--<tr>
 					<td>y</td>
 					<td>m</td>
 					<td>ym</td>
@@ -68,19 +90,7 @@ a
 					<td>1</td>
 					<td>管理者</td>
 					<td>0920218763</td>
-				</tr>
-
-				<tr>
-					<td>x</td>
-					<td>x</td>
-					<td>xxx</td>
-					<td>xxx</td>
-					<td>xxx</td>
-					<td>xxx@gmail.com</td>
-					<td>0</td>
-					<td>一般會員</td>
-					<td>09xxx</td>
-				</tr>
+				</tr>!-->
 			</table></center>
 		</td>
 	</tr>
@@ -94,36 +104,16 @@ a
 		<td><a href="bk_comment.jsp">評論管理</a></td>
 	</tr>
 </table></center>
-
-<center><table border="1" class="under">
-  <tr><td colspan="3" style="width: 80rem">會員資料</td></tr>
-  <tr>
-  	<td>會員帳號</td>
-  	<td colspan="2"><textarea style="width: 90%;"></textarea></td>
-  </tr>
-  <tr>
-  	<td>會員密碼</td>
-  	<td colspan="2"><textarea style="width: 90%;"></textarea></td>
-  </tr>
-  <tr>
-  	<td>會員地址</td>
-  	<td colspan="2"><textarea style="width: 90%;"></textarea></td>
-  </tr>
-    <tr>
-  	<td>會員電郵</td>
-  	<td colspan="2"><textarea style="width: 90%;"></textarea></td>
-  </tr>
-    <tr>
-  	<td>會員電話</td>
-  	<td colspan="2"><textarea style="width: 90%;"></textarea></td>
-  </tr>
-  <tr>
-  <td colspan="3">
-  	<button>新增會員</button>
-    <button>修改會員</button>
-    <button>刪除會員</button>
-  </td>
-  </tr>
-</table></center>
 </body>
+  <script type="text/javascript">
+    var mem = document.getElementsByClassName('confirmation');
+    var confirmIt = function (e) 
+    {
+        if (!confirm('確定刪除此會員？')) e.preventDefault();
+    };
+    for (var i = 0, l = mem.length; i < l; i++) 
+    {
+        mem[i].addEventListener('click', confirmIt, false);
+    }
+</script>
 </html>
