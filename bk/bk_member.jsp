@@ -75,7 +75,7 @@ a
                   out.println("<td>"+tmp.getString("m_level")+"</td>");
                   out.println("<td>"+tmp.getString("m_head")+"</td>");
                   out.println("<td>"+tmp.getString("m_tel")+"</td>");
-                  out.println("<td>"+"<a href='delete.jsp?m_account="+tmp.getString("m_account")+">"+"<span class='hint--right' data-hint='刪除'>"+"</span>"+"</a>"+"</td>");
+                  out.println("<td>"+"<a href='delete.jsp?m_account="+tmp.getString("m_account")+">"+"刪除"+"</a>"+"</td>");
                   out.println("</tr>");
                 }
                   con.close();
@@ -111,7 +111,8 @@ a
     {
         if (!confirm('確定刪除此會員？')) e.preventDefault();
     };
-    for (var i = 0, l = mem.length; i < l; i++) {
+    for (var i = 0, l = mem.length; i < l; i++) 
+    {
         mem[i].addEventListener('click', confirmIt, false);
     }
 </script>
