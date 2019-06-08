@@ -397,15 +397,15 @@
                                                     <p class="color-white">Whether you are an investor, a possible partner or a stranger that wants to test the app, feel free to reach us.</p>
                                                 </div>
                                                 <div id="contact-form">
-                                                    <form action="index_mess" method="post" enctype="text/plain">
+                                                    <form action="index_mess.jsp" method="get" enctype="text/plain">
                                                         <div class="wow fadeInUp" data-wow-delay="1s">
-                                                            <textarea name="fullname" class="form-control" id="fullname" placeholder="Your Name"></textarea>
+                                                            <textarea name="fullname" class="form-control" placeholder="Your Name"></textarea>
                                                         </div>
                                                         <div class="wow fadeInUp" data-wow-delay="1.4s">
-                                                            <textarea name="message" rows="5" class="form-control" id="message" placeholder="Write your message..."></textarea>
+                                                            <textarea name="message" rows="5" class="form-control"  placeholder="Write your message..."></textarea>
                                                         </div>
                                                         <div class="wow fadeInUp col-md-6 col-sm-8" data-wow-delay="1.6s">
-                                                            <input type="submit" class="form-control" id="submit" value="Send">
+                                                            <input type="submit" class="form-control" value="Send" >
                                                         </div>
                                                     </form>
                                                 </div>

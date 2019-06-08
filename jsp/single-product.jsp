@@ -102,7 +102,7 @@
                                                             out.println("</div>");
                                                             out.println("</div>");
 
-                                            }
+                                            
 
                                     %>
                             
@@ -145,8 +145,7 @@
                                                 <!--Review And Description Tab Menu End-->
                                                 <!--Review And Description Tab Content Start-->
                                     <%
-                                                if(tmp.next())
-                                                {
+                                           
                                                     out.println("<div class='tab-content product-review-content-tab mt-30' id='myTabContent-4'>");
                                                     out.println("<div class='tab-pane fade show active' id='description'>");
                                                     out.println("<div class='single-product-description'>");
@@ -180,7 +179,7 @@
                                                     out.println("</div>");
                                                     
 
-                                                }
+                                                
                                     %>
                                                                 <div id="all" class="tabcontent">
                                                                     <i class="fas fa-user-circle" style="font-size: 25px; display: inline;"></i>
@@ -376,7 +375,7 @@
                                                         out.println("<div class='tab-pane fade' id='reviews'>");
                                                         out.println("<div class='review-page-comment'>");
                                                         out.println("<div class='review-form'>");
-                                                        out.println("<from action='#'>");
+                                                        out.println("<form action='#'>");
                                                         out.println("<label>"+"評價"+"<sup class='required'>"+"*"+"</sup>"+"</label>");
                                                         out.println("<ul class='ratings'>");
                                                         out.println("<li class='star' style='font-size: 20px; width: 20px'>"+"</li>");
@@ -407,7 +406,7 @@
                                                         out.println("</div>");
                                                         out.println("</div>");
                                                         out.println("</div>");                                                                          
-
+                                                        }
                                                     %>
                                                     
                                                 <!--Review And Description Tab Content End-->
