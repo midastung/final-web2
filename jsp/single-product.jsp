@@ -144,39 +144,44 @@
                                                 </ul>
                                                 <!--Review And Description Tab Menu End-->
                                                 <!--Review And Description Tab Content Start-->
-                                                <div class="tab-content product-review-content-tab mt-30" id="myTabContent-4">
-                                                    <div class="tab-pane fade show active" id="description">
-                                                        <div class="single-product-description">
-                                                            <p>複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹</p>
-                                                        </div>
-                                                    </div>
-                                                    <!--product comment-->
-                                                    <div class="tab-pane fade" id="product-details">
-                                                        <div class="product-details">
-                                                            <div class="product_comment">
-                                                                <div class="container">
-                                                                    <div class="row">
-                                                                        <div class="col-4 comment_str" style="max-width: 25%;">
-                                                                            <p class="level_txt">4/5</p>
-                                                                            <div class="rating" style="margin-top: -15px;">
-                                                                                <span class="star"></span>
-                                                                                <span class="star"></span>
-                                                                                <span class="star"></span>
-                                                                                <span class="star"></span>
-                                                                                <span class="star star_bl"></span>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-8">
-                                                                            <button class="comment_btn tablinks"onclick="openCity(event, 'all')">  全部</button>
-                                                                            <button class="comment_btn tablinks" onclick="openCity(event, 'five_star')">  5星(216)</button>
-                                                                            <button class="comment_btn"
-                                                                            onclick="openCity(event, 'four_star')">4星(103)</button>
-                                                                            <button class="comment_btn" onclick="openCity(event, 'three_star')">3星(1)</button>
-                                                                            <button class="comment_btn" onclick="openCity(event, 'two_star')">2星(1)</button>
-                                                                            <button class="comment_btn" onclick="openCity(event, 'one_star')">1星(1)</button>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
+                                    <%
+                                                if(tmp.next())
+                                                {
+                                                    out.println("<div class='tab-content product-review-content-tab mt-30' id='myTabContent-4'>");
+                                                    out.println("<div class='tab-pane fade show active' id='description'>");
+                                                    out.println("<div class='single-product-description'>");
+                                                    out.println("<p>"+tmp.getString("p_textarea")+"</p>");
+                                                    out.println("</div>");
+                                                    out.println("</div>");
+                                                    out.println("<div class='tab-pane fade' id='product-details'>");
+                                                    out.println("<div class='product-details'>");
+                                                    out.println("<div class='product_comment'>");
+                                                    out.println("<div class='container'>");
+                                                    out.println("<div class='row'>");
+                                                    out.println("<div class='col-4 comment_str' style='max-width: 25%; '>");
+                                                    out.println("<p class='level_txt'>"+tmp.getString("p_hot")+"</p>");
+                                                    out.println("<div class='rating' style='margin-top: -15px; '>");
+                                                    out.println("<span class='star' style='font-size: 20px; width: 20px'>"+"</span>");
+                                                    out.println("<span class='star' style='font-size: 20px; width: 20px'>"+"</span>");
+                                                    out.println("<span class='star' style='font-size: 20px; width: 20px'>"+"</span>");
+                                                    out.println("<span class='star' style='font-size: 20px; width: 20px'>"+"</span>");
+                                                    out.println("<span class='star star_bl' style='font-size: 20px; width: 20px'>"+"</span>");
+                                                    out.println("</div>");
+                                                    out.println("</div>");
+                                                    out.println("<div class='col-8'>");
+                                                    out.println("<button class='comment_btn tablinks' onclick='openCity(event, 'all')'>"+" 全部"+"</button>");
+                                                    out.println("<button class='comment_btn tablinks' onclick='openCity(event, 'five_star')'>"+"5星"+"</button>");
+                                                    out.println("<button class='comment_btn' onclick='openCity(event, 'four_star')'>"+"4星"+"</button>");
+                                                    out.println("<button class='comment_btn' onclick='openCity(event, 'three_star')'>"+"3星"+"</button>");
+                                                    out.println("<button class='comment_btn' onclick='openCity(event, 'two_star')'>"+"2星"+"</button>");
+                                                    out.println("<button class='comment_btn' onclick='openCity(event, 'one_star')'>"+"1星"+"</button>");
+                                                    out.println("</div>");
+                                                    out.println("</div>");
+                                                    out.println("</div>");
+                                                    
+
+                                                }
+                                    %>
                                                                 <div id="all" class="tabcontent">
                                                                     <i class="fas fa-user-circle" style="font-size: 25px; display: inline;"></i>
                                                                     <p style="display: inline;">as*******</p>
@@ -367,42 +372,44 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="tab-pane fade" id="reviews">
-                                                        <div class="review-page-comment">
-                                                            
-                                                            <div class="review-form">
-                                                                <form action="#">
-                                                                    <label>評價<sup class="required">*</sup></label>
-                                                                    <ul class="ratings">
-                                                                        <li class="stars"></li>
-                                                                        <li class="stars"></li>
-                                                                        <li class="stars"></li>
-                                                                        <li class="stars"></li>
-                                                                        <li class="stars"></li>
-                                                                    </ul>
-                                                                    <label>名字<sup class="required">*</sup></label>
-                                                                    <input type="text" placeholder="Your Name" name="title">
-                                                                    <label>評論標題<sup class="required">*</sup></label>
-                                                                    <input type="text" placeholder="Title Here" name="title">
-                                                                    <label>聯絡方式<sup class="required">*</sup></label>
-                                                                    <input type="text" placeholder="phone" name="title">
-                                                                    <label>評論內容<sup class="required">*</sup></label>
-                                                                    <textarea id="content" name="content" placeholder="content"></textarea>
-                                                                    
-                                                                    <div class="send-your-review">
-                                                                        
-                                                                        <div class="send-cancel-btn">
-                                                                            <button class="send-btn">Send</button>
-                                                                            or
-                                                                            <button class="cancel-btn">Cancel</button>
-                                                                            
-                                                                        </div>
-                                                                    </div>
-                                                                </form>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                    <%
+                                                        out.println("<div class='tab-pane fade' id='reviews'>");
+                                                        out.println("<div class='review-page-comment'>");
+                                                        out.println("<div class='review-form'>");
+                                                        out.println("<from action='#'>");
+                                                        out.println("<label>"+"評價"+"<sup class='required'>"+"*"+"</sup>"+"</label>");
+                                                        out.println("<ul class='ratings'>");
+                                                        out.println("<li class='star' style='font-size: 20px; width: 20px'>"+"</li>");
+                                                        out.println("<li class='star' style='font-size: 20px; width: 20px'>"+"</li>");
+                                                        out.println("<li class='star' style='font-size: 20px; width: 20px'>"+"</li>");
+                                                        out.println("<li class='star' style='font-size: 20px; width: 20px'>"+"</li>");
+                                                        out.println("<li class='star' style='font-size: 20px; width: 20px'>"+"</li>");
+                                                        out.println("</ul>");
+                                                        out.println("<label>"+"名字"+"<sup class='required'>"+"*"+"</sup>"+"</label>");
+                                                        out.println("<input type='text' placeholder='Your Name' name='title'>");
+                                                        out.println("<label>"+"評論標題"+"<sup class='required'>"+"*"+"</sup>"+"</label>");
+                                                        out.println("<input type='text' placeholder='Title Here' name='title'>");
+                                                        out.println("<label>"+"聯絡方式"+"<sup class='required'>"+"*"+"</sup>"+"</label>");
+                                                        out.println("<input type='text' placeholder='phone' name='title'>");
+                                                        out.println("<label>"+"評論內容"+"<sup class='required'>"+"*"+"</sup>"+"</label>");
+                                                        out.println("<textarea id='content' name='content' placeholder='content'>"+"</textarea>");
+
+                                                        out.println("<div class='send-your-review'>");
+                                                        out.println("<div class='send-cancel-btn'>");
+                                                        out.println("<button class='send-btn'>"+"Send"+"</button>");
+                                                        out.println("<span>"+"or"+"</span>");
+                                                        out.println("<button class='cancel-btn'>"+"Cancel"+"</button>");
+
+                                                        out.println("</div>");
+                                                        out.println("</div>");
+                                                        out.println("</from>");
+                                                        out.println("</div>");
+                                                        out.println("</div>");
+                                                        out.println("</div>");
+                                                        out.println("</div>");                                                                          
+
+                                                    %>
+                                                    
                                                 <!--Review And Description Tab Content End-->
                                             </div>
                                         </div>
