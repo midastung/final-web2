@@ -101,9 +101,6 @@
                                                             out.println("</form>");
                                                             out.println("</div>");
                                                             out.println("</div>");
-
-                                            
-
                                     %>
                             
                                    
@@ -375,8 +372,7 @@
                                                         out.println("<div class='tab-pane fade' id='reviews'>");
                                                         out.println("<div class='review-page-comment'>");
                                                         out.println("<div class='review-form'>");
-                                                        out.println("<form action='#'>");
-                                                        out.println("<label>"+"評價"+"<sup class='required'>"+"*"+"</sup>"+"</label>");
+                                                        out.println("<label>"+"商品評價"+"<sup class='required'>"+"*"+"</sup>"+"</label>");
                                                         out.println("<ul class='ratings'>");
                                                         out.println("<li class='star' style='font-size: 20px; width: 20px'>"+"</li>");
                                                         out.println("<li class='star' style='font-size: 20px; width: 20px'>"+"</li>");
@@ -384,20 +380,16 @@
                                                         out.println("<li class='star' style='font-size: 20px; width: 20px'>"+"</li>");
                                                         out.println("<li class='star' style='font-size: 20px; width: 20px'>"+"</li>");
                                                         out.println("</ul>");
+                                                        out.println("<form action='product_mess.jsp' method='get' enctype='text/plain'>");
                                                         out.println("<label>"+"名字"+"<sup class='required'>"+"*"+"</sup>"+"</label>");
-                                                        out.println("<input type='text' placeholder='Your Name' name='title'>");
-                                                        out.println("<label>"+"評論標題"+"<sup class='required'>"+"*"+"</sup>"+"</label>");
-                                                        out.println("<input type='text' placeholder='Title Here' name='title'>");
-                                                        out.println("<label>"+"聯絡方式"+"<sup class='required'>"+"*"+"</sup>"+"</label>");
-                                                        out.println("<input type='text' placeholder='phone' name='title'>");
+                                                        out.println("<textarea placeholder='Your Name' name='name'>"+"</textarea>");
                                                         out.println("<label>"+"評論內容"+"<sup class='required'>"+"*"+"</sup>"+"</label>");
-                                                        out.println("<textarea id='content' name='content' placeholder='content'>"+"</textarea>");
+                                                        out.println("<textarea placeholder='content' name='content'>"+"</textarea>");
+                                                        out.println("<input type='hidden' name='pid' value='"+aa+"'>");
 
                                                         out.println("<div class='send-your-review'>");
                                                         out.println("<div class='send-cancel-btn'>");
                                                         out.println("<button class='send-btn'>"+"Send"+"</button>");
-                                                        out.println("<span>"+"or"+"</span>");
-                                                        out.println("<button class='cancel-btn'>"+"Cancel"+"</button>");
 
                                                         out.println("</div>");
                                                         out.println("</div>");
