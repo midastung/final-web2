@@ -8,6 +8,7 @@
 	    request.setCharacterEncoding("big5");
 	    request.setCharacterEncoding("UTF-8");
 		String lid=request.getParameter("lid");
+		String date=request.getParameter("date");
 		String pid=request.getParameter("pid");
 		String lname=request.getParameter("lname");
 		String message=request.getParameter("message");
@@ -28,7 +29,7 @@
 			}
 			else
 			{
-			sql="INSERT INTO list_shopping(l_id,p_id,message,l_mame) values('"+lid+"','"+pid+"'"+message+"'"+lname+"');";
+			sql="INSERT INTO list_shopping(l_id,p_id,l_name,message) values('"+lid+"','"+pid+"','"+lname+"','"+message+"');";
 			con.createStatement().execute(sql); 
 			out.write("<script language=javascript>alert('評論成功');</script>");
 			response.setHeader("refresh","0;URL=bk_comment.jsp");

@@ -108,16 +108,12 @@ a
 </table></center>
 
 <center><table border="1" class="under">
-  <tr><td colspan="3" style="width: 80rem">會員資料</td></tr>
+  <tr><td colspan="3" style="width: 80rem">評論資料</td></tr>
                   
   <form action="add_comment.jsp" method="post">
   <tr>
   	<td>評論序號(必填)</td>
   	<td colspan="2"><textarea style="width: 90%;" name="lid"></textarea></td>
-  </tr>
-  <tr>
-  	<td>評論日期</td>
-  	<td colspan="2"><textarea style="width: 90%;" name="date"></textarea></td>
   </tr>
   <tr>
   	<td>評論商品(必填)</td>

@@ -32,7 +32,7 @@
 			}
 			else
 			{
-			sql="INSERT INTO product(p_id,p_class,p_name,p_stock,p_originprice) values('"+pid+"','"+pclass+"'"+pname+"'"+pstock+"'"+poriginprice+"');";
+			sql="INSERT INTO product(p_id,p_class,p_name,p_stock,p_price,p_originprice,p_discount,p_image) values('"+pid+"','"+pclass+"','"+pname+"','"+pstock+"','"+pprice+"','"+poriginprice+"','"+pdiscount+"','"+pimage+"');";
 			con.createStatement().execute(sql); 
 			out.write("<script language=javascript>alert('建立成功');</script>");
 			response.setHeader("refresh","0;URL=bk_product.jsp");

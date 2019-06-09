@@ -9,6 +9,13 @@
 	    request.setCharacterEncoding("UTF-8");
 		String acc=request.getParameter("acc");
 		String pas=request.getParameter("pas");
+		String firstname=request.getParameter("firstname");
+		String lastname=request.getParameter("lastname");
+		String address=request.getParameter("address");
+		String email=request.getParameter("email");
+		String level=request.getParameter("level");
+		String head=request.getParameter("head");
+		String tel=request.getParameter("tel");
 
 		if(acc==null||acc.equals("")||pas==null||pas.equals(""))
 		{
@@ -26,8 +33,8 @@
 			}
 			else
 			{
-			sql="INSERT INTO member(m_account,m_password,m_level,m_firstname,m_head) values('"+acc+"','"+pas+"','"+"0"+"','"+acc+"','"+"一般會員"+"');";
-			con.createStatement().execute(sql); 
+			sql="INSERT INTO member(m_account,m_password,m_firstname,m_lastname,m_address,m_Email,m_level,m_head,m_tel) values('"+acc+"','"+pas+"','"+firstname+"','"+lastname+"','"+address+"','"+email+"','"+level+"','"+head+"','"+tel+"');";
+            con.createStatement().execute(sql); 
 			out.write("<script language=javascript>alert('註冊成功');</script>");
 			response.setHeader("refresh","0;URL=bk_member.jsp");
 		    }

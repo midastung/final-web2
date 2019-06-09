@@ -136,6 +136,10 @@ a
   	<td colspan="2"><textarea style="width: 90%;" name="email"></textarea></td>
   </tr>
     <tr>
+  	<td>權限</td>
+  	<td colspan="2"><textarea style="width: 90%;" name="level"></textarea></td>
+  </tr>
+    <tr>
   	<td>稱謂</td>
   	<td colspan="2"><textarea style="width: 90%;" name="head"></textarea></td>
   </tr>

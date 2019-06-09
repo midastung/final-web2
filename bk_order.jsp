@@ -56,7 +56,6 @@ a
 					<td>會員帳號</td>
 					<td>訂單地址</td>
                     <td>訂單電話</td>
-					<td>訂單流水號</td>
 					<td>刪除</td>
 				</tr>
 <%
@@ -70,7 +69,6 @@ a
                   out.println("<td>"+tmp.getString("m_account")+"</td>");
                   out.println("<td>"+tmp.getString("l_address")+"</td>");
                   out.println("<td>"+tmp.getString("l_cellphone")+"</td>");
-                  out.println("<td>"+tmp.getString("l_idd")+"</td>");
                   out.println("<td>"+"<a href='del_order.jsp?lid="+tmp.getString("l_id")+"'>"+"刪除"+"</a>"+"</td>");
                   out.println("</tr>");
                 }
@@ -110,7 +108,7 @@ a
 </table></center>
 
 <center><table border="1" class="under">
-  <tr><td colspan="3" style="width: 80rem">會員資料</td></tr>
+  <tr><td colspan="3" style="width: 80rem">訂單資料</td></tr>
                   
   <form action="add_order.jsp" method="post">
   <tr>
@@ -132,10 +130,6 @@ a
     <tr>
   	<td>訂單電話</td>
   	<td colspan="2"><textarea style="width: 90%;" name="lcellphone"></textarea></td>
-  </tr>
-    <tr>
-  	<td>訂單流水號</td>
-  	<td colspan="2"><textarea style="width: 90%;" name="lidd"></textarea></td>
   </tr>
   <tr>
   <td colspan="3">

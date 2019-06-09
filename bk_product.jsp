@@ -114,7 +114,7 @@ a
 </table></center>
 
 <center><table border="1" class="under">
-  <tr><td colspan="3" style="width: 80rem">會員資料</td></tr>
+  <tr><td colspan="3" style="width: 80rem">商品資料</td></tr>
                   
   <form action="add_product.jsp" method="post">
   <tr>
