@@ -62,7 +62,7 @@ a
 				</tr>
 <%
                 sql="SELECT * FROM member;";
-				tmp=con.createStatement().executeQuery(sql);
+				ResultSet tmp=con.createStatement().executeQuery(sql);
                 while(tmp.next())
                 {
                   out.println("<tr>");

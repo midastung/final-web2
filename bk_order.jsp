@@ -59,7 +59,7 @@ a
 				</tr>
 <%
                 sql="SELECT * FROM list_shopping;";
-				tmp=con.createStatement().executeQuery(sql);
+				ResultSet tmp=con.createStatement().executeQuery(sql);
                 while(tmp.next())
                 {
                   out.println("<tr>");
