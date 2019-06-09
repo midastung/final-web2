@@ -31,6 +31,12 @@ a
    float: right;
    margin-left: 3rem;
  }
+
+ .under td
+ {
+	width: 10rem;
+	height: 2rem;
+ }
 </style>
 </head>
 <body>
@@ -55,6 +61,7 @@ a
 					<td>電話</td>
 					<td>刪除</td>
 				</tr>
+				<form action="">
 <%
                 sql="SELECT * FROM member;";
 				ResultSet tmp=con.createStatement().executeQuery(sql);
@@ -70,11 +77,11 @@ a
                   out.println("<td>"+tmp.getString("m_level")+"</td>");
                   out.println("<td>"+tmp.getString("m_head")+"</td>");
                   out.println("<td>"+tmp.getString("m_tel")+"</td>");
-                  out.println("<td>"+"<a href='del_member.jsp?m_account="+tmp.getString("m_account")+">"+"刪除"+"</td>");
+                  out.println("<td>"+"<a href='del_member.jsp?acc="+tmp.getString("m_account")+"'>"+"刪除"+"</a>"+"</td>");
                   out.println("</tr>");
                 }
                   con.close();
-%>
+%>				</form>
 			    <!--<tr>
 					<td>y</td>
 					<td>m</td>
@@ -99,16 +106,49 @@ a
 		<td><a href="bk_comment.jsp">評論管理</a></td>
 	</tr>
 </table></center>
+
+<center><table border="1" class="under">
+  <tr><td colspan="3" style="width: 80rem">會員資料</td></tr>
+                  
+  <form action="add_member.jsp" method="post">
+  <tr>
+  	<td>帳號(必填)</td>
+  	<td colspan="2"><textarea style="width: 90%;" name="acc"></textarea></td>
+  </tr>
+  <tr>
+  	<td>密碼(必填)</td>
+  	<td colspan="2"><textarea style="width: 90%;" name="pas"></textarea></td>
+  </tr>
+  <tr>
+  	<td>名字</td>
+  	<td colspan="2"><textarea style="width: 90%;" name="firstname"></textarea></td>
+  </tr>
+    <tr>
+  	<td>姓氏</td>
+  	<td colspan="2"><textarea style="width: 90%;" name="lastname"></textarea></td>
+  </tr>
+    <tr>
+  	<td>地址</td>
+  	<td colspan="2"><textarea style="width: 90%;" name="address"></textarea></td>
+  </tr>
+    <tr>
+  	<td>電郵</td>
+  	<td colspan="2"><textarea style="width: 90%;" name="email"></textarea></td>
+  </tr>
+    <tr>
+  	<td>稱謂</td>
+  	<td colspan="2"><textarea style="width: 90%;" name="head"></textarea></td>
+  </tr>
+    <tr>
+  	<td>電話</td>
+  	<td colspan="2"><textarea style="width: 90%;" name="tel"></textarea></td>
+  </tr>
+  <tr>
+  <td colspan="3">
+    <button>新增會員</button>
+  </td>
+  </tr>
+</form>
+</table></center>
 </body>
-  <script type="text/javascript">
-    var elems = document.getElementsByClassName('confirmation');
-    var confirmIt = function (e) 
-    {
-        if (!confirm('確定刪除此會員？')) e.preventDefault();
-    };
-    for (var i = 0, l = elems.length; i < l; i++) 
-    {
-        elems[i].addEventListener('click', confirmIt, false);
-    }
-</script>
 </html>

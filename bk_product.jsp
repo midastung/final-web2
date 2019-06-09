@@ -32,6 +32,12 @@ a
    float: right;
    margin-left: 3rem;
  }
+
+  .under td
+ {
+	width: 10rem;
+	height: 2rem;
+ }
 </style>
 </head>
 <body>
@@ -69,7 +75,7 @@ a
                   out.println("<td>"+tmp.getString("p_originprice")+"</td>");
                   out.println("<td>"+tmp.getString("p_discount")+"</td>");
                   out.println("<td>"+tmp.getString("p_image")+"</td>");
-                  out.println("<td>"+"<a href='del_product.jsp?p_id="+tmp.getString("p_id")+">"+"刪除"+"</td>");
+                  out.println("<td>"+"<a href='del_product.jsp?pid="+tmp.getString("p_id")+"'>"+"刪除"+"</a>"+"</td>");
                   out.println("</tr>");
                 }
                   con.close();
@@ -106,16 +112,49 @@ a
 		<td><a href="bk_comment.jsp">評論管理</a></td>
 	</tr>
 </table></center>
+
+<center><table border="1" class="under">
+  <tr><td colspan="3" style="width: 80rem">會員資料</td></tr>
+                  
+  <form action="add_product.jsp" method="post">
+  <tr>
+  	<td>商品編號(必填)</td>
+  	<td colspan="2"><textarea style="width: 90%;" name="pid"></textarea></td>
+  </tr>
+  <tr>
+  	<td>商品類別(必填)</td>
+  	<td colspan="2"><textarea style="width: 90%;" name="pclass"></textarea></td>
+  </tr>
+  <tr>
+  	<td>商品名稱(必填)</td>
+  	<td colspan="2"><textarea style="width: 90%;" name="pname"></textarea></td>
+  </tr>
+    <tr>
+  	<td>商品數量(必填)</td>
+  	<td colspan="2"><textarea style="width: 90%;" name="pstock"></textarea></td>
+  </tr>
+    <tr>
+  	<td>商品單價</td>
+  	<td colspan="2"><textarea style="width: 90%;" name="pprice"></textarea></td>
+  </tr>
+   <tr>
+  	<td>商品原價(必填)</td>
+  	<td colspan="2"><textarea style="width: 90%;" name="poriginprice"></textarea></td>
+  </tr>
+    <tr>
+  	<td>商品折扣</td>
+  	<td colspan="2"><textarea style="width: 90%;" name="pdiscount"></textarea></td>
+  </tr>
+    <tr>
+  	<td>商品圖片</td>
+  	<td colspan="2"><textarea style="width: 90%;" name="pimage"></textarea></td>
+  </tr>
+  <tr>
+  <td colspan="3">
+    <button>新增商品</button>
+  </td>
+  </tr>
+</form>
+</table></center>
 </body>
-  <script type="text/javascript">
-    var elems = document.getElementsByClassName('confirmation');
-    var confirmIt = function (e) 
-    {
-        if (!confirm('確定刪除此商品？')) e.preventDefault();
-    };
-    for (var i = 0, l = elems.length; i < l; i++) 
-    {
-        elems[i].addEventListener('click', confirmIt, false);
-    }
-</script>
 </html>

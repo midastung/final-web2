@@ -2,7 +2,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"%>
 <%@include file="getDB.jsp"%>
 <%	
-	String lid=request.getParameter("l_id");
+	String lid=request.getParameter("lid");
 	sql="delete from list_shopping where l_id='"+lid+"';";
 	con.createStatement().executeUpdate(sql);
 	out.write("<script>alert('刪除訂單成功');</script>");

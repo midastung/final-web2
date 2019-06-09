@@ -32,6 +32,12 @@ a
    float: right;
    margin-left: 3rem;
  }
+
+  .under td
+ {
+	width: 10rem;
+	height: 2rem;
+ }
 </style>
 </head>
 <body>
@@ -48,7 +54,7 @@ a
 					<td>評論序號</td>
 					<td>評論日期</td>
 					<td>評論商品</td>
-					<td>評論人名</td>
+					<td>留言人名</td>
 					<td>評論內容</td>
 					<td>刪除</td>
 				</tr>
@@ -63,7 +69,7 @@ a
                   out.println("<td>"+tmp.getString("p_id")+"</td>");
                   out.println("<td>"+tmp.getString("l_name")+"</td>");
                   out.println("<td>"+tmp.getString("message")+"</td>");
-                  out.println("<td>"+"<a href='del_comment.jsp?l_id="+tmp.getString("l_id")+">"+"刪除"+"</td>");
+                  out.println("<td>"+"<a href='del_comment.jsp?lid="+tmp.getString("l_id")+"'>"+"刪除"+"</a>"+"</td>");
                   out.println("</tr>");
                 }
                   con.close();
@@ -100,16 +106,37 @@ a
 		<td><a href="bk_comment.jsp">評論管理</a></td>
 	</tr>
 </table></center>
+
+<center><table border="1" class="under">
+  <tr><td colspan="3" style="width: 80rem">會員資料</td></tr>
+                  
+  <form action="add_comment.jsp" method="post">
+  <tr>
+  	<td>評論序號(必填)</td>
+  	<td colspan="2"><textarea style="width: 90%;" name="lid"></textarea></td>
+  </tr>
+  <tr>
+  	<td>評論日期</td>
+  	<td colspan="2"><textarea style="width: 90%;" name="date"></textarea></td>
+  </tr>
+  <tr>
+  	<td>評論商品(必填)</td>
+  	<td colspan="2"><textarea style="width: 90%;" name="pid"></textarea></td>
+  </tr>
+    <tr>
+  	<td>留言人名(必填)</td>
+  	<td colspan="2"><textarea style="width: 90%;" name="lname"></textarea></td>
+  </tr>
+    <tr>
+  	<td>評論內容(必填)</td>
+  	<td colspan="2"><textarea style="width: 90%;" name="message"></textarea></td>
+  </tr>
+  <tr>
+  <td colspan="3">
+    <button>新增評論</button>
+  </td>
+  </tr>
+</form>
+</table></center>
 </body>
-  <script type="text/javascript">
-    var elems = document.getElementsByClassName('confirmation');
-    var confirmIt = function (e) 
-    {
-        if (!confirm('確定刪除此評論？')) e.preventDefault();
-    };
-    for (var i = 0, l = elems.length; i < l; i++) 
-    {
-        elems[i].addEventListener('click', confirmIt, false);
-    }
-</script>
 </html>
