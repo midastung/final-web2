@@ -63,6 +63,7 @@ a
                   out.println("<td>"+tmp.getString("p_id")+"</td>");
                   out.println("<td>"+tmp.getString("l_name")+"</td>");
                   out.println("<td>"+tmp.getString("message")+"</td>");
+                  out.println("<td>"+"<a href='del_comment.jsp?l_id="+tmp.getString("l_id")+">"+"刪除"+"</td>");
                   out.println("</tr>");
                 }
                   con.close();
@@ -100,4 +101,15 @@ a
 	</tr>
 </table></center>
 </body>
+  <script type="text/javascript">
+    var elems = document.getElementsByClassName('confirmation');
+    var confirmIt = function (e) 
+    {
+        if (!confirm('確定刪除此評論？')) e.preventDefault();
+    };
+    for (var i = 0, l = elems.length; i < l; i++) 
+    {
+        elems[i].addEventListener('click', confirmIt, false);
+    }
+</script>
 </html>

@@ -69,6 +69,7 @@ a
                   out.println("<td>"+tmp.getString("p_originprice")+"</td>");
                   out.println("<td>"+tmp.getString("p_discount")+"</td>");
                   out.println("<td>"+tmp.getString("p_image")+"</td>");
+                  out.println("<td>"+"<a href='del_product.jsp?p_id="+tmp.getString("p_id")+">"+"刪除"+"</td>");
                   out.println("</tr>");
                 }
                   con.close();
@@ -106,4 +107,15 @@ a
 	</tr>
 </table></center>
 </body>
+  <script type="text/javascript">
+    var elems = document.getElementsByClassName('confirmation');
+    var confirmIt = function (e) 
+    {
+        if (!confirm('確定刪除此商品？')) e.preventDefault();
+    };
+    for (var i = 0, l = elems.length; i < l; i++) 
+    {
+        elems[i].addEventListener('click', confirmIt, false);
+    }
+</script>
 </html>
