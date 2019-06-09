@@ -70,6 +70,7 @@ a
                   out.println("<td>"+tmp.getString("m_level")+"</td>");
                   out.println("<td>"+tmp.getString("m_head")+"</td>");
                   out.println("<td>"+tmp.getString("m_tel")+"</td>");
+                  out.println("<td>"+"<a href='del_member.jsp?m_account="+tmp.getString("m_account")+">"+"刪除"+"</td>");
                   out.println("</tr>");
                 }
                   con.close();
@@ -99,4 +100,15 @@ a
 	</tr>
 </table></center>
 </body>
+  <script type="text/javascript">
+    var elems = document.getElementsByClassName('confirmation');
+    var confirmIt = function (e) 
+    {
+        if (!confirm('確定刪除此會員？')) e.preventDefault();
+    };
+    for (var i = 0, l = elems.length; i < l; i++) 
+    {
+        elems[i].addEventListener('click', confirmIt, false);
+    }
+</script>
 </html>
