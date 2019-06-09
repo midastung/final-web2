@@ -1,5 +1,4 @@
-<%@page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@page pageEncoding="utf-8"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"%>
 <%@page import="java.util.*,java.io.*"%>
 <%@include file="getDB.jsp"%>
 <!DOCTYPE html>
@@ -52,15 +51,29 @@ a
 			<center><table border="1" class="in">
 				<tr>
 					<td>訂單編號</td>
-					<td>下單日期</td>
+					<td>訂單數量</td>
 					<td>會員帳號</td>
-					<td>商品編號</td>
-                    <td>訂購數量</td>
-					<td>訂購總價</td>
-					<td>訂購地點</td>
+					<td>訂單地址</td>
+                    <td>訂單電話</td>
+					<td>訂單流水號</td>
 				</tr>
-
-			    <tr>
+<%
+                sql="SELECT * FROM list_shopping;";
+				tmp=con.createStatement().executeQuery(sql);
+                while(tmp.next())
+                {
+                  out.println("<tr>");
+                  out.println("<td>"+tmp.getString("l_id")+"</td>");
+                  out.println("<td>"+tmp.getString("l_number")+"</td>");
+                  out.println("<td>"+tmp.getString("m_account")+"</td>");
+                  out.println("<td>"+tmp.getString("l_address")+"</td>");
+                  out.println("<td>"+tmp.getString("l_cellphone")+"</td>");
+                  out.println("<td>"+tmp.getString("l_idd")+"</td>");
+                  out.println("</tr>");
+                }
+                  con.close();
+%>
+			    <!--<tr>
 			    	<td>1</td>
 					<td>6/15</td>
 					<td>ym</td>
@@ -78,7 +91,7 @@ a
                     <td>訂購數量</td>
 					<td>訂購總價</td>
 					<td>訂購地點</td>
-				</tr>
+				</tr>!-->
 			</table></center>
 		</td>
 	</tr>
@@ -100,29 +113,27 @@ a
   	<td colspan="2"><textarea style="width: 90%;"></textarea></td>
   </tr>
   <tr>
-  	<td>會員帳號</td>
+  	<td>訂單數量</td>
   	<td colspan="2"><textarea style="width: 90%;"></textarea></td>
   </tr>
   <tr>
-  	<td>商品編號</td>
+  	<td>會員帳號</td>
   	<td colspan="2"><textarea style="width: 90%;"></textarea></td>
   </tr>
     <tr>
-  	<td>商品數量</td>
+  	<td>訂單地址</td>
   	<td colspan="2"><textarea style="width: 90%;"></textarea></td>
   </tr>
     <tr>
-  	<td>商品總價</td>
+  	<td>訂單電話</td>
   	<td colspan="2"><textarea style="width: 90%;"></textarea></td>
   </tr>
     <tr>
-  	<td>訂購地點</td>
+  	<td>訂單流水號</td>
   	<td colspan="2"><textarea style="width: 90%;"></textarea></td>
   </tr>
   <tr>
   <td colspan="3">
-  	<button>新增訂單</button>
-    <button>修改訂單</button>
     <button>刪除訂單</button>
   </td>
   </tr>

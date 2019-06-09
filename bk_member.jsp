@@ -1,5 +1,4 @@
-<%@page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@page pageEncoding="utf-8"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"%>
 <%@page import="java.util.*,java.io.*"%>
 <%@include file="getDB.jsp"%>
 <!DOCTYPE html>
@@ -62,7 +61,8 @@ a
 					<td>刪除</td>
 				</tr>
 <%
-                ResultSet tmp=con.createStatement("SELECT * FROM member");
+                sql="SELECT * FROM member;";
+				tmp=con.createStatement().executeQuery(sql);
                 while(tmp.next())
                 {
                   out.println("<tr>");
@@ -75,7 +75,6 @@ a
                   out.println("<td>"+tmp.getString("m_level")+"</td>");
                   out.println("<td>"+tmp.getString("m_head")+"</td>");
                   out.println("<td>"+tmp.getString("m_tel")+"</td>");
-                  out.println("<td>"+"<a href='delete.jsp?m_account="+tmp.getString("m_account")+">"+"刪除"+"</a>"+"</td>");
                   out.println("</tr>");
                 }
                   con.close();
@@ -105,15 +104,4 @@ a
 	</tr>
 </table></center>
 </body>
-  <script type="text/javascript">
-    var mem = document.getElementsByClassName('confirmation');
-    var confirmIt = function (e) 
-    {
-        if (!confirm('確定刪除此會員？')) e.preventDefault();
-    };
-    for (var i = 0, l = mem.length; i < l; i++) 
-    {
-        mem[i].addEventListener('click', confirmIt, false);
-    }
-</script>
 </html>
