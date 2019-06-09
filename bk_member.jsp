@@ -31,11 +31,6 @@ a
    float: right;
    margin-left: 3rem;
  }
- .under td
- {
-	width: 10rem;
-	height: 2rem;
- }
 </style>
 </head>
 <body>
@@ -71,7 +66,7 @@ a
                   out.println("<td>"+tmp.getString("m_firstname")+"</td>");
                   out.println("<td>"+tmp.getString("m_lastname")+"</td>");
                   out.println("<td>"+tmp.getString("m_address")+"</td>");
-                  out.println("<td>"+tmp.getString("m_mail")+"</td>");
+                  out.println("<td>"+tmp.getString("m_Email")+"</td>");
                   out.println("<td>"+tmp.getString("m_level")+"</td>");
                   out.println("<td>"+tmp.getString("m_head")+"</td>");
                   out.println("<td>"+tmp.getString("m_tel")+"</td>");

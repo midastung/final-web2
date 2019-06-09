@@ -32,11 +32,6 @@ a
    float: right;
    margin-left: 3rem;
  }
- .under td
- {
-	width: 10rem;
-	height: 2rem;
- }
 </style>
 </head>
 <body>
@@ -56,6 +51,7 @@ a
 					<td>訂單地址</td>
                     <td>訂單電話</td>
 					<td>訂單流水號</td>
+					<td>刪除</td>
 				</tr>
 <%
                 sql="SELECT * FROM list_shopping;";
@@ -104,39 +100,6 @@ a
 	<tr>
 		<td><a href="bk_comment.jsp">評論管理</a></td>
 	</tr>
-</table></center>
-
-<center><table border="1" class="under">
-  <tr><td colspan="3" style="width: 80rem">訂單資料</td></tr>
-  <tr>
-  	<td>訂單編號</td>
-  	<td colspan="2"><textarea style="width: 90%;"></textarea></td>
-  </tr>
-  <tr>
-  	<td>訂單數量</td>
-  	<td colspan="2"><textarea style="width: 90%;"></textarea></td>
-  </tr>
-  <tr>
-  	<td>會員帳號</td>
-  	<td colspan="2"><textarea style="width: 90%;"></textarea></td>
-  </tr>
-    <tr>
-  	<td>訂單地址</td>
-  	<td colspan="2"><textarea style="width: 90%;"></textarea></td>
-  </tr>
-    <tr>
-  	<td>訂單電話</td>
-  	<td colspan="2"><textarea style="width: 90%;"></textarea></td>
-  </tr>
-    <tr>
-  	<td>訂單流水號</td>
-  	<td colspan="2"><textarea style="width: 90%;"></textarea></td>
-  </tr>
-  <tr>
-  <td colspan="3">
-    <button>刪除訂單</button>
-  </td>
-  </tr>
 </table></center>
 </body>
 </html>

@@ -38,37 +38,31 @@ a
 <center><table border="1" class="out">
 	<tr>
 		<td><center><a href="bk_index.jsp">管理者介面</a></center></td>
-		<td colspan="2" style="width: 70rem"><center>商品管理</center></td>
+		<td colspan="2" style="width: 70rem"><center>評論管理</center></td>
 	</tr>
 	<tr>
 		<td><a href="bk_member.jsp">會員管理</a></td>
 		<td colspan="2" rowspan="4" style="width: 70rem">
 			<center><table border="1" class="in">
 				<tr>
-					<td>商品編號</td>
-					<td>商品類別</td>
-					<td>商品名稱</td>
-					<td>商品數量</td>
-					<td>商品單價</td>
-					<td>商品原價</td>
-					<td>商品折扣</td>
-                    <td>商品圖片</td>
-                    <td>刪除</td>
+					<td>評論序號</td>
+					<td>評論日期</td>
+					<td>評論商品</td>
+					<td>評論人名</td>
+					<td>評論內容</td>
+					<td>刪除</td>
 				</tr>
 <%
-                sql="SELECT * FROM product;";
+                sql="SELECT * FROM list_shopping;";
 				ResultSet tmp=con.createStatement().executeQuery(sql);
                 while(tmp.next())
                 {
                   out.println("<tr>");
+                  out.println("<td>"+tmp.getString("l_id")+"</td>");
+                  out.println("<td>"+tmp.getString("date")+"</td>");
                   out.println("<td>"+tmp.getString("p_id")+"</td>");
-                  out.println("<td>"+tmp.getString("p_class")+"</td>");
-                  out.println("<td>"+tmp.getString("p_name")+"</td>");
-                  out.println("<td>"+tmp.getString("p_stock")+"</td>");
-                  out.println("<td>"+tmp.getString("p_price")+"</td>");
-                  out.println("<td>"+tmp.getString("p_originprice")+"</td>");
-                  out.println("<td>"+tmp.getString("p_discount")+"</td>");
-                  out.println("<td>"+tmp.getString("p_image")+"</td>");
+                  out.println("<td>"+tmp.getString("l_name")+"</td>");
+                  out.println("<td>"+tmp.getString("message")+"</td>");
                   out.println("</tr>");
                 }
                   con.close();
