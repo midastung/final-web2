@@ -24,13 +24,15 @@
 			ResultSet a=con.createStatement().executeQuery(sql2);
 			if(a.next())
 			{
-				out.write("<script language=javascript>alert('評論重複');</script>");
-				response.setHeader("refresh","0;URL=bk_comment.jsp");
+	        sql="UPDATE list_shopping SET p_id="+pid+" , l_name="+lname+" , message="+message+" where l_id='"+lid+"';";
+	        con.createStatement().executeUpdate(sql);
+	        out.write("<script>alert('修改評論成功');</script>");
+            response.setHeader("refresh","0;URL=bk_comment.jsp");
 			}
 			else
 			{
 			sql="INSERT INTO list_shopping(l_id,p_id,l_name,message) values('"+lid+"','"+pid+"','"+lname+"','"+message+"');";
-			con.createStatement().execute(sql); 
+            con.createStatement().execute(sql); 
 			out.write("<script language=javascript>alert('評論成功');</script>");
 			response.setHeader("refresh","0;URL=bk_comment.jsp");
 		    }

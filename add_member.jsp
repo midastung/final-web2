@@ -28,8 +28,10 @@
 			ResultSet a=con.createStatement().executeQuery(sql2);
 			if(a.next())
 			{
-				out.write("<script language=javascript>alert('帳號重複');</script>");
-				response.setHeader("refresh","0;URL=bk_member.jsp");
+	        sql="UPDATE member SET m_password="+pas+" , m_firstname="+firstname+" , m_lastname="+lastname+" , m_address="+address+" , m_Email="+email+" , m_level="+level+" , m_head="+head+" , m_tel="+tel+" where m_account='"+acc+"';";
+	        con.createStatement().executeUpdate(sql);
+	        out.write("<script>alert('修改會員成功');</script>");
+            response.setHeader("refresh","0;URL=bk_member.jsp");
 			}
 			else
 			{

@@ -108,7 +108,7 @@ a
 </table></center>
 
 <center><table border="1" class="under">
-  <tr><td colspan="3" style="width: 80rem">訂單資料</td></tr>
+  <tr><td colspan="3" style="width: 80rem">訂單資料(修改須全填寫)</td></tr>
                   
   <form action="add_order.jsp" method="post">
   <tr>
@@ -133,6 +133,7 @@ a
   </tr>
   <tr>
   <td colspan="3">
+    <button>修改訂單</button>
     <button>新增訂單</button>
   </td>
   </tr>

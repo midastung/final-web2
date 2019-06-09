@@ -108,7 +108,7 @@ a
 </table></center>
 
 <center><table border="1" class="under">
-  <tr><td colspan="3" style="width: 80rem">會員資料</td></tr>
+  <tr><td colspan="3" style="width: 80rem">會員資料(修改須全填寫)</td></tr>
                   
   <form action="add_member.jsp" method="post">
   <tr>
@@ -149,6 +149,7 @@ a
   </tr>
   <tr>
   <td colspan="3">
+    <button>修改會員</button>
     <button>新增會員</button>
   </td>
   </tr>

@@ -108,7 +108,7 @@ a
 </table></center>
 
 <center><table border="1" class="under">
-  <tr><td colspan="3" style="width: 80rem">評論資料</td></tr>
+  <tr><td colspan="3" style="width: 80rem">評論資料(修改須全填寫)</td></tr>
                   
   <form action="add_comment.jsp" method="post">
   <tr>
@@ -129,6 +129,7 @@ a
   </tr>
   <tr>
   <td colspan="3">
+  	<button>修改評論</button>
     <button>新增評論</button>
   </td>
   </tr>

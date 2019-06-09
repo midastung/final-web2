@@ -114,7 +114,7 @@ a
 </table></center>
 
 <center><table border="1" class="under">
-  <tr><td colspan="3" style="width: 80rem">商品資料</td></tr>
+  <tr><td colspan="3" style="width: 80rem">商品資料(修改須全填寫)</td></tr>
                   
   <form action="add_product.jsp" method="post">
   <tr>
@@ -122,7 +122,7 @@ a
   	<td colspan="2"><textarea style="width: 90%;" name="pid"></textarea></td>
   </tr>
   <tr>
-  	<td>商品類別(必填)</td>
+  	<td>商品類別</td>
   	<td colspan="2"><textarea style="width: 90%;" name="pclass"></textarea></td>
   </tr>
   <tr>
@@ -151,6 +151,7 @@ a
   </tr>
   <tr>
   <td colspan="3">
+    <button>修改商品</button>
     <button>新增商品</button>
   </td>
   </tr>

@@ -24,13 +24,15 @@
 			ResultSet a=con.createStatement().executeQuery(sql2);
 			if(a.next())
 			{
-				out.write("<script language=javascript>alert('訂單重複');</script>");
-				response.setHeader("refresh","0;URL=bk_order.jsp");
+	        sql="UPDATE list_shopping SET l_number="+lnumber+" , m_account="+maccount+" , l_address="+laddress+" , l_cellphone="+lcellphone+" where l_id='"+lid+"';";
+	        con.createStatement().executeUpdate(sql);
+	        out.write("<script>alert('修改訂單成功');</script>");
+            response.setHeader("refresh","0;URL=bk_order.jsp");
 			}
 			else
 			{
 			sql="INSERT INTO list_shopping(l_id,l_number,m_account,l_address,l_cellphone) values('"+lid+"','"+lnumber+"','"+maccount+"','"+laddress+"','"+lcellphone+"');";
-			con.createStatement().execute(sql); 
+            con.createStatement().execute(sql); 
 			out.write("<script language=javascript>alert('下單成功');</script>");
 			response.setHeader("refresh","0;URL=bk_order.jsp");
 		    }
