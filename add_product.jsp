@@ -23,18 +23,18 @@
 		}
 		else 
 		{
-			String sql2="select * from list_shopping where p_id='"+pid+"';";
+			String sql2="select * from product where p_id='"+pid+"';";
 			ResultSet a=con.createStatement().executeQuery(sql2);
 			if(a.next())
 			{
-	        sql="UPDATE list_shopping SET p_class="+pclass+" , p_name="+pname+" , p_stock="+pstock+" , p_price="+pprice+" , p_originprice="+poriginprice+" , p_discount="+pdiscount+" , p_image="+pimage+" where p_id='"+pid+"';";
+	        sql="UPDATE product SET p_class="+pclass+" , p_name="+pname+" , p_stock="+pstock+" , p_price="+pprice+" , p_originprice="+poriginprice+" , p_discount="+pdiscount+" , p_image="+pimage+" where p_id='"+pid+"';";
 	        con.createStatement().executeUpdate(sql);
 	        out.write("<script>alert('修改商品成功');</script>");
             response.setHeader("refresh","0;URL=bk_product.jsp");
 			}
 			else
 			{
-			sql="INSERT INTO list_shopping(p_id,p_class,p_name,p_stock,p_price,p_originprice,p_discount,p_image) values('"+pid+"','"+pclass+"','"+pname+"','"+pstock+"','"+pprice+"','"+poriginprice+"','"+pdiscount+"','"+pimage+"');";
+			sql="INSERT INTO product(p_id,p_class,p_name,p_stock,p_price,p_originprice,p_discount,p_image) values('"+pid+"','"+pclass+"','"+pname+"','"+pstock+"','"+pprice+"','"+poriginprice+"','"+pdiscount+"','"+pimage+"');";
             con.createStatement().execute(sql); 
 			out.write("<script language=javascript>alert('建立成功');</script>");
 			response.setHeader("refresh","0;URL=bk_product.jsp");
