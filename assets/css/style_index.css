@@ -575,13 +575,4 @@ footer {
 
 
 /*---------------------*/
-#srh_btn{
-    background-color:rgb(242,243,233); 
-	   border:none;
-    color:#5F6F81;
-    font-size:10px;
-}
-#srh_btn:hover{
-     background-color:#fff;
-    color:#000;
-}
+

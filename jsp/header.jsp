@@ -185,7 +185,7 @@
                     out.println("<li>");
                     out.println("<a class='codrops-icon codrops-icon-prev' href='#'>"+"我的最愛"+"</a>");
                     out.println("</li>");
-                    out.println("<li class='more p-1 chi-font'>"+"<a href='#'>"+"<span style='font-size: 20px;position:relative;top:-10%;'>"+"歡迎，"+tmp.getString("m_firstname")+"</span></a></li>");
+                    out.println("<li class='more p-1 chi-font'>"+"<a href='member.jsp'>"+"<span style='font-size: 20px;position:relative;top:-10%;'>"+"歡迎，"+tmp.getString("m_firstname")+"</span></a></li>");
 
             }
         }

@@ -46,8 +46,8 @@
             <div class="row">
              <div class="gc p-5 col-xl-3 col-md-3">
                 <div class="menu">
-                    <div><span class="light"></span><span>商品總覽</span></div>
-                    <div class="active"><span class="light"></span><span>和菓子</span></div>
+                    <div class="active"><span class="light"></span><span>商品總覽</span></div>
+                    <div><span class="light"></span><span>和菓子</span></div>
                     <div><span class="light"></span><span>西式甜點</span></div>
                     <div><span class="light"></span><span>日式料理</span></div>
                 </div>
