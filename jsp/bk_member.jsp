@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"%>
 <%@page import="java.util.*,java.io.*"%>
-<%@include file="getDB.jsp"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,13 +39,13 @@ a
 </style>
 </head>
 <body>
-<center><table border="1" class="out">
+<center  style="padding:10%;"><table border="1" class="out">
 	<tr>
 		<td><center><a href="bk_index.jsp">管理者介面</a></center></td>
 		<td colspan="2" style="width: 70rem"><center>會員管理</center></td>
 	</tr>
 	<tr>
-		<td><a href="bk_member.jsp">會員管理</a></td>
+		<td><a href="back_member.jsp">會員管理</a></td>
 		<td colspan="2" rowspan="4" style="width: 70rem">
 			<center><table border="1" class="in">
 				<tr>
@@ -61,6 +60,38 @@ a
 					<td>電話</td>
 					<td>刪除</td>
 				</tr>
+         <%
+                                try{
+                                        Cookie getC[]=request.getCookies();
+                                        for(int i=0;i<getC.length;i++)
+                                        {
+                                            if(getC[i].getName().equals("getin"))
+                                            {
+                                                String[] sp=getC[i].getValue().split("-");
+                                                acc=sp[0];
+                                                pas=sp[1];
+                                            }
+                                        }
+                                        sql="SELECT * FROM member WHERE m_account='"+acc+"' and m_password='"+pas+"'";
+                                        ResultSet man=con.createStatement().executeQuery(sql);
+                                        man.next();
+                                        if(man.getString("m_level").equals("1"))
+                                        {
+
+                                        }
+                                        else
+                                        {
+                                            out.write("<script language=javascript>alert('非管理者，無法進入');</script>");
+                                            response.setHeader("refresh","0;URL=index.jsp");
+                                        }
+                                    }
+                                catch(Exception e)
+                                    {
+                                        out.write("<script language=javascript>alert('非管理者，無法進入');</script>");
+                                        response.setHeader("refresh","0;URL=index.jsp");
+                                    }
+                               
+                            %>
 				<form action="">
 <%
                 sql="SELECT * FROM member;";
@@ -97,17 +128,17 @@ a
 		</td>
 	</tr>
 	<tr>
-		<td><a href="bk_order.jsp">訂單管理</a></td>
+		<td><a href="back_order.jsp">訂單管理</a></td>
 	</tr>
 	<tr>
-		<td><a href="bk_product.jsp">商品管理</a></td>
+		<td><a href="back_product.jsp">商品管理</a></td>
 	</tr>
 	<tr>
-		<td><a href="bk_comment.jsp">評論管理</a></td>
+		<td><a href="back_comment.jsp">評論管理</a></td>
 	</tr>
 </table></center>
 
-<center><table border="1" class="under">
+<center  style=" margin-top:-10%;padding:5%;"><table border="1" class="under">
   <tr><td colspan="3" style="width: 80rem">會員資料(修改須全填寫)</td></tr>
                   
   <form action="add_member.jsp" method="post">

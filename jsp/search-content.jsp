@@ -88,9 +88,10 @@
                     <li class="active">
                          <div class="container">
                                     <div class="row">
-                      
+                                    
                                     <%
                                             ResultSet tmp=null;
+                                            int count = 0;
                                             try
                                             {
                                                     try
@@ -106,7 +107,7 @@
                                                     sql="SELECT * FROM product;";
                                                 }
                                                 tmp=con.createStatement().executeQuery(sql);
-                                                int count = 0;
+                                              
                                                 while(tmp.next())
                                                 {
                                                     out.println("<div class='single-product p-3'>");
@@ -144,7 +145,7 @@
                                             catch(Exception e)
                                             {
                                                 out.write("<script language=javascript>alert('查無此資料');</script>"); 
-                                                response.setHeader("refresh","0")
+                                                response.setHeader("refresh","0");
                                             }
                                                     
 

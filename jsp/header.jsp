@@ -69,18 +69,19 @@
                         <nav class="gn-menu-wrapper">
                             <div class="gn-scroller">
                                 <ul class="gn-menu">
-                                    <form action="search-content.jsp" method="post">
+                                  
                                     <li class="gn-search-item">
+                                        <a href="search.jsp">
                                         <i class="fas fa-search p-4"></i>
-                                        <input placeholder="Search" type="search" name="target" class="gn-search p-0" >
-                                        <button type="submit" class="srh_btn">SUBMIT</button>
+                                        Search
+                                        </a>
+                                      
                                     </li>
-                                    </form>
+                                    
                                     <li class="gn-search-item"><a href="index.jsp"><i class="fas fa-home p-4"></i>Home</a></li>
                                     <li class="gn-search-item"><a href="all_products.jsp"><i class="fas fa-shopping-basket p-4"></i>Product</a></li>
                                     <li class="gn-search-item"><a href="aboutus.jsp"><i class="fas fa-users p-4"></i>About Us</a></li>
                                     <li class="gn-search-item"><a href="#"><i class="far fa-question-circle p-4"></i><span class="p-1">FAQ</span></a></li>
-                                    <li class="gn-search-item"><a href="logout.jsp"><i class="far fa-question-circle p-4"></i><span class="p-1">Logout</span></a></li>
                                     <li class="gn-search-item ml-4">累計訪客人數:
                                     <%
                                     try{
@@ -127,16 +128,18 @@
                         <nav class="gn-menu-wrapper">
                             <div class="gn-scroller">
                                 <ul class="gn-menu">
-                                    <li class="gn-search-item">
+                                     <li class="gn-search-item">
+                                        <a href="search.jsp">
                                         <i class="fas fa-search p-4"></i>
-                                        <input placeholder="Search" type="search" class="gn-search p-0">
-                                        <button type="submit" class="srh_btn">SUBMIT</button>
+                                        Search
+                                        </a>
+                                      
                                     </li>
                                     <li class="gn-search-item"><a href="index.jsp"><i class="fas fa-home p-4"></i>Home</a></li>
                                     <li class="gn-search-item"><a href="all_products.jsp"><i class="fas fa-shopping-basket p-4"></i>Product</a></li>
                                     <li class="gn-search-item"><a href="aboutus.jsp"><i class="fas fa-users p-4"></i>About Us</a></li>
                                     <li class="gn-search-item"><a href="#"><i class="far fa-question-circle p-4"></i><span class="p-1">FAQ</span></a></li>
-                                    <li class="gn-search-item"><a href="logout.jsp"><i class="far fa-question-circle p-4"></i><span class="p-1">Logout</span></a></li>
+                                    <li class="gn-search-item"><a href="logout.jsp"><i class="fas fa-door-open p-4"></i><span class="p-1">Logout</span></a></li>
                                     <li class="gn-search-item ml-4">累計訪客人數:
                                     <%
                                     try{
