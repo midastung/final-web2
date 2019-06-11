@@ -6,16 +6,11 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>商品訂單</title>
-    <!--orderinf css star-->
-     <link rel="stylesheet" type="text/css" href="assets/css/order-inf.css" />
-    <!--orderinf css end-->
-    <link rel="shortcut icon" href="../favicon.ico">
+    <title>test</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/component.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/style_index.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/confirm.css">
     <link rel="stylesheet" href="assets/css/animate.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <!--    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">-->
@@ -23,52 +18,65 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:700&display=swap" rel="stylesheet">
     <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5ce40b2adc07bd00120823e5&product=inline-share-buttons' async='async'></script>
 </head>
+<style>
+    p{
+        font-size: 20px;
+    }
+    .button {
+    padding: 20px;
+    margin: 5px 12px;
+    width: 90%;
 
-<body style="background-color: rgb(236,174,106);">
+    /* Green */
+
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+  
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.button1 {
+    background-color: #f2f2f2;
+    color: black;
+    border: 2px solid #4CAF50;
+}
+.button1:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+</style>
+<body style="background-color: rgb(255,224,158);">
+   
 
     <div class="mt-5" style="position:relative;top:13px;">
-        <img src="assets/images/post7.png" style="width:100%;">
+        <img src="assets/images/post6.png" style="width:100%;">
     </div>
-    
-    <div class="container mb-5" style="margin-top:50px;">
-        <form action="">
-
-            <div class="row">
-                <div class="col-50 p-3">
-                    <h3>聯絡資訊</h3>
-                    <label for="fname"><i class="fa fa-user"></i> 姓名</label>
-                    <input type="text" id="fname" name="firstname" placeholder="姓名">
-                    <label for="email"><i class="fa fa-envelope"></i> Email</label>
-                    <input type="text" id="email" name="email" placeholder="***@gmail.com">
-                    <label for="phone"><i class="fa fa-phone"></i> 電話</label>
-                    <input type="text" id="email" name="email" placeholder="09-xxx-xxx">
-                    <label for="city"><i class="fa fa-globe-asia"></i> 國家</label>
-                    <input type="text" id="city" name="city" placeholder="國家">
-                    <div class="row">
-                        <div class="col-50">
-                            <label for="state">縣市</label>
-                            <input type="text" id="state" name="state" placeholder="縣市">
-                        </div>
-                        <div class="col-50">
-                            <label for="zip">地區</label>
-                            <input type="text" id="zip" name="zip" placeholder="地區">
-                        </div>
-                    </div>
-                    <label for="adr">路名</label>
-                    <input type="text" id="adr" name="address" placeholder="***路**號**樓">
-                    <label for="fname">付款方式</label><br>
-                    <select class="mb-3">
-                        <option value="到貨付款">到貨付款</option>
-                        <option value="信用卡">信用卡</option>
-                        <option value="電子錢包">電子錢包</option>
-                    </select>
-                    <br>
-                     </div>             
-                    <input type="textarea" placeholder="備註">
-                <input type="submit" class="button button1" value="確認送出">
-            </div>
-        </form>
+    <!--comfirm star-->
+    <div class="confirm_cont" style="border-radius:20px; ">
+        <p class="intro_cont" style="">親愛的會員您好:</p>
+        <p class="intro_cont">這個訊息是來自***，告知您***已接獲你這次的訂購需求，並將以最快速度處理!</p>
+        <p class="intro_cont">感謝您對***的支持並承蒙訂購，以下資料是您此次的訂購明細，若有問題則請依訂單編號向我們查詢，謝謝您!</p>
+        <p class="intro_cont">***仍保有決定是否接受訂單及出貨與否之權利，出貨以及取貨通知函，將以Email方式處理!</p>
+        <p class="intro_h">訂單明細</p>
+        <p class="order_inf">訂單編號:61408</p>
+        <p class="order_inf">預期到貨時間:1019/5/1</p>
+        <p class="order_inf">配送方式:宅配</p>
+        <p class="order_inf">付款方式:貨到付款</p>
+        <p class="order_inf">收件人:鹽酥小雞雞</p>
+        <p class="order_inf">應付金額:NT.459</p>
+        <p class="order_inf" style="margin-top: 70px;">訂單商品與名稱與數量:</p>
+        <hr width="68%">
+        <p class="order_inf" style="margin-top: 10px;">飯糰6份</p>
+        <hr width="68%">
+        <p class="intro_cont" style="margin-top: 70px;">為了保護您的個人資料安全，建議您可以隨時登入***，至會員專區，查詢訂單，最新訊息或修改基本資料。如果您有任何問題，請您至客服中心查詢相關資訊或來信給我們。</p>
+        <p class="intro_cont" style="margin-top: 20px;">-***敬上</p>
+         <input type="submit" class="button button1 cont" value="確認送出">
     </div>
+    <!--comfirm end-->
     <script src="assets/js/classie.js"></script>
     <script src="assets/js/gnmenu.js"></script>
     <script src="assets/js/modernizr.custom.js"></script>
@@ -94,15 +102,15 @@
         });
     </script>
     <!--
-                <script>
-                $(".slider").slick({
-                dots: true,
-                infinite: true,
-                slidesToShow: 3,
-                slidesToScroll: 3
-                });
-                </script>
-                -->
+                    <script>
+                    $(".slider").slick({
+                    dots: true,
+                    infinite: true,
+                    slidesToShow: 3,
+                    slidesToScroll: 3
+                    });
+                    </script>
+                    -->
     <script>
         var el = document.querySelector('.more');
         var btn = el.querySelector('.more-btn');
@@ -138,12 +146,12 @@
         new WOW().init();
     </script>
     <!--
-                <script>
-                window.onbeforeunload = function() {
-                window.scrollTo(0, 0);
-                }
-                </script>
-                -->
+                    <script>
+                    window.onbeforeunload = function() {
+                    window.scrollTo(0, 0);
+                    }
+                    </script>
+                    -->
     <script>
         function videoss() {
             if (document.getElementsByClassName("videoss")[0].style.height == "" || document.getElementsByClassName("videoss")[0].style.height == "0px") {

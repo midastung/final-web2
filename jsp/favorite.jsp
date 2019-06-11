@@ -36,52 +36,42 @@
 
 <body class="">
    
-   <div class="mt-5">
+   <div class="mt-5" >
         <img src="assets/images/post4.png" class="img-fluid">
     </div>
     <div>
         <img src="assets/images/pic0.png" class="img-fluid">
     </div>
+      <h2 class="title-border cont mt-5" >我的最愛</h2>
     <div class="naccs container">
            
             
-            <div  style="width:100%;">
+            <div>
                 <ul class="nacc">
                     <li class="active">
-                        <!-- 商品總覽 START -->
-                        <div class="product-area" >
-                            <div class="container">
-                                <!-- Section-title start -->
-                                <div class="row">
-                                    <div class="col-xl-12">
-                                        <div class="section-title text-center">
-                                            <h2 class="title-border">搜索結果</h2>
-                                        </div>
-                                    </div>
-                                </div>
                                 <!-- Section-title end -->
                                 <div class="container">
                                     <div class="row">
                       
                                             <%
-                                            sql="SELECT * FROM  product, favorite WHERE favorite.m_account='"+acc+"' AND favorite.p_id=product.p_id; ";
+                                            sql="SELECT * FROM  product, love WHERE love.m_account='"+acc+"' AND love.p_id=product.p_id; ";
                                             ResultSet tmp = con.createStatement().executeQuery(sql);
                                             int count = 0;
                                             while(tmp.next())
                                             {
-                                                   out.println("<div class='single-product col-lg-3'>");
+                                                   out.println("<div class='single-product p-3'>");
                                                     out.println("<div class='product-img'>");
                                                         out.println("<span class='"+tmp.getString("p_strcss")+"'>"+tmp.getString("p_strhot")+"</span>");
                                                         out.println("<a href='all_single.jsp?p_id="+tmp.getString("p_id")+"'>"+"<img src='"+tmp.getString("p_image")+"'/>"+"</a>");
                                                         out.println("<div class='product-action clearfix'>");
-                                                        out.println("<a href='#' data-toggle='tooltip' data-placement='top' title='Wishlist'>"+"<i class='zmdi zmdi-favorite-outline'>"+"</i>"+"</a>");
-                                                        out.println("<a href='#' data-toggle='tooltip' data-placement='top' title='Add To Cart'>"+"<i class='zmdi zmdi-shopping-cart-plus'>"+"</i>"+"</a>");
+                                                        out.println("<a href='del_favorite.jsp?p_id="+tmp.getString("p_id")+"'"+"data-toggle='tooltip' data-placement='top' title='trash'>"+"<i class='fas fa-trash-alt fa-2x'></i>"+"</a>");
+                                                        out.println("<a href='add_shopping.jsp?p_id="+tmp.getString("p_id")+"&act=buy2&amount=1&outlink=2' data-toggle='tooltip' data-placement='top' title='Add To Cart'>"+"<i class='fas fa-cart-plus fa-2x'></i>"+"</a>");
                                                     out.println("</div>");
                                                 out.println("</div>");
                                                 out.println("<div class='product-info clearfix'>");
                                                     out.println("<div class='fix'>");
                                                         out.println("<h4 class='post-title floatleft'>"+"<a href='#'>"+tmp.getString("p_name")+"</a>"+"</h4>");
-                                                        out.println("<p class='floatright hidden-sm hidden-xs'>$"+tmp.getString("p_originprice")+"</p>");
+                                                        out.println("<p class='floatright hidden-sm hidden-xs'><s>$"+tmp.getString("p_originprice")+"</s></p>");
                                                     out.println("</div>");
                                                     out.println("<div class='fix'>");
                                                         out.println("<span class='pro-price floatleft'>$"+tmp.getString("p_price")+"</span>");

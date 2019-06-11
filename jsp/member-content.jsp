@@ -17,7 +17,7 @@
 
    <%   
            
-                sql="SELECT * FROM member WHERE m_account='a'; ";
+                sql="SELECT * FROM member WHERE m_account='"+acc+"'; ";
                 ResultSet mem = con.createStatement().executeQuery(sql);
                 mem.next();
 %>
