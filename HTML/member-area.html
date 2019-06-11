@@ -4,7 +4,7 @@
 
 <head>
     <title>會員專區</title>
-        <link rel="stylesheet" type="text/css" href="assets/css/star.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/star.css">
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/component.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/style_index.css">
@@ -189,6 +189,12 @@
                         </div>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
+                                <span class="input-group-text">信箱</span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="請填寫此欄位" name="mail" value="123">
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
                                 <span class="input-group-text">地址</span>
                             </div>
                             <input type="text" class="form-control" placeholder="請填寫此欄位" value="埼玉县春日部市双叶町904">
@@ -206,7 +212,7 @@
                         </div>
 
                     </form>
-                
+
                 </div>
             </div>
         </div>
@@ -215,42 +221,7 @@
             <input id="tab2-2" name="tabs-two" type="radio">
             <div class="p-5">
                 <h4 class="cont mb-5">購物紀錄</h4>
-<!--                一個購物紀錄/START-->
-                <form>
-                    <div class="container-fluid">
-                        <div class="d-flex bx-shape mb-3">
-                            <div class="cont p-3">
-                                <h6>購買日期:2019/11/28</h6>
-                            </div>
-                            <div class="d-flex p-2 bx-shape2">
-
-                                <div class="cont p-2">
-                                    <section>
-                                        <nobr>
-                                            <strong>
-                                                <span style="font-size: 20px">品名:垂涎欲滴的餃子</span>
-                                                <span style="font-size: 20px">/&emsp;數量:2個</span>
-                                                <span style="font-size: 20px">/&emsp;價錢:$500</span>
-                                            </strong>
-                                        </nobr>
-                                    </section>
-                                </div>
-                            </div>
-                            <div class="p-2 flex-fill bx-shape3">
-                                <textarea class="form-control mb-3" rows="4" name="comment"></textarea>
-                                 <ul class="ratings">
-                                                                        <li class="stars"></li>
-                                                                        <li class="stars"></li>
-                                                                        <li class="stars"></li>
-                                                                        <li class="stars"></li>
-                                                                        <li class="stars"></li>
-                                                                    </ul>
-                                <input type="submit" class="button button3 " value="送出評論">
-                            </div>
-                        </div>
-                    </div>
-                </form>
-<!--                一個購物紀錄/END-->
+                <!--                一個購物紀錄/START-->
                 <form>
                     <div class="container-fluid">
                         <div class="d-flex bx-shape mb-3">
@@ -274,12 +245,47 @@
                             <div class="p-2 flex-fill bx-shape3">
                                 <textarea class="form-control mb-3" rows="4" name="comment"></textarea>
                                 <ul class="ratings">
-                                                                        <li class="stars"></li>
-                                                                        <li class="stars"></li>
-                                                                        <li class="stars"></li>
-                                                                        <li class="stars"></li>
-                                                                        <li class="stars"></li>
-                                                                    </ul>
+                                    <li class="stars"></li>
+                                    <li class="stars"></li>
+                                    <li class="stars"></li>
+                                    <li class="stars"></li>
+                                    <li class="stars"></li>
+                                </ul>
+                                <input type="submit" class="button button3 " value="送出評論">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <!--                一個購物紀錄/END-->
+                <form>
+                    <div class="container-fluid">
+                        <div class="d-flex bx-shape mb-3">
+                            <div class="cont p-3">
+                                <h6>購買日期:2019/11/28</h6>
+                            </div>
+                            <div class="d-flex p-2 bx-shape2">
+
+                                <div class="cont p-2">
+                                    <section>
+                                        <nobr>
+                                            <strong>
+                                                <span style="font-size: 20px">品名:垂涎欲滴的餃子</span>
+                                                <span style="font-size: 20px">/&emsp;數量:2個</span>
+                                                <span style="font-size: 20px">/&emsp;價錢:$500</span>
+                                            </strong>
+                                        </nobr>
+                                    </section>
+                                </div>
+                            </div>
+                            <div class="p-2 flex-fill bx-shape3">
+                                <textarea class="form-control mb-3" rows="4" name="comment"></textarea>
+                                <ul class="ratings">
+                                    <li class="stars"></li>
+                                    <li class="stars"></li>
+                                    <li class="stars"></li>
+                                    <li class="stars"></li>
+                                    <li class="stars"></li>
+                                </ul>
                                 <input type="submit" class="button button3 " value="送出評論">
                             </div>
                         </div>
@@ -349,14 +355,14 @@
 
 
 
-    
+
     <script src="assets/js/classie.js"></script>
     <script src="assets/js/gnmenu.js"></script>
     <script src="assets/js/modernizr.custom.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/star.js" ></script>
+    <script src="assets/js/star.js"></script>
     <script src="assets/js/wow.min.js"></script>
     <script>
         new gnMenu(document.getElementById('gn-menu'));
