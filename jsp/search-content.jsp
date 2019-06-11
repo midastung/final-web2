@@ -93,50 +93,59 @@
                                             ResultSet tmp=null;
                                             try
                                             {
-                                                String tar = new String(request.getParameter("target").getBytes("ISO-8859-1"),"UTF-8");
-                                                
-                                                sql="SELECT * FROM product WHERE (p_name or p_id like '%"+tar+"%')";
-                                                
+                                                    try
+                                                {
+                                                    String tar = new String(request.getParameter("target").getBytes("ISO-8859-1"),"UTF-8");
+                                                    
+                                                    sql="SELECT * FROM product WHERE (p_name or p_id like '%"+tar+"%')";
+                                                    
+                                                }
+                                                catch(Exception e)
+                                                {
+                                                   
+                                                    sql="SELECT * FROM product;";
+                                                }
+                                                tmp=con.createStatement().executeQuery(sql);
+                                                int count = 0;
+                                                while(tmp.next())
+                                                {
+                                                    out.println("<div class='single-product p-3'>");
+                                                    out.println("<div class='product-img'>");
+                                                    out.println("<span class='"+tmp.getString("p_strcss")+"'>"+tmp.getString("p_strhot")+"</span>");
+                                                    out.println("<a href='all_single.jsp?p_id="+tmp.getString("p_id")+"'>"+"<img src='"+tmp.getString("p_image")+"'/>"+"</a>");
+                                                    out.println("<div class='product-action clearfix'>");
+                                                     out.println("<a href='add_shopping.jsp?p_id="+tmp.getString("p_id")+"&act=love&amount=1&outlink=2' data-toggle='tooltip' data-placement='top' title='Wishlist'>"+"<i class='fas fa-heart fa-2x'></i>"+"</a>");
+                                                    out.println("<a href='add_shopping.jsp?p_id="+tmp.getString("p_id")+"&act=buy&amount=1&outlink=2' data-toggle='tooltip' data-placement='top' title='Add To Cart'>"+"<i class='fas fa-cart-plus fa-2x'></i>"+"</a>");
+                                                    out.println("</div>");
+                                                    out.println("</div>");
+                                                    out.println("<div class='product-info clearfix'>");
+                                                    out.println("<div class='fix'>");
+                                                    out.println("<h4 class='post-title floatleft'>"+"<a href='#'>"+tmp.getString("p_name")+"</a>"+"</h4>");
+                                                    out.println("<p class='floatright hidden-sm hidden-xs'>$"+tmp.getString("p_originprice")+"</p>");
+                                                    out.println("</div>");
+                                                    out.println("<div class='fix'>");
+                                                    out.println("<span class='pro-price floatleft'>$"+tmp.getString("p_price")+"</span>");
+                                                    out.println("<span class='pro-rating floatright'>");                                                    out.println("<div class='rating'>");
+                                                    out.println("<span class='star' style='font-size: 20px; width: 20px'>"+"</span>");
+                                                    out.println("<span class='star' style='font-size: 20px; width: 20px'>"+"</span>");
+                                                    out.println("<span class='star' style='font-size: 20px; width: 20px'>"+"</span>");
+                                                    out.println("<span class='star' style='font-size: 20px; width: 20px'>"+"</span>");
+                                                    out.println("<span class='star star_bl' style='font-size: 20px; width: 20px'>"+"</span>");
+                                                    out.println("</div>");
+                                                    out.println("</span>");
+                                                    out.println("</div>");
+                                                    out.println("</div>");
+                                                    out.println("</div>");
+
+                                                        count++;
+                                                    }
+
                                             }
                                             catch(Exception e)
                                             {
-                                                sql="SELECT * FROM product;";
+                                                out.write("<script language=javascript>alert('查無此資料');</script>"); 
+                                                response.setHeader("refresh","0")
                                             }
-                                            tmp=con.createStatement().executeQuery(sql);
-                                            int count = 0;
-                                            while(tmp.next())
-                                            {
-                                                out.println("<div class='single-product p-3'>");
-                                                out.println("<div class='product-img'>");
-                                                out.println("<span class='"+tmp.getString("p_strcss")+"'>"+tmp.getString("p_strhot")+"</span>");
-                                                out.println("<a href='all_single.jsp?p_id="+tmp.getString("p_id")+"'>"+"<img src='"+tmp.getString("p_image")+"'/>"+"</a>");
-                                                out.println("<div class='product-action clearfix'>");
-                                                out.println("<a href='#' data-toggle='tooltip' data-placement='top' title='Wishlist'>"+"<i class='zmdi zmdi-favorite-outline'>"+"</i>"+"</a>");
-                                                out.println("<a href='#' data-toggle='tooltip' data-placement='top' title='Add To Cart'>"+"<i class='zmdi zmdi-shopping-cart-plus'>"+"</i>"+"</a>");
-                                                out.println("</div>");
-                                                out.println("</div>");
-                                                out.println("<div class='product-info clearfix'>");
-                                                out.println("<div class='fix'>");
-                                                out.println("<h4 class='post-title floatleft'>"+"<a href='#'>"+tmp.getString("p_name")+"</a>"+"</h4>");
-                                                out.println("<p class='floatright hidden-sm hidden-xs'>$"+tmp.getString("p_originprice")+"</p>");
-                                                out.println("</div>");
-                                                out.println("<div class='fix'>");
-                                                out.println("<span class='pro-price floatleft'>$"+tmp.getString("p_price")+"</span>");
-                                                out.println("<span class='pro-rating floatright'>");                                                    out.println("<div class='rating'>");
-                                                out.println("<span class='star' style='font-size: 20px; width: 20px'>"+"</span>");
-                                                out.println("<span class='star' style='font-size: 20px; width: 20px'>"+"</span>");
-                                                out.println("<span class='star' style='font-size: 20px; width: 20px'>"+"</span>");
-                                                out.println("<span class='star' style='font-size: 20px; width: 20px'>"+"</span>");
-                                                out.println("<span class='star star_bl' style='font-size: 20px; width: 20px'>"+"</span>");
-                                                out.println("</div>");
-                                                out.println("</span>");
-                                                out.println("</div>");
-                                                out.println("</div>");
-                                                out.println("</div>");
-
-                                                    count++;
-                                                }
-
                                                     
 
                                                 %>

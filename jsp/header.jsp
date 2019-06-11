@@ -167,12 +167,12 @@
                 if(tmp.getString("m_level").equals("1"))
                 {
                     out.println("<li>");
-                    out.println("<a class='codrops-icon codrops-icon-prev' href='bk_index.jsp'>"+"後台頁面"+"</a>");
+                    out.println("<a class='codrops-icon codrops-icon-prev' href='back_index.jsp'>"+"後台頁面"+"</a>");
                     out.println("</li>");
                     out.println("<li>");
                     out.println("<a class='codrops-icon codrops-icon-prev' href='logout.jsp'>"+"登出"+"</a>");
                     out.println("</li>");
-                    out.println("<li class='more p-1 chi-font'>"+"<a href='#'>"+"<span style='font-size: 20px;position:relative;top:-10%;'>"+"歡迎，"+tmp.getString("m_firstname")+"管理員</span></a></li>");
+                    out.println("<li class='more p-1 chi-font'>"+"<a href='back_index.jsp'>"+"<span style='font-size: 20px;position:relative;top:-10%;'>"+"歡迎，"+tmp.getString("m_firstname")+"管理員</span></a></li>");
 
                 
 %>

@@ -13,8 +13,6 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!--    會員專區/開始-->
-
    <%   
            
                 sql="SELECT * FROM member WHERE m_account='"+acc+"'; ";
@@ -22,6 +20,7 @@
                 mem.next();
 %>
                       <!--    會員專區/開始-->
+                     
                         <div class="tabs p-5" style=" margin-top: 50px;">
                             <div class="tab-2">
                                 <label for="tab2-1">會員專區</label>
@@ -29,7 +28,7 @@
                                 <div class="p-0">
                                     <div class="p-5">
                                         <h4 class="cont mb-5">會員資料</h4>
-                                        <form>
+                                        <form action="alter_member.jsp" method="post">
                                             <div class="input-group mb-3">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text">會員等級</span>
@@ -40,33 +39,39 @@
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text">會員名稱</span>
                                                 </div>
-                                                <input type="text" class="form-control" placeholder="名字" value="<%=mem.getString("m_firstname")%>">
-                                                <input type="text" class="form-control" placeholder="姓氏" value="<%=mem.getString("m_lastname")%>">
+                                                <input type="text" class="form-control" placeholder="名字" name="fname" value="<%=mem.getString("m_firstname")%>">
+                                                <input type="text" class="form-control" placeholder="姓氏" name="lname" value="<%=mem.getString("m_lastname")%>">
                                             </div>
 
                                             <div class="input-group mb-3">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text">帳號</span>
                                                 </div>
-                                                <input type="text" class="form-control" placeholder="請填寫此欄位" value="<%=mem.getString("m_account")%>">
+                                                <input type="text" class="form-control" placeholder="請填寫此欄位" name="acc" value="<%=mem.getString("m_account")%>">
                                             </div>
                                             <div class="input-group mb-3">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text">密碼</span>
                                                 </div>
-                                                <input type="text" class="form-control" placeholder="請填寫此欄位" value="<%=mem.getString("m_password")%>">
+                                                <input type="text" class="form-control" placeholder="請填寫此欄位" name="pas" value="<%=mem.getString("m_password")%>">
+                                            </div>
+                                             <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">信箱</span>
+                                                </div>
+                                                <input type="text" class="form-control" placeholder="請填寫此欄位" name="mail" value="<%=mem.getString("m_email")%>">
                                             </div>
                                             <div class="input-group mb-3">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text">地址</span>
                                                 </div>
-                                                <input type="text" class="form-control" placeholder="請填寫此欄位" value="<%=mem.getString("m_address")%>">
+                                                <input type="text" class="form-control" placeholder="請填寫此欄位" name="address" value="<%=mem.getString("m_address")%>">
                                             </div>
                                             <div class="input-group mb-4">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text">電話</span>
                                                 </div>
-                                                <input type="text" class="form-control" placeholder="請填寫此欄位" value="<%=mem.getString("m_tel")%>">
+                                                <input type="text" class="form-control" placeholder="請填寫此欄位" name="tel" value="<%=mem.getString("m_tel")%>">
                                             </div>
                                             <div class="text-align mt-5">
                                                 <input type="submit" class="button button1" value="確認送出">
@@ -79,59 +84,65 @@
                                     </div>
                                 </div>
                             </div>
-           
+                       
+                    </form>
         <!--    會員專區/結束-->
-        <%
-            sql="select * from list_shopping,product where list_shopping.m_account='"+acc+"'and product.p_id=list_shopping.p_id order by date desc;";
-            ResultSet shp=con.createStatement().executeQuery(sql);
-            while(shp.next())
-                            {
-                                out.println("<div class='tab-2'>");
-                                out.println("<label for='tab2-2'>"+"購物紀錄"+"</label>");
-                                out.println("<input id='tab2-2' name='tabs-two' type='radio'>");
-                                out.println("<div class='p-5'>");
-                                out.println("<h4 class='cont mb-5'>"+"購物紀錄"+"</h4>");
-                                out.println("<form>");
-                                out.println("<div class='container-fluid'>");
-                                out.println("<div class='d-flex bx-shape mb-3'>");
-                                out.println("<div class='cont p-3'>");
-                                out.println("<h6>"+"購買日期:"+shp.getString("date"));
-                                out.println("</div>");
-                                out.println("<div class='d-dlex p-2 bx-shape2'>");
-                                out.println("<div class='cont p-2' style='margin-top:13%;'>");
-                                out.println("<section>");
-                                out.println("<nobr>");
-                                out.println("<strong>");
-                                out.println("<span style='font-size: 20px'>"+"品名:"+shp.getString("p_name")+"</span>");
-                                out.println("<span style='font-size: 20px'>"+"/ &emsp; 數量:"+shp.getString("l_number")+"份"+"</span>");
-                                out.println("<span style='font-size: 20px'>"+"/ &emsp; 價錢:$"+shp.getString("p_price")+"</span>");
-                                out.println("</strong>");
-                                out.println("</nobr>");
-                                out.println("</section>");
-                                out.println("</div>");
-                                out.println("</div>");
-                                out.println("<div class='p-2 flex-fill bx-shape3'>");
-                                out.println("<textarea class='form-control mb-3' rows='4' name='comment'>"+"</textarea>");
-                                out.println("<div class='ratings'>");
-                                out.println("<ul>"+"<li class='stars'>");
-                                out.println("<li class='stars'>");
-                                out.println("<li class='stars'>");
-                                out.println("<li class='stars'>");
-                                out.println("<li class='stars'>"+"</ul>");
-                                out.println("</div>");
-                                out.println("<input type='submit' class='button button3' value='送出評論'>");
-                                out.println("</div>");
-                                out.println("</div>");
-                                out.println("</div>");
-                                out.println("</form>");
-                            }
-        %>
-                <!-- 一個購物紀錄/END-->
-               
+        <div class="tab-2">
+            <label for="tab2-2">購物紀錄</label>
+            <input id="tab2-2" name="tabs-two" type="radio">
+            <div class="p-5">
+                <h4 class="cont mb-5">購物紀錄</h4>
+<%   
+           
+               String sql2="SELECT * FROM list_shopping,product WHERE list_shopping.m_account='"+acc+"' AND list_shopping.p_id=product.p_id; ";
+                ResultSet tmp = con.createStatement().executeQuery(sql2);
+                while(tmp.next())
+                    {
+%>
+        
+        
+                <!--一個購物紀錄/START-->
+                <form>
+                    <div class="container-fluid">
+                        <div class="d-flex bx-shape mb-3">
+                            <div class="cont p-3">
+                                <h6>購買日期:<%=tmp.getString("date")%></h6>
+                            </div>
+                            <div class="d-flex p-2 bx-shape2">
+
+                                <div class="cont p-2">
+                                    <section>
+                                        <nobr>
+                                            <strong>
+                                                <span style="font-size: 20px">品名:<%=tmp.getString("p_name")%></span>
+                                                <span style="font-size: 20px">/&emsp;數量:<%=tmp.getString("l_number")%>個</span>
+                                                <span style="font-size: 20px">/&emsp;價錢:$<%=tmp.getString("p_price")%></span>
+                                            </strong>
+                                        </nobr>
+                                    </section>
+                                </div>
+                            </div>
+                            <div class="p-2 flex-fill bx-shape3">
+                                <textarea class="form-control mb-3" rows="4" name="comment"></textarea>
+                                 <ul class="ratings" style="display:inline;">
+                                    <li class="stars"></li>
+                                    <li class="stars"></li>
+                                    <li class="stars"></li>
+                                    <li class="stars"></li>
+                                    <li class="stars"></li>
+                                </ul>
+                                <input type="submit" class="button button3 " value="送出評論">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+              <%
+                }
+              %>
             </div>
         </div>
     </div>
-     <script src="assets/js/star.js" ></script>
+ <script src="assets/js/star.js"></script>
 </body>
 
 </html>

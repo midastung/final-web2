@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"%>
 <%@page import="java.util.*,java.io.*"%>
-<%@include file="getDB.jsp"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +27,7 @@ a
 </style>
 </head>
 <body>
-<center><table border="1" class="out">
+<center style="padding:10%;"><table border="1" class="out">
 	<tr>
 		<td><center><a href="bk_index.jsp">管理者介面</a></center></td>
 		<td colspan="2" style="width: 70rem"><center>後台首頁</center></td>

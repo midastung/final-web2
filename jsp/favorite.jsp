@@ -47,7 +47,7 @@
            
             
             <div>
-                <ul class="nacc">
+                <ul class="nacc"  style="position: relative;left:8%;">
                     <li class="active">
                                 <!-- Section-title end -->
                                 <div class="container">
