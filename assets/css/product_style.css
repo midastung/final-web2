@@ -74,7 +74,6 @@ height: 70%;
 }
 .product-img img { width: 100%;}
 .product-action {
-background: #fff none repeat scroll 0 0;
 bottom: -40px;
 left: 0;
 margin: auto;
@@ -84,7 +83,7 @@ text-align: center;
 visibility:hidden;
 opacity: 0;
 transition: all 0.5s ease 0s;
-width: 30%;
+width: 45%;
 }
 .product-action a {
 color: #666666;
@@ -102,12 +101,14 @@ content: "";
 height: 16px;
 margin-top: -8px;
 position: absolute;
-right: -30%;
+right: -40%;
 top: 50%;
 width: 2px;
 }
 .product-action a:last-child::before {
 display:none;
+transition:all 0.5s ease 0s;
+
 }
 .product-action a:hover {
 color: #C8A165;

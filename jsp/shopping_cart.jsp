@@ -28,12 +28,12 @@
 
 <body style="background-color:rgb(255,184,121);">
     
-    <div class="mt-5">
-        <img src="assets/images/post5.png" class="img-fluid">
+    <div class="mt-5" style="position:relative;top:13px;">
+        <img src="assets/images/post5.png" style="width:100%;" >
     </div>
     <div class="main-wrapper car">
         <!-- Cart Page Start -->
-        <div class="cart_area  bg-color cart-style" data-bg-color="#ffffff">
+        <div class="cart_area  bg-color cart-style" data-bg-color="#ffffff" style="margin-top: 100px;margin-bottom: 100px;">
             <div class="container">
                 <div class="row">
                     <div class="col-12">

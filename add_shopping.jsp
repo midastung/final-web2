@@ -45,13 +45,22 @@
             out.write("<script language=javascript>alert('成功將"+rs2.getString("p_name")+"x"+amount+"加入購物車!');</script>");         
 
 		}
+        else if(act.equals("buy2"))
+        {
+            
+            sql="INSERT INTO shopping_cart(p_id, amount, m_account) VALUE('"+p_id+"','"+amount+"','"+acc+"');";
+            con.createStatement().execute(sql);
+            out.write("<script language=javascript>alert('成功將「"+rs2.getString("p_name")+"x"+amount+"」加入購物車!');</script>");
+            out.println("<script>window.open('favorite_content.jsp','_self')</script>");         
+
+        }
 
        else if(act.equals("love"))
        {
-            sql="INSERT INTO favorite(p_id, m_account) VALUE('"+p_id+"','"+acc+"');";
+            sql="INSERT INTO love(p_id, m_account) VALUE('"+p_id+"','"+acc+"');";
             con.createStatement().execute(sql);
 
-            out.write("<script >alert('成功將"+rs2.getString("p_name")+"加入收藏!');</script>");
+            out.write("<script >alert('成功將「"+rs2.getString("p_name")+"x"+amount+"」加入收藏!');</script>");
        }
 	}
     try{
