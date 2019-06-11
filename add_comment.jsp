@@ -3,10 +3,7 @@
 <%@include file="getDB.jsp" %>
 <body>
 	<%
-	    response.setCharacterEncoding("big5");
-	    response.setCharacterEncoding("UTF-8");
-	    request.setCharacterEncoding("big5");
-	    request.setCharacterEncoding("UTF-8");
+        request.setCharacterEncoding("utf-8");
 		String lid=request.getParameter("lid");
 		String date=request.getParameter("date");
 		String pid=request.getParameter("pid");
@@ -16,7 +13,7 @@
 		if(lid==null||lid.equals("")||pid==null||pid.equals("")||lname==null||lname.equals("")||message==null||message.equals(""))
 		{
 			out.write("<script language=javascript>alert('必填欄位不能為空');</script>");
-			response.setHeader("refresh","0;URL=bk_comment.jsp");
+			response.setHeader("refresh","0;URL=back_comment.jsp");
 		}
 		else 
 		{
@@ -27,14 +24,14 @@
 	        sql="UPDATE list_shopping SET p_id="+pid+" , l_name="+lname+" , message="+message+" where l_id='"+lid+"';";
 	        con.createStatement().executeUpdate(sql);
 	        out.write("<script>alert('修改評論成功');</script>");
-            response.setHeader("refresh","0;URL=bk_comment.jsp");
+            response.setHeader("refresh","0;URL=back_comment.jsp");
 			}
 			else
 			{
 			sql="INSERT INTO list_shopping(l_id,p_id,l_name,message) values('"+lid+"','"+pid+"','"+lname+"','"+message+"');";
             con.createStatement().execute(sql); 
 			out.write("<script language=javascript>alert('評論成功');</script>");
-			response.setHeader("refresh","0;URL=bk_comment.jsp");
+			response.setHeader("refresh","0;URL=back_comment.jsp");
 		    }
 		}
 	%>

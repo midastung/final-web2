@@ -3,7 +3,7 @@
 <%@ page import = "java.sql.*, java.util.*" %>
 <%@ include file="getDB.jsp"%>
 <%
-	request.setCharacterEncoding("utf-8");
+    request.setCharacterEncoding("utf-8");
 	String acc="";
     String pas="";
 	String fname=request.getParameter("fname");
