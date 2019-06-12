@@ -56,17 +56,23 @@
         <img src="assets/images/post6.png" style="width:100%;">
     </div>
     <!--comfirm star-->
+    <%
+        sql="SELECT * FROM list_shopping; ";
+        ResultSet conf = con.createStatement().executeQuery(sql);
+        conf.next();
+    %>
+
     <div class="confirm_cont" style="border-radius:20px; ">
         <p class="intro_cont" style="">親愛的會員您好:</p>
         <p class="intro_cont">這個訊息是來自***，告知您***已接獲你這次的訂購需求，並將以最快速度處理!</p>
         <p class="intro_cont">感謝您對***的支持並承蒙訂購，以下資料是您此次的訂購明細，若有問題則請依訂單編號向我們查詢，謝謝您!</p>
         <p class="intro_cont">***仍保有決定是否接受訂單及出貨與否之權利，出貨以及取貨通知函，將以Email方式處理!</p>
         <p class="intro_h">訂單明細</p>
-        <p class="order_inf">訂單編號:61408</p>
-        <p class="order_inf">預期到貨時間:1019/5/1</p>
+        <p class="order_inf">訂單編號:<%= conf.getString("l_id")%></p>
+        <p class="order_inf">下訂單時間:1019/5/1</p>
         <p class="order_inf">配送方式:宅配</p>
         <p class="order_inf">付款方式:貨到付款</p>
-        <p class="order_inf">收件人:鹽酥小雞雞</p>
+        <p class="order_inf">收件人:</p>
         <p class="order_inf">應付金額:NT.459</p>
         <p class="order_inf" style="margin-top: 70px;">訂單商品與名稱與數量:</p>
         <hr width="68%">
