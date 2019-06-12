@@ -19,19 +19,21 @@
     <link rel="stylesheet" href="assets/css/animate.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <!--    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">-->
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:700&display=swap" rel="stylesheet">
     <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5ce40b2adc07bd00120823e5&product=inline-share-buttons' async='async'></script>
 </head>
 
 <body style="background-color: rgb(236,174,106);">
 
+    
+
+
     <div class="mt-5" style="position:relative;top:13px;">
         <img src="assets/images/post7.png" style="width:100%;">
     </div>
     
-    <div class="container mb-5" style="margin-top:50px;">
-        <form action="jsp/confirm.jsp">
+    <div class="container container_chg mb-5" style="margin-top:50px;">
+        <form action="insertlist2.jsp">
 
             <div class="row">
                 <div class="col-50 p-3">
@@ -43,28 +45,28 @@
                     %>
                     <h3>聯絡資訊</h3>
                     <label for="fname"><i class="fa fa-user"></i> 姓名</label>
-                    <% out.println("<input type='text' id='fname' name='firstname' placeholder='姓名' value='"+list.getString("m_firstname")+list.getString("m_lastname")+"' >"); %>
+                    <% out.println("<input type='text' name='firstname' name='lastname' placeholder='姓名' value='"+list.getString("m_firstname")+list.getString("m_lastname")+"' >"); %>
                     <label for="email"><i class="fa fa-envelope"></i> Email</label>
-                    <input type="text" id="email" name="email" placeholder="***@gmail.com" value="<%=list.getString("m_email")%>">
+                    <input type="text"  name="email" placeholder="***@gmail.com" value="<%=list.getString("m_email")%>">
                     <label for="phone"><i class="fa fa-phone"></i> 電話</label>
-                    <input type="text" id="email" name="email" placeholder="09-xxx-xxx" value="<%=list.getString("m_tel")%>">
+                    <input type="text"  name="tel" placeholder="09-xxx-xxx" value="<%=list.getString("m_tel")%>">
                     <label for="city"><i class="fa fa-globe-asia"></i> 國家</label>
-                    <input type="text" id="city" name="city" placeholder="國家" value="國家">
+                    <input type="text"  name="country" placeholder="國家" value="國家">
                     <div class="row">
                         <div class="col-50">
                             <label for="state">地址</label>
-                            <input type="text" id="state" name="state" placeholder="地址" value="<%=list.getString("m_address")%>">
+                            <input type="text" name="address" placeholder="地址" value="<%=list.getString("m_address")%>">
                         </div>
                     </div>
                     <label for="fname">付款方式</label><br>
-                    <select class="mb-3">
+                    <select name="payment" class="mb-3">
                         <option value="到貨付款">到貨付款</option>
                         <option value="信用卡">信用卡</option>
                         <option value="電子錢包">電子錢包</option>
                     </select>
                     <br>
                      </div>             
-                    <input type="textarea" placeholder="備註">
+                    <input type="textarea" name="memo" placeholder="備註" >
                 <input type="submit" class="button button1" value="確認送出">
             </div>
         </form>
