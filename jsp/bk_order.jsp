@@ -100,7 +100,7 @@ a
                 while(tmp.next())
                 {
                   out.println("<tr>");
-                  out.println("<td>"+"<textarea name='lid'>"+tmp.getString("l_id")+"</textarea>"+"</td>");
+                  out.println("<td>"+tmp.getString("l_id")+"</td>");
                   out.println("<td>"+"<textarea name='lnumber'>"+tmp.getString("l_number")+"</textarea>"+"</td>");
                   out.println("<td>"+"<textarea name='maccount'>"+tmp.getString("m_account")+"</textarea>"+"</td>");
                   out.println("<td>"+"<textarea name='laddress'>"+tmp.getString("l_address")+"</textarea>"+"</td>");
@@ -111,7 +111,7 @@ a
                 out.println("<tr>");
                 out.println("<td colspan='10'>");
                 out.println("<button>");
-                out.println("修改會員");
+                out.println("修改訂單");
                 out.println("</button>");
                 out.println("</td>");
                 out.println("</tr>");
@@ -119,7 +119,6 @@ a
 
 
 %>
-                <button>修改訂單</button>
 			    <!--<tr>
 			    	<td>1</td>
 					<td>6/15</td>

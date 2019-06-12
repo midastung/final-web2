@@ -101,18 +101,18 @@ a
                 while(tmp.next())
                 {
                   out.println("<tr>");
-                  out.println("<td>"+"<textarea name='lid'>"+tmp.getString("l_id")+"</td>");
-                  out.println("<td>"+"<textarea name='date'>"+tmp.getString("date")+"</td>");
-                  out.println("<td>"+"<textarea name='pid'>"+tmp.getString("p_id")+"</td>");
-                  out.println("<td>"+"<textarea name='lname'>"+tmp.getString("l_name")+"</td>");
-                  out.println("<td>"+"<textarea name='message'>"+tmp.getString("message")+"</td>");
+                  out.println("<td>"+tmp.getString("l_id")+"</td>");
+                  out.println("<td>"+"<textarea name='date'>"+tmp.getString("date")+"</textarea>"+"</td>");
+                  out.println("<td>"+"<textarea name='pid'>"+tmp.getString("p_id")+"</textarea>"+"</td>");
+                  out.println("<td>"+"<textarea name='lname'>"+tmp.getString("l_name")+"</textarea>"+"</td>");
+                  out.println("<td>"+"<textarea name='message'>"+tmp.getString("message")+"</textarea>"+"</td>");
                   out.println("<td>"+"<a href='del_comment.jsp?lid="+tmp.getString("l_id")+"'>"+"刪除"+"</a>"+"</td>");
                   out.println("</tr>");
                 }
                 out.println("<tr>");
                 out.println("<td colspan='10'>");
                 out.println("<button>");
-                out.println("修改會員");
+                out.println("修改評論");
                 out.println("</button>");
                 out.println("</td>");
                 out.println("</tr>");
