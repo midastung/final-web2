@@ -37,7 +37,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <form action="insertlist.jsp" method="post">
+                        <form action="order_cart.jsp" method="post">
                             <!-- Cart Table -->
                             <div class="cart-table table-responsive mt-5">
                                 <table class="table">

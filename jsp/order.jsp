@@ -38,10 +38,58 @@
             <div class="row">
                 <div class="col-50 p-3">
                     <%
+                        String amount = request.getParameter("amount");
+                        String p_price = request.getParameter("p_price");
+                        String pid = request.getParameter("pid");
+                       
+    
+                        try{
+                            Cookie getC[]=request.getCookies();
+                            for(int i=0;i<getC.length;i++)
+                            {
+                                if(getC[i].getName().equals("getin"))
+                                {
+                                    String[] sp=getC[i].getValue().split("-");
+                                    acc=sp[0];
+                                    pas=sp[1];
+                                }
+                            }
+        
+                            }
+                        catch(Exception e)
+                        {
+
+                        
+                        }
+                       
+                    %>
+                    <%
                       
                         sql="SELECT * FROM member, shopping_cart WHERE member.m_account='"+acc+"' AND member.m_account=shopping_cart.m_account; ";
                         ResultSet list = con.createStatement().executeQuery(sql);
                         list.next();
+                    %>
+                    <%
+                        try{
+                            String[] idd= request.getParameterValues("pid");
+                            String[] nbb= request.getParameterValues("amount");
+                        //如果一次購買5種不同商品 個別不同數量，idd[這裡會是0~4] nbb[也是0~4];陣列取的大小=idd.length
+                        
+                            for(int i=0;i<idd.length;i++) 
+                            {
+                     %>
+                             <input type="hidden" name="pdid" value="<%=idd[i]%>">
+                             <input type="hidden" name="amount" value="<%=nbb[i]%>">
+                             
+                    <%
+
+                        }
+                         }catch(Exception e){
+                         out.write("<script language=javascript>alert('無商品');</script>");
+                         response.setHeader("refresh","0;URL=index.jsp") ;
+                         }
+                        sql="UPDATE shopping_cart SET amount='"+amount+"' WHERE p_id='"+pid+"' AND m_account='"+acc+"'";
+                        con.createStatement().execute(sql);
                     %>
                     <h3>聯絡資訊</h3>
                     <label for="fname"><i class="fa fa-user"></i> 姓名</label>
