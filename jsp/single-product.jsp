@@ -22,6 +22,7 @@
                             <div class="container">
                                 <div class="row">
                                     <%
+                                        ResultSet rs=null;
                                         String aa=request.getParameter("p_id");
                                          sql="SELECT * FROM product WHERE p_id='"+aa+"'; ";
                                             ResultSet tmp = con.createStatement().executeQuery(sql);
@@ -155,7 +156,7 @@
                                                     out.println("<div class='container'>");
                                                     out.println("<div class='row'>");
                                                     out.println("<div class='col-4 comment_str' style='max-width: 25%; '>");
-                                                    out.println("<p class='level_txt'>"+tmp.getString("p_hot")+"</p>");
+                                                    out.println("<p class='level_txt'>銷量"+tmp.getString("p_hot")+"</p>");
                                                     out.println("<div class='rating' style='margin-top: -15px; '>");
                                                     out.println("<span class='star' style='font-size: 20px; width: 20px'>"+"</span>");
                                                     out.println("<span class='star' style='font-size: 20px; width: 20px'>"+"</span>");
@@ -165,26 +166,56 @@
                                                     out.println("</div>");
                                                     out.println("</div>");
                                                     out.println("<div class='col-8'>");
-                                                    out.println("<button class='comment_btn tablinks' onclick='openCity(event, 'all')'>"+" 全部"+"</button>");
-                                                    out.println("<button class='comment_btn tablinks' onclick='openCity(event, 'five_star')'>"+"5星"+"</button>");
-                                                    out.println("<button class='comment_btn' onclick='openCity(event, 'four_star')'>"+"4星"+"</button>");
-                                                    out.println("<button class='comment_btn' onclick='openCity(event, 'three_star')'>"+"3星"+"</button>");
-                                                    out.println("<button class='comment_btn' onclick='openCity(event, 'two_star')'>"+"2星"+"</button>");
-                                                    out.println("<button class='comment_btn' onclick='openCity(event, 'one_star')'>"+"1星"+"</button>");
-                                                    out.println("</div>");
+                                                %>
+                                                <%
+                                                    rs = con.createStatement().executeQuery("select count(stars) as countstr from list_shopping where p_id='"+aa+"' and l_boolean='1' ;");
+                                                    rs.next();
+                                                    out.println("<button class='comment_btn tablinks' onclick='openCity(event, 'all')'>"+" 全部("+rs.getString("countstr")+")</button>");
+                                                %>
+                                                <%
+                                                    rs = con.createStatement().executeQuery("select count(stars) as countstr from list_shopping where p_id='"+aa+"' and l_boolean='1' and stars='5'");
+                                                    rs.next();
+                                                    out.println("<button class='comment_btn tablinks' onclick='openCity(event, 'five_star')'>"+"5星("+rs.getString("countstr")+")</button>");
+                                                %>
+                                                <%
+                                                    rs = con.createStatement().executeQuery("select count(stars) as countstr from list_shopping where p_id='"+aa+"' and l_boolean='1' and stars='4'");
+                                                    rs.next();
+                                                    out.println("<button class='comment_btn' onclick=openCity(event, 'four_star')'>"+"4星("+rs.getString("countstr")+")</button>");
+                                                %>
+                                                <%
+                                                    rs = con.createStatement().executeQuery("select count(stars) as countstr from list_shopping where p_id='"+aa+"' and l_boolean='1' and stars='3'");
+                                                    rs.next();
+                                                    out.println("<button class='comment_btn' onclick=openCity(event, 'three_star')'>"+"3星("+rs.getString("countstr")+")</button>");
+                                                %>
+                                                <%
+                                                    rs = con.createStatement().executeQuery("select count(stars) as countstr from list_shopping where p_id='"+aa+"' and l_boolean='1' and stars='2'");
+                                                    rs.next();
+                                                    out.println("<button class='comment_btn' onclick=openCity(event, 'two_star')'>"+"2星("+rs.getString("countstr")+")</button>");
+                                                %>
+                                                <%
+                                                    rs = con.createStatement().executeQuery("select count(stars) as countstr from list_shopping where p_id='"+aa+"' and l_boolean='1' and stars='1'");
+                                                    rs.next();
+                                                    out.println("<button class='comment_btn' onclick=openCity(event, 'one_star')'>"+"1星("+rs.getString("countstr")+")</button>");
+
+
+
+                                                      out.println("</div>");
                                                     out.println("</div>");
                                                     out.println("</div>");
                                                     
+                                                %>
+                                                  
 
                                                 
-                                    %>
-                                    <%
-                                        request.setCharacterEncoding("utf-8");
-                                        sql="SELECT * FROM list_shopping;";
-                                        ResultSet tmp=con.createStatement().executeQuery(sql);
-                                    %>
+                                    
+                                
+                                       
+                                  
 
                                     <%
+                                        request.setCharacterEncoding("utf-8");
+                                        sql="SELECT * FROM list_shopping";
+                                        tmp=con.createStatement().executeQuery(sql);
                                         while(tmp.next())
                                         {
                                         out.println("<div id='all' class='tabcontent'>");
@@ -217,9 +248,13 @@
                                     %>
 
                                     <%
+                                    request.setCharacterEncoding("utf-8");
+                                        sql="SELECT * FROM list_shopping where stars='5'";
+                                        tmp=con.createStatement().executeQuery(sql);
+                                      out.println("<div id='five_star' class='tabcontent'>");
                                         while(tmp.next())
                                         {
-                                        out.println("<div id='five_star' class='tabcontent'>");
+                                      
                                         out.println("<i class='fas fa-user-circle' style='font-size: 25px; display: inline;'>");
                                         out.println("</i>");
                                         out.println("<p style='display: inline;'>");
@@ -244,14 +279,18 @@
                                         out.println(tmp.getString("date")); 
                                         out.println("</p>");
                                         out.println("<hr>");
-                                        out.println("<div>");
+                                        
                                         }
+                                        out.println("<div>");
                                     %>
 
                                     <%
+                                     sql="SELECT * FROM list_shopping where stars='4'";
+                                     tmp=con.createStatement().executeQuery(sql);
+                                     out.println("<div id='four_star' class='tabcontent'>");
                                         while(tmp.next())
                                         {
-                                        out.println("<div id='four_star' class='tabcontent'>");
+                                       
                                         out.println("<i class='fas fa-user-circle' style='font-size: 25px; display: inline;'>");
                                         out.println("</i>");
                                         out.println("<p style='display: inline;'>");
@@ -276,14 +315,19 @@
                                         out.println(tmp.getString("date")); 
                                         out.println("</p>");
                                         out.println("<hr>");
-                                        out.println("<div>");
+                                        
                                         }
+                                        out.println("<div>");
                                     %>
 
                                     <%
+                                      request.setCharacterEncoding("utf-8");
+                                        sql="SELECT * FROM list_shopping where stars='3'";
+                                        tmp=con.createStatement().executeQuery(sql);
+                                     out.println("<div id='three_star' class='tabcontent'>");
                                         while(tmp.next())
                                         {
-                                        out.println("<div id='three_star' class='tabcontent'>");
+                                       
                                         out.println("<i class='fas fa-user-circle' style='font-size: 25px; display: inline;'>");
                                         out.println("</i>");
                                         out.println("<p style='display: inline;'>");
@@ -308,14 +352,19 @@
                                         out.println(tmp.getString("date")); 
                                         out.println("</p>");
                                         out.println("<hr>");
-                                        out.println("<div>");
+                                        
                                         }
+                                        out.println("<div>");
                                     %>
 
                                     <%
+                                      request.setCharacterEncoding("utf-8");
+                                        sql="SELECT * FROM list_shopping where stars='2'";
+                                        tmp=con.createStatement().executeQuery(sql);
+                                     out.println("<div id='two_star' class='tabcontent'>");
                                         while(tmp.next())
                                         {
-                                        out.println("<div id='two_star' class='tabcontent'>");
+                                       
                                         out.println("<i class='fas fa-user-circle' style='font-size: 25px; display: inline;'>");
                                         out.println("</i>");
                                         out.println("<p style='display: inline;'>");
@@ -345,9 +394,13 @@
                                     %>
                                     
                                     <%
+                                      request.setCharacterEncoding("utf-8");
+                                        sql="SELECT * FROM list_shopping where stars='1'";
+                                        tmp=con.createStatement().executeQuery(sql);
+                                        out.println("<div id='one_star' class='tabcontent'>");
                                         while(tmp.next())
                                         {
-                                        out.println("<div id='one_star' class='tabcontent'>");
+                                     
                                         out.println("<i class='fas fa-user-circle' style='font-size: 25px; display: inline;'>");
                                         out.println("</i>");
                                         out.println("<p style='display: inline;'>");
@@ -409,8 +462,9 @@
                                                         out.println("</div>");
                                                         out.println("</div>");
                                                         out.println("</div>");
-                                                        out.println("</div>");                                                                          
+                                                                                                                            
                                                         }
+                                                          out.println("</div>");    
                                                     %>
                                                     
                                                 <!--Review And Description Tab Content End-->

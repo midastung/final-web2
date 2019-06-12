@@ -9,7 +9,7 @@
 	<style type="text/css" media="screen">
 td
  {
- 	text-align:center;
+  text-align:center;
  }
 a
  {
@@ -17,33 +17,38 @@ a
  }
 .in td
 {
-	width: 10rem;
-	height: 5rem;
-}	
+  width: 10rem;
+  height: 5rem;
+} 
 .out td
  {
-	width: 10rem;
-	height: 5rem;
+  width: 10rem;
+  height: 5rem;
  }
-
-  button
+ button
  {
    height: 1.5rem;
    float: right;
    margin-left: 3rem;
  }
 
-  .under td
+ .under td
  {
-	width: 10rem;
-	height: 2rem;
+  width: 10rem;
+  height: 2rem;
+ }
+
+ .in textarea
+ {
+  width: 5.5rem;
+  height: 3.5rem;
  }
 </style>
 </head>
 <body>
 <center  style="padding:10%;"><table border="1" class="out">
 	<tr>
-		<td><center><a href="bk_index.jsp">管理者介面</a></center></td>
+		<td><center><a href="back_index.jsp">管理者介面</a></center></td>
 		<td colspan="2" style="width: 70rem"><center>評論管理</center></td>
 	</tr>
 	<tr>
@@ -96,15 +101,23 @@ a
                 while(tmp.next())
                 {
                   out.println("<tr>");
-                  out.println("<td>"+tmp.getString("l_id")+"</td>");
-                  out.println("<td>"+tmp.getString("date")+"</td>");
-                  out.println("<td>"+tmp.getString("p_id")+"</td>");
-                  out.println("<td>"+tmp.getString("l_name")+"</td>");
-                  out.println("<td>"+tmp.getString("message")+"</td>");
+                  out.println("<td>"+"<textarea name='lid'>"+tmp.getString("l_id")+"</td>");
+                  out.println("<td>"+"<textarea name='date'>"+tmp.getString("date")+"</td>");
+                  out.println("<td>"+"<textarea name='pid'>"+tmp.getString("p_id")+"</td>");
+                  out.println("<td>"+"<textarea name='lname'>"+tmp.getString("l_name")+"</td>");
+                  out.println("<td>"+"<textarea name='message'>"+tmp.getString("message")+"</td>");
                   out.println("<td>"+"<a href='del_comment.jsp?lid="+tmp.getString("l_id")+"'>"+"刪除"+"</a>"+"</td>");
                   out.println("</tr>");
                 }
+                out.println("<tr>");
+                out.println("<td colspan='10'>");
+                out.println("<button>");
+                out.println("修改會員");
+                out.println("</button>");
+                out.println("</td>");
+                out.println("</tr>");
                   con.close();
+
 %>
 			    <!--<tr>
 			    	<td>1</td>
@@ -140,7 +153,7 @@ a
 </table></center>
 
 <center  style="margin-top:-10%; padding:5%;"><table border="1" class="under">
-  <tr><td colspan="3" style="width: 80rem">評論資料(修改須全填寫)</td></tr>
+  <tr><td colspan="3" style="width: 80rem">評論資料</td></tr>
                   
   <form action="add_comment.jsp" method="post">
   <tr>
@@ -161,7 +174,6 @@ a
   </tr>
   <tr>
   <td colspan="3">
-  	<button>修改評論</button>
     <button>新增評論</button>
   </td>
   </tr>

@@ -36,12 +36,18 @@ a
 	width: 10rem;
 	height: 2rem;
  }
+
+ .in textarea
+ {
+  width: 5.5rem;
+  height: 3.5rem;
+ }
 </style>
 </head>
 <body>
 <center  style="padding:10%;"><table border="1" class="out">
 	<tr>
-		<td><center><a href="bk_index.jsp">管理者介面</a></center></td>
+		<td><center><a href="back_index.jsp">管理者介面</a></center></td>
 		<td colspan="2" style="width: 70rem"><center>會員管理</center></td>
 	</tr>
 	<tr>
@@ -92,27 +98,36 @@ a
                                     }
                                
                             %>
-				<form action="">
+				<form action="write_member.jsp" method="post">
 <%
                 sql="SELECT * FROM member;";
-				ResultSet tmp=con.createStatement().executeQuery(sql);
+				        ResultSet tmp=con.createStatement().executeQuery(sql);
                 while(tmp.next())
                 {
                   out.println("<tr>");
                   out.println("<td>"+tmp.getString("m_account")+"</td>");
-                  out.println("<td>"+tmp.getString("m_password")+"</td>");
-                  out.println("<td>"+tmp.getString("m_firstname")+"</td>");
-                  out.println("<td>"+tmp.getString("m_lastname")+"</td>");
-                  out.println("<td>"+tmp.getString("m_address")+"</td>");
-                  out.println("<td>"+tmp.getString("m_Email")+"</td>");
-                  out.println("<td>"+tmp.getString("m_level")+"</td>");
-                  out.println("<td>"+tmp.getString("m_head")+"</td>");
-                  out.println("<td>"+tmp.getString("m_tel")+"</td>");
+                  out.println("<td>"+"<textarea name='mpassword'>"+tmp.getString("m_password")+"</textarea>"+"</td>");
+                  out.println("<td>"+"<textarea name='mfirstname'>"+tmp.getString("m_firstname")+"</textarea>"+"</td>");
+                  out.println("<td>"+"<textarea name='mlastname'>"+tmp.getString("m_lastname")+"</textarea>"+"</td>");
+                  out.println("<td>"+"<textarea name='maddress'>"+tmp.getString("m_address")+"</textarea>"+"</td>");
+                  out.println("<td>"+"<textarea name='mEmail'>"+tmp.getString("m_Email")+"</textarea>"+"</td>");
+                  out.println("<td>"+"<textarea name='mlevel'>"+tmp.getString("m_level")+"</textarea>"+"</td>");
+                  out.println("<td>"+"<textarea name='mhead'>"+tmp.getString("m_head")+"</textarea>"+"</td>");
+                  out.println("<td>"+"<textarea name='mtel'>"+tmp.getString("m_tel")+"</textarea>"+"</td>");
                   out.println("<td>"+"<a href='del_member.jsp?acc="+tmp.getString("m_account")+"'>"+"刪除"+"</a>"+"</td>");
                   out.println("</tr>");
                 }
+                out.println("<tr>");
+                out.println("<td colspan='10'>");
+                out.println("<button>");
+                out.println("修改會員");
+                out.println("</button>");
+                out.println("</td>");
+                out.println("</tr>");
                   con.close();
-%>				</form>
+
+%>	
+</form> 
 			    <!--<tr>
 					<td>y</td>
 					<td>m</td>
@@ -139,7 +154,7 @@ a
 </table></center>
 
 <center  style=" margin-top:-10%;padding:5%;"><table border="1" class="under">
-  <tr><td colspan="3" style="width: 80rem">會員資料(修改須全填寫)</td></tr>
+  <tr><td colspan="3" style="width: 80rem">會員資料</td></tr>
                   
   <form action="add_member.jsp" method="post">
   <tr>
@@ -180,7 +195,6 @@ a
   </tr>
   <tr>
   <td colspan="3">
-    <button>修改會員</button>
     <button>新增會員</button>
   </td>
   </tr>

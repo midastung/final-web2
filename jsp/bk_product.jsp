@@ -8,7 +8,7 @@
 	<style type="text/css" media="screen">
 td
  {
- 	text-align:center;
+  text-align:center;
  }
 a
  {
@@ -16,33 +16,38 @@ a
  }
 .in td
 {
-	width: 10rem;
-	height: 5rem;
-}	
+  width: 10rem;
+  height: 5rem;
+} 
 .out td
  {
-	width: 10rem;
-	height: 5rem;
+  width: 10rem;
+  height: 5rem;
  }
-
-  button
+ button
  {
    height: 1.5rem;
    float: right;
    margin-left: 3rem;
  }
 
-  .under td
+ .under td
  {
-	width: 10rem;
-	height: 2rem;
+  width: 10rem;
+  height: 2rem;
+ }
+
+ .in textarea
+ {
+  width: 5.5rem;
+  height: 3.5rem;
  }
 </style>
 </head>
 <body>
 <center  style="padding:10%;"><table border="1" class="out">
 	<tr>
-		<td><center><a href="bk_index.jsp">管理者介面</a></center></td>
+		<td><center><a href="back_index.jsp">管理者介面</a></center></td>
 		<td colspan="2" style="width: 70rem"><center>商品管理</center></td>
 	</tr>
 	<tr>
@@ -98,17 +103,24 @@ a
                 while(tmp.next())
                 {
                   out.println("<tr>");
-                  out.println("<td>"+tmp.getString("p_id")+"</td>");
-                  out.println("<td>"+tmp.getString("p_class")+"</td>");
-                  out.println("<td>"+tmp.getString("p_name")+"</td>");
-                  out.println("<td>"+tmp.getString("p_stock")+"</td>");
-                  out.println("<td>"+tmp.getString("p_price")+"</td>");
-                  out.println("<td>"+tmp.getString("p_originprice")+"</td>");
-                  out.println("<td>"+tmp.getString("p_discount")+"</td>");
-                  out.println("<td>"+tmp.getString("p_image")+"</td>");
+                  out.println("<td>"+tmp.getString("p_id")+"</textarea>"+"</td>");
+                  out.println("<td>"+tmp.getString("p_class")+"</textarea>"+"</td>");
+                  out.println("<td>"+tmp.getString("p_name")+"</textarea>"+"</td>");
+                  out.println("<td>"+tmp.getString("p_stock")+"</textarea>"+"</td>");
+                  out.println("<td>"+tmp.getString("p_price")+"</textarea>"+"</td>");
+                  out.println("<td>"+tmp.getString("p_originprice")+"</textarea>"+"</td>");
+                  out.println("<td>"+tmp.getString("p_discount")+"</textarea>"+"</td>");
+                  out.println("<td>"+tmp.getString("p_image")+"</textarea>"+"</td>");
                   out.println("<td>"+"<a href='del_product.jsp?pid="+tmp.getString("p_id")+"'>"+"刪除"+"</a>"+"</td>");
                   out.println("</tr>");
                 }
+                out.println("<tr>");
+                out.println("<td colspan='10'>");
+                out.println("<button>");
+                out.println("修改會員");
+                out.println("</button>");
+                out.println("</td>");
+                out.println("</tr>");
                   con.close();
 %>
 			    <!--<tr>
@@ -145,7 +157,7 @@ a
 </table></center>
 
 <center  style=" margin-top:-10%;padding:5%;"><table border="1" class="under">
-  <tr><td colspan="3" style="width: 80rem">商品資料(修改須全填寫)</td></tr>
+  <tr><td colspan="3" style="width: 80rem">商品資料</td></tr>
                   
   <form action="add_product.jsp" method="post">
   <tr>
@@ -182,7 +194,6 @@ a
   </tr>
   <tr>
   <td colspan="3">
-    <button>修改商品</button>
     <button>新增商品</button>
   </td>
   </tr>
