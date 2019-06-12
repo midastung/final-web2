@@ -69,16 +69,19 @@
                         <nav class="gn-menu-wrapper">
                             <div class="gn-scroller">
                                 <ul class="gn-menu">
+                                  
                                     <li class="gn-search-item">
+                                        <a href="search.jsp">
                                         <i class="fas fa-search p-4"></i>
-                                        <input placeholder="Search" type="search" class="gn-search p-0" >
-                                        <button type="submit" class="srh_btn">SUBMIT</button>
+                                        Search
+                                        </a>
+                                      
                                     </li>
+                                    
                                     <li class="gn-search-item"><a href="index.jsp"><i class="fas fa-home p-4"></i>Home</a></li>
                                     <li class="gn-search-item"><a href="all_products.jsp"><i class="fas fa-shopping-basket p-4"></i>Product</a></li>
-                                    <li class="gn-search-item"><a href="#"><i class="fas fa-users p-4"></i>About Us</a></li>
+                                    <li class="gn-search-item"><a href="aboutus.jsp"><i class="fas fa-users p-4"></i>About Us</a></li>
                                     <li class="gn-search-item"><a href="#"><i class="far fa-question-circle p-4"></i><span class="p-1">FAQ</span></a></li>
-                                    <li class="gn-search-item"><a href="logout.jsp"><i class="far fa-question-circle p-4"></i><span class="p-1">Logout</span></a></li>
                                     <li class="gn-search-item ml-4">累計訪客人數:
                                     <%
                                     try{
@@ -125,16 +128,18 @@
                         <nav class="gn-menu-wrapper">
                             <div class="gn-scroller">
                                 <ul class="gn-menu">
-                                    <li class="gn-search-item">
+                                     <li class="gn-search-item">
+                                        <a href="search.jsp">
                                         <i class="fas fa-search p-4"></i>
-                                        <input placeholder="Search" type="search" class="gn-search p-0">
-                                        <button type="submit" class="srh_btn">SUBMIT</button>
+                                        Search
+                                        </a>
+                                      
                                     </li>
                                     <li class="gn-search-item"><a href="index.jsp"><i class="fas fa-home p-4"></i>Home</a></li>
                                     <li class="gn-search-item"><a href="all_products.jsp"><i class="fas fa-shopping-basket p-4"></i>Product</a></li>
-                                    <li class="gn-search-item"><a href="#"><i class="fas fa-users p-4"></i>About Us</a></li>
+                                    <li class="gn-search-item"><a href="aboutus.jsp"><i class="fas fa-users p-4"></i>About Us</a></li>
                                     <li class="gn-search-item"><a href="#"><i class="far fa-question-circle p-4"></i><span class="p-1">FAQ</span></a></li>
-                                    <li class="gn-search-item"><a href="logout.jsp"><i class="far fa-question-circle p-4"></i><span class="p-1">Logout</span></a></li>
+                                    <li class="gn-search-item"><a href="logout.jsp"><i class="fas fa-door-open p-4"></i><span class="p-1">Logout</span></a></li>
                                     <li class="gn-search-item ml-4">累計訪客人數:
                                     <%
                                     try{
@@ -165,12 +170,12 @@
                 if(tmp.getString("m_level").equals("1"))
                 {
                     out.println("<li>");
-                    out.println("<a class='codrops-icon codrops-icon-prev' href='bk_index.jsp'>"+"後台頁面"+"</a>");
+                    out.println("<a class='codrops-icon codrops-icon-prev' href='back_index.jsp'>"+"後台頁面"+"</a>");
                     out.println("</li>");
                     out.println("<li>");
                     out.println("<a class='codrops-icon codrops-icon-prev' href='logout.jsp'>"+"登出"+"</a>");
                     out.println("</li>");
-                    out.println("<li class='more p-1 chi-font'>"+"<a href='#'>"+"<span style='font-size: 20px;position:relative;top:-10%;'>"+"歡迎，"+tmp.getString("m_firstname")+"管理員</span></a></li>");
+                    out.println("<li class='more p-1 chi-font'>"+"<a href='back_index.jsp'>"+"<span style='font-size: 20px;position:relative;top:-10%;'>"+"歡迎，"+tmp.getString("m_firstname")+"管理員</span></a></li>");
 
                 
 %>
@@ -180,10 +185,10 @@
              else 
                 {
                     out.println("<li>");
-                    out.println("<a class='codrops-icon codrops-icon-prev' href='#' >"+"購物車"+"</a>");
+                    out.println("<a class='codrops-icon codrops-icon-prev' href='shopcart.jsp'>"+"購物車"+"</a>");
                     out.println("</li>");
                     out.println("<li>");
-                    out.println("<a class='codrops-icon codrops-icon-prev' href='#'>"+"我的最愛"+"</a>");
+                    out.println("<a class='codrops-icon codrops-icon-prev' href='favorite_content.jsp'>"+"我的最愛"+"</a>");
                     out.println("</li>");
                     out.println("<li class='more p-1 chi-font'>"+"<a href='member.jsp'>"+"<span style='font-size: 20px;position:relative;top:-10%;'>"+"歡迎，"+tmp.getString("m_firstname")+"</span></a></li>");
 

@@ -3,10 +3,7 @@
 <%@include file="getDB.jsp" %>
 <body>
 	<%
-	    response.setCharacterEncoding("big5");
-	    response.setCharacterEncoding("UTF-8");
-	    request.setCharacterEncoding("big5");
-	    request.setCharacterEncoding("UTF-8");
+        request.setCharacterEncoding("utf-8");
 		String fullname = request.getParameter("fullname");
 		String message = request.getParameter("message");
 
