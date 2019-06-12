@@ -94,9 +94,10 @@ a
                                     }
                                
                             %>
+                <form action="write_order.jsp" method="post">
 <%
                 sql="SELECT * FROM list_shopping;";
-				ResultSet tmp=con.createStatement().executeQuery(sql);
+				        ResultSet tmp=con.createStatement().executeQuery(sql);
                 while(tmp.next())
                 {
                   out.println("<tr>");
@@ -116,9 +117,8 @@ a
                 out.println("</td>");
                 out.println("</tr>");
                   con.close();
-
-
 %>
+</form>
 			    <!--<tr>
 			    	<td>1</td>
 					<td>6/15</td>
