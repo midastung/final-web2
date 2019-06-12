@@ -178,196 +178,208 @@
 
                                                 
                                     %>
-                                                                <div id="all" class="tabcontent">
-                                                                    <i class="fas fa-user-circle" style="font-size: 25px; display: inline;"></i>
-                                                                    <p style="display: inline;">as*******</p>
-                                                                    <div class="rating">
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star star_bl" style="font-size: 20px;width: 20px"></span>
-                                                                    </div>
-                                                                    <p style="font-size: 15px;margin-top: 20px;">評論內容評論內容評論內容評論內容</p>
-                                                                    
-                                                                    <p style="font-size: 7px;margin-top: 20px;">
-                                                                        2019-5-29  15:25:07
-                                                                    </p>
-                                                                    <hr>
-                                                                    <i class="fas fa-user-circle" style="font-size: 25px; display: inline;"></i>
-                                                                    <p style="display: inline;">as*******</p>
-                                                                    <div class="rating">
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star star_bl" style="font-size: 20px;width: 20px"></span>
-                                                                    </div>
-                                                                    <p style="font-size: 15px;margin-top: 20px;">評論內容評論內容評論內容評論內容</p>
-                                                                    
-                                                                    <p style="font-size: 7px;margin-top: 20px;">
-                                                                        2019-5-29  15:25:07
-                                                                    </p>
-                                                                </div>
-                                                                
-                                                                <div id="five_star" class="tabcontent">
-                                                                    <i class="fas fa-user-circle" style="font-size: 25px; display: inline;"></i>
-                                                                    <p style="display: inline;">ax*******</p>
-                                                                    <div class="rating">
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star star_bl" style="font-size: 20px;width: 20px"></span>
-                                                                    </div>
-                                                                    <p style="font-size: 15px;margin-top: 20px;">評論內容評論內容評論內容評論內容</p>
-                                                                    
-                                                                    <p style="font-size: 7px;margin-top: 20px;">
-                                                                        2019-5-29  15:25:07
-                                                                    </p>
-                                                                    <hr>
-                                                                    <i class="fas fa-user-circle" style="font-size: 25px; display: inline;"></i>
-                                                                    <p style="display: inline;">as*******</p>
-                                                                    <div class="rating">
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star star_bl" style="font-size: 20px;width: 20px"></span>
-                                                                    </div>
-                                                                    <p style="font-size: 15px;margin-top: 20px;">評論內容評論內容評論內容評論內容</p>
-                                                                    
-                                                                    <p style="font-size: 7px;margin-top: 20px;">
-                                                                        2019-5-29  15:25:07
-                                                                    </p>
-                                                                </div>
-                                                                <div id="four_star" class="tabcontent">
-                                                                    <i class="fas fa-user-circle" style="font-size: 25px; display: inline;"></i>
-                                                                    <p style="display: inline;">as*******</p>
-                                                                    <div class="rating">
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star star_bl" style="font-size: 20px;width: 20px"></span>
-                                                                    </div>
-                                                                    <p style="font-size: 15px;margin-top: 20px;">評論內容評論內容評論內容評論內容</p>
-                                                                    
-                                                                    <p style="font-size: 7px;margin-top: 20px;">
-                                                                        2019-5-29  15:25:07
-                                                                    </p>
-                                                                    <hr>
-                                                                    <i class="fas fa-user-circle" style="font-size: 25px; display: inline;"></i>
-                                                                    <p style="display: inline;">a2*******</p>
-                                                                    <div class="rating">
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star star_bl" style="font-size: 20px;width: 20px"></span>
-                                                                    </div>
-                                                                    <p style="font-size: 15px;margin-top: 20px;">評論內容評論內容評論內容評論內容</p>
-                                                                    
-                                                                    <p style="font-size: 7px;margin-top: 20px;">
-                                                                        2019-5-29  15:25:07
-                                                                    </p>
-                                                                </div>
-                                                                <div id="three_star" class="tabcontent">
-                                                                    <i class="fas fa-user-circle" style="font-size: 25px; display: inline;"></i>
-                                                                    <p style="display: inline;">a3*******</p>
-                                                                    <div class="rating">
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star star_bl" style="font-size: 20px;width: 20px"></span>
-                                                                    </div>
-                                                                    <p style="font-size: 15px;margin-top: 20px;">評論內容評論內容評論內容評論內容</p>
-                                                                    
-                                                                    <p style="font-size: 7px;margin-top: 20px;">
-                                                                        2019-5-29  15:25:07
-                                                                    </p>
-                                                                    <hr>
-                                                                    <i class="fas fa-user-circle" style="font-size: 25px; display: inline;"></i>
-                                                                    <p style="display: inline;">as*******</p>
-                                                                    <div class="rating">
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star star_bl" style="font-size: 20px;width: 20px"></span>
-                                                                    </div>
-                                                                    <p style="font-size: 15px;margin-top: 20px;">評論內容評論內容評論內容評論內容</p>
-                                                                    
-                                                                    <p style="font-size: 7px;margin-top: 20px;">
-                                                                        2019-5-29  15:25:07
-                                                                    </p>
-                                                                </div>
-                                                                <div id="two_star" class="tabcontent">
-                                                                    <i class="fas fa-user-circle" style="font-size: 25px; display: inline;"></i>
-                                                                    <p style="display: inline;">a4*******</p>
-                                                                    <div class="rating">
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star star_bl" style="font-size: 20px;width: 20px"></span>
-                                                                    </div>
-                                                                    <p style="font-size: 15px;margin-top: 20px;">評論內容評論內容評論內容評論內容</p>
-                                                                    
-                                                                    <p style="font-size: 7px;margin-top: 20px;">
-                                                                        2019-5-29  15:25:07
-                                                                    </p>
-                                                                    <hr>
-                                                                    <i class="fas fa-user-circle" style="font-size: 25px; display: inline;"></i>
-                                                                    <p style="display: inline;">as*******</p>
-                                                                    <div class="rating">
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star star_bl" style="font-size: 20px;width: 20px"></span>
-                                                                    </div>
-                                                                    <p style="font-size: 15px;margin-top: 20px;">評論內容評論內容評論內容評論內容</p>
-                                                                    
-                                                                    <p style="font-size: 7px;margin-top: 20px;">
-                                                                        2019-5-29  15:25:07
-                                                                    </p>
-                                                                </div>
-                                                                <div id="one_star" class="tabcontent">
-                                                                    <i class="fas fa-user-circle" style="font-size: 25px; display: inline;"></i>
-                                                                    <p style="display: inline;">as*******</p>
-                                                                    <div class="rating">
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star star_bl" style="font-size: 20px;width: 20px"></span>
-                                                                    </div>
-                                                                    <p style="font-size: 15px;margin-top: 20px;">評論內容評論內容評論內容評論內容</p>
-                                                                    
-                                                                    <p style="font-size: 7px;margin-top: 20px;">
-                                                                        2019-5-29  15:25:07
-                                                                    </p>
-                                                                    <hr>
-                                                                    <i class="fas fa-user-circle" style="font-size: 25px; display: inline;"></i>
-                                                                    <p style="display: inline;">as*******</p>
-                                                                    <div class="rating">
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star star_bl" style="font-size: 20px;width: 20px"></span>
-                                                                    </div>
-                                                                    <p style="font-size: 15px;margin-top: 20px;">評論內容評論內容評論內容評論內容</p>
-                                                                    
-                                                                    <p style="font-size: 7px;margin-top: 20px;">
-                                                                        2019-5-29  15:25:07
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                    <%
+                                        request.setCharacterEncoding("utf-8");
+                                        sql="SELECT * FROM list_shopping;";
+                                        ResultSet tmp=con.createStatement().executeQuery(sql);
+                                    %>
+
+                                    <%
+                                        while(tmp.next())
+                                        {
+                                        out.println("<div id='all' class='tabcontent'>");
+                                        out.println("<i class='fas fa-user-circle' style='font-size: 25px; display: inline;'>");
+                                        out.println("</i>");
+                                        out.println("<p style='display: inline;'>");
+                                        out.println(tmp.getString("l_name"));  
+                                        out.println("</p>");
+                                        out.println("<div class='rating'>");
+                                        out.println("<span class='star' style='font-size: 20px;width: 20px'>"); 
+                                        out.println("</span>"); 
+                                        out.println("<span class='star' style='font-size: 20px;width: 20px'>"); 
+                                        out.println("</span>"); 
+                                        out.println("<span class='star' style='font-size: 20px;width: 20px'>"); 
+                                        out.println("</span>"); 
+                                        out.println("<span class='star' style='font-size: 20px;width: 20px'>"); 
+                                        out.println("</span>"); 
+                                        out.println("<span class='star star_bl' style='font-size: 20px;width: 20px'>"); 
+                                        out.println("</span>"); 
+                                        out.println("</div>"); 
+                                        out.println("<p style='font-size: 15px;margin-top: 20px;''>"); 
+                                        out.println(tmp.getString("message")); 
+                                        out.println("</p>");
+                                        out.println("<p style='font-size: 7px;margin-top: 20px;'>");
+                                        out.println(tmp.getString("date")); 
+                                        out.println("</p>");
+                                        out.println("<hr>");
+                                        out.println("<div>");
+                                        }
+                                    %>
+
+                                    <%
+                                        while(tmp.next())
+                                        {
+                                        out.println("<div id='five_star' class='tabcontent'>");
+                                        out.println("<i class='fas fa-user-circle' style='font-size: 25px; display: inline;'>");
+                                        out.println("</i>");
+                                        out.println("<p style='display: inline;'>");
+                                        out.println(tmp.getString("l_name"));  
+                                        out.println("</p>");
+                                        out.println("<div class='rating'>");
+                                        out.println("<span class='star' style='font-size: 20px;width: 20px'>"); 
+                                        out.println("</span>"); 
+                                        out.println("<span class='star' style='font-size: 20px;width: 20px'>"); 
+                                        out.println("</span>"); 
+                                        out.println("<span class='star' style='font-size: 20px;width: 20px'>"); 
+                                        out.println("</span>"); 
+                                        out.println("<span class='star' style='font-size: 20px;width: 20px'>"); 
+                                        out.println("</span>"); 
+                                        out.println("<span class='star star_bl' style='font-size: 20px;width: 20px'>"); 
+                                        out.println("</span>"); 
+                                        out.println("</div>"); 
+                                        out.println("<p style='font-size: 15px;margin-top: 20px;''>"); 
+                                        out.println(tmp.getString("message")); 
+                                        out.println("</p>");
+                                        out.println("<p style='font-size: 7px;margin-top: 20px;'>");
+                                        out.println(tmp.getString("date")); 
+                                        out.println("</p>");
+                                        out.println("<hr>");
+                                        out.println("<div>");
+                                        }
+                                    %>
+
+                                    <%
+                                        while(tmp.next())
+                                        {
+                                        out.println("<div id='four_star' class='tabcontent'>");
+                                        out.println("<i class='fas fa-user-circle' style='font-size: 25px; display: inline;'>");
+                                        out.println("</i>");
+                                        out.println("<p style='display: inline;'>");
+                                        out.println(tmp.getString("l_name"));  
+                                        out.println("</p>");
+                                        out.println("<div class='rating'>");
+                                        out.println("<span class='star' style='font-size: 20px;width: 20px'>"); 
+                                        out.println("</span>"); 
+                                        out.println("<span class='star' style='font-size: 20px;width: 20px'>"); 
+                                        out.println("</span>"); 
+                                        out.println("<span class='star' style='font-size: 20px;width: 20px'>"); 
+                                        out.println("</span>"); 
+                                        out.println("<span class='star' style='font-size: 20px;width: 20px'>"); 
+                                        out.println("</span>"); 
+                                        out.println("<span class='star star_bl' style='font-size: 20px;width: 20px'>"); 
+                                        out.println("</span>"); 
+                                        out.println("</div>"); 
+                                        out.println("<p style='font-size: 15px;margin-top: 20px;''>"); 
+                                        out.println(tmp.getString("message")); 
+                                        out.println("</p>");
+                                        out.println("<p style='font-size: 7px;margin-top: 20px;'>");
+                                        out.println(tmp.getString("date")); 
+                                        out.println("</p>");
+                                        out.println("<hr>");
+                                        out.println("<div>");
+                                        }
+                                    %>
+
+                                    <%
+                                        while(tmp.next())
+                                        {
+                                        out.println("<div id='three_star' class='tabcontent'>");
+                                        out.println("<i class='fas fa-user-circle' style='font-size: 25px; display: inline;'>");
+                                        out.println("</i>");
+                                        out.println("<p style='display: inline;'>");
+                                        out.println(tmp.getString("l_name"));  
+                                        out.println("</p>");
+                                        out.println("<div class='rating'>");
+                                        out.println("<span class='star' style='font-size: 20px;width: 20px'>"); 
+                                        out.println("</span>"); 
+                                        out.println("<span class='star' style='font-size: 20px;width: 20px'>"); 
+                                        out.println("</span>"); 
+                                        out.println("<span class='star' style='font-size: 20px;width: 20px'>"); 
+                                        out.println("</span>"); 
+                                        out.println("<span class='star' style='font-size: 20px;width: 20px'>"); 
+                                        out.println("</span>"); 
+                                        out.println("<span class='star star_bl' style='font-size: 20px;width: 20px'>"); 
+                                        out.println("</span>"); 
+                                        out.println("</div>"); 
+                                        out.println("<p style='font-size: 15px;margin-top: 20px;''>"); 
+                                        out.println(tmp.getString("message")); 
+                                        out.println("</p>");
+                                        out.println("<p style='font-size: 7px;margin-top: 20px;'>");
+                                        out.println(tmp.getString("date")); 
+                                        out.println("</p>");
+                                        out.println("<hr>");
+                                        out.println("<div>");
+                                        }
+                                    %>
+
+                                    <%
+                                        while(tmp.next())
+                                        {
+                                        out.println("<div id='two_star' class='tabcontent'>");
+                                        out.println("<i class='fas fa-user-circle' style='font-size: 25px; display: inline;'>");
+                                        out.println("</i>");
+                                        out.println("<p style='display: inline;'>");
+                                        out.println(tmp.getString("l_name"));  
+                                        out.println("</p>");
+                                        out.println("<div class='rating'>");
+                                        out.println("<span class='star' style='font-size: 20px;width: 20px'>"); 
+                                        out.println("</span>"); 
+                                        out.println("<span class='star' style='font-size: 20px;width: 20px'>"); 
+                                        out.println("</span>"); 
+                                        out.println("<span class='star' style='font-size: 20px;width: 20px'>"); 
+                                        out.println("</span>"); 
+                                        out.println("<span class='star' style='font-size: 20px;width: 20px'>"); 
+                                        out.println("</span>"); 
+                                        out.println("<span class='star star_bl' style='font-size: 20px;width: 20px'>"); 
+                                        out.println("</span>"); 
+                                        out.println("</div>"); 
+                                        out.println("<p style='font-size: 15px;margin-top: 20px;''>"); 
+                                        out.println(tmp.getString("message")); 
+                                        out.println("</p>");
+                                        out.println("<p style='font-size: 7px;margin-top: 20px;'>");
+                                        out.println(tmp.getString("date")); 
+                                        out.println("</p>");
+                                        out.println("<hr>");
+                                        out.println("<div>");
+                                        }
+                                    %>
+                                    
+                                    <%
+                                        while(tmp.next())
+                                        {
+                                        out.println("<div id='one_star' class='tabcontent'>");
+                                        out.println("<i class='fas fa-user-circle' style='font-size: 25px; display: inline;'>");
+                                        out.println("</i>");
+                                        out.println("<p style='display: inline;'>");
+                                        out.println(tmp.getString("l_name"));  
+                                        out.println("</p>");
+                                        out.println("<div class='rating'>");
+                                        out.println("<span class='star' style='font-size: 20px;width: 20px'>"); 
+                                        out.println("</span>"); 
+                                        out.println("<span class='star' style='font-size: 20px;width: 20px'>"); 
+                                        out.println("</span>"); 
+                                        out.println("<span class='star' style='font-size: 20px;width: 20px'>"); 
+                                        out.println("</span>"); 
+                                        out.println("<span class='star' style='font-size: 20px;width: 20px'>"); 
+                                        out.println("</span>"); 
+                                        out.println("<span class='star star_bl' style='font-size: 20px;width: 20px'>"); 
+                                        out.println("</span>"); 
+                                        out.println("</div>"); 
+                                        out.println("<p style='font-size: 15px;margin-top: 20px;''>"); 
+                                        out.println(tmp.getString("message")); 
+                                        out.println("</p>");
+                                        out.println("<p style='font-size: 7px;margin-top: 20px;'>");
+                                        out.println(tmp.getString("date")); 
+                                        out.println("</p>");
+                                        out.println("<hr>");
+                                        out.println("<div>");
+                                        }
+                                    %>
+                                    
+                                </div>
+                                </div>
+                                </div>
+                                </div>
                                                     <%
                                                         out.println("<div class='tab-pane fade' id='reviews'>");
                                                         out.println("<div class='review-page-comment'>");
