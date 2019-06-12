@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50721
 File Encoding         : 65001
 
-Date: 2019-06-11 23:47:01
+Date: 2019-06-13 01:45:21
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -26,7 +26,7 @@ CREATE TABLE `count` (
 -- ----------------------------
 -- Records of count
 -- ----------------------------
-INSERT INTO count VALUES ('114');
+INSERT INTO count VALUES ('124');
 
 -- ----------------------------
 -- Table structure for `favorite`
@@ -83,19 +83,20 @@ CREATE TABLE `list_shopping` (
   `l_cellphone` varchar(99) DEFAULT NULL,
   `l_payment` varchar(255) DEFAULT NULL,
   `l_idd` varchar(99) DEFAULT NULL,
+  `l_boolean` varchar(99) DEFAULT NULL,
   PRIMARY KEY (`l_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=558 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of list_shopping
 -- ----------------------------
-INSERT INTO list_shopping VALUES ('1', '2019-06-11 17:36:44', null, '5', 'a', '123', null, 'midas', null, null, null, null, null, null);
-INSERT INTO list_shopping VALUES ('2', '2019-06-11 17:36:44', null, '3', 'a', '好好吃', null, 'midas', null, null, null, null, null, null);
-INSERT INTO list_shopping VALUES ('3', '2019-06-11 17:36:44', null, '1', null, '好好吃', null, '帥哥', null, null, null, null, null, null);
-INSERT INTO list_shopping VALUES ('4', '2019-06-10 01:52:48', null, '4', '4', null, null, null, null, '4', null, '4', null, null);
-INSERT INTO list_shopping VALUES ('5', '2019-06-11 17:36:44', '5', '2', 'a', '5', null, '5', null, null, null, null, null, null);
-INSERT INTO list_shopping VALUES ('556', '2019-06-11 17:36:44', '8', '3', 'a', '11', null, '11', null, null, null, null, null, null);
-INSERT INTO list_shopping VALUES ('557', '2019-06-11 17:36:44', '25', '4', 'a', '888', null, '888', null, null, null, null, null, null);
+INSERT INTO list_shopping VALUES ('1', '2019-06-12 22:12:44', '3', '5', 'a', '123', '1', 'midas', null, null, null, null, null, null, '1');
+INSERT INTO list_shopping VALUES ('2', '2019-06-12 22:12:45', '3', '3', 'a', '好好吃', '3', 'midas', null, null, null, null, null, null, '1');
+INSERT INTO list_shopping VALUES ('3', '2019-06-12 22:12:45', '5', '1', null, '好好吃', '5', '帥哥', null, null, null, null, null, null, '1');
+INSERT INTO list_shopping VALUES ('4', '2019-06-13 00:30:19', '5', '4', '4', '123', '2', 'midas', null, '4', null, '4', null, null, '1');
+INSERT INTO list_shopping VALUES ('5', '2019-06-12 22:12:46', '5', '2', 'a', '5', '5', '5', null, null, null, null, null, null, '1');
+INSERT INTO list_shopping VALUES ('556', '2019-06-12 22:12:47', '8', '3', 'a', '11', '2', '11', null, null, null, null, null, null, '1');
+INSERT INTO list_shopping VALUES ('557', '2019-06-12 22:12:51', '25', '4', 'a', '888', '5', '888', null, null, null, null, null, null, '1');
 
 -- ----------------------------
 -- Table structure for `love`
@@ -203,10 +204,9 @@ CREATE TABLE `shopping_cart` (
   `amount` varchar(99) DEFAULT NULL,
   `m_account` varchar(99) DEFAULT NULL,
   PRIMARY KEY (`s_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of shopping_cart
 -- ----------------------------
 INSERT INTO shopping_cart VALUES ('20', '5', '1', '');
-INSERT INTO shopping_cart VALUES ('25', '1', '1', 'a');
