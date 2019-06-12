@@ -4,7 +4,9 @@
 
 <%
    	String amount = request.getParameter("amount");
-        for(int i=0; i)
+   	String p_price = request.getParameter("p_price");
+
+        if(amount==)
             {
                 out.println("");
             }
