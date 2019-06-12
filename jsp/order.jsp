@@ -41,7 +41,8 @@
                         String amount = request.getParameter("amount");
                         String p_price = request.getParameter("p_price");
                         String pid = request.getParameter("pid");
-                       
+                        acc="";
+                        pas="";
     
                         try{
                             Cookie getC[]=request.getCookies();
@@ -64,12 +65,6 @@
                        
                     %>
                     <%
-                      
-                        sql="SELECT * FROM member, shopping_cart WHERE member.m_account='"+acc+"' AND member.m_account=shopping_cart.m_account; ";
-                        ResultSet list = con.createStatement().executeQuery(sql);
-                        list.next();
-                    %>
-                    <%
                         try{
                             String[] idd= request.getParameterValues("pid");
                             String[] nbb= request.getParameterValues("amount");
@@ -79,7 +74,7 @@
                             {
                      %>
                              <input type="hidden" name="pdid" value="<%=idd[i]%>">
-                             <input type="hidden" name="amount" value="<%=nbb[i]%>">
+                             <input type="hidden" name="amt" value="<%=nbb[i]%>">
                              
                     <%
 
@@ -88,12 +83,19 @@
                          out.write("<script language=javascript>alert('無商品');</script>");
                          response.setHeader("refresh","0;URL=index.jsp") ;
                          }
-                        sql="UPDATE shopping_cart SET amount='"+amount+"' WHERE p_id='"+pid+"' AND m_account='"+acc+"'";
+                         sql="UPDATE shopping_cart SET amount='"+amount+"' WHERE p_id='"+pid+"' AND m_account='"+acc+"'";
                         con.createStatement().execute(sql);
+
+                    %>
+                       <%
+                      
+                        sql="SELECT * FROM member WHERE member.m_account='"+acc+"'";
+                        ResultSet list = con.createStatement().executeQuery(sql);
+                        list.next();
                     %>
                     <h3>聯絡資訊</h3>
                     <label for="fname"><i class="fa fa-user"></i> 姓名</label>
-                    <% out.println("<input type='text' name='firstname' name='lastname' placeholder='姓名' value='"+list.getString("m_firstname")+list.getString("m_lastname")+"' >"); %>
+                    <% out.println("<input type='text' name='firstname' placeholder='姓名' value='"+list.getString("m_firstname")+list.getString("m_lastname")+"' >"); %>
                     <label for="email"><i class="fa fa-envelope"></i> Email</label>
                     <input type="text"  name="email" placeholder="***@gmail.com" value="<%=list.getString("m_email")%>">
                     <label for="phone"><i class="fa fa-phone"></i> 電話</label>

@@ -68,12 +68,12 @@
         <p class="intro_cont">感謝您對***的支持並承蒙訂購，以下資料是您此次的訂購明細，若有問題則請依訂單編號向我們查詢，謝謝您!</p>
         <p class="intro_cont">***仍保有決定是否接受訂單及出貨與否之權利，出貨以及取貨通知函，將以Email方式處理!</p>
         <p class="intro_h">訂單明細</p>
-        <p class="order_inf">訂單編號:<%= conf.getString("l_id")%></p>
-        <p class="order_inf">下訂單時間:1019/5/1</p>
+        <p class="order_inf">訂單編號:<%= conf.getString("l_idd")%></p>
+        <p class="order_inf">下訂單時間:<%= conf.getString("date")%></p>
         <p class="order_inf">配送方式:宅配</p>
-        <p class="order_inf">付款方式:貨到付款</p>
+        <p class="order_inf">付款方式:<%= conf.getString("payment")%></p>
         <p class="order_inf">收件人:</p>
-        <p class="order_inf">應付金額:NT.459</p>
+        <p class="order_inf">應付金額:<%= conf.getString("amount")%></p>
         <p class="order_inf" style="margin-top: 70px;">訂單商品與名稱與數量:</p>
         <hr width="68%">
         <p class="order_inf" style="margin-top: 10px;">飯糰6份</p>

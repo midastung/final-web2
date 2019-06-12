@@ -5,7 +5,6 @@
 
 <%
    	String firstname = request.getParameter("firstname");
-    String lastname = request.getParameter("lastname");
    	String email = request.getParameter("email");
     String tel = request.getParameter("tel");
     String address = request.getParameter("address");
@@ -13,13 +12,17 @@
     String memo = request.getParameter("memo");
     String payment = request.getParameter("payment");
     ResultSet rs=null;
+    ResultSet rs2 = null;
    	String acc="";
     String pas="";
     int rr=0;
     String[] idd=null;
     String[] number=null;
     idd=request.getParameterValues("pdid");
-    number=request.getParameterValues("amount");
+    number=request.getParameterValues("amt");
+    rs2=con.createStatement().executeQuery("select * from list_shopping,product where list_shopping.p_id=product.p_id");
+    rs2.next();
+   
 
 	        try{
                 Cookie getC[]=request.getCookies();
@@ -61,23 +64,23 @@
                   gogo=false;
                 }
             }
+      
             for(int i=0;i<idd.length;i++)
             {
-              sql=" INSERT INTO list_shopping (l_name, l_email, l_address, l_country, l_cellphone, l_memo, l_payment, l_idd) VALUES ('"+firstname+lastname+"','"+email+"','"+tel+"','"+address+"','"+country+"','"+memo+"','"+payment+"','"+rr+"'); ";
-              con.createStatement().execute(sql);
-
-              sql="select p_stock,p_hot from product where p_id='"+idd[i]+"';";
+              sql="select * from product where p_id='"+idd[i]+"';";
               rs=con.createStatement().executeQuery(sql);
               rs.next();
-
-              sql="UPDATE product SET p_stock = '"+(Integer.valueOf(rs.getString("p_stock"))-Integer.valueOf(number[i]))+"' WHERE (p_id = '"+idd[i]+"');";
+              sql="INSERT INTO list_shopping (p_id,l_name, l_email, l_address, l_country, l_cellphone, l_memo, l_payment, l_idd,l_number,l_totalprice) VALUES ('"+idd[i]+"','"+firstname+"','"+email+"','"+address+"','"+country+"','"+tel+"','"+memo+"','"+payment+"','"+rr+"','"+number[i]+"','"+String.valueOf(Integer.valueOf(number[i])*Integer.valueOf(rs.getString("p_price")))+"')"; 
               con.createStatement().execute(sql);
 
-              sql="UPDATE product SET p_hot = '"+(Integer.valueOf(rs.getString("p_hot"))+Integer.valueOf(number[i]))+"' WHERE (p_id = '"+idd[i]+"');";
+              sql="UPDATE product SET p_stock ='"+(Integer.valueOf(rs.getString("p_stock"))-Integer.valueOf(number[i]))+"' WHERE (p_id = '"+idd[i]+"');";
+              con.createStatement().execute(sql);
+
+              sql="UPDATE product SET p_hot ='"+(Integer.valueOf(rs.getString("p_hot"))+Integer.valueOf(number[i]))+"' WHERE (p_id = '"+idd[i]+"');";
               con.createStatement().execute(sql);
             }
 
-              sql="SELECT * FROM buylist where m_account='"+acc+"'";
+             sql="SELECT * FROM shopping_cart where m_account='"+acc+"'";
              rs=con.createStatement().executeQuery(sql);
              while(rs.next())
              {
@@ -86,7 +89,7 @@
              }
              response.setHeader("refresh","0;URL=confirm_cart.jsp?id="+rr+"") ;
 
-        }
+    }
 %>
 
                                         
