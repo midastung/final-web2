@@ -159,11 +159,11 @@
                                                         out.println("<span class='pro-price floatleft'>$"+tmp.getString("p_price")+"</span>");
                                                         out.println("<span class='pro-rating floatright'>");
                                                             out.println("<div class='rating'>");
-                                                                out.println("<span class='star' style='font-size: 20px; width: 20px'>"+"</span>");
-                                                                out.println("<span class='star' style='font-size: 20px; width: 20px'>"+"</span>");
-                                                                out.println("<span class='star' style='font-size: 20px; width: 20px'>"+"</span>");
-                                                                out.println("<span class='star' style='font-size: 20px; width: 20px'>"+"</span>");
-                                                                out.println("<span class='star star_bl' style='font-size: 20px; width: 20px'>"+"</span>");
+                                                            out.println("<span class='star' style='font-size: 20px; width: 20px'>"+"</span>");
+                                                            out.println("<span class='star' style='font-size: 20px; width: 20px'>"+"</span>");
+                                                            out.println("<span class='star' style='font-size: 20px; width: 20px'>"+"</span>");
+                                                            out.println("<span class='star' style='font-size: 20px; width: 20px'>"+"</span>");
+                                                            out.println("<span class='star star_bl' style='font-size: 20px; width: 20px'>"+"</span>");
                                                             out.println("</div>");
                                                         out.println("</span>");
                                                     out.println("</div>");

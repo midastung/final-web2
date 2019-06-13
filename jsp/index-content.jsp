@@ -94,11 +94,11 @@
                 <div class="col-md-4">
                     <div class="row">
                         <div class="col-md-6" style="margin-right: 20%;">
-                            <a href="#"><img src="assets/images/icon/jpdesert.png" style="max-width:180%;" class="chat1"></a>
-                            <a href="#"><img src="assets/images/icon/jpdish.png" style="max-width:180%; margin:0% 0 0 100%;" class="chat1"></a>
+                            <a href="product_class.jsp?p_class=0"><img src="assets/images/icon/jpdesert.png" style="max-width:180%;" class="chat1"></a>
+                            <a href="product_class.jsp?p_class=1"><img src="assets/images/icon/jpdish.png" style="max-width:180%; margin:0% 0 0 100%;" class="chat1"></a>
                         </div>
                         <div class="col-md-6">
-                            <a href="#"><img src="assets/images/icon/usdesert.png" style="max-width:150%;" class="chat1"></a>
+                            <a href="product_class.jsp?p_class=2"><img src="assets/images/icon/usdesert.png" style="max-width:150%;" class="chat1"></a>
                         </div>
                     </div>
                 </div>
@@ -267,15 +267,15 @@
                         <div class="contact-form">
                             <div class="wow fadeInUp section-title" data-wow-delay="0.2s">
                                 <h1 class="color-white">和我們打個招呼..</h1>
-                                <p class="color-white">Whether you are an investor, a possible partner or a stranger that wants to test the app, feel free to reach us.</p>
+                                <p class="color-white">您的回饋就是令我們「伍零貳館」更好的動來源～</p>
                             </div>
                             <div id="contact-form">
                                 <form action="index_mess.jsp" method="get" enctype="text/plain">
                                     <div class="wow fadeInUp" data-wow-delay="1s">
-                                        <textarea name="fullname" class="form-control" placeholder="Your Name"></textarea>
+                                        <textarea name="fullname" class="form-control" placeholder="你的名字"></textarea>
                                     </div>
                                     <div class="wow fadeInUp" data-wow-delay="1.4s">
-                                        <textarea name="message" rows="5" class="form-control"  placeholder="Write your message..."></textarea>
+                                        <textarea name="message" rows="5" class="form-control"  placeholder="寫下您的意見..."></textarea>
                                     </div>
                                     <div class="wow fadeInUp col-md-6 col-sm-8" data-wow-delay="1.6s">
                                         <input type="submit" class="form-control" value="Send" >
@@ -290,15 +290,11 @@
                     <div class="bg-dark col-md-6 col-sm-12 text-white">
                         <div class="contact-thumb">
                             <div class="wow fadeInUp contact-info" data-wow-delay="0.6s">
-                                <h3 class="color-white">Visit our offices</h3>
-                                <p>Leof. Andrea Siggrou 190, Kallithea 176 71</p>
-                                <p>Peiraios 74, Moskhaton 183 46</p>
+                               <h3 class="color-white">歡迎參觀總店舖</h3>
+                                <p> 346 Tokashiki, Tokashiki-son, Shimajiri-gun,</p>
+                                <p> Okinawa 901-3501日本</p>
                             </div>
-                            <div class="wow fadeInUp contact-info" data-wow-delay="0.8s">
-                                <h3 class="color-white">Contact. </h3>
-                                <p><i class="fa fa-phone"></i> +30 6977403147 </p>
-                                <p><i class="fa fa-envelope-o"></i> <a href="mailto:info@ratle-labs.com">info@ratle-labs.com</a></p>
-                            </div>
+                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1460.235771470736!2d127.36809811257785!3d26.199003437784498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e553cc7a3f683b%3A0x54c1b0edd85d3d36!2zQ2FmZSZTb2JhIOOCt-ODvOODleODrOODs-ODiSBKci4!5e0!3m2!1szh-TW!2stw!4v1560166530170!5m2!1szh-TW!2stw" width="600" height="350" width="400" frameborder="0" style="border:0" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
