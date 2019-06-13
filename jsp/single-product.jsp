@@ -514,7 +514,7 @@
                                                         <div class="review-page-comment">
                                                             
                                                             <div class="review-form">
-                                                                <form action="#">
+                                                                <form action="product_mess.jsp" method="post">
                                                                     <label>評價<sup class="required">*</sup></label>
                                                                     <div class="ratings">
                                                                             <input type="radio" hidden checked>
@@ -534,20 +534,16 @@
                                                                        
                                                                     </div>
                                                                     <label>名字<sup class="required">*</sup></label>
-                                                                    <input type="text" placeholder="Your Name" name="title">
-                                                                    <label>評論標題<sup class="required">*</sup></label>
-                                                                    <input type="text" placeholder="Title Here" name="title">
-                                                                    <label>聯絡方式<sup class="required">*</sup></label>
-                                                                    <input type="text" placeholder="phone" name="title">
+                                                                    <input type="text" placeholder="name" name="name">
                                                                     <label>評論內容<sup class="required">*</sup></label>
-                                                                    <textarea id="content" name="content" placeholder="content"></textarea>
+                                                                    <textarea id="content" placeholder="message" name="message"></textarea>
                                                            
                                                                     <div class="send-your-review">
                                                                         
                                                                         <div class="send-cancel-btn">
                                                                             <button class="send-btn">Send</button>
                                                                             or
-                                                                            <button class="cancel-btn">Cancel</button>
+                                                                            <button class="send-btn" type="reset">Cancel</button>
                                                                             
                                                                         </div>
                                                                     </div>
