@@ -29,7 +29,7 @@ text-align: justify;
 }
 .right_photo {
 float: right;
-height: 200px;
+height: 400px;
 width: 100px;
 margin-top: 15px;
 margin-left: 15px;
@@ -37,7 +37,7 @@ border-radius: 5px;
 }
 .left_photo {
 float: right;
-height: 200px;
+height: 400px;
 width: 100px;
 margin-top: 15px;
 margin-left: 15px;
