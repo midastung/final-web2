@@ -68,7 +68,7 @@
                                     			out.println("<div class='pro-qty'>"+"<input type='text' name='amount' value='"+tmp.getString("amount")+"'>"+"</div>");
                                     			out.println("</td>");
                                     			out.println("<td class='pro-subtotal'>"+"<span>$"+String.valueOf(Integer.parseInt(tmp.getString("p_price"))*Integer.parseInt(tmp.getString("amount")))+"</span>"+"</td>");
-                                    			out.println("<td class='pro-remove'>"+"<a href='del_cart.jsp?p_id="+tmp.getString("p_id")+"'>"+"<i class='fas fa-trash-alt'>"+"</i>"+"</a>"+"</td>");
+                                    			out.println("<td class='pro-remove'>"+"<a href='del_cart.jsp?s_id="+tmp.getString("s_id")+"'>"+"<i class='fas fa-trash-alt'>"+"</i>"+"</a>"+"</td>");
                                     			out.println("</tr>");
                                                 out.println("<input type='hidden' name='pid' value='"+tmp.getString("p_id")+"'>");
 

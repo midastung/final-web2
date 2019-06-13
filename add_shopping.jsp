@@ -47,20 +47,36 @@
 		}
         else if(act.equals("buy2"))
         {
-            
-            sql="INSERT INTO shopping_cart(p_id, amount, m_account) VALUE('"+p_id+"','"+amount+"','"+acc+"');";
-            con.createStatement().execute(sql);
-            out.write("<script language=javascript>alert('成功將「"+rs2.getString("p_name")+"x"+amount+"」加入購物車!');</script>");
-            out.println("<script>window.open('favorite_content.jsp','_self')</script>");         
+            String sql2="select * from shopping_cart where m_account='"+acc+"' and p_id='"+p_id+"';";
+            ResultSet a=con.createStatement().executeQuery(sql2);
+            if(a.next()){
+                sql="update shopping_cart set amount='"+String.valueOf(Integer.valueOf(a.getString("amount"))+Integer.valueOf(amount))+"' where m_account='"+acc+"'and p_id='"+p_id+"';";
+                con.createStatement().execute(sql);
+                out.write("<script language=javascript>alert('再次將「"+rs2.getString("p_name")+"x"+amount+"」加入購物車!');</script>");
+            }
+            else{
+                sql="INSERT INTO shopping_cart(p_id, amount, m_account) VALUE('"+p_id+"','"+amount+"','"+acc+"');";
+                con.createStatement().execute(sql);
+                out.write("<script language=javascript>alert('成功將「"+rs2.getString("p_name")+"x"+amount+"」加入購物車!');</script>");
+                out.println("<script>window.open('favorite_content.jsp','_self')</script>");         
 
+            }
+
+          
         }
 
        else if(act.equals("love"))
        {
-            sql="INSERT INTO love(p_id, m_account) VALUE('"+p_id+"','"+acc+"');";
+            String sql2="select * from love where m_account='"+acc+"' and p_id='"+p_id+"';";
+            ResultSet a=con.createStatement().executeQuery(sql2);
+            if(a.next()){
+                    out.write("<script language=javascript>alert('已經收入最愛囉!');</script>");
+            }
+            else{
+                sql="INSERT INTO love(p_id, m_account) VALUE('"+p_id+"','"+acc+"');";
             con.createStatement().execute(sql);
-
             out.write("<script >alert('成功將「"+rs2.getString("p_name")+"x"+amount+"」加入收藏!');</script>");
+            }
        }
 	}
     try{

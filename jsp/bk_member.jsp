@@ -55,6 +55,7 @@ a
 		<td colspan="2" rowspan="4" style="width: 70rem">
 			<center><table border="1" class="in">
 				<tr>
+          <td>序號</td>
 					<td>帳號</td>
 					<td>密碼</td>
 					<td>名字</td>
@@ -98,19 +99,20 @@ a
                                     }
                                
                             %>
-				<form action="write_member.jsp" method="post">
+				<form action="write_member.jsp" method="get">
 <%
                 sql="SELECT * FROM member;";
 				        ResultSet tmp=con.createStatement().executeQuery(sql);
                 while(tmp.next())
                 {
                   out.println("<tr>");
-                  out.println("<td>"+tmp.getString("m_account")+"</td>");
+                  out.println("<td><textarea name='mid' readonly>"+tmp.getString("m_id")+"</textarea></td>");
+                  out.println("<td name='maccount'>"+tmp.getString("m_account")+"</td>");
                   out.println("<td>"+"<textarea name='mpassword'>"+tmp.getString("m_password")+"</textarea>"+"</td>");
                   out.println("<td>"+"<textarea name='mfirstname'>"+tmp.getString("m_firstname")+"</textarea>"+"</td>");
                   out.println("<td>"+"<textarea name='mlastname'>"+tmp.getString("m_lastname")+"</textarea>"+"</td>");
                   out.println("<td>"+"<textarea name='maddress'>"+tmp.getString("m_address")+"</textarea>"+"</td>");
-                  out.println("<td>"+"<textarea name='mEmail'>"+tmp.getString("m_Email")+"</textarea>"+"</td>");
+                  out.println("<td>"+"<textarea name='memail'>"+tmp.getString("m_email")+"</textarea>"+"</td>");
                   out.println("<td>"+"<textarea name='mlevel'>"+tmp.getString("m_level")+"</textarea>"+"</td>");
                   out.println("<td>"+"<textarea name='mhead'>"+tmp.getString("m_head")+"</textarea>"+"</td>");
                   out.println("<td>"+"<textarea name='mtel'>"+tmp.getString("m_tel")+"</textarea>"+"</td>");
@@ -118,8 +120,8 @@ a
                   out.println("</tr>");
                 }
                 out.println("<tr>");
-                out.println("<td colspan='10'>");
-                out.println("<button>");
+                out.println("<td colspan='11'>");
+                out.println("<button type='submit'>");
                 out.println("修改會員");
                 out.println("</button>");
                 out.println("</td>");

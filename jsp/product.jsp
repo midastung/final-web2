@@ -146,8 +146,8 @@
                                                          out.println("<span class='"+tmp.getString("p_strcss")+"'>"+tmp.getString("p_strhot")+"</span>");
                                                         out.println("<a href='all_single.jsp?p_id="+tmp.getString("p_id")+"'>"+"<img src='"+tmp.getString("p_image")+"'/>"+"</a>");
                                                         out.println("<div class='product-action clearfix'>");
-                                                        out.println("<a href='add_shopping.jsp?p_id="+tmp.getString("p_id")+"&act=love&amount=1&outlink=2' data-toggle='tooltip' data-placement='top' title='Wishlist'>"+"<i class='zmdi zmdi-favorite-outline'>"+"</i>"+"</a>");
-                                                        out.println("<a href='add_shopping.jsp?p_id="+tmp.getString("p_id")+"&act=buy&amount=1&outlink=2' data-toggle='tooltip' data-placement='top' title='Add To Cart'>"+"<i class='zmdi zmdi-shopping-cart-plus'>"+"</i>"+"</a>");
+                                                         out.println("<a href='add_shopping.jsp?p_id="+tmp.getString("p_id")+"&act=love&amount=1&outlink=2' data-toggle='tooltip' data-placement='top' title='Wishlist'>"+"<i class='fas fa-heart fa-2x'></i>"+"</a>");
+                                                        out.println("<a href='add_shopping.jsp?p_id="+tmp.getString("p_id")+"&act=buy&amount=1&outlink=2' data-toggle='tooltip' data-placement='top' title='Add To Cart'>"+"<i class='fas fa-cart-plus fa-2x'></i>"+"</a>");
                                                     out.println("</div>");
                                                 out.println("</div>");
                                                 out.println("<div class='product-info clearfix'>");
