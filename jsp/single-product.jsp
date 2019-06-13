@@ -24,7 +24,7 @@
                                     <%
                                         ResultSet rs=null;
                                         String aa=request.getParameter("p_id");
-                                         sql="SELECT * FROM product WHERE p_id='"+aa+"'; ";
+                                         sql="SELECT * FROM product WHERE p_id='"+aa+"'";
                                             ResultSet tmp = con.createStatement().executeQuery(sql);
                                             if(tmp.next())
                                             {
@@ -142,8 +142,7 @@
                                                 </ul>
                                                 <!--Review And Description Tab Menu End-->
                                                 <!--Review And Description Tab Content Start-->
-                                    <%
-                                           
+                                                <%
                                                     out.println("<div class='tab-content product-review-content-tab mt-30' id='myTabContent-4'>");
                                                     out.println("<div class='tab-pane fade show active' id='description'>");
                                                     out.println("<div class='single-product-description'>");
@@ -166,6 +165,7 @@
                                                     out.println("</div>");
                                                     out.println("</div>");
                                                     out.println("<div class='col-8'>");
+                                                    }
                                                 %>
                                                 <%
                                                     rs = con.createStatement().executeQuery("select count(stars) as countstr from list_shopping where p_id='"+aa+"' and l_boolean='1' ;");
@@ -214,7 +214,7 @@
 
                                     <%
                                         request.setCharacterEncoding("utf-8");
-                                        sql="SELECT * FROM list_shopping";
+                                        sql="SELECT * FROM list_shopping where p_id='"+aa+"'";
                                         tmp=con.createStatement().executeQuery(sql);
                                         while(tmp.next())
                                         {
@@ -248,10 +248,10 @@
                                     %>
 
                                     <%
-                                    request.setCharacterEncoding("utf-8");
-                                        sql="SELECT * FROM list_shopping where stars='5'";
+                                        request.setCharacterEncoding("utf-8");
+                                        sql="SELECT * FROM list_shopping where p_id='"+aa+"' and stars='5'";
                                         tmp=con.createStatement().executeQuery(sql);
-                                      out.println("<div id='five_star' class='tabcontent'>");
+                                        out.println("<div id='five_star' class='tabcontent'>");
                                         while(tmp.next())
                                         {
                                       
@@ -285,7 +285,7 @@
                                     %>
 
                                     <%
-                                     sql="SELECT * FROM list_shopping where stars='4'";
+                                     sql="SELECT * FROM list_shopping where p_id='"+aa+"' and stars='4'";
                                      tmp=con.createStatement().executeQuery(sql);
                                      out.println("<div id='four_star' class='tabcontent'>");
                                         while(tmp.next())
@@ -322,7 +322,7 @@
 
                                     <%
                                       request.setCharacterEncoding("utf-8");
-                                        sql="SELECT * FROM list_shopping where stars='3'";
+                                       sql="SELECT * FROM list_shopping where p_id='"+aa+"' and stars='3'";
                                         tmp=con.createStatement().executeQuery(sql);
                                      out.println("<div id='three_star' class='tabcontent'>");
                                         while(tmp.next())
@@ -359,7 +359,7 @@
 
                                     <%
                                       request.setCharacterEncoding("utf-8");
-                                        sql="SELECT * FROM list_shopping where stars='2'";
+                                       sql="SELECT * FROM list_shopping where p_id='"+aa+"' and stars='2'";
                                         tmp=con.createStatement().executeQuery(sql);
                                      out.println("<div id='two_star' class='tabcontent'>");
                                         while(tmp.next())
@@ -395,7 +395,7 @@
                                     
                                     <%
                                       request.setCharacterEncoding("utf-8");
-                                        sql="SELECT * FROM list_shopping where stars='1'";
+                                        sql="SELECT * FROM list_shopping where p_id='"+aa+"' and stars='1'";
                                         tmp=con.createStatement().executeQuery(sql);
                                         out.println("<div id='one_star' class='tabcontent'>");
                                         while(tmp.next())
@@ -425,47 +425,57 @@
                                         out.println(tmp.getString("date")); 
                                         out.println("</p>");
                                         out.println("<hr>");
-                                        out.println("<div>");
+    
                                         }
+                                        out.println("</div>");
                                     %>
-                                    
                                 </div>
                                 </div>
                                 </div>
-                                </div>
-                                                    <%
-                                                        out.println("<div class='tab-pane fade' id='reviews'>");
-                                                        out.println("<div class='review-page-comment'>");
-                                                        out.println("<div class='review-form'>");
-                                                        out.println("<label>"+"商品評價"+"<sup class='required'>"+"*"+"</sup>"+"</label>");
-                                                        out.println("<div class='ratings'>");
-                                                        out.println("<ul>"+"<li class='stars'>");
-                                                        out.println("<li class='stars'>");
-                                                        out.println("<li class='stars'>");
-                                                        out.println("<li class='stars'>");
-                                                        out.println("<li class='stars'>"+"</ul>");
-                                                        out.println("</div>");
-                                                        out.println("<form action='product_mess.jsp' method='get' enctype='text/plain'>");
-                                                        out.println("<label>"+"名字"+"<sup class='required'>"+"*"+"</sup>"+"</label>");
-                                                        out.println("<textarea placeholder='Your Name' name='name'>"+"</textarea>");
-                                                        out.println("<label>"+"評論內容"+"<sup class='required'>"+"*"+"</sup>"+"</label>");
-                                                        out.println("<textarea placeholder='content' name='content'>"+"</textarea>");
-                                                        out.println("<input type='hidden' name='pid' value='"+aa+"'>");
-
-                                                        out.println("<div class='send-your-review'>");
-                                                        out.println("<div class='send-cancel-btn'>");
-                                                        out.println("<button class='send-btn'>"+"Send"+"</button>");
-
-                                                        out.println("</div>");
-                                                        out.println("</div>");
-                                                        out.println("</from>");
-                                                        out.println("</div>");
-                                                        out.println("</div>");
-                                                        out.println("</div>");
-                                                                                                                            
-                                                        }
-                                                          out.println("</div>");    
-                                                    %>
+                                                   <div class="tab-pane fade" id="reviews">
+                                                        <div class="review-page-comment">
+                                                            <div class="review-form">
+                                                                <form action="product_mess.jsp" method="post">
+                                                                    <label>評價<sup class="required">*</sup></label>
+                                                                    <div class="ratings">
+                                                                            <input type="radio" hidden checked>
+                                                                            <label class="stars"></label>
+                                                                     
+                                                                             <input type="radio" hidden checked>
+                                                                             <label class="stars"></label>
+                                                                     
+                                                                             <input type="radio" hidden checked>
+                                                                             <label class="stars"></label>
+                                                                        
+                                                                             <input type="radio" hidden checked>
+                                                                             <label class="stars"></label>
+        
+                                                                             <input type="radio" hidden checked>
+                                                                             <label class="stars"></label>
+                                                                       
+                                                                    </div>
+                                                                    <label>名字<sup class="required">*</sup></label>
+                                                                    <input type="text" placeholder="Your Name" name="title">
+                                                                    <label>評論標題<sup class="required">*</sup></label>
+                                                                    <input type="text" placeholder="Title Here" name="title">
+                                                                    <label>聯絡方式<sup class="required">*</sup></label>
+                                                                    <input type="text" placeholder="phone" name="title">
+                                                                    <label>評論內容<sup class="required">*</sup></label>
+                                                                    <textarea id="content" name="content" placeholder="content"></textarea>
+                                                           
+                                                                    <div class="send-your-review">
+                                                                        
+                                                                        <div class="send-cancel-btn">
+                                                                            <button class="send-btn">Send</button>
+                                                                            or
+                                                                            <button class="cancel-btn">Cancel</button>
+                                                                            
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                     
                                                 <!--Review And Description Tab Content End-->
                                             </div>
