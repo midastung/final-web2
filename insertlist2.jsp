@@ -70,7 +70,7 @@
               sql="select * from product where p_id='"+idd[i]+"';";
               rs=con.createStatement().executeQuery(sql);
               rs.next();
-              sql="INSERT INTO list_shopping (p_id,l_name, l_email, l_address, l_country, l_cellphone, l_memo, l_payment, l_idd,l_number,l_totalprice) VALUES ('"+idd[i]+"','"+firstname+"','"+email+"','"+address+"','"+country+"','"+tel+"','"+memo+"','"+payment+"','"+rr+"','"+number[i]+"','"+String.valueOf(Integer.valueOf(number[i])*Integer.valueOf(rs.getString("p_price")))+"')"; 
+              sql="INSERT INTO list_shopping (p_id,m_account,l_name, l_email, l_address, l_country, l_cellphone, l_memo, l_payment, l_idd,l_number,l_totalprice) VALUES ('"+idd[i]+"','"+acc+"','"+firstname+"','"+email+"','"+address+"','"+country+"','"+tel+"','"+memo+"','"+payment+"','"+rr+"','"+number[i]+"','"+String.valueOf(Integer.valueOf(number[i])*Integer.valueOf(rs.getString("p_price")))+"')"; 
               con.createStatement().execute(sql);
 
               sql="UPDATE product SET p_stock ='"+(Integer.valueOf(rs.getString("p_stock"))-Integer.valueOf(number[i]))+"' WHERE (p_id = '"+idd[i]+"');";
@@ -87,8 +87,8 @@
               sql="DELETE FROM shopping_cart WHERE (p_id ='"+rs.getString("p_id")+"');";
               con.createStatement().execute(sql);
              }
-             response.setHeader("refresh","0;URL=confirm_cart.jsp?id="+rr+"") ;
-
+             response.setHeader("refresh","0;URL=confirm_cart.jsp?lidd="+rr+"") ;
+            
     }
 %>
 
