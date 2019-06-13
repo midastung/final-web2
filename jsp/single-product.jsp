@@ -146,7 +146,14 @@
                                                     out.println("<div class='tab-content product-review-content-tab mt-30' id='myTabContent-4'>");
                                                     out.println("<div class='tab-pane fade show active' id='description'>");
                                                     out.println("<div class='single-product-description'>");
-                                                    out.println("<p>"+tmp.getString("p_textarea")+"</p>");
+                                                %>
+                                                    <p>
+                                                        <ul>
+                                                            <li>接單後新鮮產現作，當日冷藏宅配送出</li>
+                                                            <li>本產品不含防腐劑及人工添加物，請趁新鮮食用，產品存期限請詳見包裝盒面標示</li>
+                                                        </ul>
+                                                    </p>
+                                                <%
                                                     out.println("</div>");
                                                     out.println("</div>");
                                                     out.println("<div class='tab-pane fade' id='product-details'>");
