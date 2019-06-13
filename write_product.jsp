@@ -22,11 +22,10 @@
 		    poriginprice=request.getParameterValues("poriginprice");
 		    pdiscount=request.getParameterValues("pdiscount");
 		    pimage=request.getParameterValues("pimage");
-
 			for(int i=0;i<pid.length;i++)
 			{	
 			
-			sql="UPDATE product SET p_class='"+pclass[i]+"',p_name='"+pname[i]+"',p_stock='"+pstock[i]+"',pprice='"+pprice[i]+"',p_originprice='"+poriginprice[i]+"',p_discount='"+pdiscount[i]+"',p_image='"+pimage[i]+"' WHERE p_id='"+pid[i]+"'";
+			sql="UPDATE product SET p_class='"+pclass[i]+"',p_name='"+pname[i]+"',p_stock='"+pstock[i]+"',p_price='"+pprice[i]+"',p_originprice='"+poriginprice[i]+"',p_discount='"+pdiscount[i]+"',p_image='"+pimage[i]+"' WHERE p_id='"+pid[i]+"'";
 			con.createStatement().executeUpdate(sql); 
 			}
 			out.write("<script language=javascript>alert('修改成功');</script>");
