@@ -101,11 +101,11 @@ a
                 while(tmp.next())
                 {
                   out.println("<tr>");
-                  out.println("<td>"+tmp.getString("l_id")+"</td>");
+                  out.println("<td>"+"<textarea name='lid' readonly>"+tmp.getString("l_id")+"</textarea>"+"</td>");
                   out.println("<td>"+"<textarea name='lnumber'>"+tmp.getString("l_number")+"</textarea>"+"</td>");
                   out.println("<td>"+"<textarea name='maccount'>"+tmp.getString("m_account")+"</textarea>"+"</td>");
                   out.println("<td>"+"<textarea name='laddress'>"+tmp.getString("l_address")+"</textarea>"+"</td>");
-                  out.println("<td>"+"<textarea name='l_cellphone'>"+tmp.getString("l_cellphone")+"</textarea>"+"</td>");
+                  out.println("<td>"+"<textarea name='lcellphone'>"+tmp.getString("l_cellphone")+"</textarea>"+"</td>");
                   out.println("<td>"+"<a href='del_order.jsp?lid="+tmp.getString("l_id")+"'>"+"刪除"+"</a>"+"</td>");
                   out.println("</tr>");
                 }

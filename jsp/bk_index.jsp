@@ -61,7 +61,7 @@ a
                             %>
 <center style="padding:10%;"><table border="1" class="out">
 	<tr>
-		<td><center><a href="bk_index.jsp">管理者介面</a></center></td>
+		<td><center><a href="back_index.jsp">管理者介面</a></center></td>
 		<td colspan="2" style="width: 70rem"><center>後台首頁</center></td>
 	</tr>
 	<tr>

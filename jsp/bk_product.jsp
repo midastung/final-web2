@@ -104,7 +104,7 @@ a
                 while(tmp.next())
                 {
                   out.println("<tr>");
-                  out.println("<td>"+tmp.getString("p_id")+"</td>");
+                  out.println("<td>"+"<textarea name='pid' readonly>"+tmp.getString("p_id")+"</textarea>"+"</td>");
                   out.println("<td>"+"<textarea name='pclass'>"+tmp.getString("p_class")+"</textarea>"+"</td>");
                   out.println("<td>"+"<textarea name='pname'>"+tmp.getString("p_name")+"</textarea>"+"</td>");
                   out.println("<td>"+"<textarea name='pstock'>"+tmp.getString("p_stock")+"</textarea>"+"</td>");

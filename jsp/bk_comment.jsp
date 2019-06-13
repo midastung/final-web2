@@ -102,7 +102,7 @@ a
                 while(tmp.next())
                 {
                   out.println("<tr>");
-                  out.println("<td>"+tmp.getString("l_id")+"</td>");
+                  out.println("<td>"+"<textarea name='lid' readonly>"+tmp.getString("l_id")+"</textarea>"+"</td>");
                   out.println("<td>"+"<textarea name='date'>"+tmp.getString("date")+"</textarea>"+"</td>");
                   out.println("<td>"+"<textarea name='pid'>"+tmp.getString("p_id")+"</textarea>"+"</td>");
                   out.println("<td>"+"<textarea name='lname'>"+tmp.getString("l_name")+"</textarea>"+"</td>");
