@@ -63,10 +63,10 @@
     %>
 
     <div class="confirm_cont" style="border-radius:20px; ">
-        <p class="intro_cont" style="">親愛的會員您好:</p>
-        <p class="intro_cont">這個訊息是來自***，告知您***已接獲你這次的訂購需求，並將以最快速度處理!</p>
-        <p class="intro_cont">感謝您對***的支持並承蒙訂購，以下資料是您此次的訂購明細，若有問題則請依訂單編號向我們查詢，謝謝您!</p>
-        <p class="intro_cont">***仍保有決定是否接受訂單及出貨與否之權利，出貨以及取貨通知函，將以Email方式處理!</p>
+        <p class="intro_cont" style="line-height: 40px;">親愛的會員您好:</p>
+        <p class="intro_cont" style="line-height: 40px;">這個訊息是來自***，告知您***已接獲你這次的訂購需求，並將以最快速度處理!</p>
+        <p class="intro_cont" style="line-height: 40px;">感謝您對***的支持並承蒙訂購，以下資料是您此次的訂購明細，若有問題則請依訂單編號向我們查詢，謝謝您!</p>
+        <p class="intro_cont" style="line-height: 40px;">***仍保有決定是否接受訂單及出貨與否之權利，出貨以及取貨通知函，將以Email方式處理!</p>
         <p class="intro_h">訂單明細</p>
         <p class="order_inf">訂單編號:<%= conf.getString("l_idd")%></p>
         <p class="order_inf">下訂單時間:<%= conf.getString("date")%></p>
@@ -78,8 +78,8 @@
         <hr width="68%">
         <p class="order_inf" style="margin-top: 10px;">飯糰6份</p>
         <hr width="68%">
-        <p class="intro_cont" style="margin-top: 70px;">為了保護您的個人資料安全，建議您可以隨時登入***，至會員專區，查詢訂單，最新訊息或修改基本資料。如果您有任何問題，請您至客服中心查詢相關資訊或來信給我們。</p>
-        <p class="intro_cont" style="margin-top: 20px;">-***敬上</p>
+        <p class="intro_cont" style="margin-top: 70px;line-height: 40px;">為了保護您的個人資料安全，建議您可以隨時登入***，至會員專區，查詢訂單，最新訊息或修改基本資料。如果您有任何問題，請您至客服中心查詢相關資訊或來信給我們。</p>
+        <p class="intro_cont" style="margin-top: 20px;line-height: 40px;">-***敬上</p>
          <input type="submit" class="button button1 cont" value="確認送出">
     </div>
     <!--comfirm end-->
