@@ -57,31 +57,54 @@
     </div>
     <!--comfirm star-->
     <%
-        sql="SELECT * FROM list_shopping; ";
+        String l_idd= request.getParameter("lidd");
+        sql="SELECT * FROM list_shopping WHERE l_idd='"+l_idd+"'";
         ResultSet conf = con.createStatement().executeQuery(sql);
         conf.next();
-    %>
 
+    %>
     <div class="confirm_cont" style="border-radius:20px; ">
+<<<<<<< HEAD
         <p class="intro_cont" style="line-height: 40px;">親愛的會員您好:</p>
         <p class="intro_cont" style="line-height: 40px;">這個訊息是來自***，告知您***已接獲你這次的訂購需求，並將以最快速度處理!</p>
         <p class="intro_cont" style="line-height: 40px;">感謝您對***的支持並承蒙訂購，以下資料是您此次的訂購明細，若有問題則請依訂單編號向我們查詢，謝謝您!</p>
         <p class="intro_cont" style="line-height: 40px;">***仍保有決定是否接受訂單及出貨與否之權利，出貨以及取貨通知函，將以Email方式處理!</p>
+=======
+        <p class="intro_cont" style="">親愛的會員您好:</p>
+        <p class="intro_cont">這個訊息是來自伍零二館，告知您伍零二館已接獲你這次的訂購需求，並將以最快速度處理!</p>
+        <p class="intro_cont">感謝您對伍零二館的支持並承蒙訂購，以下資料是您此次的訂購明細，若有問題則請依訂單編號向我們查詢，謝謝您!</p>
+        <p class="intro_cont">伍零二館仍保有決定是否接受訂單及出貨與否之權利，出貨以及取貨通知函，將以Email方式處理!</p>
+>>>>>>> 76165b1ff8b978faa9b9fd62056a2411fe294a52
         <p class="intro_h">訂單明細</p>
         <p class="order_inf">訂單編號:<%= conf.getString("l_idd")%></p>
         <p class="order_inf">下訂單時間:<%= conf.getString("date")%></p>
         <p class="order_inf">配送方式:宅配</p>
-        <p class="order_inf">付款方式:<%= conf.getString("payment")%></p>
-        <p class="order_inf">收件人:</p>
-        <p class="order_inf">應付金額:<%= conf.getString("amount")%></p>
+        <p class="order_inf">付款方式:<%= conf.getString("l_payment")%></p>
+        <p class="order_inf">收件人:<%=conf.getString("l_name")%></p>
+        <p class="order_inf">應付金額:<%= conf.getString("l_totalprice")%></p>
         <p class="order_inf" style="margin-top: 70px;">訂單商品與名稱與數量:</p>
         <hr width="68%">
-        <p class="order_inf" style="margin-top: 10px;">飯糰6份</p>
+    <%
+        sql="SELECT * FROM list_shopping, product WHERE list_shopping.l_idd='"+l_idd+"' AND m_account='"+acc+"' AND list_shopping.p_id=product.p_id";
+        ResultSet conff = con.createStatement().executeQuery(sql);
+        while(conff.next())
+            {
+                out.println("<p class='order_inf' style='margin-top: 10px;'>"+conff.getString("p_name")+":"+conff.getString("l_number")+"份</p>");
+            }
+        
+    %>
         <hr width="68%">
+<<<<<<< HEAD
         <p class="intro_cont" style="margin-top: 70px;line-height: 40px;">為了保護您的個人資料安全，建議您可以隨時登入***，至會員專區，查詢訂單，最新訊息或修改基本資料。如果您有任何問題，請您至客服中心查詢相關資訊或來信給我們。</p>
         <p class="intro_cont" style="margin-top: 20px;line-height: 40px;">-***敬上</p>
          <input type="submit" class="button button1 cont" value="確認送出">
+=======
+        <p class="intro_cont" style="margin-top: 70px;">為了保護您的個人資料安全，建議您可以隨時登入伍零二館，至會員專區，查詢訂單，最新訊息或修改基本資料。如果您有任何問題，請您至客服中心查詢相關資訊或來信給我們。</p>
+        <p class="intro_cont" style="margin-top: 20px;">-伍零二館敬上</p>
+         <a href="index.jsp"><input type="submit" class="button button1 cont" value="確認送出"></a>
+>>>>>>> 76165b1ff8b978faa9b9fd62056a2411fe294a52
     </div>
+    </form>
     <!--comfirm end-->
     <script src="assets/js/classie.js"></script>
     <script src="assets/js/gnmenu.js"></script>
