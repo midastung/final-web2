@@ -9,7 +9,7 @@
 		String [] lnumber=null;
 		String [] maccount=null;
 		String [] laddress=null;
-		String [] message=null;
+		String [] lcellphone=null;
 
 			lid=request.getParameterValues("lid");
 			lnumber=request.getParameterValues("lnumber");

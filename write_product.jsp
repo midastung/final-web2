@@ -14,7 +14,7 @@
 		String [] pdiscount=null;
 		String [] pimage=null;
 
-			pid=request.getParameterValues("lid");
+			pid=request.getParameterValues("pid");
 			pclass=request.getParameterValues("pclass");
 			pname=request.getParameterValues("pname");
 			pstock=request.getParameterValues("pstock");
