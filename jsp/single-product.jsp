@@ -1,6 +1,5 @@
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <%@ page language="java" contentType="text/html; charset=utf-8"%>
-<%@ page import = "java.sql.*, java.util.*" %>
+<%@page import="java.util.*,java.io.*"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -320,39 +319,39 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
+
                                                                 <div id="all" class="tabcontent">
-                                                                    <i class="fas fa-user-circle" style="font-size: 25px; display: inline;"></i>
-                                                                    <p style="display: inline;">as*******</p>
-                                                                    <div class="rating">
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star star_bl" style="font-size: 20px;width: 20px"></span>
-                                                                    </div>
-                                                                    <p style="font-size: 15px;margin-top: 20px;">評論內容評論內容評論內容評論內容</p>
+                                                                    <%
+                                                                       sql="SELECT * FROM list_shopping;";
+                                                                       ResultSet tmp=con.createStatement().executeQuery(sql);
+                                                                       while(tmp.next())
+                                                                      {
+                                                                       out.println("<i class='fas fa-user-circle' style='font-size: 25px; display: inline;''>");
+                                                                       out.println("</i>");
+                                                                       out.println("<p style='display: inline;'>"+tmp.getString("l_name")+"</p>");
+                                                                       out.println("<div class='rating'>");
+                                                                       out.println("<span class='star' style='font-size: 20px;width: 20px'>");
+                                                                       out.println("</span>");
+                                                                       out.println("<span class='star' style='font-size: 20px;width: 20px'>");
+                                                                       out.println("</span>");
+                                                                       out.println("<span class='star' style='font-size: 20px;width: 20px'>");
+                                                                       out.println("</span>");
+                                                                       out.println("<span class='star' style='font-size: 20px;width: 20px'>");
+                                                                       out.println("</span>");
+                                                                       out.println("<span class='star star_bl' style='font-size: 20px;width: 20px'>");
+                                                                       out.println("</span>");
+                                                                       out.println(" </div>");
+                                                                       out.println("<p style='font-size: 15px;margin-top: 20px;'>"+tmp.getString("message")+"</p>");
+                                                                       out.println(" <p style='font-size: 7px;margin-top: 20px;'>"+tmp.getString("date")+"</p>");
+                                                                       out.println("<hr>");
+                                                                      }
+                                                                      con.close();
+                                                                    %>
                                                                     
-                                                                    <p style="font-size: 7px;margin-top: 20px;">
-                                                                        2019-5-29  15:25:07
-                                                                    </p>
-                                                                    <hr>
-                                                                    <i class="fas fa-user-circle" style="font-size: 25px; display: inline;"></i>
-                                                                    <p style="display: inline;">as*******</p>
-                                                                    <div class="rating">
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star star_bl" style="font-size: 20px;width: 20px"></span>
-                                                                    </div>
-                                                                    <p style="font-size: 15px;margin-top: 20px;">評論內容評論內容評論內容評論內容</p>
-                                                                    
-                                                                    <p style="font-size: 7px;margin-top: 20px;">
-                                                                        2019-5-29  15:25:07
-                                                                    </p>
                                                                 </div>
                                                                 
                                                                 <div id="five_star" class="tabcontent">
+                                                                    
                                                                     <i class="fas fa-user-circle" style="font-size: 25px; display: inline;"></i>
                                                                     <p style="display: inline;">ax*******</p>
                                                                     <div class="rating">
@@ -368,21 +367,8 @@
                                                                         2019-5-29  15:25:07
                                                                     </p>
                                                                     <hr>
-                                                                    <i class="fas fa-user-circle" style="font-size: 25px; display: inline;"></i>
-                                                                    <p style="display: inline;">as*******</p>
-                                                                    <div class="rating">
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star star_bl" style="font-size: 20px;width: 20px"></span>
-                                                                    </div>
-                                                                    <p style="font-size: 15px;margin-top: 20px;">評論內容評論內容評論內容評論內容</p>
-                                                                    
-                                                                    <p style="font-size: 7px;margin-top: 20px;">
-                                                                        2019-5-29  15:25:07
-                                                                    </p>
                                                                 </div>
+
                                                                 <div id="four_star" class="tabcontent">
                                                                     <i class="fas fa-user-circle" style="font-size: 25px; display: inline;"></i>
                                                                     <p style="display: inline;">as*******</p>
@@ -399,21 +385,8 @@
                                                                         2019-5-29  15:25:07
                                                                     </p>
                                                                     <hr>
-                                                                    <i class="fas fa-user-circle" style="font-size: 25px; display: inline;"></i>
-                                                                    <p style="display: inline;">a2*******</p>
-                                                                    <div class="rating">
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star star_bl" style="font-size: 20px;width: 20px"></span>
-                                                                    </div>
-                                                                    <p style="font-size: 15px;margin-top: 20px;">評論內容評論內容評論內容評論內容</p>
-                                                                    
-                                                                    <p style="font-size: 7px;margin-top: 20px;">
-                                                                        2019-5-29  15:25:07
-                                                                    </p>
                                                                 </div>
+
                                                                 <div id="three_star" class="tabcontent">
                                                                     <i class="fas fa-user-circle" style="font-size: 25px; display: inline;"></i>
                                                                     <p style="display: inline;">a3*******</p>
@@ -430,21 +403,8 @@
                                                                         2019-5-29  15:25:07
                                                                     </p>
                                                                     <hr>
-                                                                    <i class="fas fa-user-circle" style="font-size: 25px; display: inline;"></i>
-                                                                    <p style="display: inline;">as*******</p>
-                                                                    <div class="rating">
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star star_bl" style="font-size: 20px;width: 20px"></span>
-                                                                    </div>
-                                                                    <p style="font-size: 15px;margin-top: 20px;">評論內容評論內容評論內容評論內容</p>
-                                                                    
-                                                                    <p style="font-size: 7px;margin-top: 20px;">
-                                                                        2019-5-29  15:25:07
-                                                                    </p>
                                                                 </div>
+
                                                                 <div id="two_star" class="tabcontent">
                                                                     <i class="fas fa-user-circle" style="font-size: 25px; display: inline;"></i>
                                                                     <p style="display: inline;">a4*******</p>
@@ -461,21 +421,8 @@
                                                                         2019-5-29  15:25:07
                                                                     </p>
                                                                     <hr>
-                                                                    <i class="fas fa-user-circle" style="font-size: 25px; display: inline;"></i>
-                                                                    <p style="display: inline;">as*******</p>
-                                                                    <div class="rating">
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star star_bl" style="font-size: 20px;width: 20px"></span>
-                                                                    </div>
-                                                                    <p style="font-size: 15px;margin-top: 20px;">評論內容評論內容評論內容評論內容</p>
-                                                                    
-                                                                    <p style="font-size: 7px;margin-top: 20px;">
-                                                                        2019-5-29  15:25:07
-                                                                    </p>
                                                                 </div>
+
                                                                 <div id="one_star" class="tabcontent">
                                                                     <i class="fas fa-user-circle" style="font-size: 25px; display: inline;"></i>
                                                                     <p style="display: inline;">as*******</p>
@@ -492,21 +439,9 @@
                                                                         2019-5-29  15:25:07
                                                                     </p>
                                                                     <hr>
-                                                                    <i class="fas fa-user-circle" style="font-size: 25px; display: inline;"></i>
-                                                                    <p style="display: inline;">as*******</p>
-                                                                    <div class="rating">
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star star_bl" style="font-size: 20px;width: 20px"></span>
-                                                                    </div>
-                                                                    <p style="font-size: 15px;margin-top: 20px;">評論內容評論內容評論內容評論內容</p>
-                                                                    
-                                                                    <p style="font-size: 7px;margin-top: 20px;">
-                                                                        2019-5-29  15:25:07
-                                                                    </p>
                                                                 </div>
+
+
                                                             </div>
                                                         </div>
                                                     </div>
