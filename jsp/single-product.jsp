@@ -27,170 +27,53 @@
         <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5ce40b2adc07bd00120823e5&product=inline-share-buttons' async='async'></script>
     </head>
     <body>
-        <!--    側欄/開始-->
-        <div class="">
-            <ul id="gn-menu" class="gn-menu-main">
-                <li class="gn-trigger">
-                    <a class="gn-icon gn-icon-menu"><span>Menu</span></a>
-                    <nav class="gn-menu-wrapper">
-                        <div class="gn-scroller">
-                            <ul class="gn-menu">
-                                <li class="gn-search-item">
-                                    <i class="fas fa-search p-4"></i>
-                                    <input placeholder="Search" type="search" class="gn-search p-0" style="width:50%;">
-                                </li>
-                                <li class="gn-search-item"><a href="product1.html"><i class="fas fa-shopping-basket p-4"></i>Product</a></li>
-                                <li class="gn-search-item"><a href="#"><i class="fas fa-users p-4"></i>About Us</a></li>
-                                <li class="gn-search-item"><a href="#"><i class="far fa-question-circle p-4"></i><span class="p-1">FAQ</span></a></li>
-                            </ul>
-                            </div><!-- /gn-scroller -->
-                        </nav>
-                    </li>
-                    <li><a class="codrops-icon codrops-icon-prev" href="#" data-toggle="modal" data-target="#mySign" id="myBtn">Sign in</a></li>
-                    <li><a class="codrops-icon codrops-icon-prev" href="#" data-toggle="modal" data-target="#myModal"><span>Sign up</span></a></li>
-                    
-                    <li class="more p-1 chi-font">
-                        <button id="more-btn" class="more-btn mr-5">
-                        <h6 class="cont chi-font">歡迎，Midas</h6>
-                        </button>
-                        <div class="more-menu">
-                            <div class="more-menu-caret">
-                                <div class="more-menu-caret-outer"></div>
-                                <div class="more-menu-caret-inner"></div>
-                            </div>
-                            <ul class="more-menu-items cont  " tabindex="-1" role="menu" aria-labelledby="more-btn" aria-hidden="true">
-                                <li class="more-menu-item" role="presentation">
-                                    <button type="button" class="more-menu-btn" role="menuitem">
-                                    <h6 class="chi-font">會員專區</h6>
-                                    </button>
-                                </li>
-                                <li class="more-menu-item" role="presentation">
-                                    <button type="button" class="more-menu-btn" role="menuitem">
-                                    <h6 class="chi-font">購物車</h6>
-                                    </button>
-                                </li>
-                                <li class="more-menu-item" role="presentation">
-                                    <button type="button" class="more-menu-btn" role="menuitem">
-                                    <h6 class="chi-font">我的最愛</h6>
-                                    </button>
-                                </li>
-                                <li class="more-menu-item" role="presentation">
-                                    <button type="button" class="more-menu-btn" role="menuitem">
-                                    <h6 class="chi-font">購物紀錄</h6>
-                                    </button>
-                                </li>
-                                <li class="more-menu-item" role="presentation">
-                                    <button type="button" class="more-menu-btn" role="menuitem">
-                                    <h6 class="chi-font">登出</h6>
-                                    </button>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <!--<li>
-                        <div class="sharethis-inline-share-buttons cont p-3"></div>
-                    </li>-->
-                </ul>
-            </div>
-            <!--    側欄/結束-->
-            <!--            註冊跳出頁面Start-->
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title" id="myModalLabel" style="color: #FE938C;">
-                            註冊
-                            </h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                            &times;
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <form>
-                                <span style="color: #FE938C;">帳號</span><input style="max-width:85%;" class="form-control" type="search" placeholder="Account..." id="acc">
-                                <span style="color: #FE938C;">密碼</span><input style="max-width:85%;" class="form-control" type="search" placeholder="Password..." id="psd">
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <form>
-                                <button type="button" class="btn btn-default" data-dismiss="modal">關閉
-                                </button>
-                                <button type="submit" class="btn btn-primary">
-                                註冊完成
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                    </div><!-- /.modal -->
-                </div>
-                <!--            註冊跳出頁面--End-->
-                <!-- Modal -->
-                <div class="modal fade" id="mySign" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h4 class="modal-title" id="myModalLabel" style="color: #FE938C;">
-                                登入
-                                </h4>
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                                &times;
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <form>
-                                    <div class="modal-body">
-                                        <span style="color: #FE938C;">帳號</span><input style="max-width:85%;" class="form-control" type="search" placeholder="Account..." id="acc">
-                                        <span style="color: #FE938C;">密碼</span><input style="max-width:85%;" class="form-control" type="search" placeholder="Password..." id="psd">
-                                    </div>
-                                    <button type="submit" class="btn btn-success btn-block">登入</button>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="submit" class="btn btn-danger login-cancel" data-dismiss="modal" id="close-login">取消</button>
-                                <p class="mt-3">不是會員？
-                                    <a href="#" id="pop-reg">註冊</a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+     
                     <div class="wrapper">
                         <!--Single Product Start-->
                         <div class="single-product-area mt-80">
                             <div class="container">
                                 <div class="row">
+                                    <%
+                                        ResultSet pp = null;
+                                        ResultSet rs=null;
+                                        String aa=request.getParameter("p_id");
+                                        sql="SELECT * FROM product WHERE p_id='"+aa+"'";
+                                        pp = con.createStatement().executeQuery(sql);
+                                        if(pp.next())
+                                            {
+                                    %>
                                     <div class="col-md-5">
                                         <!--Tab Content Start-->
                                         <div class="tab-content product-details-large" id="myTabContent-3">
                                             <div class="tab-pane fade show active" id="single-slide-one">
                                                 <!--Single Product Image Start-->
-                                                <div class="single-product-img img-full">
-                                                    <img src="assets/images/desert/purin.jpg" alt="">
-                                                    <a class="venobox" data-gall="gallery01" href="assets/images/desert/purin.jpg"><i class="fa fa-search-plus"></i></a>
+                                                <div class='single-product-img img-full'>
+                                                    <img src="<%=pp.getString("p_image")%>" alt="">
+                                                    <a class="venobox" data-gall="gallery01" href="<%=pp.getString("p_image")%>"><i class="fa fa-search-plus"></i></a>
                                                 </div>
                                                 <!--Single Product Image End-->
                                             </div>
                                             <div class="tab-pane fade" id="single-slide-two">
                                                 <!--Single Product Image Start-->
                                                 <div class="single-product-img img-full">
-                                                    <img src="assets/images/desert/purin.jpg" alt="">
-                                                    <a class="venobox" data-gall="gallery01" href="assets/images/desert/purin.jpg"><i class="fa fa-search-plus"></i></a>
+                                                    <img src="<%=pp.getString("p_image")%>" alt="">
+                                                    <a class="venobox" data-gall="gallery01" href="<%=pp.getString("p_image")%>"><i class="fa fa-search-plus"></i></a>
                                                 </div>
                                                 <!--Single Product Image End-->
                                             </div>
                                             <div class="tab-pane fade" id="single-slide-three">
                                                 <!--Single Product Image Start-->
                                                 <div class="single-product-img img-full">
-                                                    <img src="assets/images/desert/purin.jpg" alt="">
-                                                    <a class="venobox" data-gall="gallery01" href="assets/images/desert/purin.jpg"><i class="fa fa-search-plus"></i></a>
+                                                    <img src="<%=pp.getString("p_image")%>" alt="">
+                                                    <a class="venobox" data-gall="gallery01" href="<%=pp.getString("p_image")%>"><i class="fa fa-search-plus"></i></a>
                                                 </div>
                                                 <!--Single Product Image End-->
                                             </div>
                                             <div class="tab-pane fade" id="single-slide-four">
                                                 <!--Single Product Image Start-->
                                                 <div class="single-product-img img-full">
-                                                    <img src="assets/images/desert/purin.jpg" alt="">
-                                                    <a class="venobox" data-gall="gallery01" href="assets/images/desert/purin.jpg"><i class="fa fa-search-plus"></i></a>
+                                                    <img src="<%=pp.getString("p_image")%>" alt="">
+                                                    <a class="venobox" data-gall="gallery01" href="<%=pp.getString("p_image")%>"><i class="fa fa-search-plus"></i></a>
                                                 </div>
                                                 <!--Single Product Image End-->
                                             </div>
@@ -200,16 +83,16 @@
                                         <div class="single-product-menu">
                                             <div class="nav single-slide-menu" role="tablist">
                                                 <div class="single-tab-menu img-full">
-                                                    <a class="active" data-toggle="tab" href="#single-slide-one"><img src="assets/images/desert/purin.jpg" alt="" style="height:120px;"></a>
+                                                    <a class="active" data-toggle="tab" href="#single-slide-one"><img src="<%=pp.getString("p_image")%>" alt="" style="height:120px;"></a>
                                                 </div>
                                                 <div class="single-tab-menu img-full">
-                                                    <a data-toggle="tab" href="#single-slide-two"><img src="assets/images/desert/purin.jpg" alt="" style="height:120px;"></a>
+                                                    <a data-toggle="tab" href="#single-slide-two"><img src="<%=pp.getString("p_image")%>" alt="" style="height:120px;"></a>
                                                 </div>
                                                 <div class="single-tab-menu img-full">
-                                                    <a data-toggle="tab" href="#single-slide-three"><img src="assets/images/desert/purin.jpg" alt="" style="height:120px;"></a>
+                                                    <a data-toggle="tab" href="#single-slide-three"><img src="<%=pp.getString("p_image")%>" alt="" style="height:120px;"></a>
                                                 </div>
                                                 <div class="single-tab-menu img-full">
-                                                    <a data-toggle="tab" href="#single-slide-four"><img src="assets/images/desert/purin.jpg" alt="" style="height:120px;"></a>
+                                                    <a data-toggle="tab" href="#single-slide-four"><img src="<%=pp.getString("p_image")%>" alt="" style="height:120px;"></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -217,7 +100,7 @@
                                     </div>
                                     <div class="col-md-7">
                                         <div class="single-product-content">
-                                            <h1 class="single-product-name">商品名稱</h1>
+                                            <h1 class="single-product-name chi-font"><%=pp.getString("p_name")%></h1>
                                             <div class="rating">
                                                 <span class="star"></span>
                                                 <span class="star"></span>
@@ -227,32 +110,33 @@
                                             </div>
                                             <div class="single-product-price">
                                                 <div class="product-discount">
-                                                    <span class="price">$80.00</span>
+                                                    <span class="price chi-font">$<%=pp.getString("p_price")%></span>
                                                     <span class="discount">-20%</span>
                                                 </div>
                                             </div>
                                             <div class="product-info">
-                                                <p>簡單介紹簡單介紹簡單介紹簡單介紹  </p>
+                                                <p class="chi-font" style="font-size: 22px;"><%=pp.getString("p_textarea")%></p>
                                             </div>
                                             <div class="single-product-action">
                                                 
                                                 <div class="product-variants-item">
                                                     
-                                                    <span class="control-label">數量</span>
+                                                    <span class="control-label chi-font">數量</span>
                                                     <form id='myform' method='POST' action='#'>
                                                         
                                                         <input type='button' value='-' class='qtyminus' field='quantity' />
                                                         <input type='text' name='quantity' value='0' class="qty pl-0" />
                                                         <input type='button' value='+' class='qtyplus' field='quantity' />
-                                                    </form>
+                                                   
                                                 </div>
                                                 
                                             </div>
                                             
                                             <div class="bt-5">
-                                                <button class="button mr-3">加購物車</button>
-                                                <button class="button">我的最愛</button>
-                                                <span class="h5 ml-5">分享至:</span>
+                                               <button type="button" class="btn btn-success btn-md mr-3s chi-font">加入購物車</button>
+                                                <button type="button" class="btn btn-info btn-md mr-3s chi-font">我的最愛</button>
+                                                 </form>
+                                                <span class="h5 ml-5 chi-font">分享至:</span>
                                                 <ul class="share-buttons" style="margin: -40px -40px 0px 350px;">
                                                     <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmidastung.github.io%2Ffinal-web2%2Fsingle-product.html&quote=%E9%99%90%E6%99%82%E5%84%AA%E6%83%A0%E5%85%A8%E9%9D%A2%E7%89%B9%E5%83%B9~%E5%8F%AA%E5%88%B06%2F15%E5%96%94" title="Share on Facebook" target="_blank"><i class="fab fa-facebook"></i></a></li>
                                                     <li><a href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fmidastung.github.io%2Ffinal-web2%2Fsingle-product.html&text=%E9%99%90%E6%99%82%E5%84%AA%E6%83%A0%E5%85%A8%E9%9D%A2%E7%89%B9%E5%83%B9~%E5%8F%AA%E5%88%B06%2F15%E5%96%94:%20https%3A%2F%2Fmidastung.github.io%2Ffinal-web2%2Fsingle-product.html" target="_blank" title="Tweet">  <i class="fab fa-twitter"></i></a></li>
@@ -265,6 +149,9 @@
                                     </div>
                                 </div>
                             </div>
+                            <%
+                                }
+                            %>
                             <!--Single Product End-->
                             <!--Single Product Review Tab Start-->
                             <div class="single-product-review-tab mt-80" style="margin-bottom: 80px;">
@@ -273,33 +160,43 @@
                                         <div class="col-md-12">
                                             <div class="single-product-review-and-description-area">
                                                 <!--Review And Description Tab Menu Start-->
-                                                <ul class="nav dec-and-review-menu">
+                                                <ul class="nav dec-and-review-menu" style="border-radius: 15px;">
                                                     <li>
-                                                        <a class="active" data-toggle="tab" href="#description">商品敘述</a>
+                                                        <a class="active chi-font" data-toggle="tab" href="#description">商品敘述</a>
                                                     </li>
                                                     <li>
-                                                        <a data-toggle="tab" href="#product-details">相關評論</a>
+                                                        <a class="chi-font" data-toggle="tab" href="#product-details">相關評論</a>
                                                     </li>
                                                     <li>
-                                                        <a data-toggle="tab" href="#reviews">填寫評論</a>
+                                                        <a class="chi-font" data-toggle="tab" href="#reviews">填寫評論</a>
                                                     </li>
                                                 </ul>
                                                 <!--Review And Description Tab Menu End-->
                                                 <!--Review And Description Tab Content Start-->
                                                 <div class="tab-content product-review-content-tab mt-30" id="myTabContent-4">
                                                     <div class="tab-pane fade show active" id="description">
-                                                        <div class="single-product-description">
-                                                            <p>複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹複雜介紹</p>
+                                                        <div class="single-product-description chi-font">
+                                                            <p style="font-size: 20px">
+                                                             <i class="fas fa-check"></i> 接單後新鮮產現作，當日冷藏宅配送出 
+                                                            </p>
+                                                            <p style="font-size: 20px">
+                                                               <i class="fas fa-check"></i> 本產品不含防腐劑及人工添加物，請趁新鮮食用，產品存期限請詳見包裝盒面標示
+                                                            </p>
+                                                            <p style="font-size: 20px">
+                                                               <i class="fas fa-check"></i>未食用完畢請於1-2小時內放置冷藏保存，確保產品新鮮
+                                                            </p>
+                                                            
                                                         </div>
                                                     </div>
                                                     <!--product comment-->
                                                     <div class="tab-pane fade" id="product-details">
                                                         <div class="product-details">
-                                                            <div class="product_comment">
+                                                            <div class="product_comment" style="border-radius: 15px;">
                                                                 <div class="container">
                                                                     <div class="row">
                                                                         <div class="col-4 comment_str" style="max-width: 25%;">
-                                                                            <p class="level_txt">4/5</p>
+                                                                            <p class="level_txt chi-font">
+                                                                                <span class="discount" style="font-size: 25px;margin-top: 5px;">熱度 &nbsp;<%=pp.getString("p_hot")%></span>
                                                                             <div class="rating" style="margin-top: -15px;">
                                                                                 <span class="star"></span>
                                                                                 <span class="star"></span>
@@ -308,144 +205,78 @@
                                                                                 <span class="star star_bl"></span>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="col-8">
-                                                                            <button class="comment_btn tablinks"onclick="openCity(event, 'all')">  全部</button>
-                                                                            <button class="comment_btn tablinks" onclick="openCity(event, 'five_star')">  5星(216)</button>
-                                                                            <button class="comment_btn"
-                                                                            onclick="openCity(event, 'four_star')">4星(103)</button>
-                                                                            <button class="comment_btn" onclick="openCity(event, 'three_star')">3星(1)</button>
-                                                                            <button class="comment_btn" onclick="openCity(event, 'two_star')">2星(1)</button>
-                                                                            <button class="comment_btn" onclick="openCity(event, 'one_star')">1星(1)</button>
-                                                                        </div>
+                                                                        <div class="col-8 chi-font">
+                                                                            <%
+                                                    rs = con.createStatement().executeQuery("select count(stars) as countstr from list_shopping where p_id='"+aa+"' and l_boolean='1' ;");
+                                                    rs.next();
+                                                    out.println("<button class='comment_btn tablinks' onclick='openCity(event, 'all')'>"+" 全部("+rs.getString("countstr")+")</button>");
+                                                %>
+                                                <%
+                                                    rs = con.createStatement().executeQuery("select count(stars) as countstr from list_shopping where p_id='"+aa+"' and l_boolean='1' and stars='5'");
+                                                    rs.next();
+                                                    out.println("<button class='comment_btn tablinks' onclick='openCity(event, 'five_star')'>"+"5星("+rs.getString("countstr")+")</button>");
+                                                %>
+                                                <%
+                                                    rs = con.createStatement().executeQuery("select count(stars) as countstr from list_shopping where p_id='"+aa+"' and l_boolean='1' and stars='4'");
+                                                    rs.next();
+                                                    out.println("<button class='comment_btn' onclick=openCity(event, 'four_star')'>"+"4星("+rs.getString("countstr")+")</button>");
+                                                %>
+                                                <%
+                                                    rs = con.createStatement().executeQuery("select count(stars) as countstr from list_shopping where p_id='"+aa+"' and l_boolean='1' and stars='3'");
+                                                    rs.next();
+                                                    out.println("<button class='comment_btn' onclick=openCity(event, 'three_star')'>"+"3星("+rs.getString("countstr")+")</button>");
+                                                %>
+                                                <%
+                                                    rs = con.createStatement().executeQuery("select count(stars) as countstr from list_shopping where p_id='"+aa+"' and l_boolean='1' and stars='2'");
+                                                    rs.next();
+                                                    out.println("<button class='comment_btn' onclick=openCity(event, 'two_star')'>"+"2星("+rs.getString("countstr")+")</button>");
+                                                %>
+                                                <%
+                                                    rs = con.createStatement().executeQuery("select count(stars) as countstr from list_shopping where p_id='"+aa+"' and l_boolean='1' and stars='1'");
+                                                    rs.next();
+                                                    out.println("<button class='comment_btn' onclick=openCity(event, 'one_star')'>"+"1星("+rs.getString("countstr")+")</button>");
+                                                %>
+                                                                      </div>
                                                                     </div>
                                                                 </div>
 
-                                                                <div id="all" class="tabcontent">
+                                                                <div id="all" class="mt-5">
                                                                     <%
-                                                                       sql="SELECT * FROM list_shopping;";
+                                                                       sql="SELECT * FROM list_shopping  where p_id='"+aa+"' and l_boolean='1'" ;
                                                                        ResultSet tmp=con.createStatement().executeQuery(sql);
                                                                        while(tmp.next())
                                                                       {
-                                                                       out.println("<i class='fas fa-user-circle' style='font-size: 25px; display: inline;''>");
-                                                                       out.println("</i>");
-                                                                       out.println("<p style='display: inline;'>"+tmp.getString("l_name")+"</p>");
-                                                                       out.println("<div class='rating'>");
-                                                                       out.println("<span class='star' style='font-size: 20px;width: 20px'>");
-                                                                       out.println("</span>");
-                                                                       out.println("<span class='star' style='font-size: 20px;width: 20px'>");
-                                                                       out.println("</span>");
-                                                                       out.println("<span class='star' style='font-size: 20px;width: 20px'>");
-                                                                       out.println("</span>");
-                                                                       out.println("<span class='star' style='font-size: 20px;width: 20px'>");
-                                                                       out.println("</span>");
-                                                                       out.println("<span class='star star_bl' style='font-size: 20px;width: 20px'>");
-                                                                       out.println("</span>");
-                                                                       out.println(" </div>");
-                                                                       out.println("<p style='font-size: 15px;margin-top: 20px;'>"+tmp.getString("message")+"</p>");
-                                                                       out.println(" <p style='font-size: 7px;margin-top: 20px;'>"+tmp.getString("date")+"</p>");
-                                                                       out.println("<hr>");
+                                                                        %>
+                                                                        <i class="fas fa-user-circle" style="font-size: 25px; "></i>
+                                                                        <p style="display: inline;"><%=tmp.getString("l_name")%></p>
+                                                                        <div class="rating">
+                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
+                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
+                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
+                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
+                                                                        <span class="star star_bl" style="font-size: 20px;width: 20px"></span>
+                                                                        </div>
+                                                                    <p style="font-size: 15px;margin-top: 20px;"><%=tmp.getString("message")%></p>
+                                                                    
+                                                                    <p style="font-size: 7px;margin-top: 20px;">
+                                                                      <%=tmp.getString("date")%>
+                                                                    </p>
+                                                                    <hr>
+
+                                                                    <%
                                                                       }
                                                                       con.close();
                                                                     %>
                                                                     
                                                                 </div>
                                                                 
-                                                                <div id="five_star" class="tabcontent">
-                                                                    
-                                                                    <i class="fas fa-user-circle" style="font-size: 25px; display: inline;"></i>
-                                                                    <p style="display: inline;">ax*******</p>
-                                                                    <div class="rating">
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star star_bl" style="font-size: 20px;width: 20px"></span>
-                                                                    </div>
-                                                                    <p style="font-size: 15px;margin-top: 20px;">評論內容評論內容評論內容評論內容</p>
-                                                                    
-                                                                    <p style="font-size: 7px;margin-top: 20px;">
-                                                                        2019-5-29  15:25:07
-                                                                    </p>
-                                                                    <hr>
-                                                                </div>
-
-                                                                <div id="four_star" class="tabcontent">
-                                                                    <i class="fas fa-user-circle" style="font-size: 25px; display: inline;"></i>
-                                                                    <p style="display: inline;">as*******</p>
-                                                                    <div class="rating">
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star star_bl" style="font-size: 20px;width: 20px"></span>
-                                                                    </div>
-                                                                    <p style="font-size: 15px;margin-top: 20px;">評論內容評論內容評論內容評論內容</p>
-                                                                    
-                                                                    <p style="font-size: 7px;margin-top: 20px;">
-                                                                        2019-5-29  15:25:07
-                                                                    </p>
-                                                                    <hr>
-                                                                </div>
-
-                                                                <div id="three_star" class="tabcontent">
-                                                                    <i class="fas fa-user-circle" style="font-size: 25px; display: inline;"></i>
-                                                                    <p style="display: inline;">a3*******</p>
-                                                                    <div class="rating">
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star star_bl" style="font-size: 20px;width: 20px"></span>
-                                                                    </div>
-                                                                    <p style="font-size: 15px;margin-top: 20px;">評論內容評論內容評論內容評論內容</p>
-                                                                    
-                                                                    <p style="font-size: 7px;margin-top: 20px;">
-                                                                        2019-5-29  15:25:07
-                                                                    </p>
-                                                                    <hr>
-                                                                </div>
-
-                                                                <div id="two_star" class="tabcontent">
-                                                                    <i class="fas fa-user-circle" style="font-size: 25px; display: inline;"></i>
-                                                                    <p style="display: inline;">a4*******</p>
-                                                                    <div class="rating">
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star star_bl" style="font-size: 20px;width: 20px"></span>
-                                                                    </div>
-                                                                    <p style="font-size: 15px;margin-top: 20px;">評論內容評論內容評論內容評論內容</p>
-                                                                    
-                                                                    <p style="font-size: 7px;margin-top: 20px;">
-                                                                        2019-5-29  15:25:07
-                                                                    </p>
-                                                                    <hr>
-                                                                </div>
-
-                                                                <div id="one_star" class="tabcontent">
-                                                                    <i class="fas fa-user-circle" style="font-size: 25px; display: inline;"></i>
-                                                                    <p style="display: inline;">as*******</p>
-                                                                    <div class="rating">
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star star_bl" style="font-size: 20px;width: 20px"></span>
-                                                                    </div>
-                                                                    <p style="font-size: 15px;margin-top: 20px;">評論內容評論內容評論內容評論內容</p>
-                                                                    
-                                                                    <p style="font-size: 7px;margin-top: 20px;">
-                                                                        2019-5-29  15:25:07
-                                                                    </p>
-                                                                    <hr>
-                                                                </div>
+                                                                
 
 
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="tab-pane fade" id="reviews">
+                                                    <div class="tab-pane fade chi-font" id="reviews">
                                                         <div class="review-page-comment">
                                                             
                                                             <div class="review-form">
