@@ -129,7 +129,7 @@
                                                     
                                                     <span class="control-label chi-font">數量</span>
                                                     <form id='myform' method='POST' action='insertlist4.jsp'>
-                                                        <input type="hidden" name="p_id" value="<%=pp.getString("p_id")%>">
+                                                      <%out.println(" <input type='hidden' name='pid' value='"+aa+"'>");%>
                                                         <input type='button' value='-' class='qtyminus' field='quantity' />
                                                         <input type='text' name='quantity' value='1' class="qty pl-0" />
                                                         <input type='button' value='+' class='qtyplus' field='quantity' />
@@ -141,9 +141,9 @@
                                             <div class="bt-5">
 
                                                 
-                                                <%
-                                                out.println("<a href='add_shopping.jsp?p_id="+aa+"&act=buy&amount=1&outlink=2' data-toggle='tooltip' data-placement='top' title='Add To Cart'>"+"<button type='submit' class='btn btn-success btn-md mr-3s chi-font'>"+"加入購物車"+"</button>"+"</a>");
-
+                                                
+                                               <button type='submit' class='btn btn-success btn-md mr-3s chi-font'>加入購物車</button>
+                                        <%
                                                 out.println("<a href='add_shopping.jsp?p_id="+aa+"&act=love2&amount=1' data-toggle='tooltip' data-placement='top' title='Wishlist'>"+"<button type='button' name='love' class='btn btn-info btn-md mr-3s chi-font'>"+"我的最愛"+"</button>"+"</a>");
     
                                                 %>

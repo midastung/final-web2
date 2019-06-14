@@ -94,20 +94,22 @@
             if(a.next()){
                     out.write("<script language=javascript>alert('已經收入最愛囉!');</script>");
                       response.setHeader("refresh","0;URL=all_single.jsp?p_id="+p_id+"");
+
             }
             else{
                 sql="INSERT INTO love(p_id, m_account) VALUE('"+p_id+"','"+acc+"');";
             con.createStatement().execute(sql);
             out.write("<script >alert('成功將「"+rs2.getString("p_name")+"x"+amount+"」加入收藏!');</script>");
-            response.setHeader("refresh","0;URL=all_single.jsp?p_id="+p_id+"");
+           
             }
+             response.setHeader("refresh","0;URL=favorite_content.jsp?p_id="+p_id+"");
        }
 	}
     try{
         String outlink=(String)request.getParameter("outlink");
         if(outlink.equals("1"))
         {
-            out.println("<script>window.open('favorite_content.jsp','_self')</script>");
+            out.println("<script>window.open('index.jsp','_self')</script>");
         }
         else if(outlink.equals("2"))
         {
