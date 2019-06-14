@@ -38,7 +38,7 @@
                         <!--Single Product Start-->
                         <div class="single-product-area mt-80">
                             <div class="container single-box">
-                                <div class="row">
+                                <div class="row p-5">
                                     <%
                                         ResultSet pp = null;
                                         ResultSet rs=null;
