@@ -1,5 +1,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
+<%@ page language="java" contentType="text/html; charset=utf-8"%>
+<%@ page import = "java.sql.*, java.util.*" %>
 <!DOCTYPE html>
 <html>
 
@@ -26,13 +27,13 @@
     </style>
 </head>
 
-<body>
+<body class="">
    
 
             <!-- Footer Section -->
 
        
-            <footer class="text-light" style="background-color: #E3AE57;">
+            <footer class="text-light chi-font" style="background-color: #E3AE57;">
                 <div class="container">
                     <div class="row wow fadeInUp footer-copyright" data-wow-delay="1.8s">
                         <div class="col-md-3 col-lg-4 col-xl-3 ">
@@ -47,10 +48,10 @@
                             <h5>Informations</h5>
                             <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
                             <ul class="list-unstyled">
-                                <li><a href="../all_products.jsp">商品頁面</a></li>
-                                <li><a href="../member.jsp">會員專區</a></li>
-                                <li><a href="../aboutus.jsp">成員介紹</a></li>
-                                <li><a href="favorite.jsp">我的最愛</a></li>
+                                <li><a href="all_products.jsp">商品頁面</a></li>
+                                <li><a href="member.jsp">會員專區</a></li>
+                                <li><a href="aboutus.jsp">關於我們</a></li>
+                                <li><a href="favorite_content.jsp">我的最愛</a></li>
                             </ul>
                         </div>
 
@@ -60,13 +61,17 @@
                             <h5>Contact</h5>
                             <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
                             <ul class="list-unstyled">
-                                <li><i class="fa fa-home mr-2"></i> My company</li>
-                                <li><i class="fa fa-envelope mr-2"></i> email@example.com</li>
+                                <li><i class="fa fa-home mr-2"></i>伍零貳館</li>
+                                <li><i class="fa fa-envelope mr-2"></i>fivezerotwo@gamil.com</li>
                                 <li><i class="fa fa-phone mr-2"></i> + 87 87 87 87 87</li>
                                 <li><i class="fa fa-print mr-2"></i> + 87 87 87 87 87</li>
                             </ul>
                         </div>
-
+                    </div>
+                    <br>
+                    <div class="mt-5">
+                        <pre class="cont text-white">DESSERT x DESIGN</pre>
+                        <p class="cont mt-3"> 2019 伍零貳館. ALL RIGHTS RESERVED.</p>
                     </div>
                 </div>
             </footer>

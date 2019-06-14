@@ -24,7 +24,7 @@
         <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:700&display=swap" rel="stylesheet">
         <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5ce40b2adc07bd00120823e5&product=inline-share-buttons' async='async'></script>
     </head>
-    <body class="bg_image body_color">
+    <body class="bg_image body_color chi-font ">
         <div class="container-fluid hot-product">
             <div class="row">
                 <div class="col-md-3 col-xl-3 index-color" style="margin-top: 36%;">

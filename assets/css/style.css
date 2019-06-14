@@ -699,7 +699,7 @@ Common Style CSS
 .dec-and-review-menu {
 	padding: 20px 0;
 	text-align: center;
-	background: #f3f3f3;
+	background: #A5FFD6;
 	-webkit-box-pack: center;
 	    -ms-flex-pack: center;
 	        justify-content: center;
@@ -859,7 +859,7 @@ border-right: none;
 }
 .product_comment
 {
-	background-color: #FFF8DC;
+	background-color: #FFA69E;
 	height: 120px;
 }
 .comment_str
@@ -874,9 +874,10 @@ border-right: none;
 .comment_btn
 {
 	margin:45px 0px 0px 10px;
-	background-color: #FFFFFF;
+	background-color: #FFF;
 	width: 100px;
-	border:1px solid #DDDDDD;
+	border:1px solid #FFF;
+	border-radius: 15px;
 }
 .comment_btn:focus
 {
