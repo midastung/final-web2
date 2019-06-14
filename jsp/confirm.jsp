@@ -91,9 +91,8 @@
         ResultSet conff = con.createStatement().executeQuery(sql);
         while(conff.next())
             {
-                out.println("<p class='order_inf' style='margin-top: 10px;'>"+conff.getString("p_name")+":"+conff.getString("l_number")+"份</p>");
+                out.println("<p class='order_inf' style='margin-top: 10px;'>"+conff.getString("p_name")+":"+conff.getString("l_number")+"份/&ensp;$"+conff.getString("l_totalprice")+"</p>");
             }
-        
     %>
         <hr width="68%">
 

@@ -298,20 +298,20 @@
                                                                 <form action="product_mess.jsp" method="post">
                                                                     <label>評價<sup class="required">*</sup></label>
                                                                     <div class="ratings">
-                                                                            <input type="radio" hidden checked>
-                                                                            <label class="stars"></label>
+                                                                            <input type="radio" id="star5" value="5" hidden checked>
+                                                                            <label for="star5" class="stars"></label>
                                                                      
-                                                                             <input type="radio" hidden checked>
-                                                                             <label class="stars"></label>
+                                                                             <input type="radio" id="star4" value="4" hidden >
+                                                                             <label for="star4" class="stars"></label>
                                                                      
-                                                                             <input type="radio" hidden checked>
-                                                                             <label class="stars"></label>
+                                                                             <input type="radio" id="star3" value="3"  hidden >
+                                                                             <label for="star3" class="stars"></label>
                                                                         
-                                                                             <input type="radio" hidden checked>
-                                                                             <label class="stars"></label>
+                                                                             <input type="radio" id="star2" value="2" hidden >
+                                                                             <label for="star2" class="stars"></label>
         
-                                                                             <input type="radio" hidden checked>
-                                                                             <label class="stars"></label>
+                                                                             <input type="radio" id="star1" value="1" hidden>
+                                                                             <label for="star1" class="stars"></label>
                                                                        
                                                                     </div>
                                                                  
