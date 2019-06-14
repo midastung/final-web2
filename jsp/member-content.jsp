@@ -124,14 +124,15 @@
                             </div>
                             <div class="p-2 flex-fill bx-shape3">
                                 <textarea class="form-control mb-3" rows="4" name="comment"></textarea>
-                                 <ul class="ratings" style="display:inline;">
+                                 <ul class="ratings" style="float: left;">
                                     <li class="stars"></li>
                                     <li class="stars"></li>
                                     <li class="stars"></li>
                                     <li class="stars"></li>
                                     <li class="stars"></li>
+<input type="submit" class="button button3 " value="送出評論" style="float: right;right: 2%;">
                                 </ul>
-                                <input type="submit" class="button button3 " value="送出評論">
+                              
                             </div>
                         </div>
                     </div>
