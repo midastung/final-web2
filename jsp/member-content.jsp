@@ -157,7 +157,7 @@
                                 <h6>訂單編號：<%=tmp.getString("l_idd")%></h6>
                                 <h6>購買日期:<%=tmp.getString("date")%></h6>
                             </div>
-                            <div class="d-flex p-2 bx-shape2">
+                            <div class="d-flex cont p-2 bx-shape2">
 
                                 <div class="cont p-2">
                                     <section>
