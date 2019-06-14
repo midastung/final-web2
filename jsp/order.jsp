@@ -32,7 +32,7 @@
         <img src="assets/images/post7.png" style="width:100%;">
     </div>
     
-    <div class="container container_chg mb-5" style="margin-top:50px;">
+    <div class="container container_chg mb-5 chi-font" style="margin-top:50px;">
         <form action="insertlist2.jsp" method="">
             <div class="row">
                 <div class="col-50 p-3">
