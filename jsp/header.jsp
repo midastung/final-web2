@@ -245,7 +245,7 @@
                 <form action="regis.jsp" method="post">
                     <div class="modal-body  chi-font">
                         <span style="color: #FE938C;" class="chi-font">帳號</span><input style="max-width:85%;" class="form-control" type="search" placeholder="Account..." id="acc" name="acc">
-                        <span style="color: #FE938C;" class="chi-font">密碼</span><input style="max-width:85%;" class="form-control" type="search" placeholder="Password..." id="pas" name="pas">
+                        <span style="color: #FE938C;" class="chi-font">密碼</span><input style="max-width:85%;" class="form-control" type="password" placeholder="Password..." id="pas" name="pas">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default chi-font" data-dismiss="modal">關閉
@@ -276,7 +276,7 @@
                     <form action="login.jsp" method="post">
                         <div class="modal-body chi-font">
                             <span style="color: #FE938C;" class="chi-font">帳號</span><input style="max-width:85%;" class="form-control" type="search" placeholder="Account..." name="acc">
-                            <span style="color: #FE938C;" class="chi-font">密碼</span><input style="max-width:85%;" class="form-control" type="search" placeholder="Password..." name="psd">
+                            <span style="color: #FE938C;" class="chi-font">密碼</span><input style="max-width:85%;" class="form-control" type="password" placeholder="Password..." name="psd">
                         </div>
                         <button type="submit" class="btn btn-success btn-block chi-font">登入</button>
                     </form>
