@@ -42,7 +42,7 @@
     <div>
         <img src="assets/images/pic0.png" style="width:100%;">
     </div>
-    <div class="naccs container">
+    <div class="naccs container chi-font">
             <div class="row">
             <div class="p-3" style="width:100%;">
                 <ul class="nacc">
@@ -94,7 +94,7 @@
                                                 out.println("</div>");
                                                 out.println("<div class='product-info clearfix'>");
                                                     out.println("<div class='fix'>");
-                                                        out.println("<h4 class='post-title floatleft'>"+"<a href='#'>"+tmp.getString("p_name")+"</a>"+"</h4>");
+                                                        out.println("<h4 class='post-title floatleft chi-font'>"+"<a href='#'>"+tmp.getString("p_name")+"</a>"+"</h4>");
                                                         out.println("<p class='floatright hidden-sm hidden-xs'>$"+tmp.getString("p_originprice")+"</p>");
                                                     out.println("</div>");
                                                     out.println("<div class='fix'>");

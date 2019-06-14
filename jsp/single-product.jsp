@@ -26,12 +26,18 @@
         <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:700&display=swap" rel="stylesheet">
         <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5ce40b2adc07bd00120823e5&product=inline-share-buttons' async='async'></script>
     </head>
+    <style>
+            .single-box{
+                    border-radius: 20px;
+                        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                    }
+    </style>
     <body>
      
                     <div class="wrapper">
                         <!--Single Product Start-->
                         <div class="single-product-area mt-80">
-                            <div class="container">
+                            <div class="container single-box">
                                 <div class="row">
                                     <%
                                         ResultSet pp = null;
@@ -190,7 +196,7 @@
                                                         </div>
                                                     </div>
                                                     <!--product comment-->
-                                                    <div class="tab-pane fade" id="product-details">
+                                                    <div class="tab-pane fade single-box" id="product-details">
                                                         <div class="product-details">
                                                             <div class="product_comment" style="border-radius: 15px;">
                                                                 <div class="container">

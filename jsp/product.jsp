@@ -87,7 +87,7 @@
                                                 out.println("</div>");
                                                 out.println("<div class='product-info clearfix'>");
                                                     out.println("<div class='fix'>");
-                                                        out.println("<h4 class='post-title floatleft'>"+"<a href='#'>"+tmp.getString("p_name")+"</a>"+"</h4>");
+                                                        out.println("<h4 class='post-title floatleft chi-font'>"+"<a href='#'>"+tmp.getString("p_name")+"</a>"+"</h4>");
                                                         out.println("<p class='floatright hidden-sm hidden-xs'>$"+tmp.getString("p_originprice")+"</p>");
                                                     out.println("</div>");
                                                     out.println("<div class='fix'>");
