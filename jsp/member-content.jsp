@@ -110,7 +110,7 @@
                                 <h6>購買日期:<%=tmp.getString("date")%></h6>
                             </div>
                             <div class="d-flex p-2 bx-shape2">
-
+                                <form action="insertlist3.jsp" method>
                                 <div class="cont p-2">
                                     <section>
                                         <nobr>

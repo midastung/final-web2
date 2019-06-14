@@ -76,7 +76,7 @@
     <div>
         <img src="assets/images/pic0.png" style="width:100%;">
     </div>
-    <h2 class="title-border cont">搜索結果</h2>
+    <center><h2 class="title-border cont">搜索結果</h2></center>
    
     <form action="#" method="post" class="mt-3" style="text-align: center;">
         <input type="search" name="target" class="srh" placeholder="請輸入關鍵字">
@@ -87,7 +87,7 @@
                 <ul class="nacc">
                     <li class="active">
                          <div class="container">
-                                    <div class="row">
+                                    <div class="row" style="float: left;left: 25%;">
                                     
                                     <%
                                             ResultSet tmp=null;
@@ -164,7 +164,9 @@
         </div>
     </div>
      <%
-                    out.println("<h4 class='title-border cont' style='position:relative;top:-20px;'>共搜索"+count+"筆資料</h4>");
+                    out.println("<center>");
+                    out.println("<h4 class='title-border cont' style='position:relative;top:-20px;right;'>共搜索"+count+"筆資料</h4>");
+                    out.println("</center>");
     %>
     
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>

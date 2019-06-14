@@ -42,7 +42,7 @@
     <div>
         <img src="assets/images/pic0.png" class="img-fluid">
     </div>
-      <h2 class="title-border cont mt-5" >我的最愛</h2>
+      <center><h2 class="title-border cont mt-5" >我的最愛</h2></center>
     <div class="naccs container">
            
             

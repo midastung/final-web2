@@ -11,14 +11,14 @@
 		if(name==null||name.equals("")||message==null||message.equals(""))
 		{
 			out.write("<script language=javascript>alert('資料請填寫完整');</script>");
-			response.setHeader("refresh","0;URL=all_single.jsp");
+			response.setHeader("refresh","0;URL=all_single.jsp?p_id="+pid+"");
 		}
 		else 
 		{
-			sql="INSERT INTO list_shopping(l_name,message,p_id) value('"+name+"','"+message+"','"+pid+"');";
+			sql="INSERT INTO list_shopping(l_name,message,p_id,l_boolean,stars) value('"+name+"','"+message+"','"+pid+"','1','0');";
 			con.createStatement().executeUpdate(sql); 
 			out.write("<script language=javascript>alert('感謝您的回饋');</script>");
-			response.setHeader("refresh","0;URL=all_single.jsp");
+			response.setHeader("refresh","0;URL=all_single.jsp?p_id="+pid+"");
 		}
 	%>
 </body>
