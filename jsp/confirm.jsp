@@ -60,6 +60,13 @@
         String l_idd= request.getParameter("lidd");
         sql="SELECT * FROM list_shopping WHERE l_idd='"+l_idd+"'";
         ResultSet conf = con.createStatement().executeQuery(sql);
+        ResultSet total = con.createStatement().executeQuery(sql);
+        int ttl;
+        int ttl2=0;
+        while(total.next()){
+            ttl=ttl2+Integer.valueOf(total.getString("l_totalprice"));
+            ttl2=ttl;
+    }
         conf.next();
 
     %>
@@ -76,7 +83,7 @@
         <p class="order_inf">配送方式:宅配</p>
         <p class="order_inf">付款方式:<%= conf.getString("l_payment")%></p>
         <p class="order_inf">收件人:<%=conf.getString("l_name")%></p>
-        <p class="order_inf">應付金額:<%= conf.getString("l_totalprice")%></p>
+        <p class="order_inf">應付金額:<%=ttl2%></p>
         <p class="order_inf" style="margin-top: 70px;">訂單商品與名稱與數量:</p>
         <hr width="68%">
     <%

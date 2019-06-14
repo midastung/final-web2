@@ -4,7 +4,7 @@
 <html>
 
 <head>
-    <title>header</title>
+    <title>伍零二館</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/component.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/style_index.css">
