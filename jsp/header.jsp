@@ -18,6 +18,18 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:700&display=swap" rel="stylesheet">
 
     <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5ce40b2adc07bd00120823e5&product=inline-share-buttons' async='async'></script>
+
+        <style type="text/css" media="screen">
+            .see_login_img 
+            {
+                width: 30px;
+                position: absolute;
+                top: 65%;
+                right: 17%;
+                margin: 15px;
+            }
+            
+        </style>
 </head>
     <style>
         .srh_btn{
@@ -245,7 +257,27 @@
                 <form action="regis.jsp" method="post">
                     <div class="modal-body  chi-font">
                         <span style="color: #FE938C;" class="chi-font">帳號</span><input style="max-width:85%;" class="form-control" type="search" placeholder="Account..." id="acc" name="acc">
-                        <span style="color: #FE938C;" class="chi-font">密碼</span><input style="max-width:85%;" class="form-control" type="password" placeholder="Password..." id="pas" name="pas">
+                        <span style="color: #FE938C;" class="chi-font">密碼</span><img class="see_login_img" id="demo_login_img" onclick="hideShowPsw2()" src="../assets/images/visible.png"><input style="max-width:85%;" class="form-control" placeholder="Password..." id="demo_login_input" type="password" name="psd">
+                                
+                                <script type="text/javascript">
+                                var demoImg2 = document.getElementById("demo_login_img");
+                                var demoInput2 = document.getElementById("demo_login_input");
+
+                                function hideShowPsw2() 
+                                {
+                                    if (demoInput2.type == "password") 
+                                    {
+                                        demoInput2.type = "text";
+                                        demo_login_img.src = "../assets/images/invisible.png";
+                                    } 
+                                    else 
+                                    {
+                                        demoInput2.type = "password";
+                                        demo_login_img.src = "../assets/images/visible.png";
+                                            }
+                                        }
+
+                                </script>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default chi-font" data-dismiss="modal">關閉
@@ -276,7 +308,24 @@
                     <form action="login.jsp" method="post">
                         <div class="modal-body chi-font">
                             <span style="color: #FE938C;" class="chi-font">帳號</span><input style="max-width:85%;" class="form-control" type="search" placeholder="Account..." name="acc">
-                            <span style="color: #FE938C;" class="chi-font">密碼</span><input style="max-width:85%;" class="form-control" type="password" placeholder="Password..." name="psd">
+                            <span style="color: #FE938C;" class="chi-font">密碼</span>
+                                        <img class="see_login_img" id="demo_img" onclick="hideShowPsw()" src="../assets/images/visible.png"><input style="max-width:85%;" class="form-control" placeholder="Password..." id="demo_input" type="password" name="psd">
+                                        <script type="text/javascript">
+                                            var demoImg = document.getElementById("demo_img");
+                                            var demoInput = document.getElementById("demo_input");
+
+                                            function hideShowPsw() {
+                                                if (demoInput.type == "password")
+                                                 {
+                                                    demoInput.type = "text";
+                                                    demo_img.src = "../assets/images/invisible.png";
+                                                } else {
+                                                    demoInput.type = "password";
+                                                    demo_img.src = "../assets/images/visible.png";
+                                                }
+                                            }
+
+                                        </script>
                         </div>
                         <button type="submit" class="btn btn-success btn-block chi-font">登入</button>
                     </form>
