@@ -87,7 +87,7 @@
                 <ul class="nacc">
                     <li class="active">
                          <div class="container">
-                                    <div class="row">
+                                    <div class="row" style="float: left;left: 25%;">
                                     
                                     <%
                                             ResultSet tmp=null;
