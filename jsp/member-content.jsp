@@ -93,8 +93,8 @@
             <div class="p-5">
                 <h4 class="cont mb-5">購物紀錄</h4>
 <%   
-           
-               String sql2="SELECT * FROM list_shopping,product WHERE list_shopping.m_account='"+acc+"' AND list_shopping.p_id=product.p_id; ";
+               
+               String sql2="SELECT * FROM list_shopping,product WHERE list_shopping.m_account='"+acc+"' AND list_shopping.p_id=product.p_id order by l_id desc; ";
                 ResultSet tmp = con.createStatement().executeQuery(sql2);
                 while(tmp.next())
                     {
@@ -106,6 +106,7 @@
                     <div class="container-fluid">
                         <div class="d-flex bx-shape mb-3">
                             <div class="cont p-3">
+                                <h6 name="lidd">訂單編號：<%=tmp.getString("l_idd")%></h6>
                                 <h6>購買日期:<%=tmp.getString("date")%></h6>
                             </div>
                             <div class="d-flex p-2 bx-shape2">
@@ -124,14 +125,15 @@
                             </div>
                             <div class="p-2 flex-fill bx-shape3">
                                 <textarea class="form-control mb-3" rows="4" name="comment"></textarea>
-                                 <ul class="ratings" style="display:inline;">
+                                 <ul class="ratings" style="float: left;>
                                     <li class="stars"></li>
                                     <li class="stars"></li>
                                     <li class="stars"></li>
                                     <li class="stars"></li>
                                     <li class="stars"></li>
+<input type="submit" class="button button3 " value="送出評論" style="float: right;right: 2%;">
                                 </ul>
-                                <input type="submit" class="button button3 " value="送出評論">
+                              
                             </div>
                         </div>
                     </div>
