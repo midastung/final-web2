@@ -144,7 +144,7 @@
                                                 <%
                                                 out.println("<a href='add_shopping.jsp?p_id="+aa+"&act=buy&amount=1&outlink=2' data-toggle='tooltip' data-placement='top' title='Add To Cart'>"+"<button type='submit' class='btn btn-success btn-md mr-3s chi-font'>"+"加入購物車"+"</button>"+"</a>");
 
-                                                out.println("<a href='add_shopping.jsp?p_id="+aa+"&act=love&amount=1&outlink=2' data-toggle='tooltip' data-placement='top' title='Wishlist'>"+"<button type='button' name='love' class='btn btn-info btn-md mr-3s chi-font'>"+"我的最愛"+"</button>"+"</a>");
+                                                out.println("<a href='add_shopping.jsp?p_id="+aa+"&act=love2&amount=1' data-toggle='tooltip' data-placement='top' title='Wishlist'>"+"<button type='button' name='love' class='btn btn-info btn-md mr-3s chi-font'>"+"我的最愛"+"</button>"+"</a>");
     
                                                 %>
                                                

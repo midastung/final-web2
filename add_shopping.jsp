@@ -87,6 +87,21 @@
             out.write("<script >alert('成功將「"+rs2.getString("p_name")+"x"+amount+"」加入收藏!');</script>");
             }
        }
+       else if(act.equals("love2"))
+       {
+            String sql2="select * from love where m_account='"+acc+"' and p_id='"+p_id+"';";
+            ResultSet a=con.createStatement().executeQuery(sql2);
+            if(a.next()){
+                    out.write("<script language=javascript>alert('已經收入最愛囉!');</script>");
+                      response.setHeader("refresh","0;URL=all_single.jsp?p_id="+p_id+"");
+            }
+            else{
+                sql="INSERT INTO love(p_id, m_account) VALUE('"+p_id+"','"+acc+"');";
+            con.createStatement().execute(sql);
+            out.write("<script >alert('成功將「"+rs2.getString("p_name")+"x"+amount+"」加入收藏!');</script>");
+            response.setHeader("refresh","0;URL=all_single.jsp?p_id="+p_id+"");
+            }
+       }
 	}
     try{
         String outlink=(String)request.getParameter("outlink");
