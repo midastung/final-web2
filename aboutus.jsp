@@ -3,4 +3,3 @@
 <%@ include file="getDB.jsp"%>
 <%@include file="jsp/header.jsp"%>
 <%@include file="HTML/aboutus.html"%>
-<%@include file="jsp/footer.jsp"%>
