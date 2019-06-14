@@ -173,6 +173,7 @@
                                                 </ul>
                                                 <!--Review And Description Tab Menu End-->
                                                 <!--Review And Description Tab Content Start-->
+
                                                 <div class="tab-content product-review-content-tab mt-30" id="myTabContent-4">
                                                     <div class="tab-pane fade show active" id="description">
                                                         <div class="single-product-description chi-font">
@@ -207,6 +208,7 @@
                                                                         </div>
                                                                         <div class="col-8 chi-font">
                                                                             <%
+
                                                     rs = con.createStatement().executeQuery("select count(stars) as countstr from list_shopping where p_id='"+aa+"' and l_boolean='1' ;");
                                                     rs.next();
                                                     out.println("<button class='comment_btn tablinks' onclick='openCity(event, 'all')'>"+" 全部("+rs.getString("countstr")+")</button>");
