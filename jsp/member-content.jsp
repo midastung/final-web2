@@ -131,9 +131,8 @@
                                     <li class="stars"></li>
                                     <li class="stars"></li>
                                     <li class="stars"></li>
-
+                                <input type="submit" class="button button3 " style="float:right; right: 2%;" value="送出評論">
                                 </ul>
-                                <input type="submit" class="button button3 " style="float:right;right: 2%;" value="送出評論">
                                 <input type="hidden" name="pid" value="<%=tmp.getString("p_id")%>">
                                 <input type="hidden" name="lidd" value="<%=tmp.getString("l_idd")%>">
                             </div>
@@ -181,8 +180,9 @@
                                     <li class="stars"></li>
                                     <li class="stars"></li>
                                     <li class="stars"></li>
+                                    <input type="submit" class="button " value="已送出" style="float: right;right: 2%;" readonly>
                                 </ul>
-                                <input type="submit" class="button " value="已送出" style="float: right;right: 2%;" readonly>
+
                              
                             </div>
                         </div>
