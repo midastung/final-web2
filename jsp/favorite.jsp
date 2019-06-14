@@ -36,7 +36,7 @@
 
 <body class="">
    
-   <div class="mt-5" >
+   <div class="mt-5">
         <img src="assets/images/post4.png" class="img-fluid">
     </div>
     <div>

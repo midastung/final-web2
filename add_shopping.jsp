@@ -49,12 +49,11 @@
             else{
                 sql="INSERT INTO shopping_cart(p_id, amount, m_account) VALUE('"+p_id+"','"+amount+"','"+acc+"');";
                 con.createStatement().execute(sql);
-                out.write("<script language=javascript>alert('成功將「"+rs2.getString("p_name")+"x"+amount+"」加入購物車!');</script>");
-                out.println("<script>window.open('all_products.jsp','_self')</script>");         
+                out.write("<script language=javascript>alert('成功將「"+rs2.getString("p_name")+"x"+amount+"」加入購物車!');</script>");        
 
             }
 		}
-        else if(act.equals("buy2"))
+        else if(act.equals("buy2"))//我的最愛
         {
             String sql2="select * from shopping_cart where m_account='"+acc+"' and p_id='"+p_id+"'";
             ResultSet a=con.createStatement().executeQuery(sql2);
@@ -66,8 +65,7 @@
             else{
                 sql="INSERT INTO shopping_cart(p_id, amount, m_account) VALUE('"+p_id+"','"+amount+"','"+acc+"');";
                 con.createStatement().execute(sql);
-                out.write("<script language=javascript>alert('成功將「"+rs2.getString("p_name")+"x"+amount+"」加入購物車!');</script>");
-                out.println("<script>window.open('favorite_content.jsp','_self')</script>");         
+                out.write("<script language=javascript>alert('成功將「"+rs2.getString("p_name")+"x"+amount+"」加入購物車!');</script>");        
 
             }
 
