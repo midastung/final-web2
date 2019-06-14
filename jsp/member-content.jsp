@@ -124,16 +124,16 @@
                                 </div>
                             </div>
                             <div class="p-2 flex-fill bx-shape3">
-                                <form action="insertlist3.jsp" method="post" >
-                                    <textarea class="form-control mb-3" rows="4" name="comment"></textarea>
-                                 <ul class="ratings">
+                                <textarea class="form-control mb-3" rows="4" name="comment"></textarea>
+                                 <ul class="ratings" style="float: left;">
                                     <li class="stars"></li>
                                     <li class="stars"></li>
                                     <li class="stars"></li>
                                     <li class="stars"></li>
                                     <li class="stars"></li>
+
                                 </ul>
-                                <input type="submit" class="button button3 " value="送出評論">
+                                <input type="submit" class="button button3 " style="float: right: 2%;" value="送出評論">
                                 <input type="hidden" name="pid" value="<%=tmp.getString("p_id")%>">
                                 <input type="hidden" name="lidd" value="<%=tmp.getString("l_idd")%>">
                             </div>
@@ -174,7 +174,7 @@
                             </div>
                             <div class="p-2 flex-fill bx-shape3">
                                
-                                    <p class="form-control mb-3"  readonly><%=tmp.getString("message")%></p>
+                                    <p class="form-control mb-3" style="float: left;" readonly><%=tmp.getString("message")%></p>
                                  <ul class="ratings">
                                     <li class="stars"></li>
                                     <li class="stars"></li>
@@ -182,7 +182,7 @@
                                     <li class="stars"></li>
                                     <li class="stars"></li>
                                 </ul>
-                                <input type="submit" class="button " value="已送出" readonly>
+                                <input type="submit" class="button " value="已送出" style="float: right;right: 2%;" readonly>
                              
                             </div>
                         </div>

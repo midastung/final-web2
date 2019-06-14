@@ -158,8 +158,8 @@ select:focus {
     background-color: #5BC0EB;
     color: white;
     border: 2px solid #fff;
-    margin-left: 65%;
-    display:inline;
+    position:relative;
+    left: 65%;
 
 }
 

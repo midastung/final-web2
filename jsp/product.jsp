@@ -42,7 +42,7 @@
     <div>
         <img src="assets/images/pic0.png" style="width:100%;">
     </div>
-    <div class="naccs container-fluid">
+    <div class="naccs container-fluid chi-font">
             <div class="row">
              <div class="gc p-5 col-xl-3 col-md-3">
                 <div class="menu">

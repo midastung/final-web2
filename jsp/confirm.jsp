@@ -40,7 +40,7 @@
 }
 
 .button1 {
-    background-color: #f2f2f2;
+    background-color: #fff;
     color: black;
     border: 2px solid #4CAF50;
 }
@@ -49,7 +49,7 @@
     color: white;
 }
 </style>
-<body style="background-color: rgb(255,224,158);">
+<body class="" style="background-color: rgb(255,224,158);">
    
 
     <div class="mt-5" style="position:relative;top:13px;">
@@ -63,7 +63,7 @@
         conf.next();
 
     %>
-    <div class="confirm_cont" style="border-radius:20px; ">
+    <div class="confirm_cont chi-font" style="border-radius:20px; ">
 
         <p class="intro_cont" style="line-height: 40px;">親愛的會員您好:</p>
         <p class="intro_cont" style="line-height: 40px;">這個訊息是來自伍零二館，告知您伍零二館已接獲你這次的訂購需求，並將以最快速度處理!</p>
@@ -92,7 +92,7 @@
 
         <p class="intro_cont" style="margin-top: 70px;line-height: 40px;">為了保護您的個人資料安全，建議您可以隨時登入伍零二館，至會員專區，查詢訂單，最新訊息或修改基本資料。如果您有任何問題，請您至客服中心查詢相關資訊或來信給我們。</p>
         <p class="intro_cont" style="margin-top: 20px;line-height: 40px;">-伍零二館敬上</p>
-         <a href="index.jsp"><input type="submit" class="button button1 cont" value="確認送出"></a>
+         <a href="index.jsp"><input type="submit" class="button button1 cont" value="返回首頁"></a>
     </div>
     </form>
     <!--comfirm end-->
