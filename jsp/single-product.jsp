@@ -307,11 +307,15 @@
                                                                              <label class="stars"></label>
                                                                        
                                                                     </div>
+                                                                 
+
                                                                     <label>名字<sup class="required">*</sup></label>
                                                                     <input type="text" placeholder="name" name="name">
                                                                     <label>評論內容<sup class="required">*</sup></label>
                                                                     <textarea id="content" placeholder="message" name="message"></textarea>
-                                                           
+                                                                     <%
+                                                                        out.println("<input type='hidden' name='pid' value='"+aa+"'>");
+                                                                    %>
                                                                     <div class="send-your-review">
                                                                         
                                                                         <div class="send-cancel-btn">

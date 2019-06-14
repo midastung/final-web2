@@ -8,7 +8,7 @@
 		speed: 300,
 		slidesToShow: 4,
 		slidesToScroll: 1,
-		prevArrow: "<img style='background-color:#000;' src='assets/images/icon/chef.png'>",
+		prevArrow: "<button type='button' class='slick-next'><i class='fas fa-chevron-right'></i></button>",
 		nextArrow: "<button type='button' class='slick-next'><i class='fas fa-chevron-right'></i></button>",
 		responsive: [
 			{  breakpoint: 1169,  settings: { slidesToShow: 3,  }  },
