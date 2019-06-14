@@ -11,7 +11,7 @@
     ResultSet a=null;
 
 
-
+        try{
                 Cookie getC[]=request.getCookies();
                 for(int i=0;i<getC.length;i++)
                 {
@@ -48,10 +48,14 @@
                     }
                 else
                      {
-                        out.write("<script language=javascript>alert('非管理者，無法進入');</script>");
+                        out.write("<script language=javascript>alert('非會員，請先登入');</script>");
                         response.setHeader("refresh","0;URL=index.jsp");
                     }
-              
+              }
+              catch(Exception e){
+               out.write("<script language=javascript>alert('非會員，請先登入');</script>");
+                        response.setHeader("refresh","0;URL=index.jsp");
+          }
           
   
 
