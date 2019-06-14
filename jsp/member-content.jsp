@@ -94,7 +94,7 @@
                 <h4 class="cont mb-5">購物紀錄</h4>
 <%   
                
-               String sql2="SELECT * FROM list_shopping,product WHERE list_shopping.m_account='"+acc+"' AND list_shopping.p_id=product.p_id order by l_id desc; ";
+               String sql2="SELECT * FROM list_shopping,product WHERE l_boolean='0' AND list_shopping.m_account='"+acc+"' AND list_shopping.p_id=product.p_id order by l_id desc; ";
                 ResultSet tmp = con.createStatement().executeQuery(sql2);
                 while(tmp.next())
                     {
@@ -102,11 +102,11 @@
         
         
                 <!--一個購物紀錄/START-->
-                <form>
+
                     <div class="container-fluid">
                         <div class="d-flex bx-shape mb-3">
                             <div class="cont p-3">
-                                <h6 name="lidd">訂單編號：<%=tmp.getString("l_idd")%></h6>
+                                <h6>訂單編號：<%=tmp.getString("l_idd")%></h6>
                                 <h6>購買日期:<%=tmp.getString("date")%></h6>
                             </div>
                             <div class="d-flex p-2 bx-shape2">
@@ -125,22 +125,74 @@
                             </div>
                             <div class="p-2 flex-fill bx-shape3">
                                 <textarea class="form-control mb-3" rows="4" name="comment"></textarea>
-                                 <ul class="ratings" style="float: left;>
+                                 <ul class="ratings" style="float: left;">
                                     <li class="stars"></li>
                                     <li class="stars"></li>
                                     <li class="stars"></li>
                                     <li class="stars"></li>
                                     <li class="stars"></li>
-<input type="submit" class="button button3 " value="送出評論" style="float: right;right: 2%;">
+
                                 </ul>
-                              
+                                <input type="submit" class="button button3 " style="float: right: 2%;" value="送出評論">
+                                <input type="hidden" name="pid" value="<%=tmp.getString("p_id")%>">
+                                <input type="hidden" name="lidd" value="<%=tmp.getString("l_idd")%>">
                             </div>
                         </div>
                     </div>
                 </form>
               <%
                 }
-              %>
+
+               sql2="SELECT * FROM list_shopping,product WHERE l_boolean='1' AND list_shopping.m_account='"+acc+"' AND list_shopping.p_id=product.p_id order by l_id desc; ";
+              tmp = con.createStatement().executeQuery(sql2);
+                while(tmp.next())
+                    {
+%>
+        
+        
+                <!--一個購物紀錄/START-->
+
+                    <div class="container-fluid">
+                        <div class="d-flex bx-shape mb-3">
+                            <div class="cont p-3">
+                                <h6>訂單編號：<%=tmp.getString("l_idd")%></h6>
+                                <h6>購買日期:<%=tmp.getString("date")%></h6>
+                            </div>
+                            <div class="d-flex p-2 bx-shape2">
+
+                                <div class="cont p-2">
+                                    <section>
+                                        <nobr>
+                                            <strong>
+                                                <span style="font-size: 20px">品名:<%=tmp.getString("p_name")%></span>
+                                                <span style="font-size: 20px">/&emsp;數量:<%=tmp.getString("l_number")%>個</span>
+                                                <span style="font-size: 20px">/&emsp;價錢:$<%=tmp.getString("p_price")%></span>
+                                            </strong>
+                                        </nobr>
+                                    </section>
+                                </div>
+                            </div>
+                            <div class="p-2 flex-fill bx-shape3">
+                               
+                                    <p class="form-control mb-3" style="float: left;" readonly><%=tmp.getString("message")%></p>
+                                 <ul class="ratings">
+                                    <li class="stars"></li>
+                                    <li class="stars"></li>
+                                    <li class="stars"></li>
+                                    <li class="stars"></li>
+                                    <li class="stars"></li>
+                                </ul>
+                                <input type="submit" class="button " value="已送出" style="float: right;right: 2%;" readonly>
+                             
+                            </div>
+                        </div>
+                    </div>
+              
+            <%
+                }
+            %>
+                
+
             </div>
         </div>
     </div>
