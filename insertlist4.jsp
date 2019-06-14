@@ -4,6 +4,7 @@
 <%@ include file="getDB.jsp"%>
 
 <%
+
     String q = request.getParameter("quantity");
     String p_id = request.getParameter("pid");
     String acc = "";
@@ -12,6 +13,7 @@
 
 
         try{
+
                 Cookie getC[]=request.getCookies();
                 for(int i=0;i<getC.length;i++)
                 {
@@ -20,9 +22,11 @@
                         String[] sp=getC[i].getValue().split("-");
                         acc=sp[0];
                         pas=sp[1];
-
                     }
                 }
+
+            }
+
                  sql="SELECT * FROM member WHERE m_account='"+acc+"' and m_password='"+pas+"'";
                 ResultSet man=con.createStatement().executeQuery(sql);
                 man.next();
@@ -57,10 +61,13 @@
                         response.setHeader("refresh","0;URL=index.jsp");
           }
           
-  
 
 %>
 <%
+			sql="INSERT INTO shopping_cart(p_id, amount, m_account) VALUE('"+p_id+"','"+q+"','"+acc+"');";
+            con.createStatement().execute(sql);
 
-			
+            out.write("<script language=javascript>alert('成功將"+rs2.getString("p_name")+"x"+q+"加入購物車!');</script>");
+
+	response.setHeader("refresh","0;URL=all_single.jsp?p_id="+p_id+"");
 %>
