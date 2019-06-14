@@ -166,6 +166,7 @@
                                                     out.println("<div class='rating' style='margin-top: -15px; '>");
                                                     out.println("<span class='star' style='font-size: 20px; width: 20px'>"+"</span>");
                                                     out.println("<span class='star' style='font-size: 20px; width: 20px'>"+"</span>");
+                   
                                                     out.println("<span class='star' style='font-size: 20px; width: 20px'>"+"</span>");
                                                     out.println("<span class='star' style='font-size: 20px; width: 20px'>"+"</span>");
                                                     out.println("<span class='star star_bl' style='font-size: 20px; width: 20px'>"+"</span>");
