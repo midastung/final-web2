@@ -346,6 +346,7 @@
             <script src="assets/js/gnmenu.js"></script>
             <script src="assets/js/modernizr.custom.js"></script>
             <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+            <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5ce41843dc07bd00120823eb&product=inline-share-buttons' async='async'></script>s
             <script src="assets/js/bootstrap.min.js"></script>
             <script src="assets/js/bootstrap.bundle.min.js"></script>
 
