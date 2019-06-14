@@ -33,8 +33,7 @@
     </div>
     
     <div class="container container_chg mb-5" style="margin-top:50px;">
-        <form action="insertlist2.jsp">
-
+        <form action="insertlist2.jsp" method="">
             <div class="row">
                 <div class="col-50 p-3">
                     <%
