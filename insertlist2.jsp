@@ -4,7 +4,6 @@
 <%@ include file="getDB.jsp" %>
 
 <%
-    String pname = request.getParameter("pname");
    	String firstname = request.getParameter("firstname");
    	String email = request.getParameter("email");
     String tel = request.getParameter("tel");
@@ -80,7 +79,7 @@
               sql="select * from product where p_id='"+idd[i]+"';";
               rs=con.createStatement().executeQuery(sql);
               rs.next();
-              sql="INSERT INTO list_shopping (p_name,p_id,m_account,l_name, l_email, l_address, l_country, l_cellphone, l_memo, l_payment, l_idd,l_number,l_totalprice,l_boolean,stars) VALUES ('"+pname+"','"+idd[i]+"','"+acc+"','"+firstname+"','"+email+"','"+address+"','"+country+"','"+tel+"','"+memo+"','"+payment+"','"+rr+"','"+number[i]+"','"+String.valueOf(Integer.valueOf(number[i])*Integer.valueOf(rs.getString("p_price")))+"','0','3')"; 
+              sql="INSERT INTO list_shopping (p_id,m_account,l_name, l_email, l_address, l_country, l_cellphone, l_memo, l_payment, l_idd,l_number,l_totalprice,l_boolean,stars) VALUES ('"+idd[i]+"','"+acc+"','"+firstname+"','"+email+"','"+address+"','"+country+"','"+tel+"','"+memo+"','"+payment+"','"+rr+"','"+number[i]+"','"+String.valueOf(Integer.valueOf(number[i])*Integer.valueOf(rs.getString("p_price")))+"','0','3')"; 
               con.createStatement().execute(sql);
 
               sql="UPDATE product SET p_stock ='"+(Integer.valueOf(rs.getString("p_stock"))-Integer.valueOf(number[i]))+"' WHERE (p_id = '"+idd[i]+"');";
