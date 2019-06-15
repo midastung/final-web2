@@ -21,10 +21,8 @@
 			ResultSet a=con.createStatement().executeQuery(sql2);
 			if(a.next())
 			{
-	        sql="UPDATE list_shopping SET l_number="+lnumber+" , m_account="+maccount+" , l_address="+laddress+" , l_cellphone="+lcellphone+" where l_id='"+lid+"';";
-	        con.createStatement().executeUpdate(sql);
-	        out.write("<script>alert('修改訂單成功');</script>");
-            response.setHeader("refresh","0;URL=back_order.jsp");
+				out.write("<script language=javascript>alert('訂單重複');</script>");
+				response.setHeader("refresh","0;URL=back_order.jsp");
 			}
 			else
 			{

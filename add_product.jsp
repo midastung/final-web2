@@ -24,10 +24,8 @@
 			ResultSet a=con.createStatement().executeQuery(sql2);
 			if(a.next())
 			{
-	        sql="UPDATE product SET p_class="+pclass+" , p_name="+pname+" , p_stock="+pstock+" , p_price="+pprice+" , p_originprice="+poriginprice+" , p_discount="+pdiscount+" , p_image="+pimage+" where p_id='"+pid+"';";
-	        con.createStatement().executeUpdate(sql);
-	        out.write("<script>alert('修改商品成功');</script>");
-            response.setHeader("refresh","0;URL=back_product.jsp");
+				out.write("<script language=javascript>alert('商品重複');</script>");
+				response.setHeader("refresh","0;URL=back_product.jsp");
 			}
 			else
 			{
