@@ -21,7 +21,7 @@ a
 }	
 .out td
  {
-	width: 10rem;
+	width: 15rem;
 	height: 5rem;
  }
  button
@@ -33,7 +33,7 @@ a
 
  .under td
  {
-	width: 15rem;
+	width: 10rem;
 	height: 2rem;
  }
 
