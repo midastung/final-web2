@@ -56,10 +56,12 @@ a
 			<center><table border="1" class="in">
 				<tr>
 					<td>訂單編號</td>
+          <td>商品名稱</td>
 					<td>訂單數量</td>
 					<td>會員帳號</td>
 					<td>訂單地址</td>
-                    <td>訂單電話</td>
+          <td>訂單電話</td>
+          <td>訂單國家</td>
 					<td>刪除</td>
 				</tr>
 				 <%
@@ -102,10 +104,12 @@ a
                 {
                   out.println("<tr>");
                   out.println("<td>"+"<textarea name='lid' readonly>"+tmp.getString("l_id")+"</textarea>"+"</td>");
+                  out.println("<td>"+"<textarea name='pname'>"+tmp.getString("p_name")+"</textarea>"+"</td>");
                   out.println("<td>"+"<textarea name='lnumber'>"+tmp.getString("l_number")+"</textarea>"+"</td>");
                   out.println("<td>"+"<textarea name='maccount'>"+tmp.getString("m_account")+"</textarea>"+"</td>");
                   out.println("<td>"+"<textarea name='laddress'>"+tmp.getString("l_address")+"</textarea>"+"</td>");
                   out.println("<td>"+"<textarea name='lcellphone'>"+tmp.getString("l_cellphone")+"</textarea>"+"</td>");
+                  out.println("<td>"+"<textarea name='lcountry'>"+tmp.getString("l_country")+"</textarea>"+"</td>");
                   out.println("<td>"+"<a href='del_order.jsp?lid="+tmp.getString("l_id")+"'>"+"刪除"+"</a>"+"</td>");
                   out.println("</tr>");
                 }
@@ -161,6 +165,11 @@ a
   	<td colspan="2"><textarea style="width: 90%;" name="lid"></textarea></td>
   </tr>
   <tr>
+  <tr>
+    <td>商品名稱(必填)</td>
+    <td colspan="2"><textarea style="width: 90%;" name="pname"></textarea></td>
+  </tr>
+  <tr>
   	<td>訂單數量(必填)</td>
   	<td colspan="2"><textarea style="width: 90%;" name="lnumber"></textarea></td>
   </tr>
@@ -175,6 +184,10 @@ a
     <tr>
   	<td>訂單電話</td>
   	<td colspan="2"><textarea style="width: 90%;" name="lcellphone"></textarea></td>
+  </tr>
+  <tr>
+    <td>訂單國家</td>
+    <td colspan="2"><textarea style="width: 90%;" name="lcountry"></textarea></td>
   </tr>
   <tr>
   <td colspan="3">

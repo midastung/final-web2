@@ -4,6 +4,7 @@
 <%@ include file="getDB.jsp" %>
 
 <%
+    String pname = request.getParameter("pname");
    	String firstname = request.getParameter("firstname");
    	String email = request.getParameter("email");
     String tel = request.getParameter("tel");
@@ -11,6 +12,8 @@
     String country = request.getParameter("country");
     String memo = request.getParameter("memo");
     String payment = request.getParameter("payment");
+    String idd1 = request.getParameter("idd1");
+    String nbb1 = request.getParameter("nbb1");
     ResultSet rs=null;
     ResultSet rs2 = null;
    	String acc="";
@@ -48,6 +51,13 @@
         }
       else
         {
+          if(firstname==null||firstname.equals("")||email==null||email.equals("")||tel==null||tel.equals("")||country==null||country.equals("")||address==null||address.equals(""))
+          {
+          out.write("<script language=javascript>alert('聯絡資訊皆必填');</script>");
+          response.setHeader("refresh","0;URL=order_cart.jsp?pid="+idd1+"&amount="+nbb1+"") ;
+          }
+          else
+          {
           Random rd=new Random();
           rr=rd.nextInt(89999)+10001;
           boolean gogo=true;
@@ -64,13 +74,13 @@
                   gogo=false;
                 }
             }
-      
+
             for(int i=0;i<idd.length;i++)
             {
               sql="select * from product where p_id='"+idd[i]+"';";
               rs=con.createStatement().executeQuery(sql);
               rs.next();
-              sql="INSERT INTO list_shopping (p_id,m_account,l_name, l_email, l_address, l_country, l_cellphone, l_memo, l_payment, l_idd,l_number,l_totalprice,l_boolean,stars) VALUES ('"+idd[i]+"','"+acc+"','"+firstname+"','"+email+"','"+address+"','"+country+"','"+tel+"','"+memo+"','"+payment+"','"+rr+"','"+number[i]+"','"+String.valueOf(Integer.valueOf(number[i])*Integer.valueOf(rs.getString("p_price")))+"','0','3')"; 
+              sql="INSERT INTO list_shopping (p_name,p_id,m_account,l_name, l_email, l_address, l_country, l_cellphone, l_memo, l_payment, l_idd,l_number,l_totalprice,l_boolean,stars) VALUES ('"+pname+"','"+idd[i]+"','"+acc+"','"+firstname+"','"+email+"','"+address+"','"+country+"','"+tel+"','"+memo+"','"+payment+"','"+rr+"','"+number[i]+"','"+String.valueOf(Integer.valueOf(number[i])*Integer.valueOf(rs.getString("p_price")))+"','0','3')"; 
               con.createStatement().execute(sql);
 
               sql="UPDATE product SET p_stock ='"+(Integer.valueOf(rs.getString("p_stock"))-Integer.valueOf(number[i]))+"' WHERE (p_id = '"+idd[i]+"');";
@@ -88,7 +98,7 @@
               con.createStatement().execute(sql);
              }
              response.setHeader("refresh","0;URL=confirm_cart.jsp?lidd="+rr+"") ;
-            
+     }       
     }
 %>
 

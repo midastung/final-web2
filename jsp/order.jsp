@@ -65,6 +65,8 @@
                     %>
                     <%
                         try{
+                            String idd1= request.getParameter("pid");
+                            String nbb1= request.getParameter("amount");
                             String[] idd= request.getParameterValues("pid");
                             String[] nbb= request.getParameterValues("amount");
                         //如果一次購買5種不同商品 個別不同數量，idd[這裡會是0~4] nbb[也是0~4];陣列取的大小=idd.length
