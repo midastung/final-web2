@@ -47,11 +47,11 @@ a
 <body>
 <center  style="padding:10%;"><table border="1" class="out">
 	<tr>
-		<td><center><a href="back_index.jsp">管理者介面</a></center></td>
+		<td style=" width: 15rem;height: 5rem;"><center><a href="back_index.jsp">管理者介面</a></center></td>
 		<td colspan="2" style="width: 70rem"><center>會員管理</center></td>
 	</tr>
 	<tr>
-		<td><a href="back_member.jsp">會員管理</a></td>
+		<td style=" width: 15rem;height: 5rem;"><a href="back_member.jsp">會員管理</a></td>
 		<td colspan="2" rowspan="4" style="width: 70rem">
 			<center><table border="1" class="in">
 				<tr>
@@ -145,13 +145,13 @@ a
 		</td>
 	</tr>
 	<tr>
-		<td><a href="back_order.jsp">訂單管理</a></td>
+		<td><a href="back_order.jsp" style=" width: 15rem;height: 5rem;">訂單管理</a></td>
 	</tr>
 	<tr>
-		<td><a href="back_product.jsp">商品管理</a></td>
+		<td><a href="back_product.jsp" style=" width: 15rem;height: 5rem;">商品管理</a></td>
 	</tr>
 	<tr>
-		<td><a href="back_comment.jsp">評論管理</a></td>
+		<td><a href="back_comment.jsp" style=" width: 15rem;height: 5rem;">評論管理</a></td>
 	</tr>
 </table></center>
 
