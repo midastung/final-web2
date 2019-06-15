@@ -16,12 +16,12 @@ a
  }
 .in td
 {
-  width: 10rem;
+  width: 8rem;
   height: 5rem;
 } 
 .out td
  {
-  width: 10rem;
+  width: 8rem;
   height: 5rem;
  }
  button
@@ -39,8 +39,8 @@ a
 
  .in textarea
  {
-  width: 5.5rem;
-  height: 3.5rem;
+  width: 5rem;
+  height: 3rem;
  }
 </style>
 </head>
