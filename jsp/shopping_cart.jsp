@@ -61,7 +61,7 @@
                                     		{
                                     			out.println("<tr>");
                                     			out.println("<td class='pro-thumbnail'>"+"<a href='all_single.jsp?p_id="+tmp.getString("p_id")+"'>"+"<img src='"+tmp.getString("p_image")+"'>"+"</a>"+"</td>");
-                                    			out.println("<td class='pro-title'>"+"<a href='all_single.jsp?p_id="+tmp.getString("p_id")+"'>"+tmp.getString("p_name")+"</a>"+"</td>");
+                                    			out.println("<td class='pro-title' name='pname'>"+"<a href='all_single.jsp?p_id="+tmp.getString("p_id")+"'>"+tmp.getString("p_name")+"</a>"+"</td>");
                                     			out.println("<td class='pro-price'>"+"<span>$"+tmp.getString("p_price")+"</span>"+"</td>");
                                     			out.println("<td class='pro-quantity'>");
 
