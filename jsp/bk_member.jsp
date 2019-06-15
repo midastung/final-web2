@@ -45,7 +45,7 @@ a
 </style>
 </head>
 <body>
-<center  style="padding:3%;"><table border="1" class="out">
+<center  style="padding:2%; padding-bottom: 5%"><table border="1" class="out">
 	<tr>
 		<td><center><a href="back_index.jsp">管理者介面</a></center></td>
 		<td colspan="2" style="width: 70rem"><center>會員管理</center></td>
