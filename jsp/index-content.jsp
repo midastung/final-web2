@@ -95,10 +95,10 @@
                     <div class="row">
                         <div class="col-md-6" style="margin-right: 20%;">
                             <a href="product_class.jsp?p_class=0"><img src="assets/images/icon/jpdesert.png" style="max-width:180%;" class="chat1"></a>
-                            <a href="product_class.jsp?p_class=1"><img src="assets/images/icon/jpdish.png" style="max-width:180%; margin:0% 0 0 100%;" class="chat1"></a>
+                            <a href="product_class.jsp?p_class=2"><img src="assets/images/icon/jpdish.png" style="max-width:180%; margin:0% 0 0 100%;" class="chat1"></a>
                         </div>
                         <div class="col-md-6">
-                            <a href="product_class.jsp?p_class=2"><img src="assets/images/icon/usdesert.png" style="max-width:150%;" class="chat1"></a>
+                            <a href="product_class.jsp?p_class=1"><img src="assets/images/icon/usdesert.png" style="max-width:150%;" class="chat1"></a>
                         </div>
                     </div>
                 </div>

@@ -34,6 +34,6 @@
 
 	sql="UPDATE member SET m_firstname='"+fname+"',m_lastname='"+lname+"',m_account='"+account+"',m_password='"+password+"',m_address='"+address+"',m_email='"+mail+"',m_tel='"+tel+"' WHERE m_account='"+acc+"' and m_password='"+pas+"'";
 	con.createStatement().executeUpdate(sql);
-	out.write("<script language=javascript>alert('修改成功');</script>");
-	response.setHeader("refresh","0;URL=member.jsp");
+	out.write("<script language=javascript>alert('修改成功，需要重新登入');</script>");
+	response.setHeader("refresh","0;URL=logout.jsp");
 %>

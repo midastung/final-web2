@@ -14,6 +14,24 @@
 </head>
 <body>
    <%   
+                try{
+                Cookie getC[]=request.getCookies();
+                for(int i=0;i<getC.length;i++)
+                {
+                    if(getC[i].getName().equals("getin"))
+                    {
+                        String[] sp=getC[i].getValue().split("-");
+                        acc=sp[0];
+                        pas=sp[1];
+                    }
+                }
+        
+            }
+        catch(Exception e)
+        {
+
+        
+        }
            
                 sql="SELECT * FROM member WHERE m_account='"+acc+"'; ";
                 ResultSet mem = con.createStatement().executeQuery(sql);
@@ -47,7 +65,7 @@
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text">帳號</span>
                                                 </div>
-                                                <input type="text" class="form-control" placeholder="請填寫此欄位" name="acc" value="<%=mem.getString("m_account")%>">
+                                                <input type="text" class="form-control" placeholder="請填寫此欄位" name="acc" value="<%=mem.getString("m_account")%> " readonly>
                                             </div>
                                             <div class="input-group mb-3">
                                                 <div class="input-group-prepend">
@@ -128,7 +146,7 @@
                                  <ul class="ratings" style="float: left;">
                                     <li class="stars"></li>
                                     <li class="stars"></li>
-                                    <li class="stars"></li>
+                                    <li class="stars selected"></li>
                                     <li class="stars"></li>
                                     <li class="stars"></li>
                                 <input type="submit" class="button button3 " style="float:right; right: 2%;" value="送出評論">
@@ -176,7 +194,7 @@
                                  <ul class="ratings">
                                     <li class="stars"></li>
                                     <li class="stars"></li>
-                                    <li class="stars"></li>
+                                    <li class="stars selected"></li>
                                     <li class="stars"></li>
                                     <li class="stars"></li>
                                     <input type="submit" class="button " value="已送出" style="float: right;right: 2%;" readonly>

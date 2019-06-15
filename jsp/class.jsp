@@ -62,10 +62,10 @@
                                                   out.println("<h2 class='title-border'>和菓子</h2>");
                                                 }
                                                 else if(product_class.equals("1")){
-                                                   out.println("<h2 class='title-border'>日式料理</h2>");
+                                                   out.println("<h2 class='title-border'>西式甜點</h2>");
                                                 }
                                                 else if(product_class.equals("2")){
-                                                    out.println("<h2 class='title-border'>日式甜點</h2>");
+                                                    out.println("<h2 class='title-border'>日式料理</h2>");
                                                 }
                                                 else{
                                                     out.println("<h2 class='title-border'>商品總覽</h2>");

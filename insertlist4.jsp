@@ -25,7 +25,7 @@
                     }
                 }
 
-            }
+            
 
                  sql="SELECT * FROM member WHERE m_account='"+acc+"' and m_password='"+pas+"'";
                 ResultSet man=con.createStatement().executeQuery(sql);
@@ -62,12 +62,4 @@
           }
           
 
-%>
-<%
-			sql="INSERT INTO shopping_cart(p_id, amount, m_account) VALUE('"+p_id+"','"+q+"','"+acc+"');";
-            con.createStatement().execute(sql);
-
-            out.write("<script language=javascript>alert('成功將"+rs2.getString("p_name")+"x"+q+"加入購物車!');</script>");
-
-	response.setHeader("refresh","0;URL=all_single.jsp?p_id="+p_id+"");
 %>

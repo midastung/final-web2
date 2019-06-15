@@ -93,7 +93,6 @@
                                     <li class="gn-search-item"><a href="index.jsp"><i class="fas fa-home p-4"></i>Home</a></li>
                                     <li class="gn-search-item"><a href="all_products.jsp"><i class="fas fa-shopping-basket p-4"></i>Product</a></li>
                                     <li class="gn-search-item"><a href="aboutus.jsp"><i class="fas fa-users p-4"></i>About Us</a></li>
-                                    <li class="gn-search-item"><a href="#"><i class="far fa-question-circle p-4"></i><span class="p-1">FAQ</span></a></li>
                                     <li class="gn-search-item ml-4">累計訪客人數:
                                     <%
                                     try{
@@ -150,7 +149,6 @@
                                     <li class="gn-search-item"><a href="index.jsp"><i class="fas fa-home p-4"></i>Home</a></li>
                                     <li class="gn-search-item"><a href="all_products.jsp"><i class="fas fa-shopping-basket p-4"></i>Product</a></li>
                                     <li class="gn-search-item"><a href="aboutus.jsp"><i class="fas fa-users p-4"></i>About Us</a></li>
-                                    <li class="gn-search-item"><a href="#"><i class="far fa-question-circle p-4"></i><span class="p-1">FAQ</span></a></li>
                                     <li class="gn-search-item"><a href="logout.jsp"><i class="fas fa-door-open p-4"></i><span class="p-1">Logout</span></a></li>
                                     <li class="gn-search-item ml-4">累計訪客人數:
                                     <%
