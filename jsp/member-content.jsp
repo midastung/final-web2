@@ -111,7 +111,7 @@
                             </div>
                             <div class="d-flex p-2 bx-shape2">
                                 <form action="insertlist3.jsp" method>
-                                <div class="cont p-2">
+                                <div class="cont p-2" style="justify-content: center;">
                                     <section>
                                         <nobr>
                                             <strong>
@@ -157,9 +157,8 @@
                                 <h6>訂單編號：<%=tmp.getString("l_idd")%></h6>
                                 <h6>購買日期:<%=tmp.getString("date")%></h6>
                             </div>
-                            <div class="d-flex cont p-2 bx-shape2">
-
-                                <div class="cont p-2">
+                            <div class="d-flex p-2 bx-shape2">
+                                <div class="cont p-2" style="justify-content: center;">
                                     <section>
                                         <nobr>
                                             <strong>
@@ -197,6 +196,11 @@
         </div>
     </div>
  <script src="assets/js/star.js"></script>
+  <script>
+                            window.onbeforeunload = function() {
+                            window.scrollTo(0, 0);
+                            }
+                            </script>
 </body>
 
 </html>

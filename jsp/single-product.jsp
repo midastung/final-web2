@@ -265,11 +265,49 @@
                                                                         <i class="fas fa-user-circle" style="font-size: 25px; "></i>
                                                                         <p style="display: inline;"><%=tmp.getString("l_name")%></p>
                                                                         <div class="rating">
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star" style="font-size: 20px;width: 20px"></span>
-                                                                        <span class="star star_bl" style="font-size: 20px;width: 20px"></span>
+                                                                         <%
+
+                                                                           
+                                                                           if(Integer.valueOf(tmp.getString("stars"))==5 ){                      
+                                                                              out.println("<span class='star ' style='font-size: 20px;width: 20px'></span>");
+                                                                              out.println("<span class='star ' style='font-size: 20px;width: 20px'></span>");
+                                                                              out.println("<span class='star ' style='font-size: 20px;width: 20px'></span>");
+                                                                              out.println("<span class='star ' style='font-size: 20px;width: 20px'></span>");
+                                                                              out.println("<span class='star ' style='font-size: 20px;width: 20px'></span>");                             
+                                                                            }
+                                                                            else if(Integer.valueOf(tmp.getString("stars"))==4)
+                                                                            {
+                                                                                 out.println("<span class='star ' style='font-size: 20px;width: 20px'></span>");
+                                                                                out.println("<span class='star ' style='font-size: 20px;width: 20px'></span>");
+                                                                                out.println("<span class='star ' style='font-size: 20px;width: 20px'></span>");
+                                                                                out.println("<span class='star ' style='font-size: 20px;width: 20px'></span>");
+                                                                                out.println("<span class='star star_bl' style='font-size: 20px;width: 20px'></span>");
+                                                                            }           
+                                                                            else if(Integer.valueOf(tmp.getString("stars"))==3)
+                                                                            {
+                                                                                out.println("<span class='star ' style='font-size: 20px;width: 20px'></span>");
+                                                                                out.println("<span class='star ' style='font-size: 20px;width: 20px'></span>");
+                                                                                out.println("<span class='star ' style='font-size: 20px;width: 20px'></span>");
+                                                                                out.println("<span class='star star_bl' style='font-size: 20px;width: 20px'></span>");
+                                                                                out.println("<span class='star star_bl' style='font-size: 20px;width: 20px'></span>");
+                                                                            }
+                                                                            else if(Integer.valueOf(tmp.getString("stars"))==2){
+                                                                            out.println("<span class='star ' style='font-size: 20px;width: 20px'></span>");
+                                                                                out.println("<span class='star ' style='font-size: 20px;width: 20px'></span>");
+                                                                                out.println("<span class='star star_bl' style='font-size: 20px;width: 20px'></span>");
+                                                                                out.println("<span class='star star_bl' style='font-size: 20px;width: 20px'></span>");
+                                                                                out.println("<span class='star star_bl' style='font-size: 20px;width: 20px'></span>");
+                                                                            }
+                                                                            else if(Integer.valueOf(tmp.getString("stars"))==1){
+                                                                             out.println("<span class='star ' style='font-size: 20px;width: 20px'></span>");
+                                                                                out.println("<span class='star star_bl' style='font-size: 20px;width: 20px'></span>");
+                                                                                out.println("<span class='star star_bl' style='font-size: 20px;width: 20px'></span>");
+                                                                                out.println("<span class='star star_bl' style='font-size: 20px;width: 20px'></span>");
+                                                                                out.println("<span class='star star_bl' style='font-size: 20px;width: 20px'></span>");
+
+                                                                        }
+                                                                        
+                                                                        %>
                                                                         </div>
                                                                     <p style="font-size: 15px;margin-top: 20px;"><%=tmp.getString("message")%></p>
                                                                     
@@ -280,7 +318,7 @@
 
                                                                     <%
                                                                       }
-                                                                      con.close();
+                                                                     
                                                                     %>
                                                                     
                                                                 </div>
@@ -298,19 +336,19 @@
                                                                 <form action="product_mess.jsp" method="post">
                                                                     <label>評價<sup class="required">*</sup></label>
                                                                     <div class="ratings">
-                                                                            <input type="radio" id="star5" value="5" hidden checked>
+                                                                            <input type="radio" id="star5" name="str" value="5" hidden>
                                                                             <label for="star5" class="stars"></label>
                                                                      
-                                                                             <input type="radio" id="star4" value="4" hidden >
+                                                                             <input type="radio" id="star4" name="str" value="4" hidden >
                                                                              <label for="star4" class="stars"></label>
                                                                      
-                                                                             <input type="radio" id="star3" value="3"  hidden >
+                                                                             <input type="radio" id="star3" name="str" value="3"  hidden >
                                                                              <label for="star3" class="stars"></label>
                                                                         
-                                                                             <input type="radio" id="star2" value="2" hidden >
-                                                                             <label for="star2" class="stars"></label>
+                                                                             <input type="radio" id="star2" name="str" value="2" hidden >
+                                                                             <label for="star2" class="stars "></label>
         
-                                                                             <input type="radio" id="star1" value="1" hidden>
+                                                                             <input type="radio" id="star1" name="str" value="1" hidden>
                                                                              <label for="star1" class="stars"></label>
                                                                        
                                                                     </div>
@@ -432,13 +470,13 @@
             <script>
             new WOW().init();
             </script>
-            <!--
+            
             <script>
             window.onbeforeunload = function() {
             window.scrollTo(0, 0);
             }
             </script>
-            -->
+            
             
         </body>
     </html>
