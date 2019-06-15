@@ -8,7 +8,7 @@
 <style type="text/css" media="screen">
 td
  {
-  text-align:center;
+ 	text-align:center;
  }
 a
  {
@@ -16,13 +16,13 @@ a
  }
 .in td
 {
-  width: 3.5rem;
-  height: 2rem;
-} 
+	width: 10rem;
+	height: 5rem;
+}	
 .out td
  {
-  width: 4rem;
-  height: 3rem;
+	width: 10rem;
+	height: 5rem;
  }
  button
  {
@@ -33,19 +33,19 @@ a
 
  .under td
  {
-  width: 10rem;
-  height: 2rem;
+	width: 10rem;
+	height: 2rem;
  }
 
  .in textarea
  {
-  width: 3rem;
-  height: 2rem;
+  width: 5.5rem;
+  height: 3.5rem;
  }
 </style>
 </head>
 <body>
-<center  style="padding-bottom:10%;"><table border="1" class="out">
+<center  style="padding:5%;"><table border="1" class="out">
 	<tr>
 		<td><center><a href="back_index.jsp">管理者介面</a></center></td>
 		<td colspan="2" style="width: 70rem"><center>會員管理</center></td>
