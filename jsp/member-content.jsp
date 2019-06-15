@@ -94,7 +94,7 @@
                                             <div class="text-align mt-5">
                                                 <input type="submit" class="button button1" value="確認送出">
                                                 &emsp;
-                                                <button class="button button1" onClick="window.location.reload();">重新輸入</button>
+                                                <button type="reset" class="button button1">重新輸入</button>
                                             </div>
 
                                         </form>

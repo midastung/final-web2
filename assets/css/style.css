@@ -484,6 +484,22 @@ Common Style CSS
 	margin-left: 10px;
 	vertical-align: top;
 }
+.usr_cmt {
+	text-transform: uppercase;
+	display: inline-block;
+	background: #007EA7;
+	color: #fff;
+	font-size: 12px;
+	padding: 0 15px;
+	text-align: center;
+	z-index: 1;
+	line-height: 30px;
+	border-radius: 20px;
+	font-weight: 500;
+	height: 30px;
+	margin-left: 10px;
+	vertical-align: top;
+}
 .product-info {
 	color: #333;
 	font-size: 14px;

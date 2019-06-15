@@ -124,7 +124,7 @@
                                                 <p class="chi-font" style="font-size: 22px;"><%=pp.getString("p_textarea")%></p>
                                             </div>
                                             <div style="">
-                                              <p>庫存:<span>6個</span></p>
+                                              <p class="chi-font">庫存:<span><%=pp.getString("p_stock")%></span></p>
                                             </div>
                                             <div class="single-product-action">
                                                 
@@ -258,16 +258,20 @@
                                                                     </div>
                                                                 </div>
 
-                                                                <div id="all" class="p-2" style="margin-top: 5%;">
+                                                                <div id="all" class="p-2 mb-2 chi-fonts" style="margin-top: 5%;">
                                                                     <%
                                                                        sql="SELECT * FROM list_shopping  where p_id='"+aa+"' and l_boolean='1'" ;
                                                                        ResultSet tmp=con.createStatement().executeQuery(sql);
                                                                        while(tmp.next())
                                                                       {
                                                                         %>
-                                                                        <i class="fas fa-user-circle" style="font-size: 25px; "></i>
-                                                                        <p style="display: inline;"><%=tmp.getString("l_name")%></p>
-                                                                        <div class="rating">
+                                                                        <div>
+                                                                        <img src="assets/images/icon/user.png" style="width:5%;">
+                                                                        <!--<i class="fas fa-user-circle" style="font-size: 25px; "></i>-->
+                                                                        <span class="usr_cmt chi-font" style="font-size: 15px;margin-top: 20px;display: inline"><%=tmp.getString("l_name")%></span>
+                                                                        </div>
+                                                                        <!--<p style="display: inline;"><%=tmp.getString("l_name")%></p>-->
+                                                                        <div class="rating" style="display:inline;">
                                                                          <%
 
                                                                            
@@ -312,9 +316,10 @@
                                                                         
                                                                         %>
                                                                         </div>
-                                                                    <p style="font-size: 15px;margin-top: 20px;"><%=tmp.getString("message")%></p>
+                                                                        <br>
+                                                                    <p class="chi-font" style="font-size: 18px;position:relative;top: 10px;"><%=tmp.getString("message")%></p>
                                                                     
-                                                                    <p style="font-size: 7px;margin-top: 20px;">
+                                                                    <p class="chi-font" style="font-size: 7px;">
                                                                       <%=tmp.getString("date")%>
                                                                     </p>
                                                                     <hr>
