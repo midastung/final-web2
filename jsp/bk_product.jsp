@@ -62,8 +62,8 @@ a
 					<td>商品單價</td>
 					<td>商品原價</td>
 					<td>商品折扣</td>
-                    <td>商品圖片</td>
-                    <td>刪除</td>
+          <td>商品圖片</td>
+          <td>刪除</td>
 				</tr> <%
                                 try{
                                         Cookie getC[]=request.getCookies();
@@ -179,11 +179,11 @@ a
   	<td colspan="2"><textarea style="width: 90%;" name="pstock"></textarea></td>
   </tr>
     <tr>
-  	<td>商品單價</td>
+  	<td>商品單價(必填)</td>
   	<td colspan="2"><textarea style="width: 90%;" name="pprice"></textarea></td>
   </tr>
    <tr>
-  	<td>商品原價(必填)</td>
+  	<td>商品原價</td>
   	<td colspan="2"><textarea style="width: 90%;" name="poriginprice"></textarea></td>
   </tr>
     <tr>

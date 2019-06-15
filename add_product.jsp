@@ -13,7 +13,7 @@
 		String pdiscount=request.getParameter("pdiscount");
 		String pimage=request.getParameter("pimage");
 
-		if(pid==null||pid.equals("")||pname==null||pname.equals("")||pstock==null||pstock.equals("")||poriginprice==null||poriginprice.equals(""))
+		if(pid==null||pid.equals("")||pname==null||pname.equals("")||pstock==null||pstock.equals("")||pprice==null||pprice.equals(""))
 		{
 			out.write("<script language=javascript>alert('必填欄位不能為空');</script>");
 			response.setHeader("refresh","0;URL=back_product.jsp");
