@@ -104,7 +104,7 @@ a
                 {
                   out.println("<tr>");
                   out.println("<td>"+"<textarea name='lid' readonly>"+tmp.getString("l_id")+"</textarea>"+"</td>");
-                  out.println("<td>"+"<textarea name='pname'>"+tmp.getString("p_name")+"</textarea>"+"</td>");
+                  out.println("<td>"+"<textarea name='pname'>"+tmp.getString("product_name")+"</textarea>"+"</td>");
                   out.println("<td>"+"<textarea name='lnumber'>"+tmp.getString("l_number")+"</textarea>"+"</td>");
                   out.println("<td>"+"<textarea name='maccount'>"+tmp.getString("m_account")+"</textarea>"+"</td>");
                   out.println("<td>"+"<textarea name='laddress'>"+tmp.getString("l_address")+"</textarea>"+"</td>");

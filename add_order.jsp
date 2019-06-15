@@ -5,6 +5,7 @@
 	<%
         request.setCharacterEncoding("utf-8");
 		String lid=request.getParameter("lid");
+		String pname=request.getParameter("pname");
 		String lnumber=request.getParameter("lnumber");
 		String maccount=request.getParameter("maccount");
 		String laddress=request.getParameter("laddress");
@@ -27,7 +28,7 @@
 			}
 			else
 			{
-			sql="INSERT INTO list_shopping(l_id,l_number,m_account,l_address,l_cellphone,l_country) values('"+lid+"','"+lnumber+"','"+maccount+"','"+laddress+"','"+lcellphone+"','"+lcountry+"');";
+			sql="INSERT INTO list_shopping(l_id,l_number,m_account,product_name,l_address,l_cellphone,l_country) values('"+lid+"','"+lnumber+"','"+maccount+"','"+pname+"','"+laddress+"','"+lcellphone+"','"+lcountry+"');";
             con.createStatement().execute(sql); 
 			out.write("<script language=javascript>alert('下單成功');</script>");
 			response.setHeader("refresh","0;URL=back_order.jsp");

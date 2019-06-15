@@ -11,8 +11,10 @@
 		String [] laddress=null;
 		String [] lcellphone=null;
 		String [] lcountry=null;
+		String [] pname=null;
 
 			lid=request.getParameterValues("lid");
+			pname=request.getParameterValues("pname");
 			lnumber=request.getParameterValues("lnumber");
 			maccount=request.getParameterValues("maccount");
 			laddress=request.getParameterValues("laddress");
@@ -21,7 +23,7 @@
 			for(int i=0;i<lid.length;i++)
 			{	
 			
-			sql="UPDATE list_shopping SET l_number='"+lnumber[i]+"',m_account='"+maccount[i]+"',l_address='"+laddress[i]+"',l_cellphone='"+lcellphone[i]+"',l_country='"+lcountry[i]+"' WHERE l_id='"+lid[i]+"'";
+			sql="UPDATE list_shopping SET l_number='"+lnumber[i]+"',m_account='"+maccount[i]+"',l_address='"+laddress[i]+"',l_cellphone='"+lcellphone[i]+"',l_country='"+lcountry[i]+"',product_name='"+pname[i]+"' WHERE l_id='"+lid[i]+"'";
 			con.createStatement().executeUpdate(sql); 
 			}
 			out.write("<script language=javascript>alert('修改成功');</script>");
