@@ -33,7 +33,7 @@ a
 
  .under td
  {
-	width: 10rem;
+	width: 15rem;
 	height: 2rem;
  }
 
