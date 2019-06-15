@@ -68,6 +68,32 @@
 			response.setHeader("refresh","0;URL=index.jsp");
 	}
 
+	try
+	{
+		if(request.getParameter("acc") !=null && request.getParameter("pas")!=null)
+		{
+			sql="SELECT * FROM member WHERE m_account='"+acc+"'=? AND m_password='"+pas+"'=? ";
+			PreparedStatement pstmt = null;
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(2,request.getParameter("acc")); //2=m_account
+			pstmt.setString(3,request.getParameter("pas")); //3=m_password
+
+			ResultSet rs = pstmt.executeQuery();
+
+			if(rs.next())
+			{
+				session.setAttribute("acc",request.getParameter("acc"));
+				response.sendRedirect("index.jsp");
+			}
+			else
+			{
+				out.println("密碼賬號不符！！<a href='login.jsp'>按此</a>重新登入");
+			}
+		}
+	}
+	catch(Exception e)
+	{}
+
 con.close();
 %>
 
