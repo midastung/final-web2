@@ -8,7 +8,7 @@
 	    request.setCharacterEncoding("big5");
 	    request.setCharacterEncoding("UTF-8");
 		String acc=request.getParameter("acc");
-		String pas=request.getParameter("pas");
+		String pas=request.getParameter("psd");
 
 		if(acc==null||acc.equals("")||pas==null||pas.equals(""))
 		{

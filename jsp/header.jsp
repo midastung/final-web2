@@ -257,7 +257,7 @@
                 <form action="regis.jsp" method="post">
                     <div class="modal-body  chi-font">
                         <span style="color: #FE938C;" class="chi-font">帳號</span><input style="max-width:85%;" class="form-control" type="search" placeholder="Account..." id="acc" name="acc">
-                        <span style="color: #FE938C;" class="chi-font">密碼</span><img class="see_login_img" id="demo_login_img" onclick="hideShowPsw2()" src="assets/images/visible.png"><input style="max-width:85%;" class="form-control" placeholder="Password..." id="demo_login_input" type="password" name="pas">
+                        <span style="color: #FE938C;" class="chi-font">密碼</span><img class="see_login_img" id="demo_login_img" onclick="hideShowPsw2()" src="assets/images/visible.png"><input style="max-width:85%;" class="form-control" placeholder="Password..." id="demo_login_input" type="password" name="psd">
                                 
                                 <script type="text/javascript">
                                 var demoImg2 = document.getElementById("demo_login_img");
@@ -309,7 +309,7 @@
                         <div class="modal-body chi-font">
                             <span style="color: #FE938C;" class="chi-font">帳號</span><input style="max-width:85%;" class="form-control" type="search" placeholder="Account..." name="acc">
                             <span style="color: #FE938C;" class="chi-font">密碼</span>
-                                        <img class="see_login_img" id="demo_img" onclick="hideShowPsw()" src="assets/images/visible.png"><input style="max-width:85%;" class="form-control" placeholder="Password..." id="demo_input" type="password" name="pas">
+                                        <img class="see_login_img" id="demo_img" onclick="hideShowPsw()" src="assets/images/visible.png"><input style="max-width:85%;" class="form-control" placeholder="Password..." id="demo_input" type="password" name="psd">
                                         <script type="text/javascript">
                                             var demoImg = document.getElementById("demo_img");
                                             var demoInput = document.getElementById("demo_input");
