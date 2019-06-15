@@ -16,13 +16,13 @@ a
  }
 .in td
 {
-	width: 8rem;
-	height: 5rem;
+	width: 6rem;
+	height: 4rem;
 }	
 .out td
  {
-	width: 8rem;
-	height: 5rem;
+	width: 6rem;
+	height: 4rem;
  }
  button
  {
