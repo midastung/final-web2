@@ -16,8 +16,8 @@ a
  }
 .in td
 {
-  width: 3rem;
-  height: 2rem;
+  width: 3.5rem;
+  height: 2.5rem;
 } 
 .out td
  {
@@ -45,7 +45,7 @@ a
 </style>
 </head>
 <body>
-<center  style="padding:10%;"><table border="1" class="out">
+<center><table border="1" class="out">
 	<tr>
 		<td><center><a href="back_index.jsp">管理者介面</a></center></td>
 		<td colspan="2" style="width: 70rem"><center>會員管理</center></td>
