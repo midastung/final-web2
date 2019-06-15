@@ -17,22 +17,11 @@
 		}
 		else 
 		{
-			String sql2="select * from list_shopping where l_id='"+lid+"';";
-			ResultSet a=con.createStatement().executeQuery(sql2);
-			if(a.next())
-			{
-	        sql="UPDATE list_shopping SET p_id="+pid+" , l_name="+lname+" , message="+message+" where l_id='"+lid+"';";
-	        con.createStatement().executeUpdate(sql);
-	        out.write("<script>alert('修改評論成功');</script>");
-            response.setHeader("refresh","0;URL=back_comment.jsp");
-			}
-			else
-			{
+
 			sql="INSERT INTO list_shopping(l_id,p_id,l_name,message) values('"+lid+"','"+pid+"','"+lname+"','"+message+"');";
             con.createStatement().execute(sql); 
 			out.write("<script language=javascript>alert('評論成功');</script>");
 			response.setHeader("refresh","0;URL=back_comment.jsp");
-		    }
 		}
 	%>
 </body>
