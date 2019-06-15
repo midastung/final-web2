@@ -98,7 +98,7 @@ a
                             %>
                 <form action="write_order.jsp" method="post">
 <%
-                sql="SELECT * FROM list_shopping, product;";
+                sql="SELECT * FROM list_shopping;";
 				        ResultSet tmp=con.createStatement().executeQuery(sql);
                 while(tmp.next())
                 {
