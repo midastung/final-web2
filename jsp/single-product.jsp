@@ -123,6 +123,9 @@
                                             <div class="product-info">
                                                 <p class="chi-font" style="font-size: 22px;"><%=pp.getString("p_textarea")%></p>
                                             </div>
+                                            <div style="">
+                                              <p>庫存:<span>6個</span></p>
+                                            </div>
                                             <div class="single-product-action">
                                                 
                                                 <div class="product-variants-item">
