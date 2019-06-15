@@ -16,13 +16,13 @@ a
  }
 .in td
 {
-  width: 10rem;
-  height: 5rem;
+  width: 6rem;
+  height: 4rem;
 } 
 .out td
  {
-  width: 10rem;
-  height: 5rem;
+  width: 6rem;
+  height: 4rem;
  }
  button
  {
@@ -39,13 +39,13 @@ a
 
  .in textarea
  {
-  width: 5.5rem;
-  height: 3.5rem;
+  width: 5rem;
+  height: 3rem;
  }
 </style>
 </head>
 <body>
-<center  style="padding:10%;"><table border="1" class="out">
+<center style="padding:2%; padding-bottom: 10%;padding-top: 10%;"><table border="1" class="out">
 	<tr>
 		<td><center><a href="back_index.jsp">管理者介面</a></center></td>
 		<td colspan="2" style="width: 70rem"><center>商品管理</center></td>
