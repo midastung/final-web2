@@ -20,22 +20,15 @@
 			sql="select * from member where m_account=? and m_password=?";
 			PreparedStatement midas=null;
 			midas=con.prepareStatement(sql);
-			midas.setString(2,request.getParameter("acc"));
-			midas.setString(3,request.getParameter("psd"));
+			midas.setString(1,request.getParameter("acc"));
+			midas.setString(2,request.getParameter("psd"));
 
 			ResultSet paperrs=midas.executeQuery();
 
 			if(paperrs.next())
 			{
 				session.setAttribute("acc",request.getParameter("acc"));
-				response.sendRedirect("index.jsp");
-			}
-			else
-			{
-				out.write("<script language=javascript>alert('帳號或密碼輸入錯誤');</script>");
-				response.setHeader("refresh","0;URL=index.jsp");
-			}
-			sql="SELECT * FROM member WHERE m_account='"+acc+"' and m_password='"+pas+"'";
+				sql="SELECT * FROM member WHERE m_account='"+acc+"' and m_password='"+pas+"'";
 			ResultSet tmp=con.createStatement().executeQuery(sql);
 			tmp.next();
 			if(tmp.getString("m_level").equals("0"))
@@ -62,6 +55,13 @@
 				out.write("<script language=javascript>alert('帳號或密碼輸入錯誤');</script>");
 				response.setHeader("refresh","0;URL=index.jsp");
 		    }
+			}
+			else
+			{
+				out.write("<script language=javascript>alert('帳號或密碼輸入錯誤');</script>");
+				response.setHeader("refresh","0;URL=index.jsp");
+			}
+		
 		}
 	}
 	catch(Exception e)
