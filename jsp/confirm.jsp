@@ -57,6 +57,41 @@
     </div>
     <!--comfirm star-->
     <%
+         try{
+                Cookie getC[]=request.getCookies();
+                for(int i=0;i<getC.length;i++)
+                {
+                    if(getC[i].getName().equals("getin"))
+                    {
+                        String[] sp=getC[i].getValue().split("-");
+                        acc=sp[0];
+                        pas=sp[1];
+                    }
+                }
+        
+            }
+        catch(Exception e)
+        {
+
+        
+        }
+        if(acc==null||acc.equals("")||pas==null||pas.equals("")){
+         out.write("<script language=javascript>alert('請先登入');</script>");
+        
+         response.setHeader("refresh","0;URL=login.jsp") ;
+        }
+        else{
+            
+            sql="SELECT * FROM member WHERE m_account='"+acc+"' and m_password='"+pas+"'";
+            ResultSet ins=con.createStatement().executeQuery(sql);
+            ins.next();
+                if(ins.getString("m_level").equals("1"))
+                {
+                    out.write("<script language=javascript>alert('歡迎管理員大大');</script>");
+                response.setHeader("refresh","0;URL=back_index.jsp") ;
+                }
+                else
+                {
         String l_idd= request.getParameter("lidd");
         sql="SELECT * FROM list_shopping WHERE l_idd='"+l_idd+"'";
         ResultSet conf = con.createStatement().executeQuery(sql);
@@ -93,6 +128,8 @@
             {
                 out.println("<p class='order_inf' style='margin-top: 10px;'>"+conff.getString("p_name")+":"+conff.getString("l_number")+"份/&ensp;$"+conff.getString("l_totalprice")+"</p>");
             }
+        }
+    }
     %>
         <hr width="68%">
 

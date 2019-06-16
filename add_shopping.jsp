@@ -25,21 +25,37 @@
 
         
         }
-    
-    
-	String act = (String) request.getParameter("act");
-	String amount = (String) request.getParameter("amount");
+         if(acc==null||acc.equals("")||pas==null||pas.equals("")){
+         out.write("<script language=javascript>alert('請先登入');</script>");
+        
+         response.setHeader("refresh","0;URL=login.jsp") ;
+        }
+        else{
+            
+            sql="SELECT * FROM member WHERE m_account='"+acc+"' and m_password='"+pas+"'";
+            ResultSet ins=con.createStatement().executeQuery(sql);
+            ins.next();
+                if(ins.getString("m_level").equals("1"))
+                {
+                    out.write("<script language=javascript>alert('歡迎管理員大大');</script>");
+                    response.setHeader("refresh","0;URL=back_index.jsp") ;
+                }
+                else
+                {
+                     
+    String act = (String) request.getParameter("act");
+    String amount = (String) request.getParameter("amount");
     String p_id = request.getParameter("p_id");
     ResultSet rs2=con.createStatement().executeQuery("SELECT * FROM product WHERE p_id='"+p_id+"'; ");
     rs2.next();
-	if(act!=null)
-	{
-		/*total = String.valueOf(Integer.parseInt(amount)*Integer.parseInt(rs2.getString("p_price")));
+    if(act!=null)
+    {
+        /*total = String.valueOf(Integer.parseInt(amount)*Integer.parseInt(rs2.getString("p_price")));
        "*/
-		if(act.equals("buy"))
-		{
+        if(act.equals("buy"))
+        {
             
-			 String sql2="select * from shopping_cart where m_account='"+acc+"' and p_id='"+p_id+"'";
+             String sql2="select * from shopping_cart where m_account='"+acc+"' and p_id='"+p_id+"'";
             ResultSet a=con.createStatement().executeQuery(sql2);
             if(a.next()){
                 sql="update shopping_cart set amount='"+String.valueOf(Integer.valueOf(a.getString("amount"))+Integer.valueOf(amount))+"' where m_account='"+acc+"'and p_id='"+p_id+"';";
@@ -52,7 +68,7 @@
                 out.write("<script language=javascript>alert('成功將「"+rs2.getString("p_name")+"x"+amount+"」加入購物車!');</script>");        
 
             }
-		}
+        }
         else if(act.equals("buy2"))//我的最愛
         {
             String sql2="select * from shopping_cart where m_account='"+acc+"' and p_id='"+p_id+"'";
@@ -102,7 +118,7 @@
             }
            
        }
-	}
+    }
     try{
         String outlink=(String)request.getParameter("outlink");
         if(outlink.equals("1"))
@@ -118,5 +134,12 @@
     {
 
     }
+                }
+    
+    
+            }
+           
+    
+   
    
 %>

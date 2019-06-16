@@ -24,6 +24,25 @@
                         pas=sp[1];
                     }
                 }
+                 if(acc==null||acc.equals("")||pas==null||pas.equals("")){
+                 out.write("<script language=javascript>alert('請先登入');</script>");
+                
+                 response.setHeader("refresh","0;URL=login.jsp") ;
+                }
+                else{
+                    
+                    sql="SELECT * FROM member WHERE m_account='"+acc+"' and m_password='"+pas+"'";
+                    ResultSet ins=con.createStatement().executeQuery(sql);
+                    ins.next();
+                        if(ins.getString("m_level").equals("1"))
+                        {
+                            out.write("<script language=javascript>alert('歡迎管理員大大');</script>");
+                        response.setHeader("refresh","0;URL=back_index.jsp") ;
+                        }
+                        else
+                        {
+
+                
 
             
 
@@ -55,7 +74,9 @@
                         out.write("<script language=javascript>alert('非會員，請先登入');</script>");
                         response.setHeader("refresh","0;URL=index.jsp");
                     }
-              }
+                }
+            }
+        }
               catch(Exception e){
                out.write("<script language=javascript>alert('非會員，請先登入');</script>");
                         response.setHeader("refresh","0;URL=index.jsp");

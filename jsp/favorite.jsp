@@ -54,6 +54,23 @@
                                     <div class="row">
                       
                                             <%
+                                             if(acc==null||acc.equals("")||pas==null||pas.equals("")){
+                                             out.write("<script language=javascript>alert('請先登入');</script>");
+                                            
+                                             response.setHeader("refresh","0;URL=login.jsp") ;
+                                            }
+                                            else{
+                                                
+                                                sql="SELECT * FROM member WHERE m_account='"+acc+"' and m_password='"+pas+"'";
+                                                ResultSet ins=con.createStatement().executeQuery(sql);
+                                                ins.next();
+                                                    if(ins.getString("m_level").equals("1"))
+                                                    {
+                                                        out.write("<script language=javascript>alert('歡迎管理員大大');</script>");
+                                                    response.setHeader("refresh","0;URL=back_index.jsp") ;
+                                                    }
+                                                    else
+                                                    {
                                             sql="SELECT * FROM  product, love WHERE love.m_account='"+acc+"' AND love.p_id=product.p_id; ";
                                             ResultSet tmp = con.createStatement().executeQuery(sql);
                                             int count = 0;
@@ -88,9 +105,8 @@
                                                     out.println("</div>");
                                                     out.println("</div>");
                                                     count++;
-                                                }
-                                                    
-                                                %>
+                                                        }
+                                                    %>
                                             </div>
                                             </div>
                                         </div>
@@ -105,6 +121,10 @@
             </div>
         </div>
     </div>
+    <%
+        }
+    } 
+    %>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
     <!-- product js start -->
 
